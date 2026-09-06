@@ -2,14 +2,18 @@
 
 Live task list and resume point. Newest status at the top. Dates are absolute.
 
-## Status — 2026-09-06 16:00 (v0.1.0 released and verified)
+## Status — 2026-09-06 17:30 (v0.1.0 released; homebrew source import verified live)
 
 Working module, verified on Danny's real 17-character roster in `daggerheart-test` (Foundry 14.367,
-Daggerheart 2.9.2). `api.selfTest()` passes 33 checks; `npm test` passes 20. **`v0.1.0` is published**:
-the manifest at `releases/latest/download/module.json` serves version 0.1.0 with the versioned zip URL,
-and the zip's `module.json`, scripts, styles, templates, lang and data were checked after download.
-The Foundry server is not running; check with `ss -ltn | grep 36000` (not `pgrep -f`, which matches
-the checking shell). Danny's roster copy sits in the gitignored `scratch/`.
+Daggerheart 2.9.2). `npm test` passes 27; `api.selfTest()` passes 44 checks (the last 11 exercise the
+homebrew path). **`v0.1.0` is published** (manifest and zip verified by download). **Homebrew source
+import** landed after the release: Danny imported his `void` source (2 classes, 5 subclasses, 21 Blood
+cards → `world.dhci-void`, 69 documents) through the new dialog, and BloodHunter (level 8, Blood
+Hunter/Order of the Mutant + Warlock multiclass), MultiMaggy (Warrior + Blood Hunter multiclass) and
+Summoner Sam then imported with no warnings — the whole roster now imports. Not yet exercised live:
+card-art upload (Danny's pick contained only the JSON files; the folder
+`daggerheart-character-import/homebrew/dhci-void` was never created). The Foundry server is running
+on port 36000 (check with `ss -ltn | grep 36000`). Danny's roster copy sits in the gitignored `scratch/`.
 
 Release history worth knowing: the first `v0.1.0` build (old workflow copied from `dannysmodule`) shipped
 literal `VERSION`/`DOWNLOAD` strings because the replace-tokens action only matches `#{NAME}#`; it was
@@ -22,8 +26,23 @@ needed by the removed changelog action and can be deleted. Package is not regist
 - [x] Danny used the file picker with his real export (2026-09-06)
 - [x] First release `v0.1.0` published 2026-09-06 and verified by downloading the manifest and zip
 - [ ] Decide whether to register the package on foundryvtt.com (then add the `FOUNDRY_PACKAGE_RELEASE_TOKEN` secret; the workflow step is already there)
-- [ ] Phase 4 candidates, none started: homebrew stub items; Beastbound companion actor; renames UI; i18n
+- [x] Homebrew: import a builder source folder into a world compendium (2026-09-06; see "Phase 4" below)
+- [ ] Homebrew follow-ups: try card-art upload live; a `v0.2.0` release once Danny has used it for a session
+- [ ] Phase 4 candidates, none started: Beastbound companion actor; renames UI; i18n
 - [ ] After each Daggerheart system update: run `api.selfTest()` in a Daggerheart world
+
+## Phase 4 — homebrew (2026-09-06)
+
+- [x] `scripts/lib/homebrew.mjs`: source files → Foundry item data (class + hope/class `feature`s + `loot` for
+      class items, subclass + tier features with `linkedClass`, domain cards), deterministic ids
+      `stableId("<source>:<builderId>[:part]")`, `flags.<module>.homebrew.{sourceId,builderId,kind}`
+- [x] `scripts/foundry/homebrew.mjs`: pack `world.dhci-<source>` (created via `CompendiumCollection.createCompendium`),
+      unknown domains added to the system's `Homebrew.domains` setting before cards are created, pack appended to
+      the packs setting, `homebrewSources` setting; `removeHomebrewSource` undoes it
+- [x] `scripts/app/homebrew-dialog.mjs`: multi-file picker (picks accumulate; clear), linked from the import dialog
+- [x] matcher indexes builder ids from flags; plan tries `lookupById` before names
+- [x] sample source `samples/homebrew/tinker` + `samples/homebrew-level1-tinker.json`; 7 Node tests; self-test section
+- [x] Verified live on Danny's `void` source and his three void characters (see Status)
 
 ## Phase 2–3 (2026-09-06)
 

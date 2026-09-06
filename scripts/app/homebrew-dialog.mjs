@@ -24,7 +24,7 @@ export class HomebrewDialog extends HandlebarsApplicationMixin(ApplicationV2) {
     classes: ["daggerheart", "dh-style", "dhci-dialog"],
     window: { title: "DHCI.Homebrew.Title", icon: "fa-solid fa-flask", resizable: true },
     position: { width: 520, height: "auto" },
-    actions: { import: HomebrewDialog.#onImport },
+    actions: { import: HomebrewDialog.#onImport, clear: HomebrewDialog.#onClear },
   };
 
   static PARTS = { body: { template: `modules/${MODULE_ID}/templates/homebrew-dialog.hbs` } };
@@ -36,6 +36,7 @@ export class HomebrewDialog extends HandlebarsApplicationMixin(ApplicationV2) {
       summary: this.parsed?.ok ? describeSource(this.parsed.source) : null,
       error: this.parsed && !this.parsed.ok ? this.parsed.error : null,
       images: this.images,
+      fileCount: this.files.length,
       ignored: this.parsed?.ignored ?? [],
       canImport: Boolean(this.parsed?.ok) && game.user.isGM && !this.busy,
       existing: Object.entries(sources).map(([id, s]) => ({ id, label: s.label, pack: s.pack, importedAt: s.importedAt?.slice(0, 10), counts: s.counts })),
@@ -47,12 +48,21 @@ export class HomebrewDialog extends HandlebarsApplicationMixin(ApplicationV2) {
     this.element.querySelector('input[type="file"]')?.addEventListener("change", (ev) => this.#readFiles([...(ev.target.files ?? [])]));
   }
 
+  /** Picks accumulate (the browser's picker takes one folder at a time: JSON, then card-art/domain, then card-art/subclass). */
   async #readFiles(files) {
-    this.files = files;
-    this.images = files.filter((f) => IMAGE_RE.test(f.name) && artKey(f.name)).length;
-    const texts = await Promise.all(files.filter((f) => !IMAGE_RE.test(f.name)).map(async (f) => ({ name: f.name, text: await f.text() })));
-    this.parsed = parseSourceFiles(texts);
+    const known = new Set(this.files.map((f) => f.name));
+    this.files = [...this.files, ...files.filter((f) => !known.has(f.name))];
+    this.images = this.files.filter((f) => IMAGE_RE.test(f.name) && artKey(f.name)).length;
+    const texts = await Promise.all(this.files.filter((f) => !IMAGE_RE.test(f.name)).map(async (f) => ({ name: f.name, text: await f.text() })));
+    this.parsed = texts.length ? parseSourceFiles(texts) : null;
     debug("homebrew parsed", this.parsed);
+    this.render();
+  }
+
+  static #onClear() {
+    this.files = [];
+    this.parsed = null;
+    this.images = 0;
     this.render();
   }
 

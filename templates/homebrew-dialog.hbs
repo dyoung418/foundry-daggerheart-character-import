@@ -4,7 +4,7 @@
 <fieldset>
   <legend>{{localize "DHCI.Homebrew.Files"}}</legend>
   <input type="file" name="files" multiple accept=".json,application/json,.png,.webp,.jpg,.jpeg,.svg,image/*">
-  <p class="hint">{{localize "DHCI.Homebrew.FilesHint"}}</p>
+  <p class="hint">{{localize "DHCI.Homebrew.FilesHint"}}{{#if fileCount}} <span class="dhci-meta">{{localize "DHCI.Homebrew.FileCount" count=fileCount}} · <a data-action="clear">{{localize "DHCI.Homebrew.Clear"}}</a></span>{{/if}}</p>
 </fieldset>
 <fieldset>
   <legend>{{localize "DHCI.Homebrew.Found"}}</legend>
