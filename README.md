@@ -39,11 +39,35 @@ Notes:
 - Importing a character again updates the actor created last time (matched by the builder's character id) rather
   than creating a duplicate; the items it created are replaced and the biography rebuilt. Foundry-side edits to
   those items are lost; other items and settings on the actor are kept.
-- Homebrew content the compendia don't know is reported and skipped.
+- Homebrew content the compendia don't know is reported and skipped, unless its builder source has
+  been imported (next section).
+
+## Homebrew content
+
+The builder loads extra content from source folders (`data/<source>/` with `classes.json`,
+`subclasses.json`, `domain-cards.json`, `source.json`). Characters built on such content carry ids
+like `void_class_blood_hunter` that no system compendium knows. To import them:
+
+1. In the import dialog choose **Import a homebrew source…** (or run
+   `game.modules.get("daggerheart-character-import").api.openHomebrew()`), as a GM.
+2. Select the source folder's JSON files, plus any `card-art/` images named after the builder ids.
+3. The module creates a world compendium `Builder homebrew: <source label>` with the classes (with
+   their hope and class features and starting items), subclasses (with tier features), and domain
+   cards; registers domains the system does not have (e.g. `blood`) in the system's **Homebrew**
+   settings; and adds the compendium to this module's pack list.
+4. Import the characters as usual. Content is matched by builder id first, then by name.
+
+Re-importing a source after editing it in the builder replaces the same compendium documents (ids
+are derived from the builder ids), so already-imported characters keep working. Feature text is
+carried over as description; the system's automated actions and effects are not generated, so
+homebrew features are read-and-apply-by-hand on the sheet. `api.removeHomebrewSource(id)` undoes an
+import.
 
 Console API: `game.modules.get("daggerheart-character-import").api` exposes `open()`, `importFile(json,
-{ actor })`, `parseTransferFile`, `buildPlan`, `CompendiumMatcher` and `selfTest()` (imports the bundled
-samples, compares derived stats with `samples/expected-derived.json`, deletes them again).
+{ actor })`, `parseTransferFile`, `buildPlan`, `CompendiumMatcher`, `openHomebrew()`,
+`importHomebrewSource(files)`, `removeHomebrewSource(id)` and `selfTest()` (imports the bundled samples
+and the sample homebrew source, compares derived stats with `samples/expected-derived.json`, deletes
+everything again).
 
 ## Requirements
 

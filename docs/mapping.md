@@ -206,9 +206,17 @@ exported by anyone today, so unmatched homebrew is reported and skipped until a 
    totals and skip `levelups` translation (state the limitation in the report).
 2. **Multiclass with Auto off** opens a system dialog mid-import. MVP: require Auto on for
    multiclass characters.
-3. **Homebrew content** (`void_` ids, `sources.local.json`): no compendium match. MVP: report and
-   skip; later: create stub items (feature/loot with description text) if the module ships the
-   builder's records for that source, or let the user pick from a compendium browser.
+3. **Homebrew content** (`void_` ids, `sources.local.json`): no compendium match. **Done 2026-09-06**
+   as a source import (`scripts/lib/homebrew.mjs`, `scripts/foundry/homebrew.mjs`): the user hands the
+   module the source folder's JSON files; it writes `class` (+ `feature` items for hope/class features,
+   `loot` for `classItems` as `inventory.take`), `subclass` (+ tier `feature`s, `linkedClass` to the
+   class in the same source or an SRD class by name), and `domainCard` documents into
+   `world.dhci-<source>` with ids `stableId("<source>:<builderId>[:part]")`, registers unknown domains in
+   the system's `Homebrew.domains` setting (they must exist before a card is created: the `domain` field's
+   choices are `CONFIG.DH.DOMAIN.allDomains`), and appends the pack to the packs setting. Items carry
+   `flags.<module>.homebrew.{sourceId,builderId,kind}` (children: `parentId`); the matcher indexes
+   `builderId` and the plan tries `lookupById` before the name lookup. Not generated: actions, effects,
+   `characterGuide`, level-up options; feature text only.
 4. **Beastbound companion**: separate `companion` actor linked via `system.companion`. Out of scope
    for MVP; report.
 5. **Re-import / update**: match by `flags.<module>.builder.id`; delete previously imported items
