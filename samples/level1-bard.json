@@ -229,7 +229,8 @@
           "srd_2_0_domain_card_book_of_ava"
         ]
       },
-      "creationCardsUnbaked": true
+      "creationCardsUnbaked": true,
+      "portrait": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAIAAADYYG7QAAAAoklEQVR42u3YWwqAMAxE0VlJv7sI94/LUhD81L4SrjKQBRxKm2aiUiqqZJBBBhn0F9BeNxDo1FyFAN2aJSat1cybtFwzaVKEZsakIM2wSXGaMZNCNQMmRWt6TUrQdJmUo2k3KU3TaFKmpsWkZM2rSfmaZ9OnToh4h4ivjNiHiJ2a+JcRf3viPEScGIkzNTF1EHMZMbkSsz1x++GFlUEGGTReB9QA/AUhjhIZAAAAAElFTkSuQmCC"
     }
   ]
 }

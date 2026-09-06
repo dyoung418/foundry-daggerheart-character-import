@@ -27,7 +27,9 @@ export async function applyPlan(plan, { actor = null, progress = () => {} } = {}
   } else {
     const previous = actor.items.filter((i) => i.getFlag(MODULE_ID, "imported"));
     if (previous.length) await actor.deleteEmbeddedDocuments("Item", previous.map((i) => i.id));
-    await actor.update({ name: plan.name, ...(img ? { img } : {}), flags, "system.levelData.levelups": {} });
+    // Biography is rebuilt: the class hook re-appends its questions and we re-append the builder text.
+    await actor.update({ name: plan.name, ...(img ? { img } : {}), flags, "system.levelData.levelups": {}, "system.biography.background": "", "system.biography.connections": "" });
+    report.push({ level: "info", message: "existing actor updated: previously imported items replaced, biography rebuilt from the file" });
   }
   // The system derives HP/evasion from the class item; write the base numbers first so
   // prepareData has sane inputs, but hold biography until the class has appended its questions.

@@ -215,7 +215,7 @@ absolute path).
 
 | file | what it exercises |
 |---|---|
-| `samples/level1-bard.json` | fresh level 1: Bard/Troubadour, pure Clank, Highborne, two creation cards, an `effectChoices` answer, portrait absent |
+| `samples/level1-bard.json` | fresh level 1: Bard/Troubadour, pure Clank, Highborne, two creation cards, an `effectChoices` answer, a 48px placeholder portrait |
 | `samples/level5-ranger-multiclass.json` | level 5 with four `levelUps`, mixed ancestry, multiclass into Druid, 7 cards with 3 vaulted (two by loadout spill), experiences raised, table state with damage, scar and a condition |
 | `samples/legacy-pre-levels.json` | old shape: flat slots, `weaponMode`, no `levelUps`/`state`, `srd_1_0_` ids, experiences without ids |
 | `samples/roster.json` | the two current characters in one file (multi-character import) |

@@ -53,6 +53,8 @@ Object.assign(bard, {
   creationDomainCardIds: ["srd_2_0_domain_card_deft_deceiver", "srd_2_0_domain_card_book_of_ava"],
   effectChoices: { "srd_2_0_ancestry_clank:Purposeful Design": { optionId: null, optionIds: [], experienceIds: ["exp_start1"] } },
   updatedAt: "2026-09-05T20:11:32.000Z",
+  // A 48px placeholder portrait so the upload path is exercised.
+  portrait: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAIAAADYYG7QAAAAoklEQVR42u3YWwqAMAxE0VlJv7sI94/LUhD81L4SrjKQBRxKm2aiUiqqZJBBBhn0F9BeNxDo1FyFAN2aJSat1cybtFwzaVKEZsakIM2wSXGaMZNCNQMmRWt6TUrQdJmUo2k3KU3TaFKmpsWkZM2rSfmaZ9OnToh4h4ivjNiHiJ2a+JcRf3viPEScGIkzNTF1EHMZMbkSsz1x++GFlUEGGTReB9QA/AUhjhIZAAAAAElFTkSuQmCC",
 });
 bard.experiences[0].name = "Silver Tongue";
 bard.experiences[1].name = "Court Etiquette";
@@ -105,7 +107,7 @@ const legacy = {
   weaponMode: "primary-secondary",
   background: { description: "", answers: "" },
   experiences: [{ name: "Shield Wall", modifier: 3 }, { name: "Mountain Born", modifier: 2 }, { name: "Stubborn", modifier: 2 }],
-  domainCardIds: ["srd_1_0_domain_card_i_see_it_coming", "srd_1_0_domain_card_bare_bones", "srd_1_0_domain_card_deft_maneuvers", "srd_1_0_domain_card_forceful_push"],
+  domainCardIds: ["srd_1_0_domain_card_get_back_up", "srd_1_0_domain_card_bare_bones", "srd_1_0_domain_card_whirlwind", "srd_1_0_domain_card_forceful_push"],
   connectionsNotes: "", level: 3, proficiency: 1,
   traitMarks: { agility: false, strength: true, finesse: false, instinct: true, presence: false, knowledge: false },
   hitPointSlotsBonus: 1, stressSlotsBonus: 0, evasionBonus: 0, subclassTier: "foundation",
