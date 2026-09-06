@@ -1,7 +1,7 @@
 import { MODULE_ID, debug } from "../foundry/constants.mjs";
 import { parseTransferFile, summarize } from "../lib/normalize.mjs";
 import { bareId } from "../lib/ids.mjs";
-import { importCharacters } from "../foundry/import.mjs";
+import { importCharacters, existingActorFor } from "../foundry/import.mjs";
 import { showReport } from "./report-dialog.mjs";
 
 const { HandlebarsApplicationMixin, ApplicationV2 } = foundry.applications.api;
@@ -57,6 +57,7 @@ export class ImportDialog extends HandlebarsApplicationMixin(ApplicationV2) {
       level: ch.level,
       summary: summarize(ch, nameOf),
       selected: this.selected.has(index),
+      updates: (this.actor ?? existingActorFor(ch))?.name ?? null,
     }));
     return {
       targetActor: this.actor,

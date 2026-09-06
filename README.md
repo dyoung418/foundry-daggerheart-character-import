@@ -26,7 +26,9 @@ Notes:
 - Stats are derived by the system from the created items and the level-up record, exactly as if the
   levels had been taken on the sheet. With the world's level-up automation off, final totals are written
   instead and multiclass characters are imported without their second class.
-- Re-importing into an existing actor replaces the items it created last time and rebuilds the biography.
+- Importing a character again updates the actor created last time (matched by the builder's character id) rather
+  than creating a duplicate; the items it created are replaced and the biography rebuilt. Foundry-side edits to
+  those items are lost; other items and settings on the actor are kept.
 - Homebrew content the compendia don't know is reported and skipped.
 
 Console API: `game.modules.get("daggerheart-character-import").api` exposes `open()`, `importFile(json,

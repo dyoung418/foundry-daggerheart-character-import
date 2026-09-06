@@ -6,12 +6,20 @@ import { levelupAuto } from "./settings.mjs";
 import { buildPlan } from "../lib/plan.mjs";
 import { parseTransferFile } from "../lib/normalize.mjs";
 
+/** The actor previously imported from this builder character, if any. */
+export function existingActorFor(ch) {
+  if (!ch?.id) return null;
+  return game.actors.find((a) => a.type === "character" && a.getFlag(MODULE_ID, "builder")?.id === ch.id) ?? null;
+}
+
 /**
  * Import characters from a parsed transfer file.
  * @param {object} parsed          result of parseTransferFile (ok: true)
  * @param {number[]} indexes       which characters
  * @param {object} [options]
- * @param {Actor} [options.actor]  update this actor (single character only)
+ * @param {Actor} [options.actor]  update this actor (single character only); otherwise an actor
+ *                                 previously imported from the same builder character is updated,
+ *                                 and failing that a new one is created
  * @param {(name: string, step: string) => void} [options.progress]
  * @returns {Promise<Array<{ name, actor: Actor|null, fatal: string[], report: object[] }>>}
  */
@@ -34,7 +42,8 @@ export async function importCharacters(parsed, indexes, { actor = null, progress
       continue;
     }
     try {
-      const { actor: created, report } = await applyPlan(plan, { actor: indexes.length === 1 ? actor : null, progress: (step) => progress(plan.name, step) });
+      const target = (indexes.length === 1 && actor) ? actor : existingActorFor(ch);
+      const { actor: created, report } = await applyPlan(plan, { actor: target, progress: (step) => progress(plan.name, step) });
       results.push({ name: plan.name, actor: created, fatal: [], report });
     } catch (err) {
       console.error(err);

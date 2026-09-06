@@ -19,7 +19,8 @@
       "NothingParsed": "No file read yet.",
       "TargetActor": "Updating {name}",
       "Importing": "Importing {name}\u2026",
-      "Step": "{name}: {step}"
+      "Step": "{name}: {step}",
+      "WillUpdate": "updates {name}"
     },
     "Notifications": {
       "NoPermission": "You need permission to create actors to import characters.",

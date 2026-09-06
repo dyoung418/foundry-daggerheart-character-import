@@ -18,7 +18,7 @@
         <li>
           <input type="checkbox" name="select" value="{{ch.index}}" {{#if ch.selected}}checked{{/if}} data-action="toggleCharacter" data-index="{{ch.index}}">
           <span class="dhci-name">{{ch.name}}</span>
-          <span class="dhci-meta">{{localize "DHCI.Dialog.Level"}} {{ch.level}} · {{ch.summary}}</span>
+          <span class="dhci-meta">{{localize "DHCI.Dialog.Level"}} {{ch.level}} · {{ch.summary}}{{#if ch.updates}} · <em>{{localize "DHCI.Dialog.WillUpdate" name=ch.updates}}</em>{{/if}}</span>
         </li>
       {{/each}}
     </ul>
