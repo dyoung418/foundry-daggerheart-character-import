@@ -2,7 +2,7 @@
 
 Live task list and resume point. Newest status at the top. Dates are absolute.
 
-## Status — 2026-09-05 23:59 (research and planning complete)
+## Status — 2026-09-06 00:25 (Phase 0 scaffold verified in Foundry)
 
 All five research tracks are done and committed. Read in this order for a cold start:
 `README.md` → `CLAUDE.md` → `docs/architecture.md` (plan) → `docs/mapping.md` (the translation) →
@@ -38,7 +38,9 @@ Headline findings:
 - [x] Symlink `~/foundrydata/Data/modules/daggerheart-character-import` → repo
 - [x] `.github/workflows/main.yaml` (release zip on published release) and `tests.yml`
 - [x] `tools/build-name-index.mjs` → `data/names.json` (807 names from srd_1_0 + srd_2_0)
-- [ ] Load in `daggerheart-test`: module enables, sidebar button appears, dialog reads `samples/roster.json`
+- [x] Loaded in `daggerheart-test` (Foundry 14.367, system 2.9.2): module enables with no console errors, sidebar button
+      appears, dialog lists both characters from `samples/roster.json`, Import shows the not-implemented notice, the
+      character-sheet header control appears in the sheet's control menu and opens the dialog targeting that actor
 
 ## Then (Phase 1 — MVP, see `docs/architecture.md`)
 

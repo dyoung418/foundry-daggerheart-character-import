@@ -50,6 +50,16 @@ uncommitted planning work. Commits use Conventional Commits (`docs:`, `feat:`, `
   `@foundryvtt/foundryvtt-cli`.
 - From the builder: plain ESM, no build step, no framework; tests are pure modules run under Node.
 
+## Foundry gotchas met so far
+
+- An ApplicationV2 Handlebars part must render exactly one root element; wrap templates in a `<div>`.
+- `game.modules.get(id).api.open()` returns the render promise; `await` it before touching `.element`.
+- Header controls added via `getHeaderControlsCharacterSheet` show in the sheet's "⋮" control menu, not
+  as visible buttons; `sheet._headerControlButtons()` lists them for a check.
+- To check the module in a live world from this session: start `~/foundryvtt/foundryvtt_launch_script`
+  in the background (port 36000), have Danny log in and launch `daggerheart-test`, then drive the page
+  with the Chrome tools and read the console for `daggerheart-character-import |` lines.
+
 ## Verification rules (learned the hard way in the builder; they apply here)
 
 - Cite `file:line` from the working tree, never from a diff, a commit message or memory.

@@ -1,3 +1,4 @@
+<div class="dhci-body">
 <p class="dhci-intro">{{localize "DHCI.Dialog.Intro"}}</p>
 {{#if targetActor}}<p class="dhci-target">{{localize "DHCI.Dialog.TargetActor" name=targetActor.name}}</p>{{/if}}
 <fieldset>
@@ -28,3 +29,4 @@
 <footer>
   <button type="button" data-action="import" {{#unless canImport}}disabled{{/unless}}><i class="fa-solid fa-user-plus"></i> {{localize "DHCI.Dialog.Import"}}</button>
 </footer>
+</div>
