@@ -1,6 +1,8 @@
 import { MODULE_ID, debug } from "../foundry/constants.mjs";
 import { parseTransferFile, summarize } from "../lib/normalize.mjs";
 import { bareId } from "../lib/ids.mjs";
+import { importCharacters } from "../foundry/import.mjs";
+import { showReport } from "./report-dialog.mjs";
 
 const { HandlebarsApplicationMixin, ApplicationV2 } = foundry.applications.api;
 
@@ -105,6 +107,25 @@ export class ImportDialog extends HandlebarsApplicationMixin(ApplicationV2) {
   }
 
   static async #onImport() {
-    ui.notifications.warn(game.i18n.localize("DHCI.Notifications.NotImplemented"));
+    if (!this.parsed || !this.selected.size || this.busy) return;
+    this.busy = true;
+    const button = this.element.querySelector('[data-action=import]');
+    button.disabled = true;
+    const indexes = [...this.selected].sort((a, b) => a - b);
+    try {
+      const results = await importCharacters(this.parsed, indexes, {
+        actor: this.actor,
+        progress: (name, step) => { button.textContent = game.i18n.format("DHCI.Dialog.Step", { name, step }); },
+      });
+      for (const r of results) {
+        if (r.actor) ui.notifications.info(game.i18n.format("DHCI.Notifications.Done", { name: r.actor.name }));
+        else ui.notifications.error(game.i18n.format("DHCI.Notifications.Fatal", { name: r.name, reasons: r.fatal.join("; ") }));
+      }
+      await this.close();
+      await showReport(results);
+      results.find((r) => r.actor)?.actor.sheet.render({ force: true });
+    } finally {
+      this.busy = false;
+    }
   }
 }

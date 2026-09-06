@@ -3,6 +3,9 @@ import { MODULE_ID, log } from "./foundry/constants.mjs";
 import { registerSettings } from "./foundry/settings.mjs";
 import { ImportDialog } from "./app/import-dialog.mjs";
 import { parseTransferFile } from "./lib/normalize.mjs";
+import { importFile, importCharacters } from "./foundry/import.mjs";
+import { buildPlan } from "./lib/plan.mjs";
+import { CompendiumMatcher } from "./foundry/matcher.mjs";
 
 Hooks.once("init", () => {
   registerSettings();
@@ -14,6 +17,10 @@ Hooks.once("ready", () => {
     /** Open the import dialog, optionally targeting an existing actor. */
     open: (options = {}) => new ImportDialog(options).render({ force: true }),
     parseTransferFile,
+    importFile,
+    importCharacters,
+    buildPlan,
+    CompendiumMatcher,
   };
   log("ready");
 });

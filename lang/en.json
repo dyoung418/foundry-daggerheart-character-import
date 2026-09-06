@@ -1,8 +1,12 @@
 {
   "DHCI": {
     "Title": "Daggerheart Character Import",
-    "Sidebar": { "Button": "Import from Builder" },
-    "Sheet": { "Control": "Import / update from builder file" },
+    "Sidebar": {
+      "Button": "Import from Builder"
+    },
+    "Sheet": {
+      "Control": "Import / update from builder file"
+    },
     "Dialog": {
       "Title": "Import from Character Builder",
       "Intro": "Choose a file saved by the Character Builder's Export or Backup & transfer button (daggerheart-characters-YYYY-MM-DD.json), or paste its contents.",
@@ -13,15 +17,41 @@
       "Level": "Level",
       "Import": "Import selected",
       "NothingParsed": "No file read yet.",
-      "TargetActor": "Updating {name}"
+      "TargetActor": "Updating {name}",
+      "Importing": "Importing {name}\u2026",
+      "Step": "{name}: {step}"
     },
     "Notifications": {
       "NoPermission": "You need permission to create actors to import characters.",
       "NotImplemented": "Importing is not implemented yet (Phase 0 scaffold).",
-      "ParseFailed": "Could not read that file: {error}"
+      "ParseFailed": "Could not read that file: {error}",
+      "Done": "Imported {name}.",
+      "Fatal": "{name} not imported: {reasons}"
     },
     "Settings": {
-      "LogLevel": { "Name": "Log level", "Hint": "How much the importer writes to the console." }
+      "LogLevel": {
+        "Name": "Log level",
+        "Hint": "How much the importer writes to the console."
+      },
+      "Packs": {
+        "Name": "Compendium packs to search",
+        "Hint": "Comma-separated pack ids, searched in order. Add homebrew packs here."
+      },
+      "PortraitFolder": {
+        "Name": "Portrait upload folder",
+        "Hint": "Where builder portraits are saved (under the user data folder)."
+      },
+      "AddStartingKit": {
+        "Name": "Add the class starting kit",
+        "Hint": "Create the class's starting loot items (torch, rope, supplies) on import."
+      }
+    },
+    "Report": {
+      "Title": "Import report",
+      "Done": "Imported {count} character(s).",
+      "Failed": "{name} could not be imported: {reasons}",
+      "NoIssues": "No issues.",
+      "Open": "Open sheet"
     }
   }
 }

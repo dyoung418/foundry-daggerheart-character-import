@@ -2,7 +2,12 @@
 
 Live task list and resume point. Newest status at the top. Dates are absolute.
 
-## Status — 2026-09-06 00:25 (Phase 0 scaffold verified in Foundry)
+## Status — 2026-09-06 00:50 (Phase 1 core import working in Foundry)
+
+The level-1 bard and level-5 ranger samples import through the module API with no console errors and
+every derived stat equal to `samples/expected-derived.json` (HP, Stress, Evasion, Armor, thresholds,
+proficiency, traits, experiences). Mixed ancestry, multiclass, vault/loadout split, level history with
+resolved item uuids, scars, marked HP/Stress/Armor, Hope and the Vulnerable condition all land.
 
 All five research tracks are done and committed. Read in this order for a cold start:
 `README.md` → `CLAUDE.md` → `docs/architecture.md` (plan) → `docs/mapping.md` (the translation) →
@@ -42,14 +47,19 @@ Headline findings:
       appears, dialog lists both characters from `samples/roster.json`, Import shows the not-implemented notice, the
       character-sheet header control appears in the sheet's control menu and opens the dialog targeting that actor
 
-## Then (Phase 1 — MVP, see `docs/architecture.md`)
+## Phase 1 — MVP (2026-09-06)
 
-- [ ] `lib/normalize.mjs` + tests against `samples/legacy-pre-levels.json`
-- [ ] `lib/ids.mjs`, `foundry/matcher.mjs`
-- [ ] `lib/plan.mjs` for level-1 characters; `foundry/writer.mjs`; import `samples/level1-bard.json`
-- [ ] Compare sheet-derived stats with `samples/expected-derived.json`
-- [ ] `lib/levelups.mjs` (assert against `samples/foundry/expected-levelups-level5-ranger.draft.json` once that draft is verified in Foundry); import `samples/level5-ranger-multiclass.json`
-- [ ] Report dialog; portrait upload
+- [x] `lib/normalize.mjs` + tests against `samples/legacy-pre-levels.json`
+- [x] `lib/ids.mjs`, `foundry/matcher.mjs` (pack list setting, `data/renames.json` overrides)
+- [x] `lib/plan.mjs`, `lib/levelups.mjs`, `lib/heritage.mjs` with tests on a compendium fixture (`tests/fixtures/`)
+- [x] `foundry/writer.mjs`, `foundry/import.mjs`, report dialog, dialog wired, API `importFile`
+- [x] Bard and ranger samples imported in `daggerheart-test`; derived stats equal `samples/expected-derived.json`
+- [ ] Re-import into an existing actor (sheet header control) — verify no duplicate items
+- [ ] Legacy sample import (srd_1_0 ids, no history)
+- [ ] Portrait upload — needs a sample with a portrait (add one via `tools/make-samples.mjs`)
+- [ ] Dialog end-to-end by hand (file picker, progress text, report)
+- [ ] Level-up automation **off** path in Foundry
+- [ ] `tests/`: levelups translation asserted against `samples/foundry/expected-levelups-level5-ranger.draft.json`
 
 ## Done
 
