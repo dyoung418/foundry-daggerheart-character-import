@@ -3,11 +3,10 @@
 Source: Foundryborne/daggerheart, branch `v14`, commit `cf0da27` (2026-09-03), version 2.9.2.
 Cloned into scratch; not vendored. Paths below are relative to that checkout. Verified 2026-09-05.
 
-**Version gap to note.** The local install at `~/foundrydata/Data/systems/daggerheart/` is 2.7.4
-(world `daggerheart-test` was last opened with 2.7.3). Releases 2.8.0 (2026-08-27) and 2.9.x
-(2026-09-01..03) added Transformations as an item type, the Hope & Fear content, feature-granted
-custom resources (Favor, Focus), and a "refresh from compendium" action. The module should target
-**2.9+** and the test world should be upgraded before any manual test.
+**Versions.** The local install was upgraded to 2.9.2 on 2026-09-06 (Foundry 14.367;
+`daggerheart-test` opened with both). Releases 2.8.0 (2026-08-27) and 2.9.x (2026-09-01..03) added
+Transformations as an item type, the Hope & Fear content, feature-granted custom resources (Favor,
+Focus), and a "refresh from compendium" action. The module targets **2.9+**.
 
 ## Documents the importer creates
 

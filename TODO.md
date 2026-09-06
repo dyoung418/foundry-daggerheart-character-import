@@ -18,17 +18,16 @@ Headline findings:
    on an actor; the importer creates parent items from compendium sources, in a fixed order.
 3. Level-ups map 1:1 from the builder's `levelUps[].picks` to `system.levelData.levelups`; the world's
    `levelupAuto` setting decides whether stats are re-derived (default) or must be written as totals.
-4. The local Daggerheart system is 2.7.4; target 2.9+ and upgrade the test world before manual tests.
+4. Target Daggerheart 2.9+ (local install upgraded to 2.9.2 on 2026-09-06).
 
-## Questions for Danny (answers unblock Phase 0/1)
+## Decisions from Danny (2026-09-06)
 
-- [ ] Ship a name-only index derived from the builder's SRD data (`data/names.json`, recommended in
-      `docs/mapping.md`), or rely on compendia only? Does anyone export homebrew (`void`) ids today?
-- [ ] On import, keep the class's background questions the system appends to the biography, or
-      overwrite with the builder's text? (Plan defaults to keep + append.)
-- [ ] OK to upgrade the local Daggerheart system 2.7.4 → 2.9.2 and the `daggerheart-test` world?
-- [ ] Module id `daggerheart-character-import` and title "Daggerheart Character Import" — fine?
-- [ ] MVP scope: multiclass only with `levelupAuto` on (the system opens a dialog otherwise) — acceptable?
+- Ship a **name-only index** `data/names.json` generated from the builder's SRD data.
+- Biography: **keep** the class questions the system appends, **append** the builder's text.
+- Local Foundry is now **14.367**, Daggerheart **2.9.2**; `daggerheart-test` opened with both.
+- Module id **`daggerheart-character-import`**, title "Daggerheart Character Import".
+- MVP: multiclass import only when `levelupAuto` is on; reported as skipped otherwise.
+- Homebrew (`void_`) content is **not in use** for exports today; homebrew import is a later phase.
 
 ## Next (Phase 0 — scaffold)
 
@@ -36,7 +35,7 @@ Headline findings:
 - [ ] Symlink `~/foundrydata/Data/modules/daggerheart-character-import` → repo; load in `daggerheart-test`
 - [ ] `.github/workflows/main.yaml` from dannysmodule (drop the pack build step)
 - [ ] `package.json` with `npm test` → `node --test tests/`
-- [ ] `tools/build-name-index.mjs` (pending question 1)
+- [ ] `tools/build-name-index.mjs` → `data/names.json`
 
 ## Then (Phase 1 — MVP, see `docs/architecture.md`)
 

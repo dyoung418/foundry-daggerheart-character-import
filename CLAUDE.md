@@ -8,9 +8,9 @@ system. Status: **planning** (started 2026-09-05). Nothing runnable yet.
 
 | Thing | Path | Version |
 |---|---|---|
-| Foundry server (Node build; client source under `client/`) | `~/foundryvtt/` | 14.366 |
+| Foundry server (Node build; client source under `client/`) | `~/foundryvtt/` | 14.367 |
 | Foundry user data | `~/foundrydata/Data/` | |
-| Daggerheart system (compiled; packs are LevelDB) | `~/foundrydata/Data/systems/daggerheart/` | 2.7.4 |
+| Daggerheart system (compiled; packs are LevelDB) | `~/foundrydata/Data/systems/daggerheart/` | 2.9.2 |
 | Daggerheart system source | https://github.com/Foundryborne/daggerheart (branch `v14`) — clone into scratch, never vendor | |
 | Pathmuncher, the PF2e importer to learn from (dist only here) | `~/foundrydata/Data/modules/pathmuncher/` | 1.6.1 |
 | D&D Beyond importer, second prior-art module | `~/foundrydata/Data/modules/ddb-importer/` | |

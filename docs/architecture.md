@@ -34,7 +34,7 @@ templates/*.hbs
 styles/import.css
 lang/en.json
 data/
-  names.json               # id → display name index generated from the builder's SRD data (decision pending)
+  names.json               # id → display name index generated from the builder's SRD data (decided 2026-09-06)
   renames.json             # builder name → compendium name overrides (empty)
 tools/                     # dev scripts (already: make-samples.mjs, name-match.py)
 tests/

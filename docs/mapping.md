@@ -20,8 +20,7 @@ Field-by-field translation. Left side is the builder character object
 3. **Class first, alone**: `createEmbeddedDocuments('Item', [classData])`. Its `_preCreate`
    (`class.mjs:99-142`) appends the class's background questions to `system.biography` and grants
    the hope + class features. Now write `system.biography.background/connections` with the
-   builder's text (overwriting the questions, or appending under them — Danny's call; default:
-   questions kept, builder text appended).
+   builder's text appended under the questions (decided 2026-09-06).
 4. **Subclass** (`featureState` from `subclassTier`), **ancestry** (one item; mixed → composed name
    and features, see Heritage), **community**, **transformation**: one `createEmbeddedDocuments`
    call. Features are granted automatically.
@@ -198,7 +197,8 @@ display names and lets the importer show a preview (class, cards, weapons) *befo
 Foundry, and lets it fill `secondaryData.limit` and validate levels. It is SRD content under the
 DPCGL like the builder's own copy. Recommendation: ship a **name-only index** generated from the
 builder's data (`tools/build-name-index.mjs` → `data/names.json`, id → display name, ~40 KB),
-not the full records. Open question for Danny (in TODO).
+not the full records. **Decided 2026-09-06: ship the name-only index.** Homebrew (`void_`) ids are not
+exported by anyone today, so unmatched homebrew is reported and skipped until a later phase.
 
 ## Hard problems, ranked
 
