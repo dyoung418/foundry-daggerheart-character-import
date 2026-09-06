@@ -44,6 +44,10 @@
       "AddStartingKit": {
         "Name": "Add the class starting kit",
         "Hint": "Create the class's starting loot items (torch, rope, supplies) on import."
+      },
+      "ActorFolder": {
+        "Name": "Actors folder for imports",
+        "Hint": "Name of the Actors-sidebar folder new imports go into (created if missing). Blank for no folder."
       }
     },
     "Report": {

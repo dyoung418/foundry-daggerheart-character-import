@@ -70,7 +70,11 @@ export function normalizeCharacter(ch) {
   if (ch.multiclass && !ch.multiclass.tier) ch.multiclass.tier = "foundation";
 
   if (!isObject(ch.traits)) ch.traits = {};
-  for (const t of TRAITS) if (!Number.isInteger(ch.traits[t])) ch.traits[t] = ch.traits[t] === null ? null : (Number.isFinite(Number(ch.traits[t])) && ch.traits[t] !== undefined ? Math.trunc(Number(ch.traits[t])) : null);
+  for (const t of TRAITS) {
+    if (Number.isInteger(ch.traits[t])) continue;
+    const n = ch.traits[t] === null || ch.traits[t] === undefined || ch.traits[t] === "" ? NaN : Number(ch.traits[t]);
+    ch.traits[t] = Number.isFinite(n) ? Math.trunc(n) : null;
+  }
   if (!isObject(ch.traitMarks)) ch.traitMarks = {};
   for (const t of TRAITS) ch.traitMarks[t] = ch.traitMarks[t] === true;
 

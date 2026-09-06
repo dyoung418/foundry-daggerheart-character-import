@@ -106,6 +106,12 @@ classes so it looks native (see `characterCreation.mjs:56-66` for `DEFAULT_OPTIO
 - **Positive controls:** every "no misses" assertion pairs with a deliberately broken id that must
   appear in the report.
 
+## Status (2026-09-06)
+
+Phases 0–3 are built and verified in `daggerheart-test` on Daggerheart 2.9.2; see `TODO.md`. The layout
+below is what exists, with `scripts/foundry/import.mjs` (pipeline + actor matching) and
+`scripts/foundry/selftest.mjs` added. Not built: homebrew stub items, Beastbound companion, renames UI, i18n.
+
 ## Phased roadmap
 
 **Phase 0 — scaffold (½ day).** module.json, main.mjs, empty dialog that opens from the sidebar,

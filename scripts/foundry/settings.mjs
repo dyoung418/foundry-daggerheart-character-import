@@ -26,6 +26,14 @@ export function registerSettings() {
     type: Boolean,
     default: true,
   });
+  game.settings.register(MODULE_ID, SETTINGS.actorFolder, {
+    name: "DHCI.Settings.ActorFolder.Name",
+    hint: "DHCI.Settings.ActorFolder.Hint",
+    scope: "world",
+    config: true,
+    type: String,
+    default: "",
+  });
   game.settings.register(MODULE_ID, SETTINGS.logLevel, {
     name: "DHCI.Settings.LogLevel.Name",
     hint: "DHCI.Settings.LogLevel.Hint",

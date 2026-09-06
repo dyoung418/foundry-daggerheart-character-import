@@ -1,6 +1,6 @@
 // Applies an ImportPlan to Foundry: creates (or updates) the actor and its embedded items in the
 // order the system's hooks require. See docs/mapping.md "Order of operations".
-import { MODULE_ID, debug, log } from "./constants.mjs";
+import { MODULE_ID, SETTINGS, debug, log } from "./constants.mjs";
 import { resolveItemUuids } from "../lib/levelups.mjs";
 import { uploadPortrait } from "./portrait.mjs";
 
@@ -23,7 +23,8 @@ export async function applyPlan(plan, { actor = null, progress = () => {} } = {}
   const img = plan.portrait ? await uploadPortrait(plan.portrait, plan.name) : null;
   if (plan.portrait && !img) warn("portrait could not be uploaded; default artwork kept");
   if (!actor) {
-    actor = await Actor.create({ name: plan.name, type: "character", ...(img ? { img } : {}), flags });
+    const folder = await actorFolder();
+    actor = await Actor.create({ name: plan.name, type: "character", ...(img ? { img } : {}), ...(folder ? { folder: folder.id } : {}), flags });
   } else {
     const previous = actor.items.filter((i) => i.getFlag(MODULE_ID, "imported"));
     if (previous.length) await actor.deleteEmbeddedDocuments("Item", previous.map((i) => i.id));
@@ -140,6 +141,14 @@ export async function applyPlan(plan, { actor = null, progress = () => {} } = {}
 
   log(`imported ${actor.name}`, { actor, report });
   return { actor, report };
+}
+
+/** The Actors folder named in settings, created if missing; null when the setting is blank. */
+async function actorFolder() {
+  const name = (game.settings.get(MODULE_ID, SETTINGS.actorFolder) ?? "").trim();
+  if (!name) return null;
+  return game.folders.find((f) => f.type === "Actor" && f.name === name)
+    ?? Folder.create({ name, type: "Actor" });
 }
 
 function joinHtml(existing, added) {

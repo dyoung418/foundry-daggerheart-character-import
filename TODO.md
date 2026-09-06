@@ -2,7 +2,7 @@
 
 Live task list and resume point. Newest status at the top. Dates are absolute.
 
-## Status — 2026-09-06 01:20 (Phase 1 complete; `api.selfTest()` green in `daggerheart-test`)
+## Status — 2026-09-06 01:40 (Phases 0–3 complete and verified; no test actors left in `daggerheart-test`)
 
 The level-1 bard and level-5 ranger samples import through the module API with no console errors and
 every derived stat equal to `samples/expected-derived.json` (HP, Stress, Evasion, Armor, thresholds,
