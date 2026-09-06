@@ -3,3 +3,6 @@
 One line per memory file. This directory is the project's tracked copy of Claude's memory;
 `~/.claude/projects/-home-danny-foundry-daggerheart-character-import/memory` is a symlink to it.
 
+- [Danny profile](user-danny-profile.md) — hobbyist dev/GM, dyoung418, local Foundry v14, builder fork maintainer
+- [Overnight checkpoints](feedback-autonomous-overnight-checkpoints.md) — unattended sessions: commit+push tracked progress every ≤30 min
+- [Project origin](project-foundry-import-origin.md) — why this repo exists, kickoff decisions (public, MIT, memory symlinked into repo)

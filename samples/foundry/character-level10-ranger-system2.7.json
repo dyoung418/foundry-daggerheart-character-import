@@ -1,0 +1,4737 @@
+{
+ "folder": "gypFUJkLaQTcSrlR",
+ "name": "Ention - Ranger (reference)",
+ "type": "character",
+ "_id": "7Wf0UYvWuMh4xhh6",
+ "img": "icons/svg/mystery-man.svg",
+ "system": {
+  "resistance": {
+   "physical": {
+    "resistance": false,
+    "immunity": false,
+    "reduction": 0
+   },
+   "magical": {
+    "resistance": false,
+    "immunity": false,
+    "reduction": 0
+   }
+  },
+  "resources": {
+   "hitPoints": {
+    "value": 0,
+    "max": null
+   },
+   "stress": {
+    "value": 0,
+    "max": null
+   },
+   "hope": {
+    "value": 2,
+    "max": null
+   }
+  },
+  "advantageSources": [],
+  "disadvantageSources": [],
+  "traits": {
+   "agility": {
+    "value": 2,
+    "tierMarked": false
+   },
+   "strength": {
+    "value": 1,
+    "tierMarked": false
+   },
+   "finesse": {
+    "value": 0,
+    "tierMarked": false
+   },
+   "instinct": {
+    "value": 1,
+    "tierMarked": false
+   },
+   "presence": {
+    "value": -1,
+    "tierMarked": false
+   },
+   "knowledge": {
+    "value": 0,
+    "tierMarked": false
+   }
+  },
+  "proficiency": 1,
+  "evasion": 0,
+  "damageThresholds": {
+   "major": 0,
+   "severe": 0
+  },
+  "experiences": {
+   "eBeLmnXjntomsu4c": {
+    "name": "Patient",
+    "value": 2,
+    "core": true,
+    "description": ""
+   },
+   "JLzriq0frqYLquDk": {
+    "name": "In Your Corner",
+    "value": 2,
+    "core": true,
+    "description": ""
+   },
+   "88r4iMWOrLSNtrkP": {
+    "name": "Deliberate",
+    "value": 2,
+    "core": true
+   },
+   "vEiyoet4rHtpo3M2": {
+    "name": "Second Wind",
+    "value": 2,
+    "core": true
+   },
+   "A7G3CyMwBQb5rRZU": {
+    "name": "Giant Toppler",
+    "value": 2,
+    "core": true
+   }
+  },
+  "gold": {
+   "coins": 0,
+   "handfuls": 1,
+   "bags": 0,
+   "chests": 0
+  },
+  "scars": 0,
+  "biography": {
+   "background": "<p><strong>A terrible creature hurt your community, and you\u2019ve vowed to hunt them down. What are they, and what unique trail or sign do they leave behind?</strong></p><br><p><strong>Your first kill almost killed you, too. What was it, and what part of you was never the same after that event?</strong></p><br><p><strong>You\u2019ve traveled many dangerous lands, but what is the one place you refuse to go?</strong></p>",
+   "connections": "<p><strong>What friendly competition do we have?</strong></p><br><p><strong>Why do you act differently when we\u2019re alone than when others are around?</strong></p><br><p><strong>What threat have you asked me to watch for, and why are you worried about it?</strong></p>",
+   "characteristics": {
+    "pronouns": "",
+    "age": "",
+    "faith": ""
+   }
+  },
+  "attack": {
+   "name": "DAGGERHEART.GENERAL.unarmedAttack",
+   "img": "icons/skills/melee/unarmed-punch-fist-yellow-red.webp",
+   "_id": "6TLOYujNkRhzsAhJ",
+   "systemPath": "attack",
+   "chatDisplay": false,
+   "type": "attack",
+   "range": "melee",
+   "target": {
+    "type": "any",
+    "amount": 1
+   },
+   "roll": {
+    "type": "attack",
+    "trait": "strength",
+    "difficulty": null,
+    "bonus": null,
+    "advState": "neutral",
+    "diceRolling": {
+     "multiplier": "prof",
+     "flatMultiplier": 1,
+     "dice": "d6",
+     "compare": null,
+     "treshold": null
+    },
+    "useDefault": false
+   },
+   "damage": {
+    "main": {
+     "type": [
+      "physical"
+     ],
+     "applyTo": "hitPoints",
+     "value": {
+      "custom": {
+       "enabled": true,
+       "formula": "@profd4"
+      },
+      "multiplier": "flat",
+      "flatMultiplier": 1,
+      "dice": "d6",
+      "bonus": null
+     },
+     "base": false,
+     "resultBased": false,
+     "fullRestore": false,
+     "valueAlt": {
+      "multiplier": "flat",
+      "flatMultiplier": 1,
+      "dice": "d6",
+      "bonus": null,
+      "custom": {
+       "enabled": false,
+       "formula": ""
+      }
+     },
+     "includeBase": false,
+     "direct": false
+    },
+    "resources": {}
+   },
+   "baseAction": false,
+   "description": "",
+   "originItem": {
+    "type": "itemCollection"
+   },
+   "actionType": "action",
+   "triggers": [],
+   "areas": [],
+   "cost": [],
+   "uses": {
+    "value": null,
+    "max": null,
+    "recovery": null,
+    "consumeOnSuccess": false
+   },
+   "effects": [],
+   "save": {
+    "trait": null,
+    "difficulty": null,
+    "damageMod": "none"
+   }
+  },
+  "levelData": {
+   "level": {
+    "current": 10,
+    "changed": 10,
+    "bonuses": {}
+   },
+   "levelups": {
+    "2": {
+     "achievements": {
+      "experiences": {
+       "88r4iMWOrLSNtrkP": {
+        "name": "Deliberate",
+        "modifier": 2
+       }
+      },
+      "domainCards": [
+       {
+        "uuid": "Compendium.daggerheart.domains.Item.Tag303LoRNC5zGgl",
+        "itemUuid": "Actor.7Wf0UYvWuMh4xhh6.Item.iDsB6FjzNly87wU8"
+       }
+      ],
+      "proficiency": 1
+     },
+     "selections": [
+      {
+       "tier": 2,
+       "minCost": 1,
+       "amount": 2,
+       "value": null,
+       "type": "trait",
+       "data": [
+        "agility",
+        "finesse"
+       ],
+       "secondaryData": {},
+       "level": 2,
+       "optionKey": "trait",
+       "checkboxNr": 1,
+       "itemUuid": null,
+       "features": []
+      },
+      {
+       "tier": 2,
+       "minCost": 1,
+       "amount": 1,
+       "value": null,
+       "type": "domainCard",
+       "secondaryData": {
+        "limit": "4"
+       },
+       "data": [
+        "Compendium.daggerheart.domains.Item.rZPH0BY8Sznc9sFG"
+       ],
+       "level": 2,
+       "optionKey": "domainCard",
+       "checkboxNr": 1,
+       "itemUuid": "Actor.7Wf0UYvWuMh4xhh6.Item.zjUtp5alIzRHQ2GC",
+       "features": []
+      }
+     ]
+    },
+    "3": {
+     "achievements": {
+      "experiences": {},
+      "domainCards": [
+       {
+        "uuid": "Compendium.daggerheart.domains.Item.QXs4vssSqNGQu5b8",
+        "itemUuid": "Actor.7Wf0UYvWuMh4xhh6.Item.iQ0FHIYfq9ssOkvR"
+       }
+      ],
+      "proficiency": null
+     },
+     "selections": [
+      {
+       "tier": 2,
+       "minCost": 1,
+       "amount": null,
+       "value": 1,
+       "type": "stress",
+       "data": [],
+       "secondaryData": {},
+       "level": 3,
+       "optionKey": "stress",
+       "checkboxNr": 1,
+       "itemUuid": null,
+       "features": []
+      },
+      {
+       "tier": 2,
+       "minCost": 1,
+       "amount": 2,
+       "value": 1,
+       "type": "experience",
+       "data": [
+        "eBeLmnXjntomsu4c",
+        "JLzriq0frqYLquDk"
+       ],
+       "secondaryData": {},
+       "level": 3,
+       "optionKey": "experience",
+       "checkboxNr": 1,
+       "itemUuid": null,
+       "features": []
+      }
+     ]
+    },
+    "4": {
+     "achievements": {
+      "experiences": {},
+      "domainCards": [
+       {
+        "uuid": "Compendium.daggerheart.domains.Item.GlRm1Dxlc0Z1b04o",
+        "itemUuid": "Actor.7Wf0UYvWuMh4xhh6.Item.h3HeuPNv0SeJMW7r"
+       }
+      ],
+      "proficiency": null
+     },
+     "selections": [
+      {
+       "tier": 2,
+       "minCost": 1,
+       "amount": 2,
+       "value": null,
+       "type": "trait",
+       "data": [
+        "strength",
+        "knowledge"
+       ],
+       "secondaryData": {},
+       "level": 4,
+       "optionKey": "trait",
+       "checkboxNr": 2,
+       "itemUuid": null,
+       "features": []
+      },
+      {
+       "tier": 2,
+       "minCost": 1,
+       "amount": null,
+       "value": 1,
+       "type": "stress",
+       "data": [],
+       "secondaryData": {},
+       "level": 4,
+       "optionKey": "stress",
+       "checkboxNr": 2,
+       "itemUuid": null,
+       "features": []
+      }
+     ]
+    },
+    "5": {
+     "achievements": {
+      "experiences": {
+       "vEiyoet4rHtpo3M2": {
+        "name": "Second Wind",
+        "modifier": 2
+       }
+      },
+      "domainCards": [
+       {
+        "uuid": "Compendium.daggerheart.domains.Item.9dFvcM1i3bxG3BSA",
+        "itemUuid": "Actor.7Wf0UYvWuMh4xhh6.Item.OCWZbqGri8hHaazv"
+       }
+      ],
+      "proficiency": 1
+     },
+     "selections": [
+      {
+       "tier": 3,
+       "minCost": 1,
+       "amount": 2,
+       "value": null,
+       "type": "trait",
+       "data": [
+        "agility",
+        "instinct"
+       ],
+       "secondaryData": {},
+       "level": 5,
+       "optionKey": "trait",
+       "checkboxNr": 1,
+       "itemUuid": null,
+       "features": []
+      },
+      {
+       "tier": 3,
+       "minCost": 1,
+       "amount": null,
+       "value": 1,
+       "type": "hitPoint",
+       "data": [],
+       "secondaryData": {},
+       "level": 5,
+       "optionKey": "hitPoint",
+       "checkboxNr": 1,
+       "itemUuid": null,
+       "features": []
+      }
+     ]
+    },
+    "6": {
+     "achievements": {
+      "experiences": {},
+      "domainCards": [
+       {
+        "uuid": "Compendium.daggerheart.domains.Item.Jkp6cMDiHHaBZQRS",
+        "itemUuid": "Actor.7Wf0UYvWuMh4xhh6.Item.YWP882dGja5LYt4a"
+       }
+      ],
+      "proficiency": null
+     },
+     "selections": [
+      {
+       "tier": 3,
+       "minCost": 2,
+       "amount": null,
+       "value": 1,
+       "type": "proficiency",
+       "data": [],
+       "secondaryData": {},
+       "level": 6,
+       "optionKey": "proficiency",
+       "checkboxNr": 2,
+       "itemUuid": null,
+       "features": []
+      }
+     ]
+    },
+    "7": {
+     "achievements": {
+      "experiences": {},
+      "domainCards": [
+       {
+        "uuid": "Compendium.daggerheart.domains.Item.ON5bvnoQBy0SYc9Y",
+        "itemUuid": "Actor.7Wf0UYvWuMh4xhh6.Item.x9bhhlXCpliq0xsA"
+       }
+      ],
+      "proficiency": null
+     },
+     "selections": [
+      {
+       "tier": 3,
+       "minCost": 1,
+       "amount": null,
+       "value": 1,
+       "type": "evasion",
+       "data": [],
+       "secondaryData": {},
+       "level": 7,
+       "optionKey": "evasion",
+       "checkboxNr": 1,
+       "itemUuid": null,
+       "features": []
+      },
+      {
+       "tier": 3,
+       "minCost": 1,
+       "amount": null,
+       "value": null,
+       "type": "subclass",
+       "data": [
+        "Actor.7Wf0UYvWuMh4xhh6.Item.S6oDWwNLFxnboxbk"
+       ],
+       "secondaryData": {
+        "featureState": "2",
+        "isMulticlass": "false"
+       },
+       "level": 7,
+       "optionKey": "subclass",
+       "checkboxNr": 1,
+       "itemUuid": null,
+       "features": []
+      }
+     ]
+    },
+    "8": {
+     "achievements": {
+      "experiences": {
+       "A7G3CyMwBQb5rRZU": {
+        "name": "Giant Toppler",
+        "modifier": 2
+       }
+      },
+      "domainCards": [
+       {
+        "uuid": "Compendium.daggerheart.domains.Item.8UANBgSdhMZ0sqfO",
+        "itemUuid": "Actor.7Wf0UYvWuMh4xhh6.Item.Gd5RtxqGeajFqatV"
+       }
+      ],
+      "proficiency": 1
+     },
+     "selections": [
+      {
+       "tier": 4,
+       "minCost": 1,
+       "amount": 2,
+       "value": null,
+       "type": "trait",
+       "data": [
+        "agility",
+        "strength"
+       ],
+       "secondaryData": {},
+       "level": 8,
+       "optionKey": "trait",
+       "checkboxNr": 1,
+       "itemUuid": null,
+       "features": []
+      },
+      {
+       "tier": 4,
+       "minCost": 1,
+       "amount": null,
+       "value": null,
+       "type": "subclass",
+       "data": [
+        "Actor.7Wf0UYvWuMh4xhh6.Item.S6oDWwNLFxnboxbk"
+       ],
+       "secondaryData": {
+        "featureState": "3",
+        "isMulticlass": "false"
+       },
+       "level": 8,
+       "optionKey": "subclass",
+       "checkboxNr": 1,
+       "itemUuid": null,
+       "features": []
+      }
+     ]
+    },
+    "9": {
+     "achievements": {
+      "experiences": {},
+      "domainCards": [
+       {
+        "uuid": "Compendium.daggerheart.domains.Item.TYKfM3H9vBXyWiH4",
+        "itemUuid": "Actor.7Wf0UYvWuMh4xhh6.Item.jUM4u7lp0ouryYwY"
+       }
+      ],
+      "proficiency": null
+     },
+     "selections": [
+      {
+       "tier": 4,
+       "minCost": 2,
+       "amount": null,
+       "value": 1,
+       "type": "proficiency",
+       "data": [],
+       "secondaryData": {},
+       "level": 9,
+       "optionKey": "proficiency",
+       "checkboxNr": 2,
+       "itemUuid": null,
+       "features": []
+      }
+     ]
+    },
+    "10": {
+     "achievements": {
+      "experiences": {},
+      "domainCards": [
+       {
+        "uuid": "Compendium.daggerheart.domains.Item.LzVpMkD5I4QeaIHf",
+        "itemUuid": "Actor.7Wf0UYvWuMh4xhh6.Item.L7Pifiy4WxOLl2wB"
+       }
+      ],
+      "proficiency": null
+     },
+     "selections": [
+      {
+       "tier": 4,
+       "minCost": 1,
+       "amount": null,
+       "value": 1,
+       "type": "hitPoint",
+       "data": [],
+       "secondaryData": {},
+       "level": 10,
+       "optionKey": "hitPoint",
+       "checkboxNr": 1,
+       "itemUuid": null,
+       "features": []
+      },
+      {
+       "tier": 4,
+       "minCost": 1,
+       "amount": null,
+       "value": 1,
+       "type": "evasion",
+       "data": [],
+       "secondaryData": {},
+       "level": 10,
+       "optionKey": "evasion",
+       "checkboxNr": 1,
+       "itemUuid": null,
+       "features": []
+      }
+     ]
+    }
+   }
+  },
+  "companion": "Actor.TGcRhloiXYVUfQsC"
+ },
+ "items": [
+  {
+   "folder": "onLJZkd7ZOMBaFMG",
+   "name": "Ranger's Focus",
+   "type": "feature",
+   "_id": "OIGNkVolUZC0iRt1",
+   "img": "icons/magic/perception/eye-ringed-green.webp",
+   "system": {
+    "description": "<html omitted>",
+    "resource": null,
+    "actions": {
+     "dTkLqUxZpW4xOEKW": {
+      "type": "effect",
+      "_id": "dTkLqUxZpW4xOEKW",
+      "systemPath": "actions",
+      "description": "<html omitted>",
+      "chatDisplay": true,
+      "actionType": "action",
+      "cost": [
+       {
+        "key": "hope",
+        "value": 1,
+        "scalable": false,
+        "step": null,
+        "itemId": null,
+        "consumeOnSuccess": false
+       }
+      ],
+      "uses": {
+       "value": null,
+       "max": "",
+       "recovery": null,
+       "consumeOnSuccess": false
+      },
+      "effects": [
+       {
+        "_id": "SXi2dQWqpwY9fap4",
+        "onSave": false
+       }
+      ],
+      "target": {
+       "type": "any",
+       "amount": null
+      },
+      "name": "Spend Hope",
+      "img": "icons/magic/perception/eye-ringed-green.webp",
+      "range": "",
+      "baseAction": false,
+      "originItem": {
+       "type": "itemCollection"
+      },
+      "triggers": [],
+      "areas": []
+     }
+    },
+    "originItemType": "class",
+    "attribution": {
+     "source": "Daggerheart SRD",
+     "page": 17,
+     "artist": ""
+    },
+    "gmNotes": "",
+    "multiclassOrigin": false,
+    "identifier": "class",
+    "featureForm": "passive"
+   },
+   "effects": [
+    {
+     "name": "Ranger's Focus",
+     "img": "icons/magic/perception/eye-ringed-green.webp",
+     "origin": "Compendium.daggerheart.classes.Item.ncLx2P8BOUtrAD38",
+     "transfer": false,
+     "_id": "SXi2dQWqpwY9fap4",
+     "type": "base",
+     "system": {
+      "changes": [],
+      "duration": {
+       "description": ""
+      },
+      "rangeDependence": null,
+      "stacking": null,
+      "targetDispositions": []
+     },
+     "disabled": false,
+     "duration": {
+      "value": null,
+      "units": "seconds",
+      "expiry": null,
+      "expired": false
+     },
+     "description": "<html omitted>",
+     "tint": "#ffffff",
+     "statuses": [],
+     "sort": 0,
+     "flags": {},
+     "_stats": {
+      "compendiumSource": null,
+      "coreVersion": "14.365",
+      "systemId": "daggerheart",
+      "systemVersion": "2.7.1",
+      "createdTime": 1786391161925,
+      "modifiedTime": 1786391161925,
+      "lastModifiedBy": "pQzNfYJpGL2Gy8DA",
+      "duplicateSource": null,
+      "exportSource": null
+     },
+     "start": null,
+     "showIcon": 1,
+     "folder": null,
+     "_key": "!actors.items.effects!7Wf0UYvWuMh4xhh6.OIGNkVolUZC0iRt1.SXi2dQWqpwY9fap4"
+    }
+   ],
+   "sort": 0,
+   "flags": {},
+   "_stats": {
+    "coreVersion": "14.365",
+    "systemId": "daggerheart",
+    "systemVersion": "2.7.1",
+    "createdTime": 1786391161924,
+    "modifiedTime": 1786391161924,
+    "lastModifiedBy": "pQzNfYJpGL2Gy8DA",
+    "compendiumSource": "Compendium.daggerheart.classes.Item.ncLx2P8BOUtrAD38",
+    "duplicateSource": null,
+    "exportSource": null
+   },
+   "_key": "!actors.items!7Wf0UYvWuMh4xhh6.OIGNkVolUZC0iRt1"
+  },
+  {
+   "folder": "onLJZkd7ZOMBaFMG",
+   "name": "Hold Them Off",
+   "type": "feature",
+   "_id": "w5daUi9b07NCkxDF",
+   "img": "icons/magic/defensive/barrier-shield-dome-deflect-teal.webp",
+   "system": {
+    "description": "<html omitted>",
+    "resource": null,
+    "actions": {
+     "yhVUna5biFAN0o2Y": {
+      "type": "effect",
+      "_id": "yhVUna5biFAN0o2Y",
+      "systemPath": "actions",
+      "description": "<html omitted>",
+      "chatDisplay": true,
+      "actionType": "action",
+      "cost": [
+       {
+        "scalable": false,
+        "key": "hope",
+        "value": 3,
+        "step": null,
+        "itemId": null,
+        "consumeOnSuccess": false
+       }
+      ],
+      "uses": {
+       "value": null,
+       "max": "",
+       "recovery": null,
+       "consumeOnSuccess": false
+      },
+      "effects": [],
+      "target": {
+       "type": "any",
+       "amount": null
+      },
+      "name": "Spend Hope",
+      "img": "icons/magic/defensive/barrier-shield-dome-deflect-teal.webp",
+      "range": "",
+      "baseAction": false,
+      "originItem": {
+       "type": "itemCollection"
+      },
+      "triggers": [],
+      "areas": []
+     }
+    },
+    "originItemType": "class",
+    "attribution": {
+     "source": "Daggerheart SRD",
+     "page": 16,
+     "artist": ""
+    },
+    "gmNotes": "",
+    "multiclassOrigin": false,
+    "identifier": "hope",
+    "featureForm": "passive"
+   },
+   "effects": [],
+   "sort": 0,
+   "flags": {},
+   "_stats": {
+    "coreVersion": "14.365",
+    "systemId": "daggerheart",
+    "systemVersion": "2.7.1",
+    "createdTime": 1786391161926,
+    "modifiedTime": 1786391161926,
+    "lastModifiedBy": "pQzNfYJpGL2Gy8DA",
+    "compendiumSource": "Compendium.daggerheart.classes.Item.2Cyb9ZeuAesf5Sb3",
+    "duplicateSource": null,
+    "exportSource": null
+   },
+   "_key": "!actors.items!7Wf0UYvWuMh4xhh6.w5daUi9b07NCkxDF"
+  },
+  {
+   "effects": [],
+   "_id": "kM1scmcm9jwxmsD6",
+   "name": "Ranger",
+   "type": "class",
+   "img": "icons/weapons/bows/shortbow-recurve-yellow-blue.webp",
+   "system": {
+    "description": "<html omitted>",
+    "domains": [
+     "bone",
+     "sage"
+    ],
+    "classItems": [],
+    "hitPoints": 6,
+    "evasion": 12,
+    "features": [
+     {
+      "type": "hope",
+      "item": "Compendium.daggerheart.classes.Item.2Cyb9ZeuAesf5Sb3"
+     },
+     {
+      "type": "class",
+      "item": "Compendium.daggerheart.classes.Item.ncLx2P8BOUtrAD38"
+     }
+    ],
+    "inventory": {
+     "take": [
+      "Compendium.daggerheart.classes.Item.hMST9iizQP1yz0MG",
+      "Compendium.daggerheart.classes.Item.uoG5iq09mxJPXfmk",
+      "Compendium.daggerheart.classes.Item.zqeXrJTd1geX73Pw"
+     ],
+     "choiceA": [
+      "Compendium.daggerheart.consumables.Item.tPfKtKRRjv8qdSqy",
+      "Compendium.daggerheart.consumables.Item.b6vGSPFWOlzZZDLO"
+     ],
+     "choiceB": [
+      "Compendium.daggerheart.classes.Item.eslejbiZRH6ODh9U",
+      "Compendium.daggerheart.classes.Item.8k76EgktQXFWHf8r"
+     ]
+    },
+    "characterGuide": {
+     "suggestedTraits": {
+      "agility": 2,
+      "strength": 0,
+      "finesse": 1,
+      "instinct": 1,
+      "presence": -1,
+      "knowledge": 0
+     },
+     "suggestedPrimaryWeapon": "Compendium.daggerheart.weapons.Item.p9tdjQr2AZP19RYm",
+     "suggestedSecondaryWeapon": null,
+     "suggestedArmor": "Compendium.daggerheart.armors.Item.nibfdNtp2PtxvbVz"
+    },
+    "isMulticlass": false,
+    "attribution": {
+     "source": "Daggerheart SRD",
+     "page": 16,
+     "artist": ""
+    },
+    "backgroundQuestions": [
+     "A terrible creature hurt your community, and you\u2019ve vowed to hunt them down. What are they, and what unique trail or sign do they leave behind?",
+     "Your first kill almost killed you, too. What was it, and what part of you was never the same after that event?",
+     "You\u2019ve traveled many dangerous lands, but what is the one place you refuse to go?"
+    ],
+    "connections": [
+     "What friendly competition do we have?",
+     "Why do you act differently when we\u2019re alone than when others are around?",
+     "What threat have you asked me to watch for, and why are you worried about it?"
+    ],
+    "gmNotes": ""
+   },
+   "folder": null,
+   "sort": 712500,
+   "flags": {},
+   "_stats": {
+    "coreVersion": "14.365",
+    "systemId": "daggerheart",
+    "systemVersion": "2.7.1",
+    "createdTime": 1786391161926,
+    "modifiedTime": 1786391161926,
+    "lastModifiedBy": "pQzNfYJpGL2Gy8DA",
+    "compendiumSource": "Compendium.daggerheart.classes.Item.BTyfve69LKqoOi9S",
+    "duplicateSource": null,
+    "exportSource": null
+   },
+   "_key": "!actors.items!7Wf0UYvWuMh4xhh6.kM1scmcm9jwxmsD6"
+  },
+  {
+   "folder": "dSAccOl5ccgXPyje",
+   "name": "Feline Instincts",
+   "type": "feature",
+   "_id": "cpFu13QtRBXXOPSn",
+   "img": "icons/magic/perception/eye-slit-orange.webp",
+   "system": {
+    "description": "<html omitted>",
+    "resource": null,
+    "actions": {
+     "ALsGHOy0q5THGxz5": {
+      "type": "effect",
+      "_id": "ALsGHOy0q5THGxz5",
+      "systemPath": "actions",
+      "description": "<html omitted>",
+      "chatDisplay": true,
+      "actionType": "action",
+      "cost": [
+       {
+        "scalable": false,
+        "key": "hope",
+        "value": 2,
+        "step": null,
+        "itemId": null,
+        "consumeOnSuccess": false
+       }
+      ],
+      "uses": {
+       "value": null,
+       "max": "",
+       "recovery": null,
+       "consumeOnSuccess": false
+      },
+      "effects": [],
+      "target": {
+       "type": "any",
+       "amount": null
+      },
+      "name": "Spend Hope",
+      "img": "icons/magic/perception/eye-slit-orange.webp",
+      "range": "",
+      "baseAction": false,
+      "originItem": {
+       "type": "itemCollection"
+      },
+      "triggers": [],
+      "areas": []
+     }
+    },
+    "originItemType": "ancestry",
+    "attribution": {
+     "source": "Daggerheart SRD",
+     "page": 30,
+     "artist": ""
+    },
+    "gmNotes": "",
+    "multiclassOrigin": false,
+    "identifier": "primary",
+    "featureForm": "passive"
+   },
+   "effects": [],
+   "sort": 0,
+   "flags": {},
+   "_stats": {
+    "coreVersion": "14.365",
+    "systemId": "daggerheart",
+    "systemVersion": "2.7.1",
+    "createdTime": 1786391161926,
+    "modifiedTime": 1786391161926,
+    "lastModifiedBy": "pQzNfYJpGL2Gy8DA",
+    "compendiumSource": "Compendium.daggerheart.ancestries.Item.lNgbbYnCKgrdvA85",
+    "duplicateSource": null,
+    "exportSource": null
+   },
+   "_key": "!actors.items!7Wf0UYvWuMh4xhh6.cpFu13QtRBXXOPSn"
+  },
+  {
+   "folder": "dSAccOl5ccgXPyje",
+   "name": "Retracting Claws",
+   "type": "feature",
+   "_id": "EOt3soZxUqj3oPku",
+   "img": "icons/creatures/claws/claw-straight-orange.webp",
+   "system": {
+    "description": "<html omitted>",
+    "resource": null,
+    "actions": {
+     "LcFhDb3sJk8sraAc": {
+      "type": "attack",
+      "_id": "LcFhDb3sJk8sraAc",
+      "systemPath": "actions",
+      "description": "<html omitted>",
+      "chatDisplay": true,
+      "actionType": "action",
+      "cost": [],
+      "uses": {
+       "value": null,
+       "max": "",
+       "recovery": null,
+       "consumeOnSuccess": false
+      },
+      "damage": {
+       "main": null,
+       "resources": {}
+      },
+      "target": {
+       "type": "any",
+       "amount": null
+      },
+      "effects": [
+       {
+        "_id": "pO76svFkmWmZ6LjC",
+        "onSave": false
+       }
+      ],
+      "roll": {
+       "type": "attack",
+       "trait": "agility",
+       "difficulty": null,
+       "bonus": null,
+       "advState": "neutral",
+       "diceRolling": {
+        "multiplier": "prof",
+        "flatMultiplier": 1,
+        "dice": "d6",
+        "compare": null,
+        "treshold": null
+       },
+       "useDefault": false
+      },
+      "save": {
+       "trait": null,
+       "difficulty": null,
+       "damageMod": "none"
+      },
+      "name": "Scratch",
+      "img": "icons/creatures/claws/claw-straight-orange.webp",
+      "range": "melee",
+      "baseAction": false,
+      "originItem": {
+       "type": "itemCollection"
+      },
+      "triggers": [],
+      "areas": []
+     }
+    },
+    "originItemType": "ancestry",
+    "attribution": {
+     "source": "Daggerheart SRD",
+     "page": 30,
+     "artist": ""
+    },
+    "gmNotes": "",
+    "multiclassOrigin": false,
+    "identifier": "secondary",
+    "featureForm": "passive"
+   },
+   "effects": [
+    {
+     "name": "Retractable Claws",
+     "img": "icons/creatures/claws/claw-straight-orange.webp",
+     "origin": "Compendium.daggerheart.ancestries.Item.Zj69cAeb3NjIa8Hn",
+     "transfer": false,
+     "_id": "pO76svFkmWmZ6LjC",
+     "type": "base",
+     "system": {
+      "changes": [],
+      "duration": {
+       "type": "temporary",
+       "description": ""
+      },
+      "rangeDependence": null,
+      "stacking": null,
+      "targetDispositions": []
+     },
+     "disabled": false,
+     "duration": {
+      "value": null,
+      "units": "seconds",
+      "expiry": null,
+      "expired": false
+     },
+     "description": "",
+     "tint": "#ffffff",
+     "statuses": [
+      "vulnerable"
+     ],
+     "sort": 0,
+     "flags": {},
+     "_stats": {
+      "compendiumSource": null,
+      "coreVersion": "14.365",
+      "systemId": "daggerheart",
+      "systemVersion": "2.7.1",
+      "createdTime": 1786391161927,
+      "modifiedTime": 1786391161927,
+      "lastModifiedBy": "pQzNfYJpGL2Gy8DA",
+      "duplicateSource": null,
+      "exportSource": null
+     },
+     "start": {
+      "time": 0,
+      "combat": null,
+      "combatant": null,
+      "initiative": null,
+      "round": null,
+      "turn": null
+     },
+     "showIcon": 1,
+     "folder": null,
+     "_key": "!actors.items.effects!7Wf0UYvWuMh4xhh6.EOt3soZxUqj3oPku.pO76svFkmWmZ6LjC"
+    }
+   ],
+   "sort": 0,
+   "flags": {},
+   "_stats": {
+    "coreVersion": "14.365",
+    "systemId": "daggerheart",
+    "systemVersion": "2.7.1",
+    "createdTime": 1786391161927,
+    "modifiedTime": 1786391161927,
+    "lastModifiedBy": "pQzNfYJpGL2Gy8DA",
+    "compendiumSource": "Compendium.daggerheart.ancestries.Item.Zj69cAeb3NjIa8Hn",
+    "duplicateSource": null,
+    "exportSource": null
+   },
+   "_key": "!actors.items!7Wf0UYvWuMh4xhh6.EOt3soZxUqj3oPku"
+  },
+  {
+   "folder": "KA1VSGslxkbvVeMp",
+   "name": "Privilege",
+   "type": "feature",
+   "_id": "qenrrjCkl6Okzfpn",
+   "img": "icons/commodities/currency/coins-plain-stack-gold.webp",
+   "system": {
+    "description": "<html omitted>",
+    "resource": null,
+    "actions": {},
+    "originItemType": "community",
+    "attribution": {
+     "source": "Daggerheart SRD",
+     "page": 32,
+     "artist": ""
+    },
+    "gmNotes": "",
+    "multiclassOrigin": false,
+    "featureForm": "passive"
+   },
+   "effects": [
+    {
+     "name": "Privilege",
+     "type": "base",
+     "_id": "xgtjykfgvg142urA",
+     "img": "icons/commodities/currency/coins-plain-stack-gold.webp",
+     "system": {
+      "changes": [
+       {
+        "key": "system.advantageSources",
+        "type": "add",
+        "value": "Consort with nobles",
+        "priority": null,
+        "phase": "initial"
+       },
+       {
+        "key": "system.advantageSources",
+        "type": "add",
+        "value": "Negotiate prices",
+        "priority": null,
+        "phase": "initial"
+       },
+       {
+        "key": "system.advantageSources",
+        "type": "add",
+        "value": "Leverage your reputation to get what you want",
+        "priority": null,
+        "phase": "initial"
+       }
+      ],
+      "duration": {
+       "type": "",
+       "description": ""
+      },
+      "rangeDependence": null,
+      "stacking": null,
+      "targetDispositions": []
+     },
+     "disabled": false,
+     "duration": {
+      "value": null,
+      "units": "seconds",
+      "expiry": null,
+      "expired": false
+     },
+     "description": "<html omitted>",
+     "origin": null,
+     "tint": "#ffffff",
+     "transfer": true,
+     "statuses": [],
+     "sort": 0,
+     "flags": {},
+     "_stats": {
+      "compendiumSource": null,
+      "coreVersion": "14.365",
+      "systemId": "daggerheart",
+      "systemVersion": "2.7.1",
+      "createdTime": 1786391161928,
+      "modifiedTime": 1786391161928,
+      "lastModifiedBy": "pQzNfYJpGL2Gy8DA",
+      "duplicateSource": null,
+      "exportSource": null
+     },
+     "start": {
+      "time": 0,
+      "combat": null,
+      "combatant": null,
+      "initiative": null,
+      "round": null,
+      "turn": null
+     },
+     "showIcon": 1,
+     "folder": null,
+     "_key": "!actors.items.effects!7Wf0UYvWuMh4xhh6.qenrrjCkl6Okzfpn.xgtjykfgvg142urA"
+    }
+   ],
+   "flags": {},
+   "sort": 0,
+   "_stats": {
+    "coreVersion": "14.365",
+    "systemId": "daggerheart",
+    "systemVersion": "2.7.1",
+    "createdTime": 1786391161928,
+    "modifiedTime": 1786391161928,
+    "lastModifiedBy": "pQzNfYJpGL2Gy8DA",
+    "compendiumSource": "Compendium.daggerheart.communities.Item.C7NR6qRatawZusmg",
+    "duplicateSource": null,
+    "exportSource": null
+   },
+   "_key": "!actors.items!7Wf0UYvWuMh4xhh6.qenrrjCkl6Okzfpn"
+  },
+  {
+   "folder": "bv1Sw5FYWaS572v3",
+   "name": "Battle-Bonded",
+   "type": "feature",
+   "_id": "vTI2Qufd3FYkmanP",
+   "img": "icons/creatures/mammals/humanoid-wolf-dog-blue.webp",
+   "system": {
+    "description": "<html omitted>",
+    "resource": null,
+    "actions": {},
+    "originItemType": "subclass",
+    "attribution": {
+     "source": "Daggerheart SRD",
+     "page": 17,
+     "artist": ""
+    },
+    "gmNotes": "",
+    "multiclassOrigin": false,
+    "identifier": "specialization",
+    "featureForm": "passive"
+   },
+   "effects": [
+    {
+     "name": "Battle Bonded",
+     "type": "base",
+     "system": {
+      "changes": [
+       {
+        "key": "system.evasion",
+        "value": 2,
+        "priority": null,
+        "type": "add",
+        "phase": "initial"
+       }
+      ],
+      "duration": {
+       "type": "",
+       "description": "<html omitted>"
+      },
+      "rangeDependence": null,
+      "stacking": null,
+      "targetDispositions": []
+     },
+     "_id": "IZhakv6EuG8DO4a3",
+     "img": "icons/creatures/mammals/humanoid-wolf-dog-blue.webp",
+     "disabled": true,
+     "duration": {
+      "value": null,
+      "units": "seconds",
+      "expiry": null,
+      "expired": false
+     },
+     "description": "<html omitted>",
+     "origin": null,
+     "tint": "#ffffff",
+     "transfer": true,
+     "statuses": [],
+     "sort": 0,
+     "flags": {},
+     "_stats": {
+      "compendiumSource": null,
+      "coreVersion": "14.365",
+      "systemId": "daggerheart",
+      "systemVersion": "2.7.1",
+      "createdTime": 1786391161929,
+      "modifiedTime": 1786391161929,
+      "lastModifiedBy": "pQzNfYJpGL2Gy8DA",
+      "duplicateSource": null,
+      "exportSource": null
+     },
+     "start": {
+      "time": 0,
+      "combat": null,
+      "combatant": null,
+      "initiative": null,
+      "round": null,
+      "turn": null
+     },
+     "showIcon": 1,
+     "folder": null,
+     "_key": "!actors.items.effects!7Wf0UYvWuMh4xhh6.vTI2Qufd3FYkmanP.IZhakv6EuG8DO4a3"
+    }
+   ],
+   "sort": 0,
+   "flags": {},
+   "_stats": {
+    "coreVersion": "14.365",
+    "systemId": "daggerheart",
+    "systemVersion": "2.7.1",
+    "createdTime": 1786391161929,
+    "modifiedTime": 1786391161929,
+    "lastModifiedBy": "pQzNfYJpGL2Gy8DA",
+    "compendiumSource": "Compendium.daggerheart.subclasses.Item.hWsKyed1vfILg0I8",
+    "duplicateSource": null,
+    "exportSource": null
+   },
+   "_key": "!actors.items!7Wf0UYvWuMh4xhh6.vTI2Qufd3FYkmanP"
+  },
+  {
+   "folder": "D1rRX2AQ9wzVOsKy",
+   "name": "Companion",
+   "type": "feature",
+   "_id": "fGFH7cVyCVmW6usZ",
+   "img": "icons/creatures/mammals/deer-antlers-blue.webp",
+   "system": {
+    "description": "<html omitted>",
+    "resource": null,
+    "actions": {},
+    "originItemType": "subclass",
+    "attribution": {
+     "source": "Daggerheart SRD",
+     "page": 17,
+     "artist": ""
+    },
+    "gmNotes": "",
+    "multiclassOrigin": false,
+    "identifier": "foundation",
+    "featureForm": "passive"
+   },
+   "effects": [],
+   "sort": 0,
+   "flags": {},
+   "_stats": {
+    "coreVersion": "14.365",
+    "systemId": "daggerheart",
+    "systemVersion": "2.7.1",
+    "createdTime": 1786391161930,
+    "modifiedTime": 1786391161930,
+    "lastModifiedBy": "pQzNfYJpGL2Gy8DA",
+    "compendiumSource": "Compendium.daggerheart.subclasses.Item.MBFXxIEwc0Dl4kJg",
+    "duplicateSource": null,
+    "exportSource": null
+   },
+   "_key": "!actors.items!7Wf0UYvWuMh4xhh6.fGFH7cVyCVmW6usZ"
+  },
+  {
+   "folder": "vIdORiocrNibqNFF",
+   "name": "Advanced Training",
+   "type": "feature",
+   "_id": "LMLIDeRzuhIgBbzs",
+   "img": "icons/creatures/mammals/wolf-howl-moon-gray.webp",
+   "system": {
+    "description": "<html omitted>",
+    "resource": null,
+    "actions": {},
+    "originItemType": "subclass",
+    "attribution": {
+     "source": "Daggerheart SRD",
+     "page": 17,
+     "artist": ""
+    },
+    "gmNotes": "",
+    "multiclassOrigin": false,
+    "identifier": "mastery",
+    "featureForm": "passive"
+   },
+   "effects": [
+    {
+     "name": "Advanced Training",
+     "type": "base",
+     "system": {
+      "changes": [
+       {
+        "key": "system.companionData.levelupChoices",
+        "type": "add",
+        "value": 2,
+        "priority": null,
+        "phase": "initial"
+       }
+      ],
+      "duration": {
+       "description": ""
+      },
+      "rangeDependence": null,
+      "stacking": null,
+      "targetDispositions": []
+     },
+     "_id": "bKOuMxhB2Jth3j2T",
+     "img": "icons/creatures/mammals/wolf-howl-moon-gray.webp",
+     "disabled": false,
+     "duration": {
+      "value": null,
+      "units": "seconds",
+      "expiry": null,
+      "expired": false
+     },
+     "description": "<html omitted>",
+     "origin": null,
+     "tint": "#ffffff",
+     "transfer": true,
+     "statuses": [],
+     "sort": 0,
+     "flags": {},
+     "_stats": {
+      "compendiumSource": null,
+      "coreVersion": "14.365",
+      "systemId": "daggerheart",
+      "systemVersion": "2.7.1",
+      "createdTime": 1786391161930,
+      "modifiedTime": 1786391161930,
+      "lastModifiedBy": "pQzNfYJpGL2Gy8DA",
+      "duplicateSource": null,
+      "exportSource": null
+     },
+     "start": null,
+     "showIcon": 1,
+     "folder": null,
+     "_key": "!actors.items.effects!7Wf0UYvWuMh4xhh6.LMLIDeRzuhIgBbzs.bKOuMxhB2Jth3j2T"
+    }
+   ],
+   "sort": 0,
+   "flags": {},
+   "_stats": {
+    "coreVersion": "14.365",
+    "systemId": "daggerheart",
+    "systemVersion": "2.7.1",
+    "createdTime": 1786391161930,
+    "modifiedTime": 1786391161930,
+    "lastModifiedBy": "pQzNfYJpGL2Gy8DA",
+    "compendiumSource": "Compendium.daggerheart.subclasses.Item.uGcs785h94RMtueH",
+    "duplicateSource": null,
+    "exportSource": null
+   },
+   "_key": "!actors.items!7Wf0UYvWuMh4xhh6.LMLIDeRzuhIgBbzs"
+  },
+  {
+   "folder": "bv1Sw5FYWaS572v3",
+   "name": "Expert Training",
+   "type": "feature",
+   "_id": "tlRUFpXflpAp9yCM",
+   "img": "icons/creatures/mammals/dog-husky-white-blue.webp",
+   "system": {
+    "description": "<html omitted>",
+    "resource": null,
+    "actions": {},
+    "originItemType": "subclass",
+    "attribution": {
+     "source": "Daggerheart SRD",
+     "page": 17,
+     "artist": ""
+    },
+    "gmNotes": "",
+    "multiclassOrigin": false,
+    "identifier": "specialization",
+    "featureForm": "passive"
+   },
+   "effects": [
+    {
+     "name": "Expert Training",
+     "type": "base",
+     "system": {
+      "changes": [
+       {
+        "key": "system.companionData.levelupChoices",
+        "type": "add",
+        "value": 1,
+        "priority": null,
+        "phase": "initial"
+       }
+      ],
+      "duration": {
+       "description": ""
+      },
+      "rangeDependence": null,
+      "stacking": null,
+      "targetDispositions": []
+     },
+     "_id": "rknTONvaUDZ2Yz1W",
+     "img": "icons/creatures/mammals/dog-husky-white-blue.webp",
+     "disabled": false,
+     "duration": {
+      "value": null,
+      "units": "seconds",
+      "expiry": null,
+      "expired": false
+     },
+     "description": "<html omitted>",
+     "origin": null,
+     "tint": "#ffffff",
+     "transfer": true,
+     "statuses": [],
+     "sort": 0,
+     "flags": {},
+     "_stats": {
+      "compendiumSource": null,
+      "coreVersion": "14.365",
+      "systemId": "daggerheart",
+      "systemVersion": "2.7.1",
+      "createdTime": 1786391161932,
+      "modifiedTime": 1786391161932,
+      "lastModifiedBy": "pQzNfYJpGL2Gy8DA",
+      "duplicateSource": null,
+      "exportSource": null
+     },
+     "start": null,
+     "showIcon": 1,
+     "folder": null,
+     "_key": "!actors.items.effects!7Wf0UYvWuMh4xhh6.tlRUFpXflpAp9yCM.rknTONvaUDZ2Yz1W"
+    }
+   ],
+   "sort": 0,
+   "flags": {},
+   "_stats": {
+    "coreVersion": "14.365",
+    "systemId": "daggerheart",
+    "systemVersion": "2.7.1",
+    "createdTime": 1786391161932,
+    "modifiedTime": 1786391161932,
+    "lastModifiedBy": "pQzNfYJpGL2Gy8DA",
+    "compendiumSource": "Compendium.daggerheart.subclasses.Item.iCXtOWBKv1FdKdWz",
+    "duplicateSource": null,
+    "exportSource": null
+   },
+   "_key": "!actors.items!7Wf0UYvWuMh4xhh6.tlRUFpXflpAp9yCM"
+  },
+  {
+   "folder": "vIdORiocrNibqNFF",
+   "name": "Loyal Friend",
+   "type": "feature",
+   "_id": "BrkXXNQnTdl9MTzH",
+   "img": "icons/creatures/mammals/humanoid-wolf-dog-blue.webp",
+   "system": {
+    "description": "<html omitted>",
+    "resource": null,
+    "actions": {
+     "Z82YQzYWo4eektMa": {
+      "type": "effect",
+      "_id": "Z82YQzYWo4eektMa",
+      "systemPath": "actions",
+      "description": "<html omitted>",
+      "chatDisplay": true,
+      "actionType": "action",
+      "cost": [],
+      "uses": {
+       "value": null,
+       "max": "1",
+       "recovery": "longRest",
+       "consumeOnSuccess": false
+      },
+      "effects": [],
+      "target": {
+       "type": "any",
+       "amount": null
+      },
+      "name": "Rush",
+      "img": "icons/creatures/mammals/humanoid-wolf-dog-blue.webp",
+      "range": "close",
+      "baseAction": false,
+      "originItem": {
+       "type": "itemCollection"
+      },
+      "triggers": [],
+      "areas": []
+     }
+    },
+    "originItemType": "subclass",
+    "attribution": {
+     "source": "Daggerheart SRD",
+     "page": 17,
+     "artist": ""
+    },
+    "gmNotes": "",
+    "multiclassOrigin": false,
+    "identifier": "mastery",
+    "featureForm": "passive"
+   },
+   "effects": [],
+   "sort": 0,
+   "flags": {},
+   "_stats": {
+    "coreVersion": "14.365",
+    "systemId": "daggerheart",
+    "systemVersion": "2.7.1",
+    "createdTime": 1786391161932,
+    "modifiedTime": 1786391161932,
+    "lastModifiedBy": "pQzNfYJpGL2Gy8DA",
+    "compendiumSource": "Compendium.daggerheart.subclasses.Item.xjZHD5Yo3Tu26rLm",
+    "duplicateSource": null,
+    "exportSource": null
+   },
+   "_key": "!actors.items!7Wf0UYvWuMh4xhh6.BrkXXNQnTdl9MTzH"
+  },
+  {
+   "effects": [],
+   "_id": "GBJXhpJWw6aaIX9l",
+   "name": "Katari",
+   "type": "ancestry",
+   "img": "icons/creatures/claws/claw-straight-orange.webp",
+   "system": {
+    "attribution": {
+     "source": "Daggerheart SRD",
+     "page": 30,
+     "artist": ""
+    },
+    "description": "<html omitted>",
+    "gmNotes": "",
+    "features": [
+     {
+      "type": "primary",
+      "item": "Compendium.daggerheart.ancestries.Item.lNgbbYnCKgrdvA85"
+     },
+     {
+      "type": "secondary",
+      "item": "Compendium.daggerheart.ancestries.Item.Zj69cAeb3NjIa8Hn"
+     }
+    ]
+   },
+   "folder": null,
+   "sort": 3400000,
+   "flags": {},
+   "_stats": {
+    "coreVersion": "14.365",
+    "systemId": "daggerheart",
+    "systemVersion": "2.7.1",
+    "createdTime": 1786391161933,
+    "modifiedTime": 1786391161933,
+    "lastModifiedBy": "pQzNfYJpGL2Gy8DA",
+    "compendiumSource": "Compendium.daggerheart.ancestries.Item.yyW0UM8srD9WuwW7",
+    "duplicateSource": null,
+    "exportSource": null
+   },
+   "_key": "!actors.items!7Wf0UYvWuMh4xhh6.GBJXhpJWw6aaIX9l"
+  },
+  {
+   "effects": [],
+   "_id": "S6oDWwNLFxnboxbk",
+   "name": "Beastbound",
+   "type": "subclass",
+   "img": "icons/creatures/mammals/elk-moose-marked-green.webp",
+   "system": {
+    "description": "<html omitted>",
+    "spellcastingTrait": "agility",
+    "features": [
+     {
+      "type": "foundation",
+      "item": "Compendium.daggerheart.subclasses.Item.MBFXxIEwc0Dl4kJg"
+     },
+     {
+      "type": "specialization",
+      "item": "Compendium.daggerheart.subclasses.Item.iCXtOWBKv1FdKdWz"
+     },
+     {
+      "type": "specialization",
+      "item": "Compendium.daggerheart.subclasses.Item.hWsKyed1vfILg0I8"
+     },
+     {
+      "type": "mastery",
+      "item": "Compendium.daggerheart.subclasses.Item.uGcs785h94RMtueH"
+     },
+     {
+      "type": "mastery",
+      "item": "Compendium.daggerheart.subclasses.Item.xjZHD5Yo3Tu26rLm"
+     }
+    ],
+    "featureState": 3,
+    "isMulticlass": false,
+    "attribution": {
+     "source": "Daggerheart SRD",
+     "page": 17,
+     "artist": ""
+    },
+    "linkedClass": "Compendium.daggerheart.classes.Item.BTyfve69LKqoOi9S",
+    "gmNotes": ""
+   },
+   "folder": "ArVAtkgkm5bYpKHL",
+   "sort": 0,
+   "flags": {},
+   "_stats": {
+    "coreVersion": "14.365",
+    "systemId": "daggerheart",
+    "systemVersion": "2.7.1",
+    "createdTime": 1786391161933,
+    "modifiedTime": 1786391161933,
+    "lastModifiedBy": "pQzNfYJpGL2Gy8DA",
+    "compendiumSource": "Compendium.daggerheart.subclasses.Item.TIUsIlTS1WkK5vr2",
+    "duplicateSource": null,
+    "exportSource": null
+   },
+   "_key": "!actors.items!7Wf0UYvWuMh4xhh6.S6oDWwNLFxnboxbk"
+  },
+  {
+   "effects": [],
+   "_id": "M6135wzYtptugou4",
+   "name": "Highborne",
+   "type": "community",
+   "img": "icons/environment/settlement/palast.webp",
+   "system": {
+    "description": "<html omitted>",
+    "features": [
+     "Compendium.daggerheart.communities.Item.C7NR6qRatawZusmg"
+    ],
+    "attribution": {
+     "source": "Daggerheart SRD",
+     "page": 32,
+     "artist": ""
+    },
+    "gmNotes": ""
+   },
+   "folder": null,
+   "sort": 3400000,
+   "flags": {},
+   "_stats": {
+    "coreVersion": "14.365",
+    "systemId": "daggerheart",
+    "systemVersion": "2.7.1",
+    "createdTime": 1786391161933,
+    "modifiedTime": 1786391161933,
+    "lastModifiedBy": "pQzNfYJpGL2Gy8DA",
+    "compendiumSource": "Compendium.daggerheart.communities.Item.DVw2mOCHB8i0XeBz",
+    "duplicateSource": null,
+    "exportSource": null
+   },
+   "_key": "!actors.items!7Wf0UYvWuMh4xhh6.M6135wzYtptugou4"
+  },
+  {
+   "effects": [],
+   "_id": "i8AUW0RFll5NX7YH",
+   "name": "I See It Coming",
+   "type": "domainCard",
+   "img": "systems/daggerheart/assets/icons/domains/domain-card/bone.png",
+   "system": {
+    "description": "<html omitted>",
+    "domain": "bone",
+    "recallCost": 1,
+    "level": 1,
+    "type": "ability",
+    "actions": {
+     "lVyTDd44pGJgF3w7": {
+      "type": "attack",
+      "_id": "lVyTDd44pGJgF3w7",
+      "systemPath": "actions",
+      "description": "<html omitted>",
+      "chatDisplay": true,
+      "actionType": "action",
+      "cost": [
+       {
+        "consumeOnSuccess": false,
+        "scalable": false,
+        "key": "stress",
+        "value": 1,
+        "step": null,
+        "itemId": null
+       }
+      ],
+      "uses": {
+       "value": null,
+       "max": "",
+       "recovery": null,
+       "consumeOnSuccess": false
+      },
+      "damage": {
+       "main": null,
+       "resources": {}
+      },
+      "target": {
+       "type": "self",
+       "amount": null
+      },
+      "effects": [],
+      "roll": {
+       "type": "diceSet",
+       "trait": null,
+       "difficulty": null,
+       "bonus": null,
+       "advState": "neutral",
+       "diceRolling": {
+        "multiplier": "flat",
+        "flatMultiplier": 1,
+        "dice": "d4",
+        "compare": null,
+        "treshold": null
+       },
+       "useDefault": false
+      },
+      "save": {
+       "trait": null,
+       "difficulty": null,
+       "damageMod": "none"
+      },
+      "name": "Roll d4",
+      "img": "icons/skills/melee/maneuver-sword-katana-yellow.webp",
+      "range": "",
+      "baseAction": false,
+      "originItem": {
+       "type": "itemCollection"
+      },
+      "triggers": [],
+      "areas": []
+     }
+    },
+    "attribution": {
+     "source": "Daggerheart SRD",
+     "page": 122,
+     "artist": ""
+    },
+    "gmNotes": "",
+    "resource": null,
+    "inVault": true,
+    "vaultActive": false,
+    "loadoutIgnore": false,
+    "domainTouched": null
+   },
+   "folder": "PeeIjbkBv41613yZ",
+   "sort": 3400000,
+   "flags": {},
+   "_stats": {
+    "coreVersion": "14.365",
+    "systemId": "daggerheart",
+    "systemVersion": "2.7.1",
+    "createdTime": 1786391161933,
+    "modifiedTime": 1786391161933,
+    "lastModifiedBy": "pQzNfYJpGL2Gy8DA",
+    "compendiumSource": "Compendium.daggerheart.domains.Item.Kp6RejHGimnuoBom",
+    "duplicateSource": null,
+    "exportSource": null
+   },
+   "_key": "!actors.items!7Wf0UYvWuMh4xhh6.i8AUW0RFll5NX7YH"
+  },
+  {
+   "effects": [
+    {
+     "name": "Restrained",
+     "img": "icons/magic/control/debuff-chains-shackle-movement-red.webp",
+     "origin": "Compendium.daggerheart.domains.Item.qvpvTnkAoRn9vYO4",
+     "transfer": false,
+     "_id": "Xh0wrgRUuYpwChBU",
+     "type": "base",
+     "system": {
+      "changes": [],
+      "duration": {
+       "type": "temporary",
+       "description": ""
+      },
+      "rangeDependence": null,
+      "stacking": null,
+      "targetDispositions": []
+     },
+     "disabled": false,
+     "duration": {
+      "value": null,
+      "units": "seconds",
+      "expiry": null,
+      "expired": false
+     },
+     "description": "",
+     "tint": "#ffffff",
+     "statuses": [
+      "restrained"
+     ],
+     "sort": 0,
+     "flags": {},
+     "_stats": {
+      "compendiumSource": null,
+      "coreVersion": "14.365",
+      "systemId": "daggerheart",
+      "systemVersion": "2.7.1",
+      "createdTime": 1786391161934,
+      "modifiedTime": 1786391161934,
+      "lastModifiedBy": "pQzNfYJpGL2Gy8DA",
+      "duplicateSource": null,
+      "exportSource": null
+     },
+     "start": {
+      "time": 0,
+      "combat": null,
+      "combatant": null,
+      "initiative": null,
+      "round": null,
+      "turn": null
+     },
+     "showIcon": 1,
+     "folder": null,
+     "_key": "!actors.items.effects!7Wf0UYvWuMh4xhh6.cqHCcmefLYVhAPMR.Xh0wrgRUuYpwChBU"
+    },
+    {
+     "name": "Restrained",
+     "img": "icons/magic/control/debuff-chains-shackle-movement-red.webp",
+     "origin": "Compendium.daggerheart.domains.Item.qvpvTnkAoRn9vYO4",
+     "transfer": false,
+     "_id": "2xzOqTaPJQzGqFJv",
+     "type": "base",
+     "system": {
+      "changes": [],
+      "duration": {
+       "type": "temporary",
+       "description": ""
+      },
+      "rangeDependence": null,
+      "stacking": null,
+      "targetDispositions": []
+     },
+     "disabled": false,
+     "duration": {
+      "value": null,
+      "units": "seconds",
+      "expiry": null,
+      "expired": false
+     },
+     "description": "",
+     "tint": "#ffffff",
+     "statuses": [
+      "restrained"
+     ],
+     "sort": 0,
+     "flags": {},
+     "_stats": {
+      "compendiumSource": null,
+      "coreVersion": "14.365",
+      "systemId": "daggerheart",
+      "systemVersion": "2.7.1",
+      "createdTime": 1786391161935,
+      "modifiedTime": 1786391161935,
+      "lastModifiedBy": "pQzNfYJpGL2Gy8DA",
+      "duplicateSource": null,
+      "exportSource": null
+     },
+     "start": {
+      "time": 0,
+      "combat": null,
+      "combatant": null,
+      "initiative": null,
+      "round": null,
+      "turn": null
+     },
+     "showIcon": 1,
+     "folder": null,
+     "_key": "!actors.items.effects!7Wf0UYvWuMh4xhh6.cqHCcmefLYVhAPMR.2xzOqTaPJQzGqFJv"
+    }
+   ],
+   "_id": "cqHCcmefLYVhAPMR",
+   "name": "Vicious Entangle",
+   "type": "domainCard",
+   "img": "systems/daggerheart/assets/icons/domains/domain-card/sage.png",
+   "system": {
+    "description": "<html omitted>",
+    "domain": "sage",
+    "recallCost": 1,
+    "level": 1,
+    "type": "spell",
+    "actions": {
+     "lrA95PnD2vOwwmgN": {
+      "type": "attack",
+      "_id": "lrA95PnD2vOwwmgN",
+      "systemPath": "actions",
+      "description": "<html omitted>",
+      "chatDisplay": true,
+      "actionType": "action",
+      "cost": [],
+      "uses": {
+       "value": null,
+       "max": "",
+       "recovery": null,
+       "consumeOnSuccess": false
+      },
+      "damage": {
+       "main": {
+        "resultBased": false,
+        "value": {
+         "custom": {
+          "enabled": false,
+          "formula": ""
+         },
+         "multiplier": "flat",
+         "flatMultiplier": 1,
+         "dice": "d8",
+         "bonus": 1
+        },
+        "applyTo": "hitPoints",
+        "type": [
+         "physical"
+        ],
+        "base": false,
+        "valueAlt": {
+         "multiplier": "prof",
+         "flatMultiplier": 1,
+         "dice": "d6",
+         "bonus": null,
+         "custom": {
+          "enabled": false,
+          "formula": ""
+         }
+        },
+        "includeBase": false,
+        "direct": false,
+        "fullRestore": false
+       },
+       "resources": {}
+      },
+      "target": {
+       "type": "any",
+       "amount": null
+      },
+      "effects": [
+       {
+        "_id": "Xh0wrgRUuYpwChBU",
+        "onSave": false
+       }
+      ],
+      "roll": {
+       "type": "spellcast",
+       "trait": null,
+       "difficulty": null,
+       "bonus": null,
+       "advState": "neutral",
+       "diceRolling": {
+        "multiplier": "prof",
+        "flatMultiplier": 1,
+        "dice": "d6",
+        "compare": null,
+        "treshold": null
+       },
+       "useDefault": false
+      },
+      "save": {
+       "trait": null,
+       "difficulty": null,
+       "damageMod": "none"
+      },
+      "name": "Cast",
+      "img": "icons/magic/nature/vines-thorned-curled-glow-teal.webp",
+      "range": "",
+      "baseAction": false,
+      "originItem": {
+       "type": "itemCollection"
+      },
+      "triggers": [],
+      "areas": []
+     },
+     "vh1IKRvsU4w57lBt": {
+      "type": "effect",
+      "_id": "vh1IKRvsU4w57lBt",
+      "systemPath": "actions",
+      "description": "<html omitted>",
+      "chatDisplay": true,
+      "actionType": "action",
+      "cost": [
+       {
+        "key": "hope",
+        "value": 1,
+        "scalable": false,
+        "step": null,
+        "itemId": null,
+        "consumeOnSuccess": false
+       }
+      ],
+      "uses": {
+       "value": null,
+       "max": "",
+       "recovery": null,
+       "consumeOnSuccess": false
+      },
+      "effects": [
+       {
+        "_id": "2xzOqTaPJQzGqFJv",
+        "onSave": false
+       }
+      ],
+      "target": {
+       "type": "any",
+       "amount": null
+      },
+      "name": "Restrain Another",
+      "img": "icons/commodities/gems/gem-faceted-octagon-yellow.webp",
+      "range": "",
+      "baseAction": false,
+      "originItem": {
+       "type": "itemCollection"
+      },
+      "triggers": [],
+      "areas": []
+     }
+    },
+    "attribution": {
+     "source": "Daggerheart SRD",
+     "page": 130,
+     "artist": ""
+    },
+    "gmNotes": "",
+    "resource": null,
+    "inVault": true,
+    "vaultActive": false,
+    "loadoutIgnore": false,
+    "domainTouched": null
+   },
+   "folder": "EJoXzO85rG5EiZsh",
+   "sort": 3400000,
+   "flags": {},
+   "_stats": {
+    "coreVersion": "14.365",
+    "systemId": "daggerheart",
+    "systemVersion": "2.7.1",
+    "createdTime": 1786391161934,
+    "modifiedTime": 1786391161934,
+    "lastModifiedBy": "pQzNfYJpGL2Gy8DA",
+    "compendiumSource": "Compendium.daggerheart.domains.Item.qvpvTnkAoRn9vYO4",
+    "duplicateSource": null,
+    "exportSource": null
+   },
+   "_key": "!actors.items!7Wf0UYvWuMh4xhh6.cqHCcmefLYVhAPMR"
+  },
+  {
+   "effects": [
+    {
+     "name": "Flexible",
+     "description": "<html omitted>",
+     "img": "icons/magic/movement/abstract-ribbons-red-orange.webp",
+     "_id": "v1FNEsypRF5W6vVc",
+     "type": "base",
+     "system": {
+      "changes": [
+       {
+        "key": "system.evasion",
+        "type": "add",
+        "value": 1,
+        "phase": "initial"
+       }
+      ],
+      "duration": {
+       "description": ""
+      },
+      "rangeDependence": null,
+      "stacking": null,
+      "targetDispositions": []
+     },
+     "disabled": false,
+     "duration": {
+      "value": null,
+      "units": "seconds",
+      "expiry": null,
+      "expired": false
+     },
+     "origin": null,
+     "tint": "#ffffff",
+     "transfer": true,
+     "statuses": [],
+     "sort": 0,
+     "flags": {},
+     "_stats": {
+      "compendiumSource": null,
+      "coreVersion": "14.365",
+      "systemId": "daggerheart",
+      "systemVersion": "2.7.1",
+      "createdTime": 1786391161936,
+      "modifiedTime": 1786391161936,
+      "lastModifiedBy": "pQzNfYJpGL2Gy8DA",
+      "duplicateSource": null,
+      "exportSource": null
+     },
+     "start": null,
+     "showIcon": 1,
+     "folder": null,
+     "_key": "!actors.items.effects!7Wf0UYvWuMh4xhh6.w2UBhyaJiBmk7A8E.v1FNEsypRF5W6vVc"
+    }
+   ],
+   "_id": "w2UBhyaJiBmk7A8E",
+   "name": "Gambeson Armor",
+   "type": "armor",
+   "img": "icons/equipment/chest/vest-leather-tattered-white.webp",
+   "system": {
+    "armor": {
+     "current": 0,
+     "max": 3
+    },
+    "description": "",
+    "actions": {},
+    "tier": 1,
+    "equipped": false,
+    "armorFeatures": [
+     {
+      "value": "flexible",
+      "effectIds": [
+       "v1FNEsypRF5W6vVc"
+      ],
+      "actionIds": []
+     }
+    ],
+    "baseThresholds": {
+     "major": 5,
+     "severe": 11
+    },
+    "attribution": {
+     "source": "Daggerheart SRD",
+     "page": 56,
+     "artist": ""
+    },
+    "gmNotes": "",
+    "resource": null,
+    "quantity": 1
+   },
+   "folder": "h4QgrovjVZ1oee7O",
+   "sort": 0,
+   "flags": {},
+   "_stats": {
+    "coreVersion": "14.365",
+    "systemId": "daggerheart",
+    "systemVersion": "2.7.1",
+    "createdTime": 1786391161935,
+    "modifiedTime": 1786391161935,
+    "lastModifiedBy": "pQzNfYJpGL2Gy8DA",
+    "compendiumSource": "Compendium.daggerheart.armors.Item.yJFp1bfpecDcStVK",
+    "duplicateSource": null,
+    "exportSource": null
+   },
+   "_key": "!actors.items!7Wf0UYvWuMh4xhh6.w2UBhyaJiBmk7A8E"
+  },
+  {
+   "effects": [
+    {
+     "name": "Cumbersome",
+     "description": "<html omitted>",
+     "img": "icons/commodities/metal/mail-plate-steel.webp",
+     "_id": "9gKDF96uId07289w",
+     "type": "base",
+     "system": {
+      "changes": [
+       {
+        "key": "system.traits.finesse.value",
+        "type": "add",
+        "value": -1,
+        "phase": "initial"
+       }
+      ],
+      "duration": {
+       "description": ""
+      },
+      "rangeDependence": null,
+      "stacking": null,
+      "targetDispositions": []
+     },
+     "disabled": false,
+     "duration": {
+      "value": null,
+      "units": "seconds",
+      "expiry": null,
+      "expired": false
+     },
+     "origin": null,
+     "tint": "#ffffff",
+     "transfer": true,
+     "statuses": [],
+     "sort": 0,
+     "flags": {},
+     "_stats": {
+      "compendiumSource": null,
+      "coreVersion": "14.365",
+      "systemId": "daggerheart",
+      "systemVersion": "2.7.1",
+      "createdTime": 1786391161937,
+      "modifiedTime": 1786391161937,
+      "lastModifiedBy": "pQzNfYJpGL2Gy8DA",
+      "duplicateSource": null,
+      "exportSource": null
+     },
+     "start": null,
+     "showIcon": 1,
+     "folder": null,
+     "_key": "!actors.items.effects!7Wf0UYvWuMh4xhh6.MYdFSeFsZNkdVHxb.9gKDF96uId07289w"
+    }
+   ],
+   "_id": "MYdFSeFsZNkdVHxb",
+   "name": "Longbow",
+   "type": "weapon",
+   "img": "icons/weapons/bows/longbow-recurve-leather-brown.webp",
+   "system": {
+    "description": "",
+    "actions": {},
+    "tier": 1,
+    "equipped": false,
+    "secondary": false,
+    "burden": "twoHanded",
+    "weaponFeatures": [
+     {
+      "value": "cumbersome",
+      "effectIds": [
+       "9gKDF96uId07289w"
+      ],
+      "actionIds": []
+     }
+    ],
+    "attack": {
+     "name": "Attack",
+     "img": "icons/skills/melee/blood-slash-foam-red.webp",
+     "_id": "ZSdAawliPNsoA7nP",
+     "baseAction": true,
+     "systemPath": "attack",
+     "type": "attack",
+     "range": "veryFar",
+     "target": {
+      "type": "any",
+      "amount": 1
+     },
+     "roll": {
+      "trait": "agility",
+      "type": "attack",
+      "difficulty": null,
+      "bonus": null,
+      "advState": "neutral",
+      "diceRolling": {
+       "multiplier": "prof",
+       "flatMultiplier": 1,
+       "dice": "d6",
+       "compare": null,
+       "treshold": null
+      },
+      "useDefault": false
+     },
+     "damage": {
+      "main": {
+       "value": {
+        "dice": "d8",
+        "bonus": 3,
+        "multiplier": "prof",
+        "flatMultiplier": 1,
+        "custom": {
+         "enabled": false,
+         "formula": ""
+        }
+       },
+       "type": [
+        "physical"
+       ],
+       "applyTo": "hitPoints",
+       "resultBased": false,
+       "valueAlt": {
+        "multiplier": "prof",
+        "flatMultiplier": 1,
+        "dice": "d6",
+        "bonus": null,
+        "custom": {
+         "enabled": false,
+         "formula": ""
+        }
+       },
+       "base": false,
+       "includeBase": false,
+       "direct": false,
+       "fullRestore": false
+      },
+      "resources": {}
+     },
+     "description": "",
+     "chatDisplay": false,
+     "actionType": "action",
+     "cost": [],
+     "uses": {
+      "value": null,
+      "max": null,
+      "recovery": null,
+      "consumeOnSuccess": false
+     },
+     "effects": [],
+     "save": {
+      "trait": null,
+      "difficulty": null,
+      "damageMod": "none"
+     },
+     "originItem": {
+      "type": "itemCollection"
+     },
+     "triggers": [],
+     "areas": []
+    },
+    "rules": {
+     "attack": {
+      "roll": {
+       "trait": null
+      }
+     }
+    },
+    "attribution": {
+     "source": "Daggerheart SRD",
+     "page": 45,
+     "artist": ""
+    },
+    "gmNotes": "",
+    "resource": null,
+    "quantity": 1
+   },
+   "folder": "d7tdCsIUd94XuTtq",
+   "sort": 0,
+   "flags": {},
+   "_stats": {
+    "coreVersion": "14.365",
+    "systemId": "daggerheart",
+    "systemVersion": "2.7.1",
+    "createdTime": 1786391161936,
+    "modifiedTime": 1786391161936,
+    "lastModifiedBy": "pQzNfYJpGL2Gy8DA",
+    "compendiumSource": "Compendium.daggerheart.weapons.Item.YfVs6Se903az4Yet",
+    "duplicateSource": null,
+    "exportSource": null
+   },
+   "_key": "!actors.items!7Wf0UYvWuMh4xhh6.MYdFSeFsZNkdVHxb"
+  },
+  {
+   "effects": [],
+   "_id": "oVqv0tVyReGeq6Jy",
+   "name": "Broken Compass",
+   "type": "loot",
+   "img": "icons/tools/navigation/compass-plain-blue.webp",
+   "system": {
+    "description": "",
+    "quantity": 1,
+    "actions": {},
+    "attribution": {},
+    "gmNotes": ""
+   },
+   "folder": "zPuYycsLK2GlbLpO",
+   "sort": 0,
+   "flags": {},
+   "_stats": {
+    "coreVersion": "14.365",
+    "systemId": "daggerheart",
+    "systemVersion": "2.7.1",
+    "createdTime": 1786391161937,
+    "modifiedTime": 1786391161937,
+    "lastModifiedBy": "pQzNfYJpGL2Gy8DA",
+    "compendiumSource": "Compendium.daggerheart.classes.Item.8k76EgktQXFWHf8r",
+    "duplicateSource": null,
+    "exportSource": null
+   },
+   "_key": "!actors.items!7Wf0UYvWuMh4xhh6.oVqv0tVyReGeq6Jy"
+  },
+  {
+   "_id": "jL1r2qs3LgHYibFT",
+   "name": "50ft of Rope",
+   "img": "icons/sundries/survival/rope-coiled-tan.webp",
+   "type": "loot",
+   "sort": 0,
+   "folder": "rY8M3uLGRwuLhzk0",
+   "system": {
+    "attribution": {},
+    "description": "",
+    "gmNotes": "",
+    "quantity": 1,
+    "actions": {}
+   },
+   "effects": [],
+   "flags": {},
+   "_stats": {
+    "coreVersion": "14.365",
+    "systemId": "daggerheart",
+    "systemVersion": "2.7.1",
+    "createdTime": 1786391161937,
+    "modifiedTime": 1786391161937,
+    "lastModifiedBy": "pQzNfYJpGL2Gy8DA",
+    "compendiumSource": "Compendium.daggerheart.classes.Item.hMST9iizQP1yz0MG",
+    "duplicateSource": null,
+    "exportSource": null
+   },
+   "_key": "!actors.items!7Wf0UYvWuMh4xhh6.jL1r2qs3LgHYibFT"
+  },
+  {
+   "effects": [],
+   "_id": "WH7Re6gE2twurAdh",
+   "name": "Minor Health Potion",
+   "type": "consumable",
+   "img": "icons/consumables/potions/potion-tube-corked-red.webp",
+   "system": {
+    "description": "<html omitted>",
+    "quantity": 1,
+    "actions": {
+     "9HVL2MPFX9VGiSsV": {
+      "type": "healing",
+      "_id": "9HVL2MPFX9VGiSsV",
+      "systemPath": "actions",
+      "description": "<html omitted>",
+      "chatDisplay": true,
+      "actionType": "action",
+      "cost": [
+       {
+        "scalable": false,
+        "key": "quantity",
+        "value": 1,
+        "itemId": "tPfKtKRRjv8qdSqy",
+        "step": null,
+        "consumeOnSuccess": false
+       }
+      ],
+      "uses": {
+       "value": null,
+       "max": "",
+       "recovery": null,
+       "consumeOnSuccess": false
+      },
+      "damage": {
+       "main": null,
+       "resources": {
+        "hitPoints": {
+         "value": {
+          "custom": {
+           "enabled": false,
+           "formula": ""
+          },
+          "multiplier": "flat",
+          "flatMultiplier": 1,
+          "dice": "d4",
+          "bonus": null
+         },
+         "applyTo": "hitPoints",
+         "base": false,
+         "resultBased": false,
+         "valueAlt": {
+          "multiplier": "prof",
+          "flatMultiplier": 1,
+          "dice": "d6",
+          "bonus": null,
+          "custom": {
+           "enabled": false,
+           "formula": ""
+          }
+         },
+         "fullRestore": false
+        }
+       }
+      },
+      "target": {
+       "type": "",
+       "amount": null
+      },
+      "effects": [],
+      "roll": {
+       "type": null,
+       "trait": null,
+       "difficulty": null,
+       "bonus": null,
+       "advState": "neutral",
+       "diceRolling": {
+        "multiplier": "prof",
+        "flatMultiplier": 1,
+        "dice": "d6",
+        "compare": null,
+        "treshold": null
+       },
+       "useDefault": false
+      },
+      "name": "Drink",
+      "img": "icons/consumables/potions/potion-tube-corked-red.webp",
+      "range": "",
+      "baseAction": false,
+      "originItem": {
+       "type": "itemCollection"
+      },
+      "triggers": [],
+      "areas": []
+     }
+    },
+    "consumeOnUse": true,
+    "attribution": {
+     "source": "Daggerheart SRD",
+     "page": 60,
+     "artist": ""
+    },
+    "gmNotes": ""
+   },
+   "folder": null,
+   "sort": 0,
+   "flags": {},
+   "_stats": {
+    "coreVersion": "14.365",
+    "systemId": "daggerheart",
+    "systemVersion": "2.7.1",
+    "createdTime": 1786391161937,
+    "modifiedTime": 1786391161937,
+    "lastModifiedBy": "pQzNfYJpGL2Gy8DA",
+    "compendiumSource": "Compendium.daggerheart.consumables.Item.tPfKtKRRjv8qdSqy",
+    "duplicateSource": null,
+    "exportSource": null
+   },
+   "_key": "!actors.items!7Wf0UYvWuMh4xhh6.WH7Re6gE2twurAdh"
+  },
+  {
+   "_id": "zPNzKEouoIJ5DajI",
+   "name": "Basic Supplies",
+   "img": "icons/containers/bags/sack-leather-stitched-brown.webp",
+   "type": "loot",
+   "sort": 0,
+   "folder": "rY8M3uLGRwuLhzk0",
+   "system": {
+    "attribution": {},
+    "description": "",
+    "gmNotes": "",
+    "quantity": 1,
+    "actions": {}
+   },
+   "effects": [],
+   "flags": {},
+   "_stats": {
+    "coreVersion": "14.365",
+    "systemId": "daggerheart",
+    "systemVersion": "2.7.1",
+    "createdTime": 1786391161938,
+    "modifiedTime": 1786391161938,
+    "lastModifiedBy": "pQzNfYJpGL2Gy8DA",
+    "compendiumSource": "Compendium.daggerheart.classes.Item.uoG5iq09mxJPXfmk",
+    "duplicateSource": null,
+    "exportSource": null
+   },
+   "_key": "!actors.items!7Wf0UYvWuMh4xhh6.zPNzKEouoIJ5DajI"
+  },
+  {
+   "_id": "BcXQyhIAqJKa2F16",
+   "name": "Torch",
+   "img": "icons/sundries/lights/torch-brown-lit.webp",
+   "type": "loot",
+   "sort": 0,
+   "folder": "rY8M3uLGRwuLhzk0",
+   "system": {
+    "attribution": {},
+    "description": "",
+    "gmNotes": "",
+    "quantity": 1,
+    "actions": {}
+   },
+   "effects": [],
+   "flags": {},
+   "_stats": {
+    "coreVersion": "14.365",
+    "systemId": "daggerheart",
+    "systemVersion": "2.7.1",
+    "createdTime": 1786391161938,
+    "modifiedTime": 1786391161938,
+    "lastModifiedBy": "pQzNfYJpGL2Gy8DA",
+    "compendiumSource": "Compendium.daggerheart.classes.Item.zqeXrJTd1geX73Pw",
+    "duplicateSource": null,
+    "exportSource": null
+   },
+   "_key": "!actors.items!7Wf0UYvWuMh4xhh6.BcXQyhIAqJKa2F16"
+  },
+  {
+   "name": "Conjure Swarm",
+   "img": "systems/daggerheart/assets/icons/domains/domain-card/sage.png",
+   "type": "domainCard",
+   "folder": "xZrCYAd05ayNu1yW",
+   "system": {
+    "description": "<html omitted>",
+    "domain": "sage",
+    "recallCost": 1,
+    "level": 2,
+    "type": "spell",
+    "actions": {
+     "qygTUSNldYNbP7vN": {
+      "type": "attack",
+      "_id": "qygTUSNldYNbP7vN",
+      "systemPath": "actions",
+      "description": "<html omitted>",
+      "chatDisplay": true,
+      "actionType": "action",
+      "cost": [
+       {
+        "scalable": false,
+        "key": "stress",
+        "value": 1,
+        "step": null,
+        "itemId": null,
+        "consumeOnSuccess": false
+       }
+      ],
+      "uses": {
+       "value": null,
+       "max": "",
+       "recovery": null,
+       "consumeOnSuccess": false
+      },
+      "damage": {
+       "main": null,
+       "resources": {}
+      },
+      "target": {
+       "type": "self",
+       "amount": null
+      },
+      "effects": [
+       {
+        "_id": "dImnF8ZT2rVybiIP",
+        "onSave": false
+       }
+      ],
+      "roll": {
+       "type": null,
+       "trait": null,
+       "difficulty": null,
+       "bonus": null,
+       "advState": "neutral",
+       "diceRolling": {
+        "multiplier": "prof",
+        "flatMultiplier": 1,
+        "dice": "d6",
+        "compare": null,
+        "treshold": null
+       },
+       "useDefault": false
+      },
+      "save": {
+       "trait": null,
+       "difficulty": null,
+       "damageMod": "none"
+      },
+      "name": "Tekaira's Armored Beetles: Stress",
+      "img": "icons/creatures/invertebrates/wasp-swarm-attack.webp",
+      "range": "self",
+      "baseAction": false,
+      "originItem": {
+       "type": "itemCollection"
+      },
+      "triggers": [],
+      "areas": []
+     },
+     "533qzPIjcccpiMey": {
+      "type": "effect",
+      "_id": "533qzPIjcccpiMey",
+      "systemPath": "actions",
+      "description": "<html omitted>",
+      "chatDisplay": true,
+      "actionType": "action",
+      "cost": [
+       {
+        "key": "hope",
+        "value": 1,
+        "scalable": false,
+        "step": null,
+        "itemId": null,
+        "consumeOnSuccess": false
+       }
+      ],
+      "uses": {
+       "value": null,
+       "max": "",
+       "recovery": null,
+       "consumeOnSuccess": false
+      },
+      "effects": [],
+      "target": {
+       "type": "any",
+       "amount": null
+      },
+      "name": "Keep Beetles",
+      "img": "icons/commodities/gems/gem-faceted-octagon-yellow.webp",
+      "range": "",
+      "baseAction": false,
+      "originItem": {
+       "type": "itemCollection"
+      },
+      "triggers": [],
+      "areas": []
+     },
+     "nugW0yPOG08pqBAT": {
+      "type": "attack",
+      "_id": "nugW0yPOG08pqBAT",
+      "systemPath": "actions",
+      "description": "<html omitted>",
+      "chatDisplay": true,
+      "actionType": "action",
+      "cost": [
+       {
+        "consumeOnSuccess": true,
+        "scalable": false,
+        "key": "hope",
+        "value": 1,
+        "step": null,
+        "itemId": null
+       }
+      ],
+      "uses": {
+       "value": null,
+       "max": "",
+       "recovery": null,
+       "consumeOnSuccess": false
+      },
+      "damage": {
+       "main": {
+        "resultBased": false,
+        "value": {
+         "custom": {
+          "enabled": false,
+          "formula": ""
+         },
+         "multiplier": "flat",
+         "flatMultiplier": 2,
+         "dice": "d8",
+         "bonus": 3
+        },
+        "applyTo": "hitPoints",
+        "type": [
+         "magical"
+        ],
+        "base": false,
+        "valueAlt": {
+         "multiplier": "prof",
+         "flatMultiplier": 1,
+         "dice": "d6",
+         "bonus": null,
+         "custom": {
+          "enabled": false,
+          "formula": ""
+         }
+        },
+        "includeBase": false,
+        "direct": false,
+        "fullRestore": false
+       },
+       "resources": {}
+      },
+      "target": {
+       "type": "any",
+       "amount": null
+      },
+      "effects": [],
+      "roll": {
+       "type": "spellcast",
+       "trait": null,
+       "difficulty": null,
+       "bonus": null,
+       "advState": "neutral",
+       "diceRolling": {
+        "multiplier": "prof",
+        "flatMultiplier": 1,
+        "dice": "d6",
+        "compare": null,
+        "treshold": null
+       },
+       "useDefault": false
+      },
+      "save": {
+       "trait": null,
+       "difficulty": null,
+       "damageMod": "none"
+      },
+      "name": "Fire Flies: Cast",
+      "img": "icons/creatures/invertebrates/wasp-swarm-movement.webp",
+      "range": "close",
+      "areas": [
+       {
+        "name": "Conjure Swarm",
+        "type": "placed",
+        "shape": "emanation",
+        "size": "close",
+        "effects": [],
+        "hasHole": false
+       }
+      ],
+      "baseAction": false,
+      "originItem": {
+       "type": "itemCollection"
+      },
+      "triggers": []
+     }
+    },
+    "attribution": {
+     "source": "Daggerheart SRD",
+     "page": 130,
+     "artist": ""
+    },
+    "gmNotes": "",
+    "resource": null,
+    "inVault": true,
+    "vaultActive": false,
+    "loadoutIgnore": false,
+    "domainTouched": null
+   },
+   "flags": {},
+   "_id": "zjUtp5alIzRHQ2GC",
+   "sort": 3400000,
+   "effects": [
+    {
+     "name": "Reduced Damage",
+     "img": "icons/magic/defensive/shield-barrier-flaming-diamond-acid.webp",
+     "origin": "Compendium.daggerheart.domains.Item.rZPH0BY8Sznc9sFG",
+     "transfer": false,
+     "_id": "dImnF8ZT2rVybiIP",
+     "type": "base",
+     "system": {
+      "changes": [
+       {
+        "key": "system.rules.damageReduction.reduceSeverity.magical",
+        "value": 1,
+        "priority": null,
+        "type": "add",
+        "phase": "initial"
+       },
+       {
+        "key": "system.rules.damageReduction.reduceSeverity.physical",
+        "value": 1,
+        "priority": null,
+        "type": "add",
+        "phase": "initial"
+       }
+      ],
+      "duration": {
+       "description": ""
+      },
+      "rangeDependence": null,
+      "stacking": null,
+      "targetDispositions": []
+     },
+     "disabled": false,
+     "duration": {
+      "value": null,
+      "units": "seconds",
+      "expiry": null,
+      "expired": false
+     },
+     "description": "",
+     "tint": "#ffffff",
+     "statuses": [],
+     "sort": 0,
+     "flags": {},
+     "_stats": {
+      "compendiumSource": null,
+      "coreVersion": "14.365",
+      "systemId": "daggerheart",
+      "systemVersion": "2.7.1",
+      "createdTime": 1786391161939,
+      "modifiedTime": 1786391161939,
+      "lastModifiedBy": "pQzNfYJpGL2Gy8DA",
+      "duplicateSource": null,
+      "exportSource": null
+     },
+     "start": null,
+     "showIcon": 1,
+     "folder": null,
+     "_key": "!actors.items.effects!7Wf0UYvWuMh4xhh6.zjUtp5alIzRHQ2GC.dImnF8ZT2rVybiIP"
+    }
+   ],
+   "_stats": {
+    "coreVersion": "14.365",
+    "systemId": "daggerheart",
+    "systemVersion": "2.7.1",
+    "createdTime": 1786391161938,
+    "modifiedTime": 1786391161938,
+    "lastModifiedBy": "pQzNfYJpGL2Gy8DA",
+    "compendiumSource": "Compendium.daggerheart.domains.Item.rZPH0BY8Sznc9sFG",
+    "duplicateSource": null,
+    "exportSource": null
+   },
+   "_key": "!actors.items!7Wf0UYvWuMh4xhh6.zjUtp5alIzRHQ2GC"
+  },
+  {
+   "name": "Natural Familiar",
+   "img": "systems/daggerheart/assets/icons/domains/domain-card/sage.png",
+   "type": "domainCard",
+   "folder": "xZrCYAd05ayNu1yW",
+   "system": {
+    "description": "<html omitted>",
+    "domain": "sage",
+    "recallCost": 1,
+    "level": 2,
+    "type": "spell",
+    "actions": {
+     "BhVDgty2nqoOhn97": {
+      "type": "effect",
+      "_id": "BhVDgty2nqoOhn97",
+      "systemPath": "actions",
+      "description": "<html omitted>",
+      "chatDisplay": true,
+      "actionType": "action",
+      "cost": [
+       {
+        "scalable": true,
+        "key": "hope",
+        "value": 1,
+        "step": null,
+        "consumeOnSuccess": false,
+        "itemId": null
+       }
+      ],
+      "uses": {
+       "value": null,
+       "max": "",
+       "recovery": null,
+       "consumeOnSuccess": false
+      },
+      "effects": [
+       {
+        "_id": "0BumAWKw2aK4A5al",
+        "onSave": false
+       }
+      ],
+      "target": {
+       "type": "any",
+       "amount": null
+      },
+      "name": "Summon Familiar",
+      "img": "icons/creatures/amphibians/bullfrog-glass-teal.webp",
+      "range": "",
+      "baseAction": false,
+      "originItem": {
+       "type": "itemCollection"
+      },
+      "triggers": [],
+      "areas": []
+     },
+     "kHAwq8lfsEPd9Qga": {
+      "type": "attack",
+      "_id": "kHAwq8lfsEPd9Qga",
+      "systemPath": "actions",
+      "description": "<html omitted>",
+      "chatDisplay": true,
+      "actionType": "action",
+      "cost": [],
+      "uses": {
+       "value": null,
+       "max": "",
+       "recovery": null,
+       "consumeOnSuccess": false
+      },
+      "damage": {
+       "main": null,
+       "resources": {}
+      },
+      "target": {
+       "type": "any",
+       "amount": null
+      },
+      "effects": [],
+      "roll": {
+       "type": "spellcast",
+       "trait": null,
+       "difficulty": null,
+       "bonus": null,
+       "advState": "neutral",
+       "diceRolling": {
+        "multiplier": "prof",
+        "flatMultiplier": 1,
+        "dice": "d6",
+        "compare": null,
+        "treshold": null
+       },
+       "useDefault": false
+      },
+      "save": {
+       "trait": null,
+       "difficulty": null,
+       "damageMod": "none"
+      },
+      "name": "Perform Task",
+      "img": "icons/creatures/amphibians/treefrog-leaf-green.webp",
+      "range": "",
+      "baseAction": false,
+      "originItem": {
+       "type": "itemCollection"
+      },
+      "triggers": [],
+      "areas": []
+     },
+     "8Y03LcPgXF30DfzZ": {
+      "type": "effect",
+      "_id": "8Y03LcPgXF30DfzZ",
+      "systemPath": "actions",
+      "description": "<html omitted>",
+      "chatDisplay": true,
+      "actionType": "action",
+      "cost": [
+       {
+        "scalable": false,
+        "key": "stress",
+        "value": 1,
+        "step": null,
+        "itemId": null,
+        "consumeOnSuccess": false
+       }
+      ],
+      "uses": {
+       "value": null,
+       "max": "",
+       "recovery": null,
+       "consumeOnSuccess": false
+      },
+      "effects": [],
+      "target": {
+       "type": "any",
+       "amount": null
+      },
+      "name": "See Through Eyes",
+      "img": "icons/magic/perception/eye-ringed-green.webp",
+      "range": "",
+      "baseAction": false,
+      "originItem": {
+       "type": "itemCollection"
+      },
+      "triggers": [],
+      "areas": []
+     }
+    },
+    "attribution": {
+     "source": "Daggerheart SRD",
+     "page": 130,
+     "artist": ""
+    },
+    "gmNotes": "",
+    "resource": null,
+    "inVault": true,
+    "vaultActive": false,
+    "loadoutIgnore": false,
+    "domainTouched": null
+   },
+   "flags": {},
+   "_id": "iDsB6FjzNly87wU8",
+   "sort": 3400000,
+   "effects": [
+    {
+     "name": "Familiar Damage",
+     "img": "icons/sundries/gaming/dice-pair-white-green.webp",
+     "origin": "Compendium.daggerheart.domains.Item.Tag303LoRNC5zGgl",
+     "transfer": false,
+     "_id": "0BumAWKw2aK4A5al",
+     "type": "base",
+     "system": {
+      "changes": [
+       {
+        "key": "system.bonuses.damage.magical.dice",
+        "type": "add",
+        "value": "d6",
+        "priority": null,
+        "phase": "initial"
+       },
+       {
+        "key": "system.bonuses.damage.physical.dice",
+        "type": "add",
+        "value": "d6",
+        "priority": null,
+        "phase": "initial"
+       }
+      ],
+      "duration": {
+       "description": ""
+      },
+      "rangeDependence": null,
+      "stacking": null,
+      "targetDispositions": []
+     },
+     "disabled": false,
+     "duration": {
+      "value": null,
+      "units": "seconds",
+      "expiry": null,
+      "expired": false
+     },
+     "description": "",
+     "tint": "#ffffff",
+     "statuses": [],
+     "sort": 0,
+     "flags": {},
+     "_stats": {
+      "compendiumSource": null,
+      "coreVersion": "14.365",
+      "systemId": "daggerheart",
+      "systemVersion": "2.7.1",
+      "createdTime": 1786391161940,
+      "modifiedTime": 1786391161940,
+      "lastModifiedBy": "pQzNfYJpGL2Gy8DA",
+      "duplicateSource": null,
+      "exportSource": null
+     },
+     "start": null,
+     "showIcon": 1,
+     "folder": null,
+     "_key": "!actors.items.effects!7Wf0UYvWuMh4xhh6.iDsB6FjzNly87wU8.0BumAWKw2aK4A5al"
+    }
+   ],
+   "_stats": {
+    "coreVersion": "14.365",
+    "systemId": "daggerheart",
+    "systemVersion": "2.7.1",
+    "createdTime": 1786391161939,
+    "modifiedTime": 1786391161939,
+    "lastModifiedBy": "pQzNfYJpGL2Gy8DA",
+    "compendiumSource": "Compendium.daggerheart.domains.Item.Tag303LoRNC5zGgl",
+    "duplicateSource": null,
+    "exportSource": null
+   },
+   "_key": "!actors.items!7Wf0UYvWuMh4xhh6.iDsB6FjzNly87wU8"
+  },
+  {
+   "name": "Brace",
+   "img": "systems/daggerheart/assets/icons/domains/domain-card/bone.png",
+   "type": "domainCard",
+   "folder": "eR7sP5jQwfCLORUe",
+   "system": {
+    "description": "<html omitted>",
+    "domain": "bone",
+    "recallCost": 1,
+    "level": 3,
+    "type": "ability",
+    "attribution": {
+     "source": "Daggerheart SRD",
+     "page": 122,
+     "artist": ""
+    },
+    "gmNotes": "",
+    "resource": null,
+    "actions": {},
+    "inVault": false,
+    "vaultActive": false,
+    "loadoutIgnore": false,
+    "domainTouched": null
+   },
+   "flags": {},
+   "_id": "iQ0FHIYfq9ssOkvR",
+   "sort": 3400000,
+   "effects": [
+    {
+     "name": "Brace",
+     "type": "base",
+     "system": {
+      "changes": [
+       {
+        "key": "system.rules.damageReduction.maxArmorMarked.stressExtra",
+        "type": "add",
+        "value": 1,
+        "priority": null,
+        "phase": "initial"
+       }
+      ],
+      "duration": {
+       "description": ""
+      },
+      "rangeDependence": null,
+      "stacking": null,
+      "targetDispositions": []
+     },
+     "_id": "xSjqLOHfi5lImDHS",
+     "img": "icons/magic/defensive/shield-barrier-blue.webp",
+     "disabled": false,
+     "duration": {
+      "value": null,
+      "units": "seconds",
+      "expiry": null,
+      "expired": false
+     },
+     "description": "<html omitted>",
+     "origin": null,
+     "tint": "#ffffff",
+     "transfer": true,
+     "statuses": [],
+     "sort": 0,
+     "flags": {},
+     "_stats": {
+      "compendiumSource": null,
+      "coreVersion": "14.365",
+      "systemId": "daggerheart",
+      "systemVersion": "2.7.1",
+      "createdTime": 1786391161940,
+      "modifiedTime": 1786391161940,
+      "lastModifiedBy": "pQzNfYJpGL2Gy8DA",
+      "duplicateSource": null,
+      "exportSource": null
+     },
+     "start": null,
+     "showIcon": 1,
+     "folder": null,
+     "_key": "!actors.items.effects!7Wf0UYvWuMh4xhh6.iQ0FHIYfq9ssOkvR.xSjqLOHfi5lImDHS"
+    }
+   ],
+   "_stats": {
+    "coreVersion": "14.365",
+    "systemId": "daggerheart",
+    "systemVersion": "2.7.1",
+    "createdTime": 1786391161940,
+    "modifiedTime": 1786391161940,
+    "lastModifiedBy": "pQzNfYJpGL2Gy8DA",
+    "compendiumSource": "Compendium.daggerheart.domains.Item.QXs4vssSqNGQu5b8",
+    "duplicateSource": null,
+    "exportSource": null
+   },
+   "_key": "!actors.items!7Wf0UYvWuMh4xhh6.iQ0FHIYfq9ssOkvR"
+  },
+  {
+   "name": "Healing Field",
+   "img": "systems/daggerheart/assets/icons/domains/domain-card/sage.png",
+   "type": "domainCard",
+   "folder": "BJIiOIWAQUz5zuqo",
+   "system": {
+    "description": "<html omitted>",
+    "domain": "sage",
+    "recallCost": 2,
+    "level": 4,
+    "type": "spell",
+    "actions": {
+     "oQ4nCYdwCXqd7NWt": {
+      "type": "healing",
+      "_id": "oQ4nCYdwCXqd7NWt",
+      "systemPath": "actions",
+      "description": "<html omitted>",
+      "chatDisplay": true,
+      "actionType": "action",
+      "cost": [
+       {
+        "key": "resource",
+        "itemId": "GlRm1Dxlc0Z1b04o",
+        "value": 1,
+        "scalable": false,
+        "step": null,
+        "consumeOnSuccess": false
+       }
+      ],
+      "uses": {
+       "value": null,
+       "max": "",
+       "recovery": null,
+       "consumeOnSuccess": false
+      },
+      "damage": {
+       "main": null,
+       "resources": {
+        "hitPoints": {
+         "value": {
+          "custom": {
+           "enabled": true,
+           "formula": "1"
+          },
+          "multiplier": "prof",
+          "flatMultiplier": 1,
+          "dice": "d6",
+          "bonus": null
+         },
+         "applyTo": "hitPoints",
+         "base": false,
+         "resultBased": false,
+         "valueAlt": {
+          "multiplier": "prof",
+          "flatMultiplier": 1,
+          "dice": "d6",
+          "bonus": null,
+          "custom": {
+           "enabled": false,
+           "formula": ""
+          }
+         },
+         "fullRestore": false
+        }
+       }
+      },
+      "target": {
+       "type": "any",
+       "amount": null
+      },
+      "effects": [],
+      "roll": {
+       "type": null,
+       "trait": null,
+       "difficulty": null,
+       "bonus": null,
+       "advState": "neutral",
+       "diceRolling": {
+        "multiplier": "prof",
+        "flatMultiplier": 1,
+        "dice": "d6",
+        "compare": null,
+        "treshold": null
+       },
+       "useDefault": false
+      },
+      "name": "Heal 1 Hit Point",
+      "img": "icons/commodities/gems/gem-faceted-diamond-green.webp",
+      "range": "close",
+      "areas": [
+       {
+        "name": "Healing Field",
+        "type": "placed",
+        "shape": "emanation",
+        "size": "close",
+        "effects": [],
+        "hasHole": false
+       }
+      ],
+      "baseAction": false,
+      "originItem": {
+       "type": "itemCollection"
+      },
+      "triggers": []
+     },
+     "EqamWsxO86ZjY8WV": {
+      "type": "healing",
+      "_id": "EqamWsxO86ZjY8WV",
+      "systemPath": "actions",
+      "description": "<html omitted>",
+      "chatDisplay": true,
+      "actionType": "action",
+      "cost": [
+       {
+        "key": "hope",
+        "itemId": null,
+        "value": 2,
+        "scalable": false,
+        "step": null,
+        "consumeOnSuccess": false
+       },
+       {
+        "key": "resource",
+        "itemId": "GlRm1Dxlc0Z1b04o",
+        "value": 1,
+        "scalable": false,
+        "step": null,
+        "consumeOnSuccess": false
+       }
+      ],
+      "uses": {
+       "value": null,
+       "max": "",
+       "recovery": null,
+       "consumeOnSuccess": false
+      },
+      "damage": {
+       "main": null,
+       "resources": {
+        "hitPoints": {
+         "value": {
+          "custom": {
+           "enabled": true,
+           "formula": "2"
+          },
+          "multiplier": "prof",
+          "flatMultiplier": 1,
+          "dice": "d6",
+          "bonus": null
+         },
+         "applyTo": "hitPoints",
+         "base": false,
+         "resultBased": false,
+         "valueAlt": {
+          "multiplier": "prof",
+          "flatMultiplier": 1,
+          "dice": "d6",
+          "bonus": null,
+          "custom": {
+           "enabled": false,
+           "formula": ""
+          }
+         },
+         "fullRestore": false
+        }
+       }
+      },
+      "target": {
+       "type": "any",
+       "amount": null
+      },
+      "effects": [],
+      "roll": {
+       "type": null,
+       "trait": null,
+       "difficulty": null,
+       "bonus": null,
+       "advState": "neutral",
+       "diceRolling": {
+        "multiplier": "prof",
+        "flatMultiplier": 1,
+        "dice": "d6",
+        "compare": null,
+        "treshold": null
+       },
+       "useDefault": false
+      },
+      "name": "Heal 2 Hit Points",
+      "img": "icons/commodities/gems/gem-faceted-diamond-green.webp",
+      "range": "close",
+      "areas": [
+       {
+        "name": "Healing Field",
+        "type": "placed",
+        "shape": "emanation",
+        "size": "close",
+        "effects": [],
+        "hasHole": false
+       }
+      ],
+      "baseAction": false,
+      "originItem": {
+       "type": "itemCollection"
+      },
+      "triggers": []
+     }
+    },
+    "resource": {
+     "type": "simple",
+     "value": 1,
+     "recovery": "longRest",
+     "max": "1",
+     "icon": "",
+     "progression": "decreasing",
+     "diceStates": {},
+     "dieFaces": "d4"
+    },
+    "attribution": {
+     "source": "Daggerheart SRD",
+     "page": 130,
+     "artist": ""
+    },
+    "gmNotes": "",
+    "inVault": true,
+    "vaultActive": false,
+    "loadoutIgnore": false,
+    "domainTouched": null
+   },
+   "flags": {},
+   "_id": "h3HeuPNv0SeJMW7r",
+   "sort": 3400000,
+   "effects": [],
+   "_stats": {
+    "coreVersion": "14.365",
+    "systemId": "daggerheart",
+    "systemVersion": "2.7.1",
+    "createdTime": 1786391161941,
+    "modifiedTime": 1786391161941,
+    "lastModifiedBy": "pQzNfYJpGL2Gy8DA",
+    "compendiumSource": "Compendium.daggerheart.domains.Item.GlRm1Dxlc0Z1b04o",
+    "duplicateSource": null,
+    "exportSource": null
+   },
+   "_key": "!actors.items!7Wf0UYvWuMh4xhh6.h3HeuPNv0SeJMW7r"
+  },
+  {
+   "name": "Wild Fortress",
+   "img": "systems/daggerheart/assets/icons/domains/domain-card/sage.png",
+   "type": "domainCard",
+   "folder": "ZZHIbaynhzVArA1p",
+   "system": {
+    "description": "<html omitted>",
+    "domain": "sage",
+    "recallCost": 1,
+    "level": 5,
+    "type": "spell",
+    "actions": {
+     "WlcAj8f6THUudbWp": {
+      "type": "attack",
+      "_id": "WlcAj8f6THUudbWp",
+      "systemPath": "actions",
+      "description": "<html omitted>",
+      "chatDisplay": true,
+      "actionType": "action",
+      "cost": [
+       {
+        "consumeOnSuccess": true,
+        "scalable": false,
+        "key": "hope",
+        "value": 2,
+        "step": null,
+        "itemId": null
+       }
+      ],
+      "uses": {
+       "value": null,
+       "max": "",
+       "recovery": null,
+       "consumeOnSuccess": false
+      },
+      "damage": {
+       "main": null,
+       "resources": {}
+      },
+      "target": {
+       "type": "any",
+       "amount": null
+      },
+      "effects": [],
+      "roll": {
+       "type": "spellcast",
+       "trait": null,
+       "difficulty": 13,
+       "bonus": null,
+       "advState": "neutral",
+       "diceRolling": {
+        "multiplier": "prof",
+        "flatMultiplier": 1,
+        "dice": "d6",
+        "compare": null,
+        "treshold": null
+       },
+       "useDefault": false
+      },
+      "save": {
+       "trait": null,
+       "difficulty": null,
+       "damageMod": "none"
+      },
+      "name": "Cast",
+      "img": "icons/magic/nature/leaf-armor-scale-green.webp",
+      "range": "",
+      "baseAction": false,
+      "originItem": {
+       "type": "itemCollection"
+      },
+      "triggers": [],
+      "areas": []
+     }
+    },
+    "resource": {
+     "type": "simple",
+     "value": 0,
+     "max": "3",
+     "icon": "",
+     "recovery": null,
+     "progression": "increasing",
+     "diceStates": {},
+     "dieFaces": "d4"
+    },
+    "attribution": {
+     "source": "Daggerheart SRD",
+     "page": 131,
+     "artist": ""
+    },
+    "gmNotes": "",
+    "inVault": true,
+    "vaultActive": false,
+    "loadoutIgnore": false,
+    "domainTouched": null
+   },
+   "flags": {},
+   "_id": "OCWZbqGri8hHaazv",
+   "sort": 3400000,
+   "effects": [],
+   "_stats": {
+    "coreVersion": "14.365",
+    "systemId": "daggerheart",
+    "systemVersion": "2.7.1",
+    "createdTime": 1786391161941,
+    "modifiedTime": 1786391161941,
+    "lastModifiedBy": "pQzNfYJpGL2Gy8DA",
+    "compendiumSource": "Compendium.daggerheart.domains.Item.9dFvcM1i3bxG3BSA",
+    "duplicateSource": null,
+    "exportSource": null
+   },
+   "_key": "!actors.items!7Wf0UYvWuMh4xhh6.OCWZbqGri8hHaazv"
+  },
+  {
+   "name": "Conjured Steeds",
+   "img": "systems/daggerheart/assets/icons/domains/domain-card/sage.png",
+   "type": "domainCard",
+   "folder": "u5Lq2kfC8LlDAGDC",
+   "system": {
+    "description": "<html omitted>",
+    "domain": "sage",
+    "recallCost": 0,
+    "level": 6,
+    "type": "spell",
+    "actions": {
+     "xMIMyRto9jgYLN3S": {
+      "type": "effect",
+      "_id": "xMIMyRto9jgYLN3S",
+      "systemPath": "actions",
+      "description": "<html omitted>",
+      "chatDisplay": true,
+      "actionType": "action",
+      "cost": [
+       {
+        "scalable": true,
+        "key": "hope",
+        "value": 1,
+        "step": 1,
+        "itemId": null,
+        "consumeOnSuccess": false
+       }
+      ],
+      "uses": {
+       "value": null,
+       "max": "",
+       "recovery": null,
+       "consumeOnSuccess": false
+      },
+      "effects": [
+       {
+        "_id": "cNSlGBGPKKBNnlH8",
+        "onSave": false
+       }
+      ],
+      "target": {
+       "type": "any",
+       "amount": null
+      },
+      "name": "Conjure",
+      "img": "icons/creatures/mammals/deer-movement-leap-green.webp",
+      "range": "",
+      "baseAction": false,
+      "originItem": {
+       "type": "itemCollection"
+      },
+      "triggers": [],
+      "areas": []
+     }
+    },
+    "attribution": {
+     "source": "Daggerheart SRD",
+     "page": 131,
+     "artist": ""
+    },
+    "gmNotes": "",
+    "resource": null,
+    "inVault": true,
+    "vaultActive": false,
+    "loadoutIgnore": false,
+    "domainTouched": null
+   },
+   "flags": {},
+   "_id": "YWP882dGja5LYt4a",
+   "sort": 3400000,
+   "effects": [
+    {
+     "name": "Riding",
+     "img": "icons/creatures/mammals/goat-horned-blue.webp",
+     "origin": "Compendium.daggerheart.domains.Item.Jkp6cMDiHHaBZQRS",
+     "transfer": false,
+     "_id": "cNSlGBGPKKBNnlH8",
+     "type": "base",
+     "system": {
+      "changes": [
+       {
+        "key": "system.bonuses.roll.attack.bonus",
+        "type": "add",
+        "value": -2,
+        "priority": null,
+        "phase": "initial"
+       },
+       {
+        "key": "system.bonuses.damage.magical.dice",
+        "type": "add",
+        "value": "+2",
+        "priority": null,
+        "phase": "initial"
+       },
+       {
+        "key": "system.bonuses.damage.physical.bonus",
+        "type": "add",
+        "value": "+2",
+        "priority": null,
+        "phase": "initial"
+       }
+      ],
+      "duration": {
+       "description": ""
+      },
+      "rangeDependence": null,
+      "stacking": null,
+      "targetDispositions": []
+     },
+     "disabled": false,
+     "duration": {
+      "value": null,
+      "units": "seconds",
+      "expiry": null,
+      "expired": false
+     },
+     "description": "<html omitted>",
+     "tint": "#ffffff",
+     "statuses": [],
+     "sort": 0,
+     "flags": {},
+     "_stats": {
+      "compendiumSource": null,
+      "coreVersion": "14.365",
+      "systemId": "daggerheart",
+      "systemVersion": "2.7.1",
+      "createdTime": 1786391161942,
+      "modifiedTime": 1786391161942,
+      "lastModifiedBy": "pQzNfYJpGL2Gy8DA",
+      "duplicateSource": null,
+      "exportSource": null
+     },
+     "start": null,
+     "showIcon": 1,
+     "folder": null,
+     "_key": "!actors.items.effects!7Wf0UYvWuMh4xhh6.YWP882dGja5LYt4a.cNSlGBGPKKBNnlH8"
+    }
+   ],
+   "_stats": {
+    "coreVersion": "14.365",
+    "systemId": "daggerheart",
+    "systemVersion": "2.7.1",
+    "createdTime": 1786391161941,
+    "modifiedTime": 1786391161941,
+    "lastModifiedBy": "pQzNfYJpGL2Gy8DA",
+    "compendiumSource": "Compendium.daggerheart.domains.Item.Jkp6cMDiHHaBZQRS",
+    "duplicateSource": null,
+    "exportSource": null
+   },
+   "_key": "!actors.items!7Wf0UYvWuMh4xhh6.YWP882dGja5LYt4a"
+  },
+  {
+   "name": "Bone-Touched",
+   "img": "systems/daggerheart/assets/icons/domains/domain-card/bone.png",
+   "type": "domainCard",
+   "folder": "i5iDLXMZLc0ckWI5",
+   "system": {
+    "description": "<html omitted>",
+    "domain": "bone",
+    "recallCost": 2,
+    "level": 7,
+    "type": "ability",
+    "actions": {
+     "pRSiIoh4Bzk5I9ej": {
+      "type": "effect",
+      "_id": "pRSiIoh4Bzk5I9ej",
+      "systemPath": "actions",
+      "description": "<html omitted>",
+      "chatDisplay": true,
+      "actionType": "action",
+      "cost": [
+       {
+        "scalable": false,
+        "key": "hope",
+        "value": 3,
+        "step": null,
+        "consumeOnSuccess": false,
+        "itemId": null
+       }
+      ],
+      "uses": {
+       "value": null,
+       "max": "1",
+       "recovery": "shortRest",
+       "consumeOnSuccess": false
+      },
+      "effects": [],
+      "target": {
+       "type": "self",
+       "amount": null
+      },
+      "name": "Spend Hope",
+      "img": "icons/magic/holy/barrier-shield-winged-blue.webp",
+      "range": "",
+      "baseAction": false,
+      "originItem": {
+       "type": "itemCollection"
+      },
+      "triggers": [],
+      "areas": []
+     }
+    },
+    "attribution": {
+     "source": "Daggerheart SRD",
+     "page": 123,
+     "artist": ""
+    },
+    "domainTouched": 4,
+    "gmNotes": "",
+    "resource": null,
+    "inVault": false,
+    "vaultActive": false,
+    "loadoutIgnore": false
+   },
+   "flags": {},
+   "_id": "x9bhhlXCpliq0xsA",
+   "sort": 3400000,
+   "effects": [
+    {
+     "name": "Bone Touched",
+     "type": "base",
+     "system": {
+      "changes": [
+       {
+        "key": "system.traits.agility.value",
+        "type": "add",
+        "value": 1,
+        "priority": null,
+        "phase": "initial"
+       }
+      ],
+      "duration": {
+       "description": ""
+      },
+      "rangeDependence": null,
+      "stacking": null,
+      "targetDispositions": []
+     },
+     "_id": "P6hYkkI64FqIcMoP",
+     "img": "icons/magic/death/bones-crossed-orange.webp",
+     "disabled": false,
+     "duration": {
+      "value": null,
+      "units": "seconds",
+      "expiry": null,
+      "expired": false
+     },
+     "description": "<html omitted>",
+     "origin": null,
+     "tint": "#ffffff",
+     "transfer": true,
+     "statuses": [],
+     "sort": 0,
+     "flags": {},
+     "_stats": {
+      "compendiumSource": null,
+      "coreVersion": "14.365",
+      "systemId": "daggerheart",
+      "systemVersion": "2.7.1",
+      "createdTime": 1786391161943,
+      "modifiedTime": 1786391161943,
+      "lastModifiedBy": "pQzNfYJpGL2Gy8DA",
+      "duplicateSource": null,
+      "exportSource": null
+     },
+     "start": null,
+     "showIcon": 1,
+     "folder": null,
+     "_key": "!actors.items.effects!7Wf0UYvWuMh4xhh6.x9bhhlXCpliq0xsA.P6hYkkI64FqIcMoP"
+    }
+   ],
+   "_stats": {
+    "coreVersion": "14.365",
+    "systemId": "daggerheart",
+    "systemVersion": "2.7.1",
+    "createdTime": 1786391161943,
+    "modifiedTime": 1786391161943,
+    "lastModifiedBy": "pQzNfYJpGL2Gy8DA",
+    "compendiumSource": "Compendium.daggerheart.domains.Item.ON5bvnoQBy0SYc9Y",
+    "duplicateSource": null,
+    "exportSource": null
+   },
+   "_key": "!actors.items!7Wf0UYvWuMh4xhh6.x9bhhlXCpliq0xsA"
+  },
+  {
+   "name": "Breaking Blow",
+   "img": "systems/daggerheart/assets/icons/domains/domain-card/bone.png",
+   "type": "domainCard",
+   "folder": "n7pgTBYSItMzCX0s",
+   "system": {
+    "description": "<html omitted>",
+    "domain": "bone",
+    "recallCost": 3,
+    "level": 8,
+    "type": "ability",
+    "actions": {
+     "aL83OMkU7hSQRlOA": {
+      "type": "effect",
+      "_id": "aL83OMkU7hSQRlOA",
+      "systemPath": "actions",
+      "description": "<html omitted>",
+      "chatDisplay": true,
+      "actionType": "action",
+      "cost": [
+       {
+        "scalable": false,
+        "key": "stress",
+        "value": 1,
+        "step": null,
+        "consumeOnSuccess": false,
+        "itemId": null
+       }
+      ],
+      "uses": {
+       "value": null,
+       "max": "",
+       "recovery": null,
+       "consumeOnSuccess": false
+      },
+      "effects": [
+       {
+        "_id": "ETIeXRAib3DFBHpX",
+        "onSave": false
+       }
+      ],
+      "target": {
+       "type": "any",
+       "amount": 1
+      },
+      "name": "Mark Stress",
+      "img": "icons/skills/wounds/bone-broken-knee-beam.webp",
+      "range": "",
+      "baseAction": false,
+      "originItem": {
+       "type": "itemCollection"
+      },
+      "triggers": [],
+      "areas": []
+     }
+    },
+    "attribution": {
+     "source": "Daggerheart SRD",
+     "page": 123,
+     "artist": ""
+    },
+    "gmNotes": "",
+    "resource": null,
+    "inVault": false,
+    "vaultActive": false,
+    "loadoutIgnore": false,
+    "domainTouched": null
+   },
+   "flags": {},
+   "_id": "Gd5RtxqGeajFqatV",
+   "sort": 3400000,
+   "effects": [
+    {
+     "name": "Breaking Blow",
+     "img": "icons/skills/wounds/bone-broken-knee-beam.webp",
+     "origin": "Compendium.daggerheart.domains.Item.8UANBgSdhMZ0sqfO",
+     "transfer": false,
+     "_id": "ETIeXRAib3DFBHpX",
+     "type": "base",
+     "system": {
+      "changes": [],
+      "duration": {
+       "description": ""
+      },
+      "rangeDependence": null,
+      "stacking": null,
+      "targetDispositions": []
+     },
+     "disabled": false,
+     "duration": {
+      "value": null,
+      "units": "seconds",
+      "expiry": null,
+      "expired": false
+     },
+     "description": "<html omitted>",
+     "tint": "#ffffff",
+     "statuses": [],
+     "sort": 0,
+     "flags": {},
+     "_stats": {
+      "compendiumSource": null,
+      "coreVersion": "14.365",
+      "systemId": "daggerheart",
+      "systemVersion": "2.7.1",
+      "createdTime": 1786391161944,
+      "modifiedTime": 1786391161944,
+      "lastModifiedBy": "pQzNfYJpGL2Gy8DA",
+      "duplicateSource": null,
+      "exportSource": null
+     },
+     "start": null,
+     "showIcon": 1,
+     "folder": null,
+     "_key": "!actors.items.effects!7Wf0UYvWuMh4xhh6.Gd5RtxqGeajFqatV.ETIeXRAib3DFBHpX"
+    }
+   ],
+   "_stats": {
+    "coreVersion": "14.365",
+    "systemId": "daggerheart",
+    "systemVersion": "2.7.1",
+    "createdTime": 1786391161944,
+    "modifiedTime": 1786391161944,
+    "lastModifiedBy": "pQzNfYJpGL2Gy8DA",
+    "compendiumSource": "Compendium.daggerheart.domains.Item.8UANBgSdhMZ0sqfO",
+    "duplicateSource": null,
+    "exportSource": null
+   },
+   "_key": "!actors.items!7Wf0UYvWuMh4xhh6.Gd5RtxqGeajFqatV"
+  },
+  {
+   "name": "Splintering Strike",
+   "img": "systems/daggerheart/assets/icons/domains/domain-card/bone.png",
+   "type": "domainCard",
+   "folder": "eg2vM8j9xhya9Rwa",
+   "system": {
+    "description": "<html omitted>",
+    "domain": "bone",
+    "recallCost": 3,
+    "level": 9,
+    "type": "ability",
+    "actions": {
+     "yjEcSlzsWGX79gpB": {
+      "type": "attack",
+      "_id": "yjEcSlzsWGX79gpB",
+      "systemPath": "actions",
+      "description": "",
+      "chatDisplay": true,
+      "actionType": "action",
+      "cost": [
+       {
+        "key": "hope",
+        "value": 1,
+        "scalable": false,
+        "step": null,
+        "consumeOnSuccess": false,
+        "itemId": null
+       }
+      ],
+      "uses": {
+       "value": null,
+       "max": "1",
+       "recovery": "longRest",
+       "consumeOnSuccess": true
+      },
+      "damage": {
+       "main": null,
+       "resources": {}
+      },
+      "target": {
+       "type": "any",
+       "amount": null
+      },
+      "effects": [],
+      "roll": {
+       "type": "attack",
+       "trait": null,
+       "difficulty": null,
+       "bonus": null,
+       "advState": "neutral",
+       "diceRolling": {
+        "multiplier": "prof",
+        "flatMultiplier": 1,
+        "dice": "d6",
+        "compare": null,
+        "treshold": null
+       },
+       "useDefault": false
+      },
+      "save": {
+       "trait": null,
+       "difficulty": null,
+       "damageMod": "none"
+      },
+      "name": "Spend Hope",
+      "img": "icons/skills/melee/strike-sword-steel-yellow.webp",
+      "range": "",
+      "baseAction": false,
+      "originItem": {
+       "type": "itemCollection"
+      },
+      "triggers": [],
+      "areas": []
+     }
+    },
+    "attribution": {
+     "source": "Daggerheart SRD",
+     "page": 123,
+     "artist": ""
+    },
+    "gmNotes": "",
+    "resource": null,
+    "inVault": false,
+    "vaultActive": false,
+    "loadoutIgnore": false,
+    "domainTouched": null
+   },
+   "flags": {},
+   "_id": "jUM4u7lp0ouryYwY",
+   "sort": 3400000,
+   "effects": [],
+   "_stats": {
+    "coreVersion": "14.365",
+    "systemId": "daggerheart",
+    "systemVersion": "2.7.1",
+    "createdTime": 1786391161944,
+    "modifiedTime": 1786391161944,
+    "lastModifiedBy": "pQzNfYJpGL2Gy8DA",
+    "compendiumSource": "Compendium.daggerheart.domains.Item.TYKfM3H9vBXyWiH4",
+    "duplicateSource": null,
+    "exportSource": null
+   },
+   "_key": "!actors.items!7Wf0UYvWuMh4xhh6.jUM4u7lp0ouryYwY"
+  },
+  {
+   "name": "Force of Nature",
+   "img": "systems/daggerheart/assets/icons/domains/domain-card/sage.png",
+   "type": "domainCard",
+   "folder": "pPzU9WOQNv3ckO1w",
+   "system": {
+    "description": "<html omitted>",
+    "domain": "sage",
+    "recallCost": 2,
+    "level": 10,
+    "type": "spell",
+    "actions": {
+     "Yf4L0fo5vq4dIZFM": {
+      "type": "effect",
+      "_id": "Yf4L0fo5vq4dIZFM",
+      "systemPath": "actions",
+      "description": "<html omitted>",
+      "chatDisplay": true,
+      "actionType": "action",
+      "cost": [
+       {
+        "scalable": false,
+        "key": "stress",
+        "value": 1,
+        "step": null,
+        "itemId": null,
+        "consumeOnSuccess": false
+       }
+      ],
+      "uses": {
+       "value": null,
+       "max": "",
+       "recovery": null,
+       "consumeOnSuccess": false
+      },
+      "effects": [
+       {
+        "_id": "ptBC882plZW39Ld9",
+        "onSave": false
+       }
+      ],
+      "target": {
+       "type": "self",
+       "amount": null
+      },
+      "name": "Transform",
+      "img": "icons/magic/nature/elemental-plant-humanoid.webp",
+      "range": "self",
+      "baseAction": false,
+      "originItem": {
+       "type": "itemCollection"
+      },
+      "triggers": [],
+      "areas": []
+     },
+     "1rLoYS90AZizJujS": {
+      "type": "effect",
+      "_id": "1rLoYS90AZizJujS",
+      "systemPath": "actions",
+      "description": "<html omitted>",
+      "chatDisplay": true,
+      "actionType": "action",
+      "cost": [
+       {
+        "key": "hope",
+        "value": 1,
+        "scalable": false,
+        "step": null,
+        "itemId": null,
+        "consumeOnSuccess": false
+       }
+      ],
+      "uses": {
+       "value": null,
+       "max": "",
+       "recovery": null,
+       "consumeOnSuccess": false
+      },
+      "effects": [],
+      "target": {
+       "type": "any",
+       "amount": null
+      },
+      "name": "Spend Hope for Action",
+      "img": "icons/commodities/gems/gem-faceted-octagon-yellow.webp",
+      "range": "",
+      "baseAction": false,
+      "originItem": {
+       "type": "itemCollection"
+      },
+      "triggers": [],
+      "areas": []
+     }
+    },
+    "attribution": {
+     "source": "Daggerheart SRD",
+     "page": 131,
+     "artist": ""
+    },
+    "gmNotes": "",
+    "resource": null,
+    "inVault": false,
+    "vaultActive": false,
+    "loadoutIgnore": false,
+    "domainTouched": null
+   },
+   "flags": {},
+   "_id": "L7Pifiy4WxOLl2wB",
+   "sort": 3400000,
+   "effects": [
+    {
+     "name": "Force of Nature",
+     "img": "icons/magic/nature/elemental-plant-humanoid.webp",
+     "origin": "Compendium.daggerheart.domains.Item.LzVpMkD5I4QeaIHf",
+     "transfer": false,
+     "_id": "ptBC882plZW39Ld9",
+     "type": "base",
+     "system": {
+      "changes": [
+       {
+        "key": "system.bonuses.damage.physical.bonus",
+        "type": "add",
+        "value": 10,
+        "priority": null,
+        "phase": "initial"
+       },
+       {
+        "key": "system.bonuses.damage.magical.bonus",
+        "type": "add",
+        "value": 10,
+        "priority": null,
+        "phase": "initial"
+       },
+       {
+        "key": "system.rules.conditionImmunities.restrained",
+        "type": "override",
+        "value": 1,
+        "priority": null,
+        "phase": "initial"
+       }
+      ],
+      "duration": {
+       "description": ""
+      },
+      "rangeDependence": null,
+      "stacking": null,
+      "targetDispositions": []
+     },
+     "disabled": false,
+     "duration": {
+      "value": null,
+      "units": "seconds",
+      "expiry": null,
+      "expired": false
+     },
+     "description": "<html omitted>",
+     "tint": "#ffffff",
+     "statuses": [],
+     "sort": 0,
+     "flags": {},
+     "_stats": {
+      "compendiumSource": null,
+      "coreVersion": "14.365",
+      "systemId": "daggerheart",
+      "systemVersion": "2.7.1",
+      "createdTime": 1786391161945,
+      "modifiedTime": 1786391161945,
+      "lastModifiedBy": "pQzNfYJpGL2Gy8DA",
+      "duplicateSource": null,
+      "exportSource": null
+     },
+     "start": null,
+     "showIcon": 1,
+     "folder": null,
+     "_key": "!actors.items.effects!7Wf0UYvWuMh4xhh6.L7Pifiy4WxOLl2wB.ptBC882plZW39Ld9"
+    }
+   ],
+   "_stats": {
+    "coreVersion": "14.365",
+    "systemId": "daggerheart",
+    "systemVersion": "2.7.1",
+    "createdTime": 1786391161945,
+    "modifiedTime": 1786391161945,
+    "lastModifiedBy": "pQzNfYJpGL2Gy8DA",
+    "compendiumSource": "Compendium.daggerheart.domains.Item.LzVpMkD5I4QeaIHf",
+    "duplicateSource": null,
+    "exportSource": null
+   },
+   "_key": "!actors.items!7Wf0UYvWuMh4xhh6.L7Pifiy4WxOLl2wB"
+  },
+  {
+   "name": "Legendary Longbow",
+   "type": "weapon",
+   "_id": "Utt1GpoH1fhaTOtN",
+   "img": "icons/weapons/bows/bow-ornamental-carved-brown.webp",
+   "system": {
+    "description": "",
+    "actions": {},
+    "tier": 4,
+    "equipped": true,
+    "secondary": false,
+    "burden": "twoHanded",
+    "weaponFeatures": [
+     {
+      "value": "cumbersome",
+      "effectIds": [
+       "004BkCQeQzuMVGS3"
+      ],
+      "actionIds": []
+     }
+    ],
+    "attack": {
+     "name": "Attack",
+     "img": "icons/skills/melee/blood-slash-foam-red.webp",
+     "_id": "31XEMDUyjpqFA7H9",
+     "baseAction": true,
+     "systemPath": "attack",
+     "type": "attack",
+     "range": "veryFar",
+     "target": {
+      "type": "any",
+      "amount": 1
+     },
+     "roll": {
+      "trait": "agility",
+      "type": "attack",
+      "difficulty": null,
+      "bonus": null,
+      "advState": "neutral",
+      "diceRolling": {
+       "multiplier": "prof",
+       "flatMultiplier": 1,
+       "dice": "d6",
+       "compare": null,
+       "treshold": null
+      },
+      "useDefault": false
+     },
+     "damage": {
+      "main": {
+       "value": {
+        "dice": "d8",
+        "bonus": 12,
+        "multiplier": "prof",
+        "flatMultiplier": 1,
+        "custom": {
+         "enabled": false,
+         "formula": ""
+        }
+       },
+       "type": [
+        "physical"
+       ],
+       "applyTo": "hitPoints",
+       "resultBased": false,
+       "valueAlt": {
+        "multiplier": "prof",
+        "flatMultiplier": 1,
+        "dice": "d6",
+        "bonus": null,
+        "custom": {
+         "enabled": false,
+         "formula": ""
+        }
+       },
+       "base": false,
+       "includeBase": false,
+       "direct": false,
+       "fullRestore": false
+      },
+      "resources": {}
+     },
+     "description": "",
+     "chatDisplay": false,
+     "actionType": "action",
+     "cost": [],
+     "uses": {
+      "value": null,
+      "max": null,
+      "recovery": null,
+      "consumeOnSuccess": false
+     },
+     "effects": [],
+     "save": {
+      "trait": null,
+      "difficulty": null,
+      "damageMod": "none"
+     },
+     "originItem": {
+      "type": "itemCollection"
+     },
+     "triggers": [],
+     "areas": []
+    },
+    "rules": {
+     "attack": {
+      "roll": {
+       "trait": null
+      }
+     }
+    },
+    "attribution": {
+     "source": "Daggerheart SRD",
+     "page": 50,
+     "artist": ""
+    },
+    "gmNotes": "",
+    "resource": null,
+    "quantity": 1
+   },
+   "effects": [
+    {
+     "name": "Cumbersome",
+     "description": "<html omitted>",
+     "img": "icons/commodities/metal/mail-plate-steel.webp",
+     "_id": "004BkCQeQzuMVGS3",
+     "type": "base",
+     "system": {
+      "changes": [
+       {
+        "key": "system.traits.finesse.value",
+        "type": "add",
+        "value": -1,
+        "phase": "initial"
+       }
+      ],
+      "duration": {
+       "description": ""
+      },
+      "rangeDependence": null,
+      "stacking": null,
+      "targetDispositions": []
+     },
+     "disabled": false,
+     "duration": {
+      "value": null,
+      "units": "seconds",
+      "expiry": null,
+      "expired": false
+     },
+     "origin": null,
+     "tint": "#ffffff",
+     "transfer": true,
+     "statuses": [],
+     "sort": 0,
+     "flags": {},
+     "_stats": {
+      "compendiumSource": null,
+      "coreVersion": "14.365",
+      "systemId": "daggerheart",
+      "systemVersion": "2.7.1",
+      "createdTime": 1786391161946,
+      "modifiedTime": 1786391161946,
+      "lastModifiedBy": "pQzNfYJpGL2Gy8DA",
+      "duplicateSource": null,
+      "exportSource": null
+     },
+     "start": null,
+     "showIcon": 1,
+     "folder": null,
+     "_key": "!actors.items.effects!7Wf0UYvWuMh4xhh6.Utt1GpoH1fhaTOtN.004BkCQeQzuMVGS3"
+    }
+   ],
+   "flags": {},
+   "_stats": {
+    "coreVersion": "14.365",
+    "systemId": "daggerheart",
+    "systemVersion": "2.7.1",
+    "createdTime": 1786391161946,
+    "modifiedTime": 1786391161946,
+    "lastModifiedBy": "pQzNfYJpGL2Gy8DA",
+    "compendiumSource": "Compendium.daggerheart.weapons.Item.Utt1GpoH1fhaTOtN",
+    "duplicateSource": null,
+    "exportSource": null
+   },
+   "folder": null,
+   "sort": 0,
+   "_key": "!actors.items!7Wf0UYvWuMh4xhh6.Utt1GpoH1fhaTOtN"
+  },
+  {
+   "name": "Legendary Gambeson Armor",
+   "type": "armor",
+   "_id": "c6tMXz4rPf9ioQrf",
+   "img": "icons/equipment/chest/breastplate-layered-leather-blue-gold.webp",
+   "system": {
+    "armor": {
+     "current": 0,
+     "max": 6
+    },
+    "description": "",
+    "actions": {},
+    "tier": 4,
+    "equipped": true,
+    "armorFeatures": [
+     {
+      "value": "flexible",
+      "effectIds": [
+       "3AUNxBoj7mp1ziJQ"
+      ],
+      "actionIds": []
+     }
+    ],
+    "baseThresholds": {
+     "major": 11,
+     "severe": 32
+    },
+    "attribution": {
+     "source": "Daggerheart SRD",
+     "page": 57,
+     "artist": ""
+    },
+    "gmNotes": "",
+    "resource": null,
+    "quantity": 1
+   },
+   "effects": [
+    {
+     "name": "Flexible",
+     "description": "<html omitted>",
+     "img": "icons/magic/movement/abstract-ribbons-red-orange.webp",
+     "_id": "3AUNxBoj7mp1ziJQ",
+     "type": "base",
+     "system": {
+      "changes": [
+       {
+        "key": "system.evasion",
+        "type": "add",
+        "value": 1,
+        "phase": "initial"
+       }
+      ],
+      "duration": {
+       "description": ""
+      },
+      "rangeDependence": null,
+      "stacking": null,
+      "targetDispositions": []
+     },
+     "disabled": false,
+     "duration": {
+      "value": null,
+      "units": "seconds",
+      "expiry": null,
+      "expired": false
+     },
+     "origin": null,
+     "tint": "#ffffff",
+     "transfer": true,
+     "statuses": [],
+     "sort": 0,
+     "flags": {},
+     "_stats": {
+      "compendiumSource": null,
+      "coreVersion": "14.365",
+      "systemId": "daggerheart",
+      "systemVersion": "2.7.1",
+      "createdTime": 1786391161947,
+      "modifiedTime": 1786391161947,
+      "lastModifiedBy": "pQzNfYJpGL2Gy8DA",
+      "duplicateSource": null,
+      "exportSource": null
+     },
+     "start": null,
+     "showIcon": 1,
+     "folder": null,
+     "_key": "!actors.items.effects!7Wf0UYvWuMh4xhh6.c6tMXz4rPf9ioQrf.3AUNxBoj7mp1ziJQ"
+    }
+   ],
+   "flags": {},
+   "_stats": {
+    "coreVersion": "14.365",
+    "systemId": "daggerheart",
+    "systemVersion": "2.7.1",
+    "createdTime": 1786391161947,
+    "modifiedTime": 1786391161947,
+    "lastModifiedBy": "pQzNfYJpGL2Gy8DA",
+    "compendiumSource": "Compendium.daggerheart.armors.Item.c6tMXz4rPf9ioQrf",
+    "duplicateSource": null,
+    "exportSource": null
+   },
+   "folder": null,
+   "sort": 0,
+   "_key": "!actors.items!7Wf0UYvWuMh4xhh6.c6tMXz4rPf9ioQrf"
+  },
+  {
+   "name": "Bonded",
+   "img": "icons/magic/life/heart-red-blue.webp",
+   "type": "feature",
+   "system": {
+    "description": "<html omitted>",
+    "attribution": {},
+    "gmNotes": "",
+    "resource": null,
+    "actions": {},
+    "originItemType": null,
+    "multiclassOrigin": false,
+    "featureForm": "passive"
+   },
+   "_id": "ztYWlcMzrC5QikYW",
+   "effects": [],
+   "folder": null,
+   "sort": 0,
+   "flags": {},
+   "_stats": {
+    "coreVersion": "14.365",
+    "systemId": "daggerheart",
+    "systemVersion": "2.7.1",
+    "createdTime": 1786391161947,
+    "modifiedTime": 1786391161947,
+    "lastModifiedBy": "pQzNfYJpGL2Gy8DA",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   },
+   "_key": "!actors.items!7Wf0UYvWuMh4xhh6.ztYWlcMzrC5QikYW"
+  },
+  {
+   "name": "Creature Comfort",
+   "img": "icons/magic/life/heart-cross-purple-orange.webp",
+   "type": "feature",
+   "system": {
+    "description": "<html omitted>",
+    "attribution": {},
+    "gmNotes": "",
+    "resource": null,
+    "actions": {},
+    "originItemType": null,
+    "multiclassOrigin": false,
+    "featureForm": "passive"
+   },
+   "_id": "4QHWQHdamIkFebbM",
+   "effects": [],
+   "folder": null,
+   "sort": 0,
+   "flags": {},
+   "_stats": {
+    "coreVersion": "14.365",
+    "systemId": "daggerheart",
+    "systemVersion": "2.7.1",
+    "createdTime": 1786391161947,
+    "modifiedTime": 1786391161947,
+    "lastModifiedBy": "pQzNfYJpGL2Gy8DA",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   },
+   "_key": "!actors.items!7Wf0UYvWuMh4xhh6.4QHWQHdamIkFebbM"
+  }
+ ],
+ "effects": [],
+ "sort": 0,
+ "flags": {},
+ "_stats": {
+  "coreVersion": "14.365",
+  "systemId": "daggerheart",
+  "systemVersion": "2.7.1",
+  "createdTime": 1786391161920,
+  "modifiedTime": 1786391161920,
+  "lastModifiedBy": "pQzNfYJpGL2Gy8DA",
+  "compendiumSource": null,
+  "duplicateSource": null,
+  "exportSource": null
+ },
+ "_key": "!actors!7Wf0UYvWuMh4xhh6"
+}

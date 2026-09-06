@@ -1,7 +1,7 @@
 # Daggerheart system data model (what the importer writes)
 
 Source: Foundryborne/daggerheart, branch `v14`, commit `cf0da27` (2026-09-03), version 2.9.2.
-Cloned into scratch; not vendored. Paths below are relative to that checkout. Verified 2026-09-06.
+Cloned into scratch; not vendored. Paths below are relative to that checkout. Verified 2026-09-05.
 
 **Version gap to note.** The local install at `~/foundrydata/Data/systems/daggerheart/` is 2.7.4
 (world `daggerheart-test` was last opened with 2.7.3). Releases 2.8.0 (2026-08-27) and 2.9.x
@@ -68,7 +68,8 @@ ids, value 1), `domainCard` (data = [compendium uuid], itemUuid = embedded item)
 [class compendium uuid], secondaryData `{ subclass, domain }`), `dice` (Brawler combo die).
 Tier/option keys and checkbox counts come from the `LevelTiers` world setting, default at
 `levelTier.mjs:264-500`: tier 2 = levels 2-4, tier 3 = 5-7, tier 4 = 8-10; `checkboxNr` is the
-0-based box within the option row; `optionKey` is the row name (`trait`, `hitPoint`, …).
+box within the option row (a real level-10 actor in the test world uses `1` for the first box, see
+`samples/foundry/character-level10-ranger-system2.7.json`); `optionKey` is the row name (`trait`, `hitPoint`, …).
 
 How the system itself applies a level-up: `DhActor.levelUp()` at `module/documents/actor.mjs:471-690`.
 With `levelupAuto` **on** it creates the embedded domain-card / multiclass / subclass items, sets
