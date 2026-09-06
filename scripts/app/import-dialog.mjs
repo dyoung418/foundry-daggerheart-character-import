@@ -40,6 +40,8 @@ export class ImportDialog extends HandlebarsApplicationMixin(ApplicationV2) {
     actions: {
       parsePasted: ImportDialog.#onParsePasted,
       toggleCharacter: ImportDialog.#onToggle,
+      selectAll: ImportDialog.#onSelectAll,
+      selectNone: ImportDialog.#onSelectNone,
       import: ImportDialog.#onImport,
     },
   };
@@ -64,6 +66,7 @@ export class ImportDialog extends HandlebarsApplicationMixin(ApplicationV2) {
       pasted: this.pasted,
       characters,
       canImport: this.selected.size > 0,
+      selectedCount: this.selected.size,
     };
   }
 
@@ -98,6 +101,16 @@ export class ImportDialog extends HandlebarsApplicationMixin(ApplicationV2) {
   static #onParsePasted() {
     const ta = this.element.querySelector("textarea[name=pasted]");
     if (ta?.value.trim()) this.#setParsed(ta.value);
+  }
+
+  static #onSelectAll() {
+    this.selected = new Set((this.parsed?.characters ?? []).map((_, i) => i));
+    this.render();
+  }
+
+  static #onSelectNone() {
+    this.selected.clear();
+    this.render();
   }
 
   static #onToggle(event, target) {

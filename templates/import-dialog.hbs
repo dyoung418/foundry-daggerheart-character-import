@@ -13,6 +13,7 @@
 <fieldset>
   <legend>{{localize "DHCI.Dialog.Found"}}</legend>
   {{#if characters.length}}
+    {{#unless targetActor}}<div class="dhci-select"><a data-action="selectAll">{{localize "DHCI.Dialog.SelectAll"}}</a><a data-action="selectNone">{{localize "DHCI.Dialog.SelectNone"}}</a><span class="dhci-meta">{{selectedCount}} / {{characters.length}}</span></div>{{/unless}}
     <ul class="dhci-characters">
       {{#each characters as |ch|}}
         <li>

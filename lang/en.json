@@ -20,7 +20,9 @@
       "TargetActor": "Updating {name}",
       "Importing": "Importing {name}\u2026",
       "Step": "{name}: {step}",
-      "WillUpdate": "updates {name}"
+      "WillUpdate": "updates {name}",
+      "SelectAll": "Select all",
+      "SelectNone": "Select none"
     },
     "Notifications": {
       "NoPermission": "You need permission to create actors to import characters.",
