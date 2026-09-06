@@ -27,13 +27,18 @@ export async function applyPlan(plan, { actor = null, progress = () => {} } = {}
   } else {
     const previous = actor.items.filter((i) => i.getFlag(MODULE_ID, "imported"));
     if (previous.length) await actor.deleteEmbeddedDocuments("Item", previous.map((i) => i.id));
-    // Biography is rebuilt: the class hook re-appends its questions and we re-append the builder text.
-    await actor.update({ name: plan.name, ...(img ? { img } : {}), flags, "system.levelData.levelups": {}, "system.biography.background": "", "system.biography.connections": "" });
+    // Keyed collections merge on update, so old experiences and level records must be deleted
+    // explicitly. Biography is rebuilt: the class hook re-appends its questions and we re-append
+    // the builder text.
+    const deletions = {};
+    for (const key of Object.keys(actor.system._source.experiences ?? {})) deletions[`system.experiences.-=${key}`] = null;
+    for (const key of Object.keys(actor.system._source.levelData?.levelups ?? {})) deletions[`system.levelData.levelups.-=${key}`] = null;
+    await actor.update({ name: plan.name, ...(img ? { img } : {}), flags, "system.biography.background": "", "system.biography.connections": "", ...deletions });
     report.push({ level: "info", message: "existing actor updated: previously imported items replaced, biography rebuilt from the file" });
   }
   // The system derives HP/evasion from the class item; write the base numbers first so
   // prepareData has sane inputs, but hold biography until the class has appended its questions.
-  await actor.update({ system: foundry.utils.deepClone(plan.actorSystem) }, { overwrite: true });
+  await actor.update({ system: foundry.utils.deepClone(plan.actorSystem) });
 
   const created = { cards: new Map(), multiclassClass: null };
   const fetchData = async (uuid, overrides = {}) => {

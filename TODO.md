@@ -58,7 +58,7 @@ Headline findings:
 - [x] Legacy sample import (srd_1_0 ids, no history): resolves by name, one warning about the missing history
 - [x] Portrait upload to `daggerheart-character-import/portraits/` (folder created on demand)
 - [x] Dialog end-to-end via paste → Import → report dialog listing both characters (file picker not scriptable; check by hand)
-- [ ] Level-up automation **off** path in Foundry
+- [x] Level-up automation **off** path: totals written (same derived numbers), multiclass skipped with a report line
 - [x] `tests/levelups.test.mjs` snapshot against `samples/foundry/expected-levelups-level5-ranger.json` (rendered correctly in the sheet's level-up view)
 - [x] `api.selfTest()`: imports the three samples, 33 checks against `samples/expected-derived.json`, all passing on 2.9.2
 
