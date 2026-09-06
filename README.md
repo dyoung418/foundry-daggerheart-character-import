@@ -6,7 +6,7 @@ A [Foundry Virtual Tabletop](https://foundryvtt.com/) module that imports charac
 into a world running the official
 [Foundryborne Daggerheart system](https://github.com/Foundryborne/daggerheart).
 
-**Status: v0.1.0 released 2026-09-06.** Imports SRD characters at any level, including level-up history,
+**Status: v0.2.0 released 2026-09-06.** Imports SRD characters at any level, including level-up history,
 mixed ancestry, multiclass, vault/loadout, equipment, table state and portraits. Homebrew content is
 reported and skipped. Planning record: `TODO.md`, `docs/`.
 

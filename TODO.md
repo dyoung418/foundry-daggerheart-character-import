@@ -28,7 +28,7 @@ needed by the removed changelog action and can be deleted. Package is not regist
 - [x] First release `v0.1.0` published 2026-09-06 and verified by downloading the manifest and zip
 - [ ] Decide whether to register the package on foundryvtt.com (then add the `FOUNDRY_PACKAGE_RELEASE_TOKEN` secret; the workflow step is already there)
 - [x] Homebrew: import a builder source folder into a world compendium (2026-09-06; see "Phase 4" below)
-- [ ] Homebrew follow-up: a `v0.2.0` release once Danny has used it for a session
+- [x] `v0.2.0` released 2026-09-06 (homebrew source import and removal; samples in the zip)
 - [x] UI for removing an imported homebrew source: trash control per entry in the homebrew dialog, confirm
       dialog lists what goes and which actors use the content, optional removal of the domains the import
       added — refused (with a warning) while a card on an actor still uses one, because dropping the domain

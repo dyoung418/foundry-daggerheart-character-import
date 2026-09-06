@@ -74,7 +74,7 @@ jobs:
         run: |
           zip --recurse-paths ./module.zip \
             module.json README.md CHANGELOG.md LICENSE \
-            scripts/ styles/ templates/ lang/ data/
+            scripts/ styles/ templates/ lang/ data/ samples/
 
       - name: Attach module.json and module.zip to the release
         uses: ncipollo/release-action@v1
