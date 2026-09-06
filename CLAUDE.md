@@ -1,0 +1,53 @@
+# CLAUDE.md — working notes for this repo
+
+A FoundryVTT module that imports characters exported as `.json` by
+`~/daggerheart-character-builder` into a world running the official Foundryborne **Daggerheart**
+system. Status: **planning** (started 2026-09-05). Nothing runnable yet.
+
+## Where things are on this machine
+
+| Thing | Path | Version |
+|---|---|---|
+| Foundry server (Node build; client source under `client/`) | `~/foundryvtt/` | 14.366 |
+| Foundry user data | `~/foundrydata/Data/` | |
+| Daggerheart system (compiled; packs are LevelDB) | `~/foundrydata/Data/systems/daggerheart/` | 2.7.4 |
+| Daggerheart system source | https://github.com/Foundryborne/daggerheart (branch `v14`) — clone into scratch, never vendor | |
+| Pathmuncher, the PF2e importer to learn from (dist only here) | `~/foundrydata/Data/modules/pathmuncher/` | 1.6.1 |
+| D&D Beyond importer, second prior-art module | `~/foundrydata/Data/modules/ddb-importer/` | |
+| Danny's earlier module: conventions, fvtt-cli pack workflow, release CI | `~/foundrydata/Data/modules/dannysmodule/` | |
+| Test world on the Daggerheart system | `~/foundrydata/Data/worlds/daggerheart-test/` | |
+| Builder export code (the format is entirely here) | `~/daggerheart-character-builder/shared/transfer.js` | format v1 |
+| Builder game data the exports reference by id | `~/daggerheart-character-builder/data/srd_2_0/` | |
+
+Foundry data paths above are the local install; the module will eventually live at
+`~/foundrydata/Data/modules/<module-id>/` as a symlink to this repo.
+
+## Tracked planning record
+
+Danny wants the whole planning record in git: `TODO.md` is the live task list and resume point,
+`docs/` holds research findings, and `memory/` is Claude's memory directory —
+`~/.claude/projects/-home-danny-foundry-daggerheart-character-import/memory` is a **symlink to
+`./memory`**. On a fresh clone, recreate that symlink before starting a session.
+
+**Checkpoint rule.** While working autonomously: update `TODO.md`, commit, and `git push` at
+least every 30 minutes and at the end of every research track. Never end a turn with
+uncommitted planning work. Commits use Conventional Commits (`docs:`, `feat:`, `fix:`, `chore:`).
+
+## Conventions carried over
+
+- From `dannysmodule`: Conventional Commits; releases are tags `vX.Y.Z` published via GitHub
+  Releases with CI building the zip; nothing OS-dependent in scripts; `packs/` (LevelDB) is never
+  committed — if packs are ever needed, YAML source goes in `src/packs/` and is built with
+  `@foundryvtt/foundryvtt-cli`.
+- From the builder: plain ESM, no build step, no framework; tests are pure modules run under Node.
+
+## Verification rules (learned the hard way in the builder; they apply here)
+
+- Cite `file:line` from the working tree, never from a diff, a commit message or memory.
+- Never judge a two-sided change from one side. The export (builder) and the import (this module)
+  are a pipeline; read both before concluding either is wrong.
+- An empty grep is a claim that needs a positive control.
+- Green tests do not mean the page works. Module code is verified by loading it in Foundry
+  (`daggerheart-test` world) and reading the console.
+- Commit messages and notes are dated claims, not current state. When wrong, fix the note that
+  carried the error and move on.
