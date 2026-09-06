@@ -2,7 +2,7 @@
 
 Live task list and resume point. Newest status at the top. Dates are absolute.
 
-## Status — 2026-09-06 00:50 (Phase 1 core import working in Foundry)
+## Status — 2026-09-06 01:05 (Phase 1 import verified in Foundry; three sample actors left in `daggerheart-test`)
 
 The level-1 bard and level-5 ranger samples import through the module API with no console errors and
 every derived stat equal to `samples/expected-derived.json` (HP, Stress, Evasion, Armor, thresholds,
@@ -54,10 +54,10 @@ Headline findings:
 - [x] `lib/plan.mjs`, `lib/levelups.mjs`, `lib/heritage.mjs` with tests on a compendium fixture (`tests/fixtures/`)
 - [x] `foundry/writer.mjs`, `foundry/import.mjs`, report dialog, dialog wired, API `importFile`
 - [x] Bard and ranger samples imported in `daggerheart-test`; derived stats equal `samples/expected-derived.json`
-- [ ] Re-import into an existing actor (sheet header control) — verify no duplicate items
-- [ ] Legacy sample import (srd_1_0 ids, no history)
-- [ ] Portrait upload — needs a sample with a portrait (add one via `tools/make-samples.mjs`)
-- [ ] Dialog end-to-end by hand (file picker, progress text, report)
+- [x] Re-import into an existing actor: no duplicate items, biography rebuilt (one `<hr>`), portrait re-uploaded
+- [x] Legacy sample import (srd_1_0 ids, no history): resolves by name, one warning about the missing history
+- [x] Portrait upload to `daggerheart-character-import/portraits/` (folder created on demand)
+- [x] Dialog end-to-end via paste → Import → report dialog listing both characters (file picker not scriptable; check by hand)
 - [ ] Level-up automation **off** path in Foundry
 - [ ] `tests/`: levelups translation asserted against `samples/foundry/expected-levelups-level5-ranger.draft.json`
 
