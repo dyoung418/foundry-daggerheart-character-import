@@ -1,6 +1,6 @@
 ---
 name: project-foundry-import-status
-description: State of the Daggerheart character importer as of 2026-09-06 (v0.1.0 released) — what works, what Danny has tried, what is next; the resume point for the next session
+description: State of the Daggerheart character importer as of 2026-09-06 (v0.2.0 released, homebrew import) — what works, what Danny has tried, what is next; the resume point for the next session
 metadata:
   type: project
 ---
@@ -13,8 +13,8 @@ dialog, loadout warnings, Brawler combo die) were fixed the same night and verif
 `v0.1.0` was released 2026-09-06 (re-cut once the same hour after a broken first build; see
 [[feedback-release-workflow-research]]). Later that day the homebrew source import landed (builder
 `data/<source>/` folder → `world.dhci-<source>` compendium; Danny's `void` source and its three
-characters import cleanly), so the whole roster imports. Not yet done: card-art upload tried live,
-a `v0.2.0` release, foundryvtt.com listing, Beastbound companion, renames UI, i18n.
+characters import cleanly, card art included), so the whole roster imports; `v0.2.0` shipped it the
+same evening with a removal UI. Not yet done: foundryvtt.com listing, Beastbound companion, renames UI, i18n.
 `TODO.md` has the exact list. `api.selfTest()` in a Daggerheart world is the regression check;
 `npm test` covers the pure library (27 tests); selfTest runs 44 checks including the homebrew path. See [[project-foundry-import-origin]] and
 [[feedback-verify-in-live-foundry]].

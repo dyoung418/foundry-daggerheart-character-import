@@ -2,12 +2,13 @@
 
 Live task list and resume point. Newest status at the top. Dates are absolute.
 
-## Status — 2026-09-06 17:30 (v0.1.0 released; homebrew source import verified live)
+## Status — 2026-09-06 18:00 (v0.2.0 released: homebrew source import and removal)
 
 Working module, verified on Danny's real 17-character roster in `daggerheart-test` (Foundry 14.367,
 Daggerheart 2.9.2). `npm test` passes 27; `api.selfTest()` passes 44 checks (the last 11 exercise the
-homebrew path). **`v0.1.0` is published** (manifest and zip verified by download). **Homebrew source
-import** landed after the release: Danny imported his `void` source (2 classes, 5 subclasses, 21 Blood
+homebrew path). **`v0.2.0` is published** (manifest and zip verified by download; the zip now carries
+`samples/` so `api.selfTest()` works on an installed copy). `v0.1.0` was the first release earlier the same
+day. **Homebrew source import** landed between the two: Danny imported his `void` source (2 classes, 5 subclasses, 21 Blood
 cards → `world.dhci-void`, 69 documents) through the new dialog, and BloodHunter (level 8, Blood
 Hunter/Order of the Mutant + Warlock multiclass), MultiMaggy (Warrior + Blood Hunter multiclass) and
 Summoner Sam then imported with no warnings — the whole roster now imports. Card art verified live too:
