@@ -1,0 +1,645 @@
+{
+  "char_lvl1bard": {
+    "sheet": {
+      "name": "Lyra Quillwright",
+      "pronouns": "she/her",
+      "level": 1,
+      "proficiency": 1,
+      "className": "Bard",
+      "subclassName": "Troubadour",
+      "subclassTierLabel": "Foundation",
+      "ancestryNames": [
+        "Clank"
+      ],
+      "communityName": "Highborne",
+      "transformationName": null,
+      "traits": [
+        {
+          "key": "agility",
+          "label": "Agility",
+          "display": "0"
+        },
+        {
+          "key": "strength",
+          "label": "Strength",
+          "display": "-1"
+        },
+        {
+          "key": "finesse",
+          "label": "Finesse",
+          "display": "+1"
+        },
+        {
+          "key": "instinct",
+          "label": "Instinct",
+          "display": "0"
+        },
+        {
+          "key": "presence",
+          "label": "Presence",
+          "display": "+2"
+        },
+        {
+          "key": "knowledge",
+          "label": "Knowledge",
+          "display": "+1"
+        }
+      ],
+      "evasion": 11,
+      "armorScore": 3,
+      "hitPoints": 5,
+      "stress": 6,
+      "hopeSlots": 6,
+      "hopeStart": 2,
+      "thresholds": {
+        "major": 6,
+        "severe": 12
+      },
+      "weapons": [
+        {
+          "name": "Rapier",
+          "range": "Melee",
+          "burden": "One handed",
+          "traitLabel": "Presence",
+          "attack": "+2",
+          "attackNamesTraits": false,
+          "damage": "1d8",
+          "damageType": "Physical",
+          "features": [
+            {
+              "name": "Quick",
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "When you make an attack, you can mark a Stress to target another creature within range."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Shortsword",
+          "range": "Melee",
+          "burden": "One handed",
+          "traitLabel": "Agility",
+          "attack": "0",
+          "attackNamesTraits": false,
+          "damage": "1d8",
+          "damageType": "Physical",
+          "features": [
+            {
+              "name": "Paired",
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "+2 to primary weapon damage to targets within Melee range"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "armorName": "Gambeson Armor",
+      "armorFeatures": [
+        {
+          "name": "Flexible",
+          "description": [
+            {
+              "type": "paragraph",
+              "text": "+1 to Evasion"
+            }
+          ]
+        }
+      ],
+      "potionName": "Minor Health Potion",
+      "experiences": [
+        {
+          "name": "Silver Tongue",
+          "display": "+2"
+        },
+        {
+          "name": "Court Etiquette",
+          "display": "+2"
+        }
+      ],
+      "spellcast": {
+        "display": "Presence"
+      },
+      "tracks": [
+        {
+          "label": "Rally Die",
+          "display": "d6",
+          "note": "Increases to d8 at level 5."
+        }
+      ],
+      "multiclass": null,
+      "multiclassFeatures": [],
+      "loadout": [
+        {
+          "id": "srd_2_0_domain_card_deft_deceiver",
+          "name": "Deft Deceiver",
+          "domain": "GRACE",
+          "domainClass": "grace",
+          "level": 1,
+          "type": "Ability",
+          "recallCost": 0,
+          "features": [
+            {
+              "name": "",
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Spend a Hope to gain advantage on a roll to deceive or trick someone into believing a lie you tell them."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "srd_2_0_domain_card_book_of_ava",
+          "name": "Book of Ava",
+          "domain": "CODEX",
+          "domainClass": "codex",
+          "level": 1,
+          "type": "Grimoire",
+          "recallCost": 2,
+          "features": [
+            {
+              "name": "Power Push",
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Make a Spellcast Roll against a target within Melee range. On a success, they’re knocked back to Far range and take d10+2 magic damage using your Proficiency."
+                }
+              ]
+            },
+            {
+              "name": "Tava’s Armor",
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Spend a Hope to give a target you can touch a +1 bonus to their Armor Score until their next rest or you cast Tava’s Armor again."
+                }
+              ]
+            },
+            {
+              "name": "Ice Spike",
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Make a Spellcast Roll (12) to summon a large ice spike within Far range. If you use it as a weapon, make the Spellcast Roll against the target’s Difficulty instead. On a success, deal d6 physical damage using your Proficiency."
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "hopeFeature": {
+        "name": "Make a Scene",
+        "description": [
+          {
+            "type": "paragraph",
+            "text": "Spend 3 Hope to temporarily Distract a target within Close range, giving them a -2 penalty to their Difficulty."
+          }
+        ]
+      },
+      "classFeatures": [
+        {
+          "name": "Rally",
+          "description": [
+            {
+              "type": "paragraph",
+              "text": "Once per session, describe how you rally the party and give yourself and each of your allies a Rally Die. At level 1, your Rally Die is a d6. A PC can spend their Rally Die to roll it, adding the result to their action roll, reaction roll, damage roll, or to clear a number of Stress equal to the result. At the end of each session, clear all unspent Rally Dice. At level 5, your Rally Die increases to a d8."
+            }
+          ]
+        }
+      ],
+      "subclassFeatures": [
+        {
+          "name": "Gifted Performer",
+          "description": [
+            {
+              "type": "paragraph",
+              "text": "You can play three different types of songs, once each per long rest; describe how you perform for others to gain the listed benefit:"
+            },
+            {
+              "type": "list",
+              "items": [
+                "Relaxing Song: You and all allies within Close range clear a Hit Point.",
+                "Epic Song: Make a target within Close range temporarily Vulnerable.",
+                "Heartbreaking Song: You and all allies within Close range gain a Hope."
+              ]
+            }
+          ],
+          "source": "Foundation"
+        }
+      ],
+      "ancestryFeatures": [
+        {
+          "name": "Purposeful Design",
+          "description": [
+            {
+              "type": "paragraph",
+              "text": "Decide who made you and for what purpose. At character creation, choose one of your Experiences that best aligns with this purpose and gain a permanent +1 bonus to it."
+            }
+          ],
+          "source": "Clank"
+        },
+        {
+          "name": "Efficient",
+          "description": [
+            {
+              "type": "paragraph",
+              "text": "When you take a short rest, you can choose a long rest move instead of a short rest move."
+            }
+          ],
+          "source": "Clank"
+        }
+      ],
+      "communityFeatures": [
+        {
+          "name": "Privilege",
+          "description": [
+            {
+              "type": "paragraph",
+              "text": "You have advantage on rolls to consort with nobles, negotiate prices, or leverage your reputation to get what you want."
+            }
+          ],
+          "source": "Highborne"
+        }
+      ],
+      "transformationFeatures": [],
+      "unresolvedChoicePrompts": [
+        "Purposeful Design: choose the Experience that best aligns with what you were made for."
+      ],
+      "missingContent": [],
+      "background": "A court musician who fled after a song offended the wrong duke.",
+      "appearance": "Who taught you your first song? A clockmaker who wound me every morning.",
+      "connections": "Owes Thessaly a favour from the road."
+    },
+    "statsSummary": {
+      "hitPoints": 5,
+      "stress": 6,
+      "evasion": 11,
+      "armorScore": 3,
+      "thresholds": {
+        "major": 6,
+        "severe": 12
+      },
+      "proficiency": 1,
+      "traits": {
+        "agility": 0,
+        "strength": -1,
+        "finesse": 1,
+        "instinct": 0,
+        "presence": 2,
+        "knowledge": 1
+      }
+    }
+  },
+  "char_lvl5ranger": {
+    "sheet": {
+      "name": "Thessaly Vane",
+      "pronouns": "they/them",
+      "level": 5,
+      "proficiency": 3,
+      "className": "Ranger",
+      "subclassName": "Beastbound",
+      "subclassTierLabel": "Foundation",
+      "ancestryNames": [
+        "Drakona",
+        "Elf"
+      ],
+      "communityName": "Wanderborne",
+      "transformationName": null,
+      "traits": [
+        {
+          "key": "agility",
+          "label": "Agility",
+          "display": "+3"
+        },
+        {
+          "key": "strength",
+          "label": "Strength",
+          "display": "0"
+        },
+        {
+          "key": "finesse",
+          "label": "Finesse",
+          "display": "+1"
+        },
+        {
+          "key": "instinct",
+          "label": "Instinct",
+          "display": "+2"
+        },
+        {
+          "key": "presence",
+          "label": "Presence",
+          "display": "-1"
+        },
+        {
+          "key": "knowledge",
+          "label": "Knowledge",
+          "display": "0"
+        }
+      ],
+      "evasion": 13,
+      "armorScore": 3,
+      "hitPoints": 7,
+      "stress": 7,
+      "hopeSlots": 6,
+      "hopeStart": 2,
+      "thresholds": {
+        "major": 11,
+        "severe": 18
+      },
+      "weapons": [
+        {
+          "name": "Longsword",
+          "range": "Melee",
+          "burden": "Two handed",
+          "traitLabel": "Agility",
+          "attack": "+3",
+          "attackNamesTraits": false,
+          "damage": "3d10+3",
+          "damageType": "Physical",
+          "features": []
+        }
+      ],
+      "armorName": "Leather Armor",
+      "armorFeatures": [],
+      "potionName": "Minor Stamina Potion",
+      "experiences": [
+        {
+          "name": "Caravan Scout",
+          "display": "+3"
+        },
+        {
+          "name": "Wolf Whisperer",
+          "display": "+2"
+        },
+        {
+          "name": "Seen It Before",
+          "display": "+3"
+        },
+        {
+          "name": "Old Roads",
+          "display": "+2"
+        }
+      ],
+      "spellcast": {
+        "display": "Agility / Instinct",
+        "note": "Your foundation cards name different Spellcast traits: choose which to use on each roll."
+      },
+      "tracks": [],
+      "multiclass": {
+        "className": "Druid",
+        "subclassName": "Warden of the Elements",
+        "domain": "Arcana"
+      },
+      "multiclassFeatures": [
+        {
+          "name": "Beastform",
+          "description": [
+            {
+              "type": "paragraph",
+              "text": "Mark a Stress to magically transform into a creature of your tier or lower from the Beastform list. You can drop out of this form at any time. While transformed, you can’t use weapons or cast spells from domain cards, but you can still use other features or abilities you have access to. Spells you cast before you transform stay active and last for their normal duration, and you can talk and communicate as normal. Additionally, you gain the Beastform’s features, add their Evasion bonus to your Evasion, and use the trait specified in their statistics for your attack. While you’re in a Beastform, your armor becomes part of your body and you mark Armor Slots as usual; when you drop out of a Beastform, those marked Armor Slots remain marked. If you mark your last Hit Point, you automatically drop out of this form."
+            }
+          ],
+          "source": "Druid"
+        },
+        {
+          "name": "Wildtouch",
+          "description": [
+            {
+              "type": "paragraph",
+              "text": "You can perform harmless, subtle effects that involve nature—such as causing a flower to rapidly grow, summoning a slight gust of wind, or starting a campfire— at will."
+            }
+          ],
+          "source": "Druid"
+        },
+        {
+          "name": "Elemental Incarnation",
+          "description": [
+            {
+              "type": "paragraph",
+              "text": "Mark a Stress to Channel one of the following elements until you take Severe damage or until your next rest:"
+            },
+            {
+              "type": "list",
+              "items": [
+                "Fire: When an adversary within Melee range deals damage to you, they take 1d10 magic damage.",
+                "Earth: Gain a bonus to your damage thresholds equal to your Proficiency.",
+                "Water: When you deal damage to an adversary within Melee range, all other adversaries within Very Close range must mark a Stress.",
+                "Air: You can hover, gaining advantage on Agility Rolls."
+              ]
+            }
+          ],
+          "source": "Warden of the Elements (Foundation)"
+        }
+      ],
+      "loadout": [
+        {
+          "id": "srd_2_0_domain_card_brace",
+          "name": "Brace",
+          "domain": "BONE",
+          "domainClass": "bone",
+          "level": 3,
+          "type": "Ability",
+          "recallCost": 1,
+          "features": [
+            {
+              "name": "",
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "When you mark an Armor Slot to reduce incoming damage, you can mark a Stress to mark an additional Armor Slot."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "srd_2_0_domain_card_conjure_swarm",
+          "name": "Conjure Swarm",
+          "domain": "SAGE",
+          "domainClass": "sage",
+          "level": 2,
+          "type": "Spell",
+          "recallCost": 1,
+          "features": [
+            {
+              "name": "",
+              "description": [
+                {
+                  "type": "list",
+                  "items": [
+                    "Tekaira Armored Beetles: Mark a Stress to conjure armored beetles that encircle you. When you next take damage, reduce the severity by one threshold. You can spend a Hope to keep the beetles conjured after taking damage.",
+                    "Fire Flies: Make a Spellcast Roll against all adversaries within Close range. Spend a Hope to deal 2d8+3 magic damage to targets you succeeded against."
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "srd_2_0_domain_card_ferocity",
+          "name": "Ferocity",
+          "domain": "BONE",
+          "domainClass": "bone",
+          "level": 2,
+          "type": "Ability",
+          "recallCost": 2,
+          "features": [
+            {
+              "name": "",
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "When you cause an adversary to mark 1 or more Hit Points, you can spend 2 Hope to increase your Evasion by the number of Hit Points they marked. This bonus lasts until after the next attack made against you."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "srd_2_0_domain_card_know_thy_enemy",
+          "name": "Know Thy Enemy",
+          "domain": "BONE",
+          "domainClass": "bone",
+          "level": 5,
+          "type": "Ability",
+          "recallCost": 1,
+          "features": [
+            {
+              "name": "",
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "When observing a creature, you can make an Instinct Roll against them. On a success, spend a Hope and ask the GM for one set of information about the target from the following options:"
+                },
+                {
+                  "type": "list",
+                  "items": [
+                    "Their unmarked Hit Points and Stress.",
+                    "Their Difficulty and damage thresholds.",
+                    "Their tactics and standard attack damage dice.",
+                    "Their features and Experiences."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Additionally on a success, you can mark a Stress to remove a Fear from the GM’s Fear Pool."
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "hopeFeature": {
+        "name": "Hold Them Off",
+        "description": [
+          {
+            "type": "paragraph",
+            "text": "Spend 3 Hope when you succeed on an attack with a weapon to use that same roll against two additional adversaries within range of the attack."
+          }
+        ]
+      },
+      "classFeatures": [
+        {
+          "name": "Ranger’s Focus",
+          "description": [
+            {
+              "type": "paragraph",
+              "text": "Spend a Hope and make an attack against a target. On a success, deal your attack’s normal damage and temporarily make the attack’s target your Focus. Until this feature ends or you make a different creature your Focus, you gain the following benefits against your Focus:"
+            },
+            {
+              "type": "list",
+              "items": [
+                "You know precisely what direction they are in.",
+                "When you deal damage to them, they must mark a Stress.",
+                "When you fail an attack against them, you can end your Ranger’s Focus feature to reroll your Duality Dice."
+              ]
+            }
+          ]
+        }
+      ],
+      "subclassFeatures": [
+        {
+          "name": "Companion",
+          "description": [
+            {
+              "type": "paragraph",
+              "text": "You have an animal companion of your choice (at the GM’s discretion). They stay by your side unless you tell them otherwise."
+            },
+            {
+              "type": "paragraph",
+              "text": "Take the Ranger Companion sheet. When you level up your character, choose a level-up option for your companion from this sheet as well."
+            }
+          ],
+          "source": "Foundation"
+        }
+      ],
+      "ancestryFeatures": [
+        {
+          "name": "Scales",
+          "description": [
+            {
+              "type": "paragraph",
+              "text": "Your scales act as natural protection. When you would take Severe damage, you can mark a Stress to mark 1 fewer Hit Points."
+            }
+          ],
+          "source": "Drakona"
+        },
+        {
+          "name": "Celestial Trance",
+          "description": [
+            {
+              "type": "paragraph",
+              "text": "During a rest, you can drop into a trance to choose an additional downtime move."
+            }
+          ],
+          "source": "Elf"
+        }
+      ],
+      "communityFeatures": [
+        {
+          "name": "Nomadic Pack",
+          "description": [
+            {
+              "type": "paragraph",
+              "text": "Add a Nomadic Pack to your inventory. Once per session, you can spend a Hope to reach into this pack and pull out a mundane item that’s useful to your situation. Work with the GM to figure out what item you take out."
+            }
+          ],
+          "source": "Wanderborne"
+        }
+      ],
+      "transformationFeatures": [],
+      "unresolvedChoicePrompts": [],
+      "missingContent": [],
+      "background": "Caravan scout with a wolf named Ashe.",
+      "appearance": "",
+      "connections": ""
+    },
+    "statsSummary": {
+      "hitPoints": 7,
+      "stress": 7,
+      "evasion": 13,
+      "armorScore": 3,
+      "thresholds": {
+        "major": 11,
+        "severe": 18
+      },
+      "proficiency": 3,
+      "traits": {
+        "agility": 3,
+        "strength": 0,
+        "finesse": 1,
+        "instinct": 2,
+        "presence": -1,
+        "knowledge": 0
+      }
+    }
+  }
+}

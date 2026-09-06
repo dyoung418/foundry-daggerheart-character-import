@@ -1,0 +1,97 @@
+{
+  "format": "daggerheart-character-builder",
+  "version": 1,
+  "exportedAt": "2026-06-02T14:05:00.000Z",
+  "characters": [
+    {
+      "id": "char_legacy3",
+      "name": "Old Save Orrin",
+      "pronouns": "he/him",
+      "classId": "srd_1_0_class_guardian",
+      "subclassId": "srd_1_0_subclass_stalwart",
+      "heritage": {
+        "ancestryMode": "pure",
+        "ancestryIds": [
+          "srd_1_0_ancestry_dwarf"
+        ],
+        "chosenFeatures": [
+          {
+            "ancestryId": "srd_1_0_ancestry_dwarf",
+            "featureName": "Thick Skin"
+          },
+          {
+            "ancestryId": "srd_1_0_ancestry_dwarf",
+            "featureName": "Increased Fortitude"
+          }
+        ],
+        "communityId": "srd_1_0_community_ridgeborne"
+      },
+      "traits": {
+        "agility": 0,
+        "strength": 3,
+        "finesse": 0,
+        "instinct": 1,
+        "presence": 1,
+        "knowledge": -1
+      },
+      "equipment": {
+        "primaryWeaponId": "srd_1_0_weapon_warhammer",
+        "secondaryWeaponId": "srd_1_0_weapon_round_shield",
+        "armorId": "srd_1_0_armor_chainmail_armor",
+        "potionChoice": "srd_1_0_consumable_minor_health_potion"
+      },
+      "weaponMode": "primary-secondary",
+      "background": {
+        "description": "",
+        "answers": ""
+      },
+      "experiences": [
+        {
+          "name": "Shield Wall",
+          "modifier": 3
+        },
+        {
+          "name": "Mountain Born",
+          "modifier": 2
+        },
+        {
+          "name": "Stubborn",
+          "modifier": 2
+        }
+      ],
+      "domainCardIds": [
+        "srd_1_0_domain_card_i_see_it_coming",
+        "srd_1_0_domain_card_bare_bones",
+        "srd_1_0_domain_card_deft_maneuvers",
+        "srd_1_0_domain_card_forceful_push"
+      ],
+      "connectionsNotes": "",
+      "level": 3,
+      "proficiency": 1,
+      "traitMarks": {
+        "agility": false,
+        "strength": true,
+        "finesse": false,
+        "instinct": true,
+        "presence": false,
+        "knowledge": false
+      },
+      "hitPointSlotsBonus": 1,
+      "stressSlotsBonus": 0,
+      "evasionBonus": 0,
+      "subclassTier": "foundation",
+      "advancementSlotsUsed": {
+        "traits": 1,
+        "hitPoint": 1,
+        "stress": 0,
+        "evasion": 0,
+        "experience": 1,
+        "domainCard": 0,
+        "subclass": 0,
+        "proficiency": 0,
+        "multiclass": 0
+      },
+      "updatedAt": "2026-06-02T14:03:11.000Z"
+    }
+  ]
+}
