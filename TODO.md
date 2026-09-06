@@ -2,7 +2,7 @@
 
 Live task list and resume point. Newest status at the top. Dates are absolute.
 
-## Status — 2026-09-06 01:05 (Phase 1 import verified in Foundry; three sample actors left in `daggerheart-test`)
+## Status — 2026-09-06 01:20 (Phase 1 complete; `api.selfTest()` green in `daggerheart-test`)
 
 The level-1 bard and level-5 ranger samples import through the module API with no console errors and
 every derived stat equal to `samples/expected-derived.json` (HP, Stress, Evasion, Armor, thresholds,
@@ -59,7 +59,8 @@ Headline findings:
 - [x] Portrait upload to `daggerheart-character-import/portraits/` (folder created on demand)
 - [x] Dialog end-to-end via paste → Import → report dialog listing both characters (file picker not scriptable; check by hand)
 - [ ] Level-up automation **off** path in Foundry
-- [ ] `tests/`: levelups translation asserted against `samples/foundry/expected-levelups-level5-ranger.draft.json`
+- [x] `tests/levelups.test.mjs` snapshot against `samples/foundry/expected-levelups-level5-ranger.json` (rendered correctly in the sheet's level-up view)
+- [x] `api.selfTest()`: imports the three samples, 33 checks against `samples/expected-derived.json`, all passing on 2.9.2
 
 ## Done
 
