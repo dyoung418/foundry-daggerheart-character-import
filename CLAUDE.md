@@ -2,7 +2,7 @@
 
 A FoundryVTT module that imports characters exported as `.json` by
 `~/daggerheart-character-builder` into a world running the official Foundryborne **Daggerheart**
-system. Started 2026-09-05; the import pipeline works as of 2026-09-06 (see `TODO.md`).
+system. Started 2026-09-05; working and verified on Danny's real roster as of 2026-09-06 (see `TODO.md`).
 
 Code layout: `scripts/lib/` is pure and tested under Node (`npm test`); `scripts/foundry/` touches
 Foundry; `scripts/app/` is the UI. `api.selfTest()` in a live world is the integration check.
@@ -66,6 +66,8 @@ uncommitted planning work. Commits use Conventional Commits (`docs:`, `feat:`, `
   granted, and vaults cards past the loadout limit.
 - Re-running `applyPlan` on an existing actor: items flagged `daggerheart-character-import.imported` are
   deleted first; biography is reset before the class is re-created.
+- After a Daggerheart system update: re-clone the `v14` branch into scratch, run
+  `tools/build-test-fixture.py`, `tools/name-match.py`, then `npm test` and `api.selfTest()`.
 - To check the module in a live world from this session: start `~/foundryvtt/foundryvtt_launch_script`
   in the background (port 36000), have Danny log in and launch `daggerheart-test`, then drive the page
   with the Chrome tools and read the console for `daggerheart-character-import |` lines.

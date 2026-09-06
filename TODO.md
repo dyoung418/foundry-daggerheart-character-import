@@ -2,20 +2,21 @@
 
 Live task list and resume point. Newest status at the top. Dates are absolute.
 
-## Status — 2026-09-06 01:50 (Phases 0–3 complete and verified; no test actors left in `daggerheart-test`)
+## Status — 2026-09-06 02:20 (session closed cleanly; resume from "Next")
 
-The module imports builder files end to end. In `daggerheart-test` (Foundry 14.367, Daggerheart 2.9.2)
-`api.selfTest()` imports the three bundled samples, runs 33 checks against `samples/expected-derived.json`
-and passes; re-import is idempotent; the level-up-automation-off path, transformations, portraits and the
-optional actor folder are verified. 19 Node unit tests pass (`npm test`). Nothing is released yet.
+Working module, verified on Danny's real 17-character roster in `daggerheart-test` (Foundry 14.367,
+Daggerheart 2.9.2). `api.selfTest()` passes 33 checks; `npm test` passes 20. Working tree clean, all
+pushed. Nothing released yet. The Foundry server started from this session may still be running on
+port 36000 (`pgrep -f "foundryvtt/main.js"`); Danny's roster copy sits in the gitignored `scratch/`.
 
 Cold-start reading order: `README.md` → `CLAUDE.md` → this file → `docs/architecture.md` →
 `docs/mapping.md` → `docs/builder-export-format.md` and `docs/daggerheart-system-model.md` →
-`docs/prior-art.md`. Samples in `samples/`, dev tools in `tools/`, fixtures in `tests/fixtures/`.
+`docs/prior-art.md`. Samples in `samples/`, dev tools in `tools/`, fixtures in `tests/fixtures/`
+(regenerate with `tools/build-test-fixture.py <clone>/src/packs` after a system update).
 
 ## Next
 
-- [ ] Danny: try the file picker in the dialog by hand (the scripted checks used the paste path)
+- [x] Danny used the file picker with his real export (2026-09-06)
 - [ ] First release: tag `v0.1.0` (the release workflow zips and publishes) once a real export has been tried
 - [ ] Phase 4 candidates, none started: homebrew stub items; Beastbound companion actor; renames UI; i18n
 - [ ] After each Daggerheart system update: run `api.selfTest()` in a Daggerheart world
