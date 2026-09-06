@@ -4,23 +4,45 @@
   "description": "Import characters exported by the Daggerheart Character Builder (.json) into the Foundryborne Daggerheart system.",
   "version": "VERSION",
   "authors": [
-    { "name": "Danny Young", "url": "https://github.com/dyoung418" }
+    {
+      "name": "Danny Young",
+      "url": "https://github.com/dyoung418"
+    }
   ],
   "url": "URL",
+  "bugs": "https://github.com/dyoung418/foundry-daggerheart-character-import/issues",
   "manifest": "MANIFEST",
   "download": "DOWNLOAD",
-  "license": "LICENSE",
-  "readme": "README.md",
-  "changelog": "CHANGELOG.md",
-  "compatibility": { "minimum": "14", "verified": "14" },
-  "esmodules": ["scripts/main.mjs"],
-  "styles": ["styles/import.css"],
+  "license": "https://github.com/dyoung418/foundry-daggerheart-character-import/blob/main/LICENSE",
+  "readme": "https://github.com/dyoung418/foundry-daggerheart-character-import/blob/main/README.md",
+  "changelog": "https://github.com/dyoung418/foundry-daggerheart-character-import/blob/main/CHANGELOG.md",
+  "compatibility": {
+    "minimum": "14",
+    "verified": "14"
+  },
+  "esmodules": [
+    "scripts/main.mjs"
+  ],
+  "styles": [
+    "styles/import.css"
+  ],
   "languages": [
-    { "lang": "en", "name": "English", "path": "lang/en.json" }
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
   ],
   "relationships": {
     "systems": [
-      { "id": "daggerheart", "type": "system", "compatibility": { "minimum": "2.9.0", "verified": "2.9.2" } }
+      {
+        "id": "daggerheart",
+        "type": "system",
+        "compatibility": {
+          "minimum": "2.9.0",
+          "verified": "2.9.2"
+        }
+      }
     ]
   }
 }
