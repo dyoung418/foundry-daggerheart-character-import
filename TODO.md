@@ -29,6 +29,10 @@ needed by the removed changelog action and can be deleted. Package is not regist
 - [ ] Decide whether to register the package on foundryvtt.com (then add the `FOUNDRY_PACKAGE_RELEASE_TOKEN` secret; the workflow step is already there)
 - [x] Homebrew: import a builder source folder into a world compendium (2026-09-06; see "Phase 4" below)
 - [ ] Homebrew follow-up: a `v0.2.0` release once Danny has used it for a session
+- [ ] UI for removing an imported homebrew source (`void` or any other): a remove control per entry in the
+      homebrew dialog's "Sources already imported" list, calling `removeHomebrewSource` after a confirm;
+      say what it deletes (the compendium documents and the pack; whether to drop the domains it added)
+      and warn that actors keep their copied items but lose the compendium link (Danny, 2026-09-06)
 - [ ] Phase 4 candidates, none started: Beastbound companion actor; renames UI; i18n
 - [ ] After each Daggerheart system update: run `api.selfTest()` in a Daggerheart world
 
