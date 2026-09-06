@@ -3,7 +3,10 @@
 {{#unless isGM}}<p class="dhci-fatal">{{localize "DHCI.Homebrew.GMOnly"}}</p>{{/unless}}
 <fieldset>
   <legend>{{localize "DHCI.Homebrew.Files"}}</legend>
-  <input type="file" name="files" multiple accept=".json,application/json,.png,.webp,.jpg,.jpeg,.svg,image/*">
+  <div class="dhci-pickers">
+    <label>{{localize "DHCI.Homebrew.PickFolder"}} <input type="file" name="folder" webkitdirectory multiple></label>
+    <label>{{localize "DHCI.Homebrew.PickFiles"}} <input type="file" name="files" multiple accept=".json,application/json,.png,.webp,.jpg,.jpeg,.svg,image/*"></label>
+  </div>
   <p class="hint">{{localize "DHCI.Homebrew.FilesHint"}}{{#if fileCount}} <span class="dhci-meta">{{localize "DHCI.Homebrew.FileCount" count=fileCount}} · <a data-action="clear">{{localize "DHCI.Homebrew.Clear"}}</a></span>{{/if}}</p>
 </fieldset>
 <fieldset>

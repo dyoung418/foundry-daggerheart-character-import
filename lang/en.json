@@ -66,7 +66,7 @@
       "Intro": "Pick the JSON files of a builder homebrew source (the data/<source>/ folder: classes.json, subclasses.json, domain-cards.json, source.json). Card art from card-art/ can be added too. The module creates a world compendium with the classes, subclasses, features and domain cards, registers new domains with the system's Homebrew settings, and searches that compendium when importing characters.",
       "GMOnly": "Only a GM can import homebrew sources.",
       "Files": "Source files",
-      "FilesHint": "Pick the JSON files first, then add card-art/domain and card-art/subclass with further picks; selections accumulate. Files that are not builder source files are ignored and listed.",
+      "FilesHint": "Pick the source folder (e.g. data/void) to take its JSON files and card-art in one go, or pick files: JSON first, then the files inside card-art/domain and card-art/subclass. Selections accumulate; anything that is not a builder source file or image is ignored.",
       "Found": "Source",
       "Images": "{count} art file(s)",
       "NothingParsed": "No files read yet.",
@@ -80,7 +80,9 @@
       "ReportIgnored": "Ignored {file}: not a builder source file.",
       "ReportNext": "You can now import characters that use this content. Re-import the source after changing it in the builder; items keep their ids.",
       "FileCount": "{count} file(s) selected",
-      "Clear": "clear"
+      "Clear": "clear",
+      "PickFolder": "Whole source folder",
+      "PickFiles": "Or individual files"
     }
   }
 }

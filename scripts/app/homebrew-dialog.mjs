@@ -45,13 +45,18 @@ export class HomebrewDialog extends HandlebarsApplicationMixin(ApplicationV2) {
 
   _onRender(context, options) {
     super._onRender(context, options);
-    this.element.querySelector('input[type="file"]')?.addEventListener("change", (ev) => this.#readFiles([...(ev.target.files ?? [])]));
+    for (const input of this.element.querySelectorAll('input[type="file"]')) {
+      input.addEventListener("change", (ev) => this.#readFiles([...(ev.target.files ?? [])]));
+    }
   }
 
   /** Picks accumulate (the browser's picker takes one folder at a time: JSON, then card-art/domain, then card-art/subclass). */
   async #readFiles(files) {
+    // A folder pick includes everything below it (card-art/domain, card-art/subclass); keep only
+    // JSON and images, deduplicated by file name.
     const known = new Set(this.files.map((f) => f.name));
-    this.files = [...this.files, ...files.filter((f) => !known.has(f.name))];
+    const wanted = files.filter((f) => /\.json$/i.test(f.name) || IMAGE_RE.test(f.name));
+    this.files = [...this.files, ...wanted.filter((f) => !known.has(f.name))];
     this.images = this.files.filter((f) => IMAGE_RE.test(f.name) && artKey(f.name)).length;
     const texts = await Promise.all(this.files.filter((f) => !IMAGE_RE.test(f.name)).map(async (f) => ({ name: f.name, text: await f.text() })));
     this.parsed = texts.length ? parseSourceFiles(texts) : null;

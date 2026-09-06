@@ -20,3 +20,5 @@
 .dhci-dialog .hint { font-size: 0.85em; opacity: 0.8; margin: 0.25rem 0 0; }
 .dhci-dialog .dhci-fatal { color: var(--color-level-error, #c33); }
 .dhci-dialog .dhci-meta a { cursor: pointer; }
+.dhci-dialog .dhci-pickers { display: flex; flex-direction: column; gap: 0.35rem; }
+.dhci-dialog .dhci-pickers label { display: flex; gap: 0.5rem; align-items: center; font-size: 0.9em; }
