@@ -73,6 +73,12 @@ uncommitted planning work. Commits use Conventional Commits (`docs:`, `feat:`, `
   with the Chrome tools and read the console for `daggerheart-character-import |` lines. To see whether
   the server is up use `ss -ltn | grep 36000`; `pgrep -f foundryvtt/main.js` matches the shell running
   the check and reports a false positive.
+- Foundry 14 deprecates the `{"path.-=key": null}` deletion syntax; use
+  `new foundry.data.operators.ForcedDeletion()` as the value under the plain key (writer.mjs does).
+- Changing the system's `Homebrew` setting re-validates every actor (`handleChange`): removing a domain
+  that a card on an actor still uses throws from inside `game.settings.set`. Homebrew source removal
+  therefore refuses to drop in-use domains.
+- Inside a Handlebars `{{#each}}`, root context needs `@root.name` (`isGM` silently rendered nothing).
 - `module.json` placeholders must be `#{VERSION}#`-style; bare `VERSION` is silently left alone by the
   replace-tokens action (this shipped a broken first v0.1.0 on 2026-09-06 before it was re-cut).
 - Releases: add a `CHANGELOG.md` entry by hand, commit, then `gh release create vX.Y.Z --generate-notes
