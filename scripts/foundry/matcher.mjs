@@ -10,7 +10,7 @@ export const DEFAULT_PACKS = [
 const INDEX_FIELDS = [
   "type", "system.domain", "system.level", "system.tier", "system.secondary", "system.features",
   "system.linkedClass", "system.spellcastingTrait", "system.domains", "system.hitPoints", "system.evasion",
-  "system.inventory.take",
+  "system.inventory.take", "system.levelupOptionTiers",
 ];
 
 let namesCache = null;
@@ -52,6 +52,7 @@ export class CompendiumMatcher {
           features: sys.features, linkedClass: sys.linkedClass, spellcastingTrait: sys.spellcastingTrait,
           domains: sys.domains, hitPoints: sys.hitPoints, evasion: sys.evasion,
           inventory: sys.inventory ? { take: sys.inventory.take ?? [] } : null,
+          levelupOptionTiers: sys.levelupOptionTiers ?? null,
         };
         const key = normalizeName(e.name);
         (this.index[e.type] ??= {})[key] ??= entry;   // first pack in the list wins

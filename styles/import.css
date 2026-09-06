@@ -16,3 +16,4 @@
 .dhci-dialog .dhci-characters { max-height: 40vh; overflow-y: auto; padding-right: 0.25rem; }
 .dhci-dialog .dhci-select { display: flex; gap: 0.75rem; margin-bottom: 0.35rem; font-size: 0.9em; }
 .dhci-dialog .dhci-select a { cursor: pointer; }
+.dhci-report-dialog .window-content { max-height: calc(100vh - 8rem); overflow-y: auto; }

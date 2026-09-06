@@ -127,6 +127,7 @@ export function buildPlan(ch, resolver, options = {}) {
       classUuid: (id) => find(id, "class")?.uuid ?? null,
       subclassUuid: (id) => find(id, "subclass")?.uuid ?? null,
       experienceIds,
+      declaredOption: (tier, pick) => declaredOption(tier, pick, [cls, multiclass?.class].filter(Boolean)),
       warn,
     });
     if (!multiclass) {
@@ -201,6 +202,35 @@ export function buildPlan(ch, resolver, options = {}) {
     report,
     missing,
   };
+}
+
+/**
+ * A builder pick recorded against a class feature (`srd_2_0_class_brawler:Combo Strike`, label
+ * "Increase your Combo Die by one step") → the class item's own level-up option for that tier
+ * (`system.levelupOptionTiers[tier][key] = { type: 'dice', subType: 'comboDieIndex', label }`).
+ * Matched by the builder's class id when it names one, then by label words, then by being the
+ * only declared option in the tier.
+ */
+export function declaredOption(tier, pick, classes) {
+  const wantedClass = String(pick.key ?? "").split(":")[0];
+  const ordered = [...classes].sort((a, b) => (nameMatches(b, wantedClass) ? 1 : 0) - (nameMatches(a, wantedClass) ? 1 : 0));
+  const words = String(pick.optionLabel ?? "").toLowerCase().match(/[a-z]+/g) ?? [];
+  for (const c of ordered) {
+    const options = Object.entries(c.levelupOptionTiers?.[tier] ?? {});
+    if (!options.length) continue;
+    const scored = options.map(([optionKey, o]) => {
+      const label = String(o.label ?? "").toLowerCase();
+      const score = words.filter((w) => w.length > 3 && label.includes(w)).length;
+      return { optionKey, type: o.type, subType: o.subType ?? null, score };
+    });
+    scored.sort((a, b) => b.score - a.score);
+    if (scored[0].score > 0 || scored.length === 1) return { optionKey: scored[0].optionKey, type: scored[0].type, subType: scored[0].subType };
+  }
+  return null;
+}
+function nameMatches(entry, builderClassId) {
+  const tail = builderClassId.replace(/^.*_class_/, "").replace(/_/g, " ");
+  return !!tail && String(entry.name ?? "").toLowerCase() === tail;
 }
 
 export function escapeHtml(s) {

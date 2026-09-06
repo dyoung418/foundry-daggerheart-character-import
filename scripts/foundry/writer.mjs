@@ -102,12 +102,17 @@ export async function applyPlan(plan, { actor = null, progress = () => {} } = {}
 
   // ---- 5. domain cards: loadout first, then vault ----
   progress("cards");
+  // The system's domain-card hook warns "loadout max reached" for every card created once the
+  // loadout is full, vaulted or not. Vault cards are created with `loadoutIgnore` set so the check
+  // is skipped, then the flag is cleared.
   const ordered = [...plan.items.domainCards.filter((c) => !c.inVault), ...plan.items.domainCards.filter((c) => c.inVault)];
+  const vaulted = [];
   for (const card of ordered) {
-    const [item] = await createItems([fetchData(card.uuid, { system: { inVault: card.inVault } })]);
-    if (item) created.cards.set(card.builderId, item);
+    const [item] = await createItems([fetchData(card.uuid, { system: { inVault: card.inVault, loadoutIgnore: card.inVault } })]);
+    if (item) { created.cards.set(card.builderId, item); if (card.inVault) vaulted.push(item.id); }
     else warn(`domain card ${card.name} was refused by the system (see console)`);
   }
+  if (vaulted.length) await actor.updateEmbeddedDocuments("Item", vaulted.map((_id) => ({ _id, "system.loadoutIgnore": false })));
 
   // ---- 6. equipment ----
   progress("equipment");

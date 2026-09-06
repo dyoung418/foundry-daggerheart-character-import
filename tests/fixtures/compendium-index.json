@@ -505,6 +505,35 @@
 "item": "Compendium.daggerheart.classes.Item.LtG3pKzd4gtfLgFJ"
 }
 ],
+"levelupOptionTiers": {
+"2": {
+"UXJXoQH2UH12UaWS": {
+"label": "Permanently increase your Combo Die by one step (d4 to d6, d6 to d8, etc.).",
+"type": "dice",
+"checkboxSelections": 1,
+"minCost": 1,
+"subType": "comboDieIndex"
+}
+},
+"3": {
+"NqAjwgJaorwhlxfp": {
+"label": "Permanently increase your Combo Die by one step (d4 to d6, d6 to d8, etc.).",
+"type": "dice",
+"checkboxSelections": 1,
+"minCost": 1,
+"subType": "comboDieIndex"
+}
+},
+"4": {
+"kX18xCR6KbTS3iTP": {
+"label": "Permanently increase your Combo Die by one step (d4 to d6, d6 to d8, etc.).",
+"type": "dice",
+"checkboxSelections": 1,
+"minCost": 1,
+"subType": "comboDieIndex"
+}
+}
+},
 "hitPoints": 6,
 "evasion": 10,
 "inventory": {

@@ -49,3 +49,20 @@ test("a missing card is dropped from the record with a warning, boxes stay conti
   assert.equal(levelups[4].selections.length, 1);
   assert.match(warnings[0], /void_domain_card_nope not found/);
 });
+
+test("a class-declared pick (Brawler combo die) maps to the class's own level-up option", async () => {
+  const { buildPlan } = await import("../scripts/lib/plan.mjs");
+  const ch = parseTransferFile(sample("level5-ranger-multiclass.json")).characters[0];
+  ch.classId = "srd_2_0_class_brawler"; ch.subclassId = "srd_2_0_subclass_juggernaut"; ch.multiclass = null;
+  ch.domainCardIds = []; ch.domainVaultIds = [];
+  ch.levelUps = [{ level: 2, picks: [{ key: "srd_2_0_class_brawler:Combo Strike", slotTier: 2, optionLabel: "Increase your Combo Die by one step" }, { key: "hitPoint", slotTier: 2 }], mandatoryCardId: null, grantedCardIds: [], exchange: null }];
+  ch.level = 2;
+  const plan = buildPlan(ch, fixtureResolver());
+  assert.equal(plan.ok, true, JSON.stringify(plan.fatal));
+  const sel = plan.levelups[2].selections[0];
+  assert.equal(sel.type, "dice");
+  assert.equal(sel.subType, "comboDieIndex");
+  assert.equal(sel.optionKey, "UXJXoQH2UH12UaWS");
+  assert.equal(sel.checkboxNr, 1);
+  assert.equal(plan.report.filter((r) => r.level === "warn").length, 0, JSON.stringify(plan.report));
+});

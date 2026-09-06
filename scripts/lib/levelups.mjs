@@ -21,6 +21,9 @@ const COST_TWO = new Set(["proficiency", "multiclass"]);
  * @param {(builderId: string) => string|null} ctx.classUuid  compendium uuid for a class id
  * @param {(builderId: string) => string|null} ctx.subclassUuid
  * @param {Record<string,string>} ctx.experienceIds  builder experience id → foundry id
+ * @param {(tier: number, pick: object) => { optionKey, type, subType } | null} [ctx.declaredOption]
+ *        the class's own level-up option (system `levelupOptionTiers`) that a builder pick with a
+ *        `<classId>:<feature>` key and an `optionLabel` stands for
  * @param {(msg: string) => void} [ctx.warn]
  * @returns {Record<string, object>} levelups keyed by level
  */
@@ -44,18 +47,24 @@ export function translateLevelUps(ch, ctx) {
     }
     const selections = [];
     for (const p of e.picks ?? []) {
-      const key = PICK_KEY[p.key] ?? p.key;
-      if (p.optionLabel) { warn(`level ${L}: custom advancement "${p.optionLabel}" has no system equivalent; skipped`); continue; }
+      let key = PICK_KEY[p.key] ?? p.key;
+      let declared = null;
+      if (p.optionLabel || p.key.includes(":")) {
+        declared = ctx.declaredOption?.(T, p) ?? null;
+        if (!declared) { warn(`level ${L}: class advancement "${p.optionLabel ?? p.key}" has no matching option on the class in the compendium; skipped`); continue; }
+        key = declared.optionKey;
+      }
       const boxKey = `${T}|${key}`;
       boxes[boxKey] = (boxes[boxKey] ?? 0) + 1;
       const sel = {
-        tier: T, level: L, optionKey: key, type: key, subType: null,
+        tier: T, level: L, optionKey: key, type: declared?.type ?? key, subType: declared?.subType ?? null,
         checkboxNr: boxes[boxKey],
         value: VALUE_ONE.has(key) ? 1 : null,
         minCost: COST_TWO.has(key) ? 2 : 1,
         amount: key === "trait" || key === "experience" ? 2 : key === "domainCard" ? 1 : null,
         data: [], secondaryData: {}, itemUuid: null, features: [],
       };
+      if (declared) { selections.push(sel); continue; }
       switch (key) {
         case "trait":
           sel.data = [...(p.traits ?? [])];
