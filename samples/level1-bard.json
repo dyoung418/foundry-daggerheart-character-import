@@ -136,7 +136,7 @@
       "multiclass": null,
       "effectChoices": {
         "srd_2_0_ancestry_clank:Purposeful Design": {
-          "optionId": null,
+          "optionId": "one",
           "optionIds": [],
           "experienceIds": [
             "exp_start1"

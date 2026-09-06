@@ -6,6 +6,7 @@ import { parseTransferFile } from "./lib/normalize.mjs";
 import { importFile, importCharacters } from "./foundry/import.mjs";
 import { buildPlan } from "./lib/plan.mjs";
 import { CompendiumMatcher } from "./foundry/matcher.mjs";
+import { selfTest } from "./foundry/selftest.mjs";
 
 Hooks.once("init", () => {
   registerSettings();
@@ -21,6 +22,7 @@ Hooks.once("ready", () => {
     importCharacters,
     buildPlan,
     CompendiumMatcher,
+    selfTest,
   };
   log("ready");
 });

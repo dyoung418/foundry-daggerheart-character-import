@@ -85,9 +85,10 @@ export function buildPlan(ch, resolver, options = {}) {
     const value = opts.levelupAuto && ch.levelUps.length ? base : base + (expBumps[exp.id] ?? 0);
     experiences[fid] = { name: exp.name || `Experience ${i + 1}`, value, core: true, description: "" };
   });
-  // Clank's Purposeful Design: +1 to one Experience, stored by the builder as an effect choice.
+  // Clank's Purposeful Design: +1 to one Experience, stored by the builder as an effect choice
+  // (`optionId` "one" plus the chosen experience; the builder applies nothing until both are set).
   for (const [key, answer] of Object.entries(ch.effectChoices ?? {})) {
-    if (/purposeful design/i.test(key) && answer?.experienceIds?.[0] && experienceIds[answer.experienceIds[0]]) {
+    if (/purposeful design/i.test(key) && answer?.optionId && answer?.experienceIds?.[0] && experienceIds[answer.experienceIds[0]]) {
       experiences[experienceIds[answer.experienceIds[0]]].value += 1;
       info(`Purposeful Design: +1 applied to Experience "${experiences[experienceIds[answer.experienceIds[0]]].name}"`);
     }

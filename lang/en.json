@@ -23,7 +23,6 @@
     },
     "Notifications": {
       "NoPermission": "You need permission to create actors to import characters.",
-      "NotImplemented": "Importing is not implemented yet (Phase 0 scaffold).",
       "ParseFailed": "Could not read that file: {error}",
       "Done": "Imported {name}.",
       "Fatal": "{name} not imported: {reasons}"

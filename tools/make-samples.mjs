@@ -51,7 +51,7 @@ Object.assign(bard, {
   connectionsNotes: "Owes Thessaly a favour from the road.",
   domainCardIds: ["srd_2_0_domain_card_deft_deceiver", "srd_2_0_domain_card_book_of_ava"],
   creationDomainCardIds: ["srd_2_0_domain_card_deft_deceiver", "srd_2_0_domain_card_book_of_ava"],
-  effectChoices: { "srd_2_0_ancestry_clank:Purposeful Design": { optionId: null, optionIds: [], experienceIds: ["exp_start1"] } },
+  effectChoices: { "srd_2_0_ancestry_clank:Purposeful Design": { optionId: "one", optionIds: [], experienceIds: ["exp_start1"] } },
   updatedAt: "2026-09-05T20:11:32.000Z",
   // A 48px placeholder portrait so the upload path is exercised.
   portrait: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAIAAADYYG7QAAAAoklEQVR42u3YWwqAMAxE0VlJv7sI94/LUhD81L4SrjKQBRxKm2aiUiqqZJBBBhn0F9BeNxDo1FyFAN2aJSat1cybtFwzaVKEZsakIM2wSXGaMZNCNQMmRWt6TUrQdJmUo2k3KU3TaFKmpsWkZM2rSfmaZ9OnToh4h4ivjNiHiJ2a+JcRf3viPEScGIkzNTF1EHMZMbkSsz1x++GFlUEGGTReB9QA/AUhjhIZAAAAAElFTkSuQmCC",

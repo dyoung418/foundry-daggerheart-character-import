@@ -2,7 +2,10 @@
 
 A FoundryVTT module that imports characters exported as `.json` by
 `~/daggerheart-character-builder` into a world running the official Foundryborne **Daggerheart**
-system. Status: **planning** (started 2026-09-05). Nothing runnable yet.
+system. Started 2026-09-05; the import pipeline works as of 2026-09-06 (see `TODO.md`).
+
+Code layout: `scripts/lib/` is pure and tested under Node (`npm test`); `scripts/foundry/` touches
+Foundry; `scripts/app/` is the UI. `api.selfTest()` in a live world is the integration check.
 
 ## Where things are on this machine
 
@@ -56,6 +59,13 @@ uncommitted planning work. Commits use Conventional Commits (`docs:`, `feat:`, `
 - `game.modules.get(id).api.open()` returns the render promise; `await` it before touching `.element`.
 - Header controls added via `getHeaderControlsCharacterSheet` show in the sheet's "⋮" control menu, not
   as visible buttons; `sheet._headerControlButtons()` lists them for a check.
+- `pack.getIndex({ fields })` entries carry `uuid`; `system.features` on class/ancestry/etc. is an array of
+  `{ type, item }` where `item` is a compendium uuid string.
+- The class item's `_preCreate` appends its background questions to the biography, so write biography
+  text after creating the class. The domain-card `_preCreate` needs the class present and the domain
+  granted, and vaults cards past the loadout limit.
+- Re-running `applyPlan` on an existing actor: items flagged `daggerheart-character-import.imported` are
+  deleted first; biography is reset before the class is re-created.
 - To check the module in a live world from this session: start `~/foundryvtt/foundryvtt_launch_script`
   in the background (port 36000), have Danny log in and launch `daggerheart-test`, then drive the page
   with the Chrome tools and read the console for `daggerheart-character-import |` lines.
