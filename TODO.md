@@ -15,13 +15,17 @@ Cold-start reading order: `README.md` → `CLAUDE.md` → this file → `docs/ar
 
 ## Next
 
-- [ ] Danny: export a real character from the builder and import it; report anything odd
 - [ ] Danny: try the file picker in the dialog by hand (the scripted checks used the paste path)
 - [ ] First release: tag `v0.1.0` (the release workflow zips and publishes) once a real export has been tried
 - [ ] Phase 4 candidates, none started: homebrew stub items; Beastbound companion actor; renames UI; i18n
 - [ ] After each Daggerheart system update: run `api.selfTest()` in a Daggerheart world
 
 ## Phase 2–3 (2026-09-06)
+
+- [x] Danny's real 17-character export: 15 import; 2 homebrew (`void_`) classes refused as designed
+- [x] Fixes from that run: dialog and report scroll with long rosters; vault cards no longer trigger the system's
+      "loadout max reached" warning; class-declared level-up options (Brawler combo die) map to the class's own
+      `levelupOptionTiers` entry — verified on Cranston (17 cards) and Bruiser (combo die d6)
 
 - [x] Importing a known builder character updates its existing actor (flag match); dialog says "updates <name>"
 - [x] Re-import three times into the same actor: item, experience and level-record counts stable
