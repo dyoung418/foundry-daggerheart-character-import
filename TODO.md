@@ -10,9 +10,10 @@ homebrew path). **`v0.1.0` is published** (manifest and zip verified by download
 import** landed after the release: Danny imported his `void` source (2 classes, 5 subclasses, 21 Blood
 cards → `world.dhci-void`, 69 documents) through the new dialog, and BloodHunter (level 8, Blood
 Hunter/Order of the Mutant + Warlock multiclass), MultiMaggy (Warrior + Blood Hunter multiclass) and
-Summoner Sam then imported with no warnings — the whole roster now imports. Not yet exercised live:
-card-art upload (Danny's pick contained only the JSON files; the folder
-`daggerheart-character-import/homebrew/dhci-void` was never created). The Foundry server is running
+Summoner Sam then imported with no warnings — the whole roster now imports. Card art verified live too:
+picking the whole `data/void` folder uploaded 36 images to `daggerheart-character-import/homebrew/dhci-void`
+and every card, subclass and tier feature carries its image; a character re-import refreshes the art on
+existing actors. The Foundry server is running
 on port 36000 (check with `ss -ltn | grep 36000`). Danny's roster copy sits in the gitignored `scratch/`.
 
 Release history worth knowing: the first `v0.1.0` build (old workflow copied from `dannysmodule`) shipped
@@ -27,7 +28,7 @@ needed by the removed changelog action and can be deleted. Package is not regist
 - [x] First release `v0.1.0` published 2026-09-06 and verified by downloading the manifest and zip
 - [ ] Decide whether to register the package on foundryvtt.com (then add the `FOUNDRY_PACKAGE_RELEASE_TOKEN` secret; the workflow step is already there)
 - [x] Homebrew: import a builder source folder into a world compendium (2026-09-06; see "Phase 4" below)
-- [ ] Homebrew follow-ups: try card-art upload live; a `v0.2.0` release once Danny has used it for a session
+- [ ] Homebrew follow-up: a `v0.2.0` release once Danny has used it for a session
 - [ ] Phase 4 candidates, none started: Beastbound companion actor; renames UI; i18n
 - [ ] After each Daggerheart system update: run `api.selfTest()` in a Daggerheart world
 
