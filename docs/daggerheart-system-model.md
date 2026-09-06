@@ -155,8 +155,10 @@ auto-applies Vulnerable when stress is full (`creature.mjs:48-77`), so don't dou
 
 ## Open questions to resolve during implementation
 
-1. Does `createEmbeddedDocuments` with a class item trigger `class.mjs:_preCreate`'s actor update
-   (line 75) that we'd rather control? Read lines 40-96 fully before coding.
+1. Resolved: `class.mjs:_preCreate` (lines 99-142) appends the class's background questions and
+   connections to `system.biography` when the class is created on a character, and with
+   `levelupAuto` **off** it opens a `MulticlassChoiceDialog` for any second class. So create the
+   class before writing the biography text, and require Auto on for multiclass imports (MVP).
 2. `levelupAuto` off: confirm exactly which fields the sheet expects hand-edited (traits value,
    `resources.hitPoints.max`, `evasion`, `proficiency`) — mirror `prepareBaseData`.
 3. Experience ids: the system keys experiences by random id and `levelups[].achievements.experiences`

@@ -70,8 +70,10 @@ by an "update existing actor" path that computes what to delete first.
    Creates a new actor per selected character. GM / `ACTOR_CREATE` only.
 2. **Character sheet header control** ("Import / update from builder file"):
    `Hooks.on('getHeaderControlsCharacterSheet', (sheet, controls) => controls.push({...}))`
-   (ApplicationV2 dispatches `getHeaderControls<ClassName>`; the system's sheet class is
+   (ApplicationV2 dispatches `getHeaderControls<ClassName>` for the class and each parent,
+   `client/applications/api/application.mjs:1722-1730`; the system's sheet class is
    `CharacterSheet`, `module/applications/sheets/actors/character.mjs:18`). Updates that actor.
+   Verify the `.header-actions` selector against the rendered v14 sidebar in Phase 0.
 3. **API**: `game.modules.get('daggerheart-character-import').api.importFile(json, options)` for
    macros and tests.
 
