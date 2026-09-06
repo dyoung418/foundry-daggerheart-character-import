@@ -2,12 +2,13 @@
 
 Live task list and resume point. Newest status at the top. Dates are absolute.
 
-## Status — 2026-09-06 02:20 (session closed cleanly; resume from "Next")
+## Status — 2026-09-06 (v0.1.0 released)
 
 Working module, verified on Danny's real 17-character roster in `daggerheart-test` (Foundry 14.367,
-Daggerheart 2.9.2). `api.selfTest()` passes 33 checks; `npm test` passes 20. Working tree clean, all
-pushed. Nothing released yet. The Foundry server started from this session may still be running on
-port 36000 (`pgrep -f "foundryvtt/main.js"`); Danny's roster copy sits in the gitignored `scratch/`.
+Daggerheart 2.9.2). `api.selfTest()` passes 33 checks; `npm test` passes 20. First release `v0.1.0`
+published 2026-09-06 via the GitHub Release workflow (manifest URL in `README.md`). The Foundry server
+is not running; check with `ss -ltn | grep 36000` (not `pgrep -f`, which matches the checking shell).
+Danny's roster copy sits in the gitignored `scratch/`.
 
 Cold-start reading order: `README.md` → `CLAUDE.md` → this file → `docs/architecture.md` →
 `docs/mapping.md` → `docs/builder-export-format.md` and `docs/daggerheart-system-model.md` →
@@ -17,7 +18,7 @@ Cold-start reading order: `README.md` → `CLAUDE.md` → this file → `docs/ar
 ## Next
 
 - [x] Danny used the file picker with his real export (2026-09-06)
-- [ ] First release: tag `v0.1.0` (the release workflow zips and publishes) once a real export has been tried
+- [x] First release `v0.1.0` published 2026-09-06 (workflow builds `module.zip` and fills `module.json`)
 - [ ] Phase 4 candidates, none started: homebrew stub items; Beastbound companion actor; renames UI; i18n
 - [ ] After each Daggerheart system update: run `api.selfTest()` in a Daggerheart world
 

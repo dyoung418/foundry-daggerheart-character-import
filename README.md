@@ -6,9 +6,19 @@ A [Foundry Virtual Tabletop](https://foundryvtt.com/) module that imports charac
 into a world running the official
 [Foundryborne Daggerheart system](https://github.com/Foundryborne/daggerheart).
 
-**Status: working, pre-release.** Imports SRD characters at any level, including level-up history,
-mixed ancestry, multiclass, vault/loadout, equipment, table state and portraits. Not yet published as a
-release; install by cloning (see Development). Planning record: `TODO.md`, `docs/`.
+**Status: v0.1.0 released 2026-09-06.** Imports SRD characters at any level, including level-up history,
+mixed ancestry, multiclass, vault/loadout, equipment, table state and portraits. Homebrew content is
+reported and skipped. Planning record: `TODO.md`, `docs/`.
+
+## Installation
+
+In Foundry's **Add-on Modules** tab choose **Install Module** and paste this manifest URL:
+
+```
+https://github.com/dyoung418/foundry-daggerheart-character-import/releases/latest/download/module.json
+```
+
+Then enable the module in a world running the Daggerheart system.
 
 ## How to use it
 
@@ -35,7 +45,7 @@ Console API: `game.modules.get("daggerheart-character-import").api` exposes `ope
 { actor })`, `parseTransferFile`, `buildPlan`, `CompendiumMatcher` and `selfTest()` (imports the bundled
 samples, compares derived stats with `samples/expected-derived.json`, deletes them again).
 
-## Requirements (planned)
+## Requirements
 
 - Foundry VTT v14
 - Daggerheart system 2.9 or later
