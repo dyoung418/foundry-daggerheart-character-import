@@ -1,0 +1,3095 @@
+{
+ "_generated": "2026-09-06T07:12:58.794Z",
+ "_sources": [
+  "/home/danny/daggerheart-character-builder/data/srd_1_0",
+  "/home/danny/daggerheart-character-builder/data/srd_2_0"
+ ],
+ "names": {
+  "class_bard": "Bard",
+  "class_druid": "Druid",
+  "class_guardian": "Guardian",
+  "class_ranger": "Ranger",
+  "class_rogue": "Rogue",
+  "class_seraph": "Seraph",
+  "class_sorcerer": "Sorcerer",
+  "class_warrior": "Warrior",
+  "class_wizard": "Wizard",
+  "subclass_beastbound": "Beastbound",
+  "subclass_call_of_the_brave": "Call of the Brave",
+  "subclass_call_of_the_slayer": "Call of the Slayer",
+  "subclass_divine_wielder": "Divine Wielder",
+  "subclass_elemental_origin": "Elemental Origin",
+  "subclass_nightwalker": "Nightwalker",
+  "subclass_primal_origin": "Primal Origin",
+  "subclass_school_of_knowledge": "School of Knowledge",
+  "subclass_school_of_war": "School of War",
+  "subclass_stalwart": "Stalwart",
+  "subclass_syndicate": "Syndicate",
+  "subclass_troubadour": "Troubadour",
+  "subclass_vengeance": "Vengeance",
+  "subclass_warden_of_renewal": "Warden of Renewal",
+  "subclass_warden_of_the_elements": "Warden of the Elements",
+  "subclass_wayfinder": "Wayfinder",
+  "subclass_winged_sentinel": "Winged Sentinel",
+  "subclass_wordsmith": "Wordsmith",
+  "ancestry_clank": "Clank",
+  "ancestry_drakona": "Drakona",
+  "ancestry_dwarf": "Dwarf",
+  "ancestry_elf": "Elf",
+  "ancestry_faerie": "Faerie",
+  "ancestry_faun": "Faun",
+  "ancestry_firbolg": "Firbolg",
+  "ancestry_fungril": "Fungril",
+  "ancestry_galapa": "Galapa",
+  "ancestry_giant": "Giant",
+  "ancestry_goblin": "Goblin",
+  "ancestry_halfling": "Halfling",
+  "ancestry_human": "Human",
+  "ancestry_infernis": "Infernis",
+  "ancestry_katari": "Katari",
+  "ancestry_orc": "Orc",
+  "ancestry_ribbet": "Ribbet",
+  "ancestry_simiah": "Simiah",
+  "community_highborne": "Highborne",
+  "community_loreborne": "Loreborne",
+  "community_orderborne": "Orderborne",
+  "community_ridgeborne": "Ridgeborne",
+  "community_seaborne": "Seaborne",
+  "community_slyborne": "Slyborne",
+  "community_underborne": "Underborne",
+  "community_wanderborne": "Wanderborne",
+  "community_wildborne": "Wildborne",
+  "domain_card_a_soldiers_bond": "A Soldier’s Bond",
+  "domain_card_adjust_reality": "Adjust Reality",
+  "domain_card_arcana_touched": "Arcana-Touched",
+  "domain_card_arcane_reflection": "Arcane Reflection",
+  "domain_card_armorer": "Armorer",
+  "domain_card_astral_projection": "Astral Projection",
+  "domain_card_banish": "Banish",
+  "domain_card_bare_bones": "Bare Bones",
+  "domain_card_battle_cry": "Battle Cry",
+  "domain_card_battle_monster": "Battle Monster",
+  "domain_card_battle_hardened": "Battle-Hardened",
+  "domain_card_blade_touched": "Blade-Touched",
+  "domain_card_blink_out": "Blink Out",
+  "domain_card_body_basher": "Body Basher",
+  "domain_card_bold_presence": "Bold Presence",
+  "domain_card_bolt_beacon": "Bolt Beacon",
+  "domain_card_bone_touched": "Bone-Touched",
+  "domain_card_book_of_ava": "Book of Ava",
+  "domain_card_book_of_exota": "Book of Exota",
+  "domain_card_book_of_grynn": "Book of Grynn",
+  "domain_card_book_of_homet": "Book of Homet",
+  "domain_card_book_of_illiat": "Book of Illiat",
+  "domain_card_book_of_korvax": "Book of Korvax",
+  "domain_card_book_of_norai": "Book of Norai",
+  "domain_card_book_of_ronin": "Book of Ronin",
+  "domain_card_book_of_sitil": "Book of Sitil",
+  "domain_card_book_of_tyfar": "Book of Tyfar",
+  "domain_card_book_of_vagras": "Book of Vagras",
+  "domain_card_book_of_vyola": "Book of Vyola",
+  "domain_card_book_of_yarrow": "Book of Yarrow",
+  "domain_card_boost": "Boost",
+  "domain_card_brace": "Brace",
+  "domain_card_breaking_blow": "Breaking Blow",
+  "domain_card_chain_lightning": "Chain Lightning",
+  "domain_card_champions_edge": "Champion’s Edge",
+  "domain_card_chokehold": "Chokehold",
+  "domain_card_cinder_grasp": "Cinder Grasp",
+  "domain_card_cloaking_blast": "Cloaking Blast",
+  "domain_card_codex_touched": "Codex-Touched",
+  "domain_card_confusing_aura": "Confusing Aura",
+  "domain_card_conjure_swarm": "Conjure Swarm",
+  "domain_card_conjured_steeds": "Conjured Steeds",
+  "domain_card_copycat": "Copycat",
+  "domain_card_corrosive_projectile": "Corrosive Projectile",
+  "domain_card_counterspell": "Counterspell",
+  "domain_card_critical_inspiration": "Critical Inspiration",
+  "domain_card_cruel_precision": "Cruel Precision",
+  "domain_card_dark_whispers": "Dark Whispers",
+  "domain_card_deadly_focus": "Deadly Focus",
+  "domain_card_death_grip": "Death Grip",
+  "domain_card_deathrun": "Deathrun",
+  "domain_card_deft_deceiver": "Deft Deceiver",
+  "domain_card_deft_maneuvers": "Deft Maneuvers",
+  "domain_card_disintegration_wave": "Disintegration Wave",
+  "domain_card_divination": "Divination",
+  "domain_card_earthquake": "Earthquake",
+  "domain_card_eclipse": "Eclipse",
+  "domain_card_encore": "Encore",
+  "domain_card_endless_charisma": "Endless Charisma",
+  "domain_card_enrapture": "Enrapture",
+  "domain_card_falling_sky": "Falling Sky",
+  "domain_card_fane_of_the_wilds": "Fane of the Wilds",
+  "domain_card_ferocity": "Ferocity",
+  "domain_card_final_words": "Final Words",
+  "domain_card_flight": "Flight",
+  "domain_card_floating_eye": "Floating Eye",
+  "domain_card_forager": "Forager",
+  "domain_card_force_of_nature": "Force of Nature",
+  "domain_card_forceful_push": "Forceful Push",
+  "domain_card_forest_sprites": "Forest Sprites",
+  "domain_card_fortified_armor": "Fortified Armor",
+  "domain_card_frenzy": "Frenzy",
+  "domain_card_full_surge": "Full Surge",
+  "domain_card_get_back_up": "Get Back Up",
+  "domain_card_gifted_tracker": "Gifted Tracker",
+  "domain_card_glancing_blow": "Glancing Blow",
+  "domain_card_glyph_of_nightfall": "Glyph of Nightfall",
+  "domain_card_goad_them_on": "Goad Them On",
+  "domain_card_gore_and_glory": "Gore and Glory",
+  "domain_card_grace_touched": "Grace-Touched",
+  "domain_card_ground_pound": "Ground Pound",
+  "domain_card_healing_field": "Healing Field",
+  "domain_card_healing_hands": "Healing Hands",
+  "domain_card_healing_strike": "Healing Strike",
+  "domain_card_hold_the_line": "Hold the Line",
+  "domain_card_hush": "Hush",
+  "domain_card_hypnotic_shimmer": "Hypnotic Shimmer",
+  "domain_card_i_am_your_shield": "I Am Your Shield",
+  "domain_card_i_see_it_coming": "I See It Coming",
+  "domain_card_inevitable": "Inevitable",
+  "domain_card_inspirational_words": "Inspirational Words",
+  "domain_card_invigoration": "Invigoration",
+  "domain_card_invisibility": "Invisibility",
+  "domain_card_know_thy_enemy": "Know Thy Enemy",
+  "domain_card_lead_by_example": "Lead by Example",
+  "domain_card_lean_on_me": "Lean on Me",
+  "domain_card_life_ward": "Life Ward",
+  "domain_card_manifest_wall": "Manifest Wall",
+  "domain_card_mass_disguise": "Mass Disguise",
+  "domain_card_mass_enrapture": "Mass Enrapture",
+  "domain_card_master_of_the_craft": "Master of the Craft",
+  "domain_card_mending_touch": "Mending Touch",
+  "domain_card_midnight_spirit": "Midnight Spirit",
+  "domain_card_midnight_touched": "Midnight-Touched",
+  "domain_card_natural_familiar": "Natural Familiar",
+  "domain_card_natures_tongue": "Nature’s Tongue",
+  "domain_card_never_upstaged": "Never Upstaged",
+  "domain_card_night_terror": "Night Terror",
+  "domain_card_not_good_enough": "Not Good Enough",
+  "domain_card_notorious": "Notorious",
+  "domain_card_on_the_brink": "On the Brink",
+  "domain_card_onslaught": "Onslaught",
+  "domain_card_overwhelming_aura": "Overwhelming Aura",
+  "domain_card_phantom_retreat": "Phantom Retreat",
+  "domain_card_pick_and_pull": "Pick and Pull",
+  "domain_card_plant_dominion": "Plant Dominion",
+  "domain_card_premonition": "Premonition",
+  "domain_card_preservation_blast": "Preservation Blast",
+  "domain_card_rage_up": "Rage Up",
+  "domain_card_rain_of_blades": "Rain of Blades",
+  "domain_card_rapid_riposte": "Rapid Riposte",
+  "domain_card_reapers_strike": "Reaper’s Strike",
+  "domain_card_reassurance": "Reassurance",
+  "domain_card_reckless": "Reckless",
+  "domain_card_recovery": "Recovery",
+  "domain_card_redirect": "Redirect",
+  "domain_card_rejuvenation_barrier": "Rejuvenation Barrier",
+  "domain_card_restoration": "Restoration",
+  "domain_card_resurrection": "Resurrection",
+  "domain_card_rift_walker": "Rift Walker",
+  "domain_card_rise_up": "Rise Up",
+  "domain_card_rousing_strike": "Rousing Strike",
+  "domain_card_rune_ward": "Rune Ward",
+  "domain_card_safe_haven": "Safe Haven",
+  "domain_card_sage_touched": "Sage-Touched",
+  "domain_card_salvation_beam": "Salvation Beam",
+  "domain_card_scramble": "Scramble",
+  "domain_card_second_wind": "Second Wind",
+  "domain_card_sensory_projection": "Sensory Projection",
+  "domain_card_shadowbind": "Shadowbind",
+  "domain_card_shadowhunter": "Shadowhunter",
+  "domain_card_shape_material": "Shape Material",
+  "domain_card_share_the_burden": "Share the Burden",
+  "domain_card_shield_aura": "Shield Aura",
+  "domain_card_shrug_it_off": "Shrug It Off",
+  "domain_card_sigil_of_retribution": "Sigil of Retribution",
+  "domain_card_signature_move": "Signature Move",
+  "domain_card_smite": "Smite",
+  "domain_card_soothing_speech": "Soothing Speech",
+  "domain_card_specter_of_the_dark": "Specter of the Dark",
+  "domain_card_spellcharge": "Spellcharge",
+  "domain_card_splendor_touched": "Splendor-Touched",
+  "domain_card_splintering_strike": "Splintering Strike",
+  "domain_card_stealth_expertise": "Stealth Expertise",
+  "domain_card_strategic_approach": "Strategic Approach",
+  "domain_card_stunning_sunlight": "Stunning Sunlight",
+  "domain_card_support_tank": "Support Tank",
+  "domain_card_swift_step": "Swift Step",
+  "domain_card_tactician": "Tactician",
+  "domain_card_telekinesis": "Telekinesis",
+  "domain_card_teleport": "Teleport",
+  "domain_card_tell_no_lies": "Tell No Lies",
+  "domain_card_tempest": "Tempest",
+  "domain_card_thorn_skin": "Thorn Skin",
+  "domain_card_thought_delver": "Thought Delver",
+  "domain_card_through_your_eyes": "Through Your Eyes",
+  "domain_card_towering_stalk": "Towering Stalk",
+  "domain_card_transcendent_union": "Transcendent Union",
+  "domain_card_troublemaker": "Troublemaker",
+  "domain_card_twilight_toll": "Twilight Toll",
+  "domain_card_unbreakable": "Unbreakable",
+  "domain_card_uncanny_disguise": "Uncanny Disguise",
+  "domain_card_unleash_chaos": "Unleash Chaos",
+  "domain_card_untouchable": "Untouchable",
+  "domain_card_unyielding_armor": "Unyielding Armor",
+  "domain_card_valor_touched": "Valor-Touched",
+  "domain_card_vanishing_dodge": "Vanishing Dodge",
+  "domain_card_veil_of_night": "Veil of Night",
+  "domain_card_versatile_fighter": "Versatile Fighter",
+  "domain_card_vicious_entangle": "Vicious Entangle",
+  "domain_card_vitality": "Vitality",
+  "domain_card_voice_of_reason": "Voice of Reason",
+  "domain_card_wall_walk": "Wall Walk",
+  "domain_card_whirlwind": "Whirlwind",
+  "domain_card_wild_fortress": "Wild Fortress",
+  "domain_card_wild_surge": "Wild Surge",
+  "domain_card_words_of_discord": "Words of Discord",
+  "domain_card_wrangle": "Wrangle",
+  "domain_card_zone_of_protection": "Zone of Protection",
+  "weapon_broadsword": "Broadsword",
+  "weapon_longsword": "Longsword",
+  "weapon_battleaxe": "Battleaxe",
+  "weapon_greatsword": "Greatsword",
+  "weapon_mace": "Mace",
+  "weapon_warhammer": "Warhammer",
+  "weapon_dagger": "Dagger",
+  "weapon_quarterstaff": "Quarterstaff",
+  "weapon_cutlass": "Cutlass",
+  "weapon_rapier": "Rapier",
+  "weapon_halberd": "Halberd",
+  "weapon_spear": "Spear",
+  "weapon_shortbow": "Shortbow",
+  "weapon_crossbow": "Crossbow",
+  "weapon_longbow": "Longbow",
+  "weapon_arcane_gauntlets": "Arcane Gauntlets",
+  "weapon_hallowed_axe": "Hallowed Axe",
+  "weapon_glowing_rings": "Glowing Rings",
+  "weapon_hand_runes": "Hand Runes",
+  "weapon_returning_blade": "Returning Blade",
+  "weapon_shortstaff": "Shortstaff",
+  "weapon_dualstaff": "Dualstaff",
+  "weapon_scepter": "Scepter",
+  "weapon_wand": "Wand",
+  "weapon_greatstaff": "Greatstaff",
+  "weapon_improved_broadsword": "Improved Broadsword",
+  "weapon_improved_longsword": "Improved Longsword",
+  "weapon_improved_battleaxe": "Improved Battleaxe",
+  "weapon_improved_greatsword": "Improved Greatsword",
+  "weapon_improved_mace": "Improved Mace",
+  "weapon_improved_warhammer": "Improved Warhammer",
+  "weapon_improved_dagger": "Improved Dagger",
+  "weapon_improved_quarterstaff": "Improved Quarterstaff",
+  "weapon_improved_cutlass": "Improved Cutlass",
+  "weapon_improved_rapier": "Improved Rapier",
+  "weapon_improved_halberd": "Improved Halberd",
+  "weapon_improved_spear": "Improved Spear",
+  "weapon_improved_shortbow": "Improved Shortbow",
+  "weapon_improved_crossbow": "Improved Crossbow",
+  "weapon_improved_longbow": "Improved Longbow",
+  "weapon_gilded_falchion": "Gilded Falchion",
+  "weapon_knuckle_blades": "Knuckle Blades",
+  "weapon_urok_broadsword": "Urok Broadsword",
+  "weapon_bladed_whip": "Bladed Whip",
+  "weapon_steelforged_halberd": "Steelforged Halberd",
+  "weapon_war_scythe": "War Scythe",
+  "weapon_blunderbuss": "Blunderbuss",
+  "weapon_greatbow": "Greatbow",
+  "weapon_finehair_bow": "Finehair Bow",
+  "weapon_improved_arcane_gauntlets": "Improved Arcane Gauntlets",
+  "weapon_improved_hallowed_axe": "Improved Hallowed Axe",
+  "weapon_improved_glowing_rings": "Improved Glowing Rings",
+  "weapon_improved_hand_runes": "Improved Hand Runes",
+  "weapon_improved_returning_blade": "Improved Returning Blade",
+  "weapon_improved_shortstaff": "Improved Shortstaff",
+  "weapon_improved_dualstaff": "Improved Dualstaff",
+  "weapon_improved_scepter": "Improved Scepter",
+  "weapon_improved_wand": "Improved Wand",
+  "weapon_improved_greatstaff": "Improved Greatstaff",
+  "weapon_ego_blade": "Ego Blade",
+  "weapon_casting_sword": "Casting Sword",
+  "weapon_devouring_dagger": "Devouring Dagger",
+  "weapon_hammer_of_exota": "Hammer of Exota",
+  "weapon_yutari_bloodbow": "Yutari Bloodbow",
+  "weapon_elder_bow": "Elder Bow",
+  "weapon_scepter_of_elias": "Scepter of Elias",
+  "weapon_wand_of_enthrallment": "Wand of Enthrallment",
+  "weapon_keeper_s_staff": "Keeper's Staff",
+  "weapon_advanced_broadsword": "Advanced Broadsword",
+  "weapon_advanced_longsword": "Advanced Longsword",
+  "weapon_advanced_battleaxe": "Advanced Battleaxe",
+  "weapon_advanced_greatsword": "Advanced Greatsword",
+  "weapon_advanced_mace": "Advanced Mace",
+  "weapon_advanced_warhammer": "Advanced Warhammer",
+  "weapon_advanced_dagger": "Advanced Dagger",
+  "weapon_advanced_quarterstaff": "Advanced Quarterstaff",
+  "weapon_advanced_cutlass": "Advanced Cutlass",
+  "weapon_advanced_rapier": "Advanced Rapier",
+  "weapon_advanced_halberd": "Advanced Halberd",
+  "weapon_advanced_spear": "Advanced Spear",
+  "weapon_advanced_shortbow": "Advanced Shortbow",
+  "weapon_advanced_crossbow": "Advanced Crossbow",
+  "weapon_advanced_longbow": "Advanced Longbow",
+  "weapon_flickerfly_blade": "Flickerfly Blade",
+  "weapon_bravesword": "Bravesword",
+  "weapon_hammer_of_wrath": "Hammer of Wrath",
+  "weapon_labrys_axe": "Labrys Axe",
+  "weapon_meridian_cutlass": "Meridian Cutlass",
+  "weapon_retractable_saber": "Retractable Saber",
+  "weapon_double_flail": "Double Flail",
+  "weapon_talon_blades": "Talon Blades",
+  "weapon_black_powder_revolver": "Black Powder Revolver",
+  "weapon_spiked_bow": "Spiked Bow",
+  "weapon_legendary_broadsword": "Legendary Broadsword",
+  "weapon_legendary_longsword": "Legendary Longsword",
+  "weapon_legendary_battleaxe": "Legendary Battleaxe",
+  "weapon_legendary_greatsword": "Legendary Greatsword",
+  "weapon_legendary_mace": "Legendary Mace",
+  "weapon_legendary_warhammer": "Legendary Warhammer",
+  "weapon_legendary_dagger": "Legendary Dagger",
+  "weapon_legendary_quarterstaff": "Legendary Quarterstaff",
+  "weapon_legendary_cutlass": "Legendary Cutlass",
+  "weapon_legendary_rapier": "Legendary Rapier",
+  "weapon_legendary_halberd": "Legendary Halberd",
+  "weapon_legendary_spear": "Legendary Spear",
+  "weapon_legendary_shortbow": "Legendary Shortbow",
+  "weapon_legendary_crossbow": "Legendary Crossbow",
+  "weapon_legendary_longbow": "Legendary Longbow",
+  "weapon_dual_ended_sword": "Dual-Ended Sword",
+  "weapon_impact_gauntlet": "Impact Gauntlet",
+  "weapon_sledge_axe": "Sledge Axe",
+  "weapon_curved_dagger": "Curved Dagger",
+  "weapon_extended_polearm": "Extended Polearm",
+  "weapon_swinging_ropeblade": "Swinging Ropeblade",
+  "weapon_ricochet_axes": "Ricochet Axes",
+  "weapon_aantari_bow": "Aantari Bow",
+  "weapon_hand_cannon": "Hand Cannon",
+  "weapon_legendary_arcane_gauntlets": "Legendary Arcane Gauntlets",
+  "weapon_legendary_hallowed_axe": "Legendary Hallowed Axe",
+  "weapon_legendary_glowing_rings": "Legendary Glowing Rings",
+  "weapon_legendary_hand_runes": "Legendary Hand Runes",
+  "weapon_legendary_returning_blade": "Legendary Returning Blade",
+  "weapon_legendary_shortstaff": "Legendary Shortstaff",
+  "weapon_legendary_dualstaff": "Legendary Dualstaff",
+  "weapon_legendary_scepter": "Legendary Scepter",
+  "weapon_legendary_wand": "Legendary Wand",
+  "weapon_legendary_greatstaff": "Legendary Greatstaff",
+  "weapon_sword_of_light_flame": "Sword of Light & Flame",
+  "weapon_siphoning_gauntlets": "Siphoning Gauntlets",
+  "weapon_midas_scythe": "Midas Scythe",
+  "weapon_floating_bladeshards": "Floating Bladeshards",
+  "weapon_bloodstaff": "Bloodstaff",
+  "weapon_thistlebow": "Thistlebow",
+  "weapon_wand_of_essek": "Wand of Essek",
+  "weapon_magus_revolver": "Magus Revolver",
+  "weapon_fusion_gloves": "Fusion Gloves",
+  "weapon_shortsword": "Shortsword",
+  "weapon_round_shield": "Round Shield",
+  "weapon_tower_shield": "Tower Shield",
+  "weapon_small_dagger": "Small Dagger",
+  "weapon_whip": "Whip",
+  "weapon_grappler": "Grappler",
+  "weapon_hand_crossbow": "Hand Crossbow",
+  "weapon_improved_shortsword": "Improved Shortsword",
+  "weapon_improved_round_shield": "Improved Round Shield",
+  "weapon_improved_tower_shield": "Improved Tower Shield",
+  "weapon_improved_small_dagger": "Improved Small Dagger",
+  "weapon_improved_whip": "Improved Whip",
+  "weapon_improved_grappler": "Improved Grappler",
+  "weapon_improved_hand_crossbow": "Improved Hand Crossbow",
+  "weapon_spiked_shield": "Spiked Shield",
+  "weapon_parrying_dagger": "Parrying Dagger",
+  "weapon_returning_axe": "Returning Axe",
+  "weapon_advanced_shortsword": "Advanced Shortsword",
+  "weapon_advanced_round_shield": "Advanced Round Shield",
+  "weapon_advanced_tower_shield": "Advanced Tower Shield",
+  "weapon_advanced_small_dagger": "Advanced Small Dagger",
+  "weapon_advanced_whip": "Advanced Whip",
+  "weapon_advanced_grappler": "Advanced Grappler",
+  "weapon_advanced_hand_crossbow": "Advanced Hand Crossbow",
+  "weapon_buckler": "Buckler",
+  "weapon_powered_gauntlet": "Powered Gauntlet",
+  "weapon_hand_sling": "Hand Sling",
+  "weapon_legendary_shortsword": "Legendary Shortsword",
+  "weapon_legendary_round_shield": "Legendary Round Shield",
+  "weapon_legendary_tower_shield": "Legendary Tower Shield",
+  "weapon_legendary_small_dagger": "Legendary Small Dagger",
+  "weapon_legendary_whip": "Legendary Whip",
+  "weapon_legendary_grappler": "Legendary Grappler",
+  "weapon_legendary_hand_crossbow": "Legendary Hand Crossbow",
+  "weapon_braveshield": "Braveshield",
+  "weapon_knuckle_claws": "Knuckle Claws",
+  "weapon_primer_shard": "Primer Shard",
+  "weapon_advanced_arcane_gauntlets": "Advanced Arcane Gauntlets",
+  "weapon_advanced_hallowed_axe": "Advanced Hallowed Axe",
+  "weapon_advanced_glowing_rings": "Advanced Glowing Rings",
+  "weapon_advanced_hand_runes": "Advanced Hand Runes",
+  "weapon_advanced_returning_blade": "Advanced Returning Blade",
+  "weapon_advanced_shortstaff": "Advanced Shortstaff",
+  "weapon_advanced_dualstaff": "Advanced Dualstaff",
+  "weapon_advanced_scepter": "Advanced Scepter",
+  "weapon_advanced_wand": "Advanced Wand",
+  "weapon_advanced_greatstaff": "Advanced Greatstaff",
+  "weapon_axe_of_fortunis": "Axe of Fortunis",
+  "weapon_blessed_anlace": "Blessed Anlace",
+  "weapon_ghostblade": "Ghostblade",
+  "weapon_runes_of_ruination": "Runes of Ruination",
+  "weapon_widogast_pendant": "Widogast Pendant",
+  "weapon_gilded_bow": "Gilded Bow",
+  "weapon_firestaff": "Firestaff",
+  "weapon_mage_orb": "Mage Orb",
+  "weapon_ilmaris_rifle": "Ilmari’s Rifle",
+  "weapon_light_frame_wheelchair": "Light-Frame Wheelchair",
+  "weapon_improved_light_frame_wheelchair": "Improved Light-Frame Wheelchair",
+  "weapon_advanced_light_frame_wheelchair": "Advanced Light-Frame Wheelchair",
+  "weapon_legendary_light_frame_wheelchair": "Legendary Light-Frame Wheelchair",
+  "weapon_heavy_frame_wheelchair": "Heavy-Frame Wheelchair",
+  "weapon_improved_heavy_frame_wheelchair": "Improved Heavy-Frame Wheelchair",
+  "weapon_advanced_heavy_frame_wheelchair": "Advanced Heavy-Frame Wheelchair",
+  "weapon_legendary_heavy_frame_wheelchair": "Legendary Heavy-Frame Wheelchair",
+  "weapon_arcane_frame_wheelchair": "Arcane-Frame Wheelchair",
+  "weapon_improved_arcane_frame_wheelchair": "Improved Arcane-Frame Wheelchair",
+  "weapon_advanced_arcane_frame_wheelchair": "Advanced Arcane-Frame Wheelchair",
+  "weapon_legendary_arcane_frame_wheelchair": "Legendary Arcane-Frame Wheelchair",
+  "armor_gambeson_armor": "Gambeson Armor",
+  "armor_leather_armor": "Leather Armor",
+  "armor_chainmail_armor": "Chainmail Armor",
+  "armor_full_plate_armor": "Full Plate Armor",
+  "armor_improved_gambeson_armor": "Improved Gambeson Armor",
+  "armor_improved_leather_armor": "Improved Leather Armor",
+  "armor_improved_chainmail_armor": "Improved Chainmail Armor",
+  "armor_improved_full_plate_armor": "Improved Full Plate Armor",
+  "armor_elundrian_chain_armor": "Elundrian Chain Armor",
+  "armor_harrowbone_armor": "Harrowbone Armor",
+  "armor_irontree_breastplate_armor": "Irontree Breastplate Armor",
+  "armor_runetan_floating_armor": "Runetan Floating Armor",
+  "armor_tyris_soft_armor": "Tyris Soft Armor",
+  "armor_rosewild_armor": "Rosewild Armor",
+  "armor_advanced_gambeson_armor": "Advanced Gambeson Armor",
+  "armor_advanced_leather_armor": "Advanced Leather Armor",
+  "armor_advanced_chainmail_armor": "Advanced Chainmail Armor",
+  "armor_advanced_full_plate_armor": "Advanced Full Plate Armor",
+  "armor_bellamoi_fine_armor": "Bellamoi Fine Armor",
+  "armor_dragonscale_armor": "Dragonscale Armor",
+  "armor_spiked_plate_armor": "Spiked Plate Armor",
+  "armor_bladefare_armor": "Bladefare Armor",
+  "armor_monetts_cloak": "Monett’s Cloak",
+  "armor_runes_of_fortification": "Runes of Fortification",
+  "armor_legendary_gambeson_armor": "Legendary Gambeson Armor",
+  "armor_legendary_leather_armor": "Legendary Leather Armor",
+  "armor_legendary_chainmail_armor": "Legendary Chainmail Armor",
+  "armor_legendary_full_plate_armor": "Legendary Full Plate Armor",
+  "armor_dunamis_silkchain": "Dunamis Silkchain",
+  "armor_channeling_armor": "Channeling Armor",
+  "armor_emberwoven_armor": "Emberwoven Armor",
+  "armor_full_fortified_armor": "Full Fortified Armor",
+  "armor_veritas_opal_armor": "Veritas Opal Armor",
+  "armor_savior_chainmail": "Savior Chainmail",
+  "consumable_stride_potion": "Stride Potion",
+  "consumable_bolster_potion": "Bolster Potion",
+  "consumable_control_potion": "Control Potion",
+  "consumable_attune_potion": "Attune Potion",
+  "consumable_charm_potion": "Charm Potion",
+  "consumable_enlighten_potion": "Enlighten Potion",
+  "consumable_minor_health_potion": "Minor Health Potion",
+  "consumable_minor_stamina_potion": "Minor Stamina Potion",
+  "consumable_grindletooth_venom": "Grindletooth Venom",
+  "consumable_varik_leaves": "Varik Leaves",
+  "consumable_vial_of_moondrip": "Vial of Moondrip",
+  "consumable_unstable_arcane_shard": "Unstable Arcane Shard",
+  "consumable_potion_of_stability": "Potion of Stability",
+  "consumable_improved_grindletooth_venom": "Improved Grindletooth Venom",
+  "consumable_morphing_clay": "Morphing Clay",
+  "consumable_vial_of_darksmoke": "Vial of Darksmoke",
+  "consumable_jumping_root": "Jumping Root",
+  "consumable_snap_powder": "Snap Powder",
+  "consumable_health_potion": "Health Potion",
+  "consumable_stamina_potion": "Stamina Potion",
+  "consumable_armor_stitcher": "Armor Stitcher",
+  "consumable_gill_salve": "Gill Salve",
+  "consumable_replication_parchment": "Replication Parchment",
+  "consumable_improved_arcane_shard": "Improved Arcane Shard",
+  "consumable_major_stride_potion": "Major Stride Potion",
+  "consumable_major_bolster_potion": "Major Bolster Potion",
+  "consumable_major_control_potion": "Major Control Potion",
+  "consumable_major_attune_potion": "Major Attune Potion",
+  "consumable_major_charm_potion": "Major Charm Potion",
+  "consumable_major_enlighten_potion": "Major Enlighten Potion",
+  "consumable_blood_of_the_yorgi": "Blood of the Yorgi",
+  "consumable_homet_s_secret_potion": "Homet’s Secret Potion",
+  "consumable_redthorn_saliva": "Redthorn Saliva",
+  "consumable_channelstone": "Channelstone",
+  "consumable_mythic_dust": "Mythic Dust",
+  "consumable_acidpaste": "Acidpaste",
+  "consumable_hopehold_flare": "Hopehold Flare",
+  "consumable_major_arcane_shard": "Major Arcane Shard",
+  "consumable_featherbone": "Featherbone",
+  "consumable_circle_of_the_void": "Circle of the Void",
+  "consumable_sun_tree_sap": "Sun Tree Sap",
+  "consumable_dripfang_poison": "Dripfang Poison",
+  "consumable_major_health_potion": "Major Health Potion",
+  "consumable_major_stamina_potion": "Major Stamina Potion",
+  "consumable_ogre_musk": "Ogre Musk",
+  "consumable_wingsprout": "Wingsprout",
+  "consumable_jar_of_lost_voices": "Jar of Lost Voices",
+  "consumable_dragonbloom_tea": "Dragonbloom Tea",
+  "consumable_bridge_seed": "Bridge Seed",
+  "consumable_sleeping_sap": "Sleeping Sap",
+  "consumable_feast_of_xuria": "Feast of Xuria",
+  "consumable_bonding_honey": "Bonding Honey",
+  "consumable_shrinking_potion": "Shrinking Potion",
+  "consumable_growing_potion": "Growing Potion",
+  "consumable_knowledge_stone": "Knowledge Stone",
+  "consumable_sweet_moss": "Sweet Moss",
+  "consumable_blinding_orb": "Blinding Orb",
+  "consumable_death_tea": "Death Tea",
+  "consumable_mirror_of_marigold": "Mirror of Marigold",
+  "consumable_stardrop": "Stardrop",
+  "class_assassin": "Assassin",
+  "class_brawler": "Brawler",
+  "class_warlock": "Warlock",
+  "class_witch": "Witch",
+  "subclass_executioners_guild": "Executioners Guild",
+  "subclass_poisoners_guild": "Poisoners Guild",
+  "subclass_juggernaut": "Juggernaut",
+  "subclass_martial_artist": "Martial Artist",
+  "subclass_pact_of_the_endless": "Pact of the Endless",
+  "subclass_pact_of_the_wrathful": "Pact of the Wrathful",
+  "subclass_hedge": "Hedge",
+  "subclass_moon": "Moon",
+  "ancestry_aetheris": "Aetheris",
+  "ancestry_earthkin": "Earthkin",
+  "ancestry_emberkin": "Emberkin",
+  "ancestry_gnome": "Gnome",
+  "ancestry_skykin": "Skykin",
+  "ancestry_tidekin": "Tidekin",
+  "community_duneborne": "Duneborne",
+  "community_freeborne": "Freeborne",
+  "community_frostborne": "Frostborne",
+  "community_hearthborne": "Hearthborne",
+  "community_reborne": "Reborne",
+  "community_warborne": "Warborne",
+  "transformation_demigod": "Demigod",
+  "transformation_ghost": "Ghost",
+  "transformation_reanimated": "Reanimated",
+  "transformation_shapeshifter": "Shapeshifter",
+  "transformation_vampire": "Vampire",
+  "transformation_werewolf": "Werewolf",
+  "domain_card_blighting_strike": "Blighting Strike",
+  "domain_card_umbral_veil": "Umbral Veil",
+  "domain_card_voice_of_dread": "Voice of Dread",
+  "domain_card_hideous_retribution": "Hideous Retribution",
+  "domain_card_siphon_essence": "Siphon Essence",
+  "domain_card_shared_trauma": "Shared Trauma",
+  "domain_card_terrify": "Terrify",
+  "domain_card_chains_of_affliction": "Chains of Affliction",
+  "domain_card_summon_horror": "Summon Horror",
+  "domain_card_dire_strike": "Dire Strike",
+  "domain_card_spectral_mist": "Spectral Mist",
+  "domain_card_darkfire": "Darkfire",
+  "domain_card_jump_scare": "Jump Scare",
+  "domain_card_dread_touched": "Dread-Touched",
+  "domain_card_wall_of_hunger": "Wall of Hunger",
+  "domain_card_dark_army": "Dark Army",
+  "domain_card_eldritch_flesh": "Eldritch Flesh",
+  "domain_card_damnation": "Damnation",
+  "domain_card_savor_the_anguish": "Savor the Anguish",
+  "domain_card_avatar_of_terror": "Avatar of Terror",
+  "domain_card_invoke_torment": "Invoke Torment",
+  "weapon_katana": "Katana",
+  "weapon_brass_knuckles": "Brass Knuckles",
+  "weapon_scimitar": "Scimitar",
+  "weapon_twisted_dagger": "Twisted Dagger",
+  "weapon_whipsword": "Whipsword",
+  "weapon_rope_dart": "Rope Dart",
+  "weapon_brightsword": "Brightsword",
+  "weapon_shadowblade": "Shadowblade",
+  "weapon_enchanted_chakram": "Enchanted Chakram",
+  "weapon_casting_dagger": "Casting Dagger",
+  "weapon_runelock_pistol": "Runelock Pistol",
+  "weapon_arcane_rifle": "Arcane Rifle",
+  "weapon_improved_katana": "Improved Katana",
+  "weapon_improved_brass_knuckles": "Improved Brass Knuckles",
+  "weapon_improved_scimitar": "Improved Scimitar",
+  "weapon_improved_twisted_dagger": "Improved Twisted Dagger",
+  "weapon_improved_whipsword": "Improved Whipsword",
+  "weapon_improved_rope_dart": "Improved Rope Dart",
+  "weapon_war_pick": "War Pick",
+  "weapon_cane_sword": "Cane Sword",
+  "weapon_bladed_fan": "Bladed Fan",
+  "weapon_cyrurgiens_scalpel": "Cyrurgien’s Scalpel",
+  "weapon_lance": "Lance",
+  "weapon_javelins": "Javelins",
+  "weapon_improved_brightsword": "Improved Brightsword",
+  "weapon_improved_shadowblade": "Improved Shadowblade",
+  "weapon_improved_enchanted_chakram": "Improved Enchanted Chakram",
+  "weapon_improved_casting_dagger": "Improved Casting Dagger",
+  "weapon_improved_runelock_pistol": "Improved Runelock Pistol",
+  "weapon_improved_arcane_rifle": "Improved Arcane Rifle",
+  "weapon_enchanted_shillelagh": "Enchanted Shillelagh",
+  "weapon_displacement_razor": "Displacement Razor",
+  "weapon_spellbound_bangles": "Spellbound Bangles",
+  "weapon_fury_gem": "Fury Gem",
+  "weapon_enchanted_lute": "Enchanted Lute",
+  "weapon_splintershaft_bow": "Splintershaft Bow",
+  "weapon_advanced_katana": "Advanced Katana",
+  "weapon_advanced_brass_knuckles": "Advanced Brass Knuckles",
+  "weapon_advanced_scimitar": "Advanced Scimitar",
+  "weapon_advanced_twisted_dagger": "Advanced Twisted Dagger",
+  "weapon_advanced_whipsword": "Advanced Whipsword",
+  "weapon_advanced_rope_dart": "Advanced Rope Dart",
+  "weapon_blitz_hammer": "Blitz Hammer",
+  "weapon_platinum_estoc": "Platinum Estoc",
+  "weapon_soldiers_pike": "Soldier’s Pike",
+  "weapon_chained_scythe": "Chained Scythe",
+  "weapon_singing_sword": "Singing Sword",
+  "weapon_bladed_star": "Bladed Star",
+  "weapon_advanced_brightsword": "Advanced Brightsword",
+  "weapon_advanced_shadowblade": "Advanced Shadowblade",
+  "weapon_advanced_enchanted_chakram": "Advanced Enchanted Chakram",
+  "weapon_advanced_casting_dagger": "Advanced Casting Dagger",
+  "weapon_advanced_runelock_pistol": "Advanced Runelock Pistol",
+  "weapon_advanced_arcane_rifle": "Advanced Arcane Rifle",
+  "weapon_rocket_maul": "Rocket Maul",
+  "weapon_crystal_spear": "Crystal Spear",
+  "weapon_arc_wand": "Arc Wand",
+  "weapon_rime_scepter": "Rime Scepter",
+  "weapon_gunblade": "Gunblade",
+  "weapon_staff_of_augma": "Staff of Augma",
+  "weapon_legendary_katana": "Legendary Katana",
+  "weapon_legendary_brass_knuckles": "Legendary Brass Knuckles",
+  "weapon_legendary_scimitar": "Legendary Scimitar",
+  "weapon_legendary_twisted_dagger": "Legendary Twisted Dagger",
+  "weapon_legendary_whipsword": "Legendary Whipsword",
+  "weapon_legendary_rope_dart": "Legendary Rope Dart",
+  "weapon_severed_dragon_claw": "Severed Dragon Claw",
+  "weapon_infinite_staff": "Infinite Staff",
+  "weapon_bec_de_corbin": "Bec de Corbin",
+  "weapon_black_powder_serpentine": "Black Powder Serpentine",
+  "weapon_clockwork_crossbow": "Clockwork Crossbow",
+  "weapon_arquebus": "Arquebus",
+  "weapon_legendary_brightsword": "Legendary Brightsword",
+  "weapon_legendary_shadowblade": "Legendary Shadowblade",
+  "weapon_legendary_enchanted_chakram": "Legendary Enchanted Chakram",
+  "weapon_legendary_casting_dagger": "Legendary Casting Dagger",
+  "weapon_legendary_runelock_pistol": "Legendary Runelock Pistol",
+  "weapon_legendary_arcane_rifle": "Legendary Arcane Rifle",
+  "weapon_starmetal_blade": "Starmetal Blade",
+  "weapon_adders_fang": "Adder’s Fang",
+  "weapon_demons_edge": "Demon’s Edge",
+  "weapon_storm_gods_greataxe": "Storm God’s Greataxe",
+  "weapon_ethereal_zweihander": "Ethereal Zweihänder",
+  "weapon_gravity_arbalest": "Gravity Arbalest",
+  "weapon_hatchet": "Hatchet",
+  "weapon_offhand_brass_knuckles": "Offhand Brass Knuckles",
+  "weapon_throwing_knives": "Throwing Knives",
+  "weapon_fighting_cloak": "Fighting Cloak",
+  "weapon_rune_shield": "Rune Shield",
+  "weapon_focus_runes": "Focus Runes",
+  "weapon_improved_hatchet": "Improved Hatchet",
+  "weapon_improved_offhand_brass_knuckles": "Improved Offhand Brass Knuckles",
+  "weapon_improved_throwing_knives": "Improved Throwing Knives",
+  "weapon_improved_fighting_cloak": "Improved Fighting Cloak",
+  "weapon_improved_rune_shield": "Improved Rune Shield",
+  "weapon_improved_focus_runes": "Improved Focus Runes",
+  "weapon_collapsible_baton": "Collapsible Baton",
+  "weapon_eldritch_vambrace": "Eldritch Vambrace",
+  "weapon_segmented_staff": "Segmented Staff",
+  "weapon_razor_wire": "Razor Wire",
+  "weapon_advanced_hatchet": "Advanced Hatchet",
+  "weapon_advanced_offhand_brass_knuckles": "Advanced Offhand Brass Knuckles",
+  "weapon_advanced_throwing_knives": "Advanced Throwing Knives",
+  "weapon_advanced_fighting_cloak": "Advanced Fighting Cloak",
+  "weapon_advanced_rune_shield": "Advanced Rune Shield",
+  "weapon_advanced_focus_runes": "Advanced Focus Runes",
+  "weapon_tinkers_hammer": "Tinker’s Hammer",
+  "weapon_vorpal_shard": "Vorpal Shard",
+  "weapon_soul_chain": "Soul Chain",
+  "weapon_war_dart": "War Dart",
+  "weapon_legendary_hatchet": "Legendary Hatchet",
+  "weapon_legendary_offhand_brass_knuckles": "Legendary Offhand Brass Knuckles",
+  "weapon_legendary_throwing_knives": "Legendary Throwing Knives",
+  "weapon_legendary_fighting_cloak": "Legendary Fighting Cloak",
+  "weapon_legendary_rune_shield": "Legendary Rune Shield",
+  "weapon_legendary_focus_runes": "Legendary Focus Runes",
+  "weapon_void_needle": "Void Needle",
+  "weapon_echo_blade": "Echo Blade",
+  "weapon_mobius_orb": "Möbius Orb",
+  "weapon_blackblood_tendril": "Blackblood Tendril",
+  "armor_mage_robes": "Mage Robes",
+  "armor_brigandine_armor": "Brigandine Armor",
+  "armor_scale_mail_armor": "Scale Mail Armor",
+  "armor_banded_armor": "Banded Armor",
+  "armor_improved_mage_robes": "Improved Mage Robes",
+  "armor_improved_brigandine_armor": "Improved Brigandine Armor",
+  "armor_improved_scale_mail_armor": "Improved Scale Mail Armor",
+  "armor_improved_banded_armor": "Improved Banded Armor",
+  "armor_enchanters_robes": "Enchanter’s Robes",
+  "armor_hawkguards_mantle": "Hawkguard’s Mantle",
+  "armor_spidersilk_tunic": "Spidersilk Tunic",
+  "armor_stormthread_habit": "Stormthread Habit",
+  "armor_wyrdwood_splint_armor": "Wyrdwood Splint Armor",
+  "armor_trollhide_cuirass": "Trollhide Cuirass",
+  "armor_gilded_sunplate": "Gilded Sunplate",
+  "armor_advanced_mage_robes": "Advanced Mage Robes",
+  "armor_advanced_brigandine_armor": "Advanced Brigandine Armor",
+  "armor_advanced_scale_mail_armor": "Advanced Scale Mail Armor",
+  "armor_advanced_banded_armor": "Advanced Banded Armor",
+  "armor_granminsters_finery": "Granminster’s Finery",
+  "armor_astral_raiment": "Astral Raiment",
+  "armor_cloverweave_cloak": "Cloverweave Cloak",
+  "armor_skywardens_lamellar": "Skywarden’s Lamellar",
+  "armor_bloodstone_plate_armor": "Bloodstone Plate Armor",
+  "armor_deep_forged_coral_armor": "Deep-Forged Coral Armor",
+  "armor_legendary_mage_robes": "Legendary Mage Robes",
+  "armor_legendary_brigandine_armor": "Legendary Brigandine Armor",
+  "armor_legendary_scale_mail_armor": "Legendary Scale Mail Armor",
+  "armor_legendary_banded_armor": "Legendary Banded Armor",
+  "armor_darkweave_shroud": "Darkweave Shroud",
+  "armor_godbound_laminar": "Godbound Laminar",
+  "armor_circle_forged_dreadplate": "Circle-Forged Dreadplate",
+  "armor_rune_forged_exosuit": "Rune-Forged Exosuit",
+  "armor_hallowed_heroplate": "Hallowed Heroplate",
+  "armor_resonant_harness": "Resonant Harness",
+  "consumable_warding_candle": "Warding Candle",
+  "consumable_iridian_dust": "Iridian Dust",
+  "consumable_verglasian_seed": "Verglasian Seed",
+  "consumable_cupbearers_bezoar": "Cupbearer’s Bezoar",
+  "consumable_mossmantle_potion": "Mossmantle Potion",
+  "consumable_lyrebird_lozenge": "Lyrebird Lozenge",
+  "consumable_vial_of_featherfall": "Vial of Featherfall",
+  "consumable_chimeric_saliva": "Chimeric Saliva",
+  "consumable_packet_of_space_dust": "Packet of Space Dust",
+  "consumable_pipeweed": "Pipeweed",
+  "consumable_deathseers_powder": "Deathseer’s Powder",
+  "consumable_slayers_salt": "Slayer’s Salt",
+  "consumable_yakamel_milk": "Yakamel Milk",
+  "consumable_glowmoss_mushroom": "Glowmoss Mushroom",
+  "consumable_red_ooze_oil": "Red Ooze Oil",
+  "consumable_instant_camp": "Instant Camp",
+  "consumable_bundle_of_spiderlegs": "Bundle of Spiderlegs",
+  "consumable_ciscan_fog_bottle": "Ciscan Fog Bottle",
+  "consumable_snapthorn_seed": "Snapthorn Seed",
+  "consumable_sprite_bottle": "Sprite Bottle",
+  "consumable_gravity_bomb": "Gravity Bomb",
+  "consumable_gossip_flower": "Gossip Flower",
+  "consumable_displacement_token": "Displacement Token",
+  "consumable_night_hags_dust": "Night Hag’s Dust",
+  "consumable_self_sewing_thread": "Self-Sewing Thread",
+  "consumable_stonemasons_fortune": "Stonemason’s Fortune",
+  "consumable_mnemonic_potion": "Mnemonic Potion",
+  "consumable_salamander_salve": "Salamander Salve",
+  "consumable_green_ooze_oil": "Green Ooze Oil",
+  "consumable_sunlight_orb": "Sunlight Orb",
+  "consumable_moonlight_orb": "Moonlight Orb",
+  "consumable_midas_flask": "Midas Flask",
+  "consumable_staff_of_reversal": "Staff of Reversal",
+  "consumable_berserkers_brew": "Berserker’s Brew",
+  "consumable_emberite_shard": "Emberite Shard",
+  "consumable_arcticite_shard": "Arcticite Shard",
+  "consumable_fulgurite_shard": "Fulgurite Shard",
+  "consumable_demiurges_draught": "Demiurge’s Draught",
+  "consumable_cockerel_claw_tea": "Cockerel Claw Tea",
+  "consumable_potion_of_vigilance": "Potion of Vigilance",
+  "consumable_cacophonous_concoction": "Cacophonous Concoction",
+  "consumable_nightmare_mead": "Nightmare Mead",
+  "consumable_stake_of_abjuration": "Stake of Abjuration",
+  "consumable_psychopomps_shroud": "Psychopomp’s Shroud",
+  "consumable_phial_of_deep_ink": "Phial of Deep Ink",
+  "consumable_mesmers_tonic": "Mesmer’s Tonic",
+  "consumable_invisibility_potion": "Invisibility Potion",
+  "consumable_formoid_serum": "Formoid Serum",
+  "consumable_steelskin_salve": "Steelskin Salve",
+  "consumable_godlings_pomelo": "Godling’s Pomelo",
+  "consumable_snakeskin_spirit": "Snakeskin Spirit",
+  "consumable_magic_users_malison": "Magic-User’s Malison",
+  "consumable_quintessential_severant": "Quintessential Severant",
+  "consumable_mask_of_the_echoed_self": "Mask of the Echoed Self",
+  "consumable_necroprancers_bell": "Necroprancer’s Bell",
+  "consumable_drakemantle": "Drakemantle",
+  "consumable_gamblers_fallacy": "Gambler’s Fallacy",
+  "consumable_lionheart_tonic": "Lionheart Tonic",
+  "consumable_tears_of_the_undying_hero": "Tears of the Undying Hero",
+  "consumable_featherstep_potion": "Featherstep Potion"
+ },
+ "extras": {
+  "subclass_beastbound": {
+   "class": "Ranger"
+  },
+  "subclass_call_of_the_brave": {
+   "class": "Warrior"
+  },
+  "subclass_call_of_the_slayer": {
+   "class": "Warrior"
+  },
+  "subclass_divine_wielder": {
+   "class": "Seraph"
+  },
+  "subclass_elemental_origin": {
+   "class": "Sorcerer"
+  },
+  "subclass_nightwalker": {
+   "class": "Rogue"
+  },
+  "subclass_primal_origin": {
+   "class": "Sorcerer"
+  },
+  "subclass_school_of_knowledge": {
+   "class": "Wizard"
+  },
+  "subclass_school_of_war": {
+   "class": "Wizard"
+  },
+  "subclass_stalwart": {
+   "class": "Guardian"
+  },
+  "subclass_syndicate": {
+   "class": "Rogue"
+  },
+  "subclass_troubadour": {
+   "class": "Bard"
+  },
+  "subclass_vengeance": {
+   "class": "Guardian"
+  },
+  "subclass_warden_of_renewal": {
+   "class": "Druid"
+  },
+  "subclass_warden_of_the_elements": {
+   "class": "Druid"
+  },
+  "subclass_wayfinder": {
+   "class": "Ranger"
+  },
+  "subclass_winged_sentinel": {
+   "class": "Seraph"
+  },
+  "subclass_wordsmith": {
+   "class": "Bard"
+  },
+  "ancestry_clank": {
+   "features": [
+    "Purposeful Design",
+    "Efficient"
+   ]
+  },
+  "ancestry_drakona": {
+   "features": [
+    "Scales",
+    "Elemental Breath"
+   ]
+  },
+  "ancestry_dwarf": {
+   "features": [
+    "Thick Skin",
+    "Increased Fortitude"
+   ]
+  },
+  "ancestry_elf": {
+   "features": [
+    "Quick Reactions",
+    "Celestial Trance"
+   ]
+  },
+  "ancestry_faerie": {
+   "features": [
+    "Luckbender",
+    "Wings"
+   ]
+  },
+  "ancestry_faun": {
+   "features": [
+    "Caprine Leap",
+    "Kick"
+   ]
+  },
+  "ancestry_firbolg": {
+   "features": [
+    "Charge",
+    "Unshakable"
+   ]
+  },
+  "ancestry_fungril": {
+   "features": [
+    "Fungril Network",
+    "Death Connection"
+   ]
+  },
+  "ancestry_galapa": {
+   "features": [
+    "Shell",
+    "Retract"
+   ]
+  },
+  "ancestry_giant": {
+   "features": [
+    "Endurance",
+    "Reach"
+   ]
+  },
+  "ancestry_goblin": {
+   "features": [
+    "Surefooted",
+    "Danger Sense"
+   ]
+  },
+  "ancestry_halfling": {
+   "features": [
+    "Luckbringer",
+    "Internal Compass"
+   ]
+  },
+  "ancestry_human": {
+   "features": [
+    "High Stamina",
+    "Adaptability"
+   ]
+  },
+  "ancestry_infernis": {
+   "features": [
+    "Fearless",
+    "Dread Visage"
+   ]
+  },
+  "ancestry_katari": {
+   "features": [
+    "Feline Instincts",
+    "Retracting Claws"
+   ]
+  },
+  "ancestry_orc": {
+   "features": [
+    "Sturdy",
+    "Tusks"
+   ]
+  },
+  "ancestry_ribbet": {
+   "features": [
+    "Amphibious",
+    "Long Tongue"
+   ]
+  },
+  "ancestry_simiah": {
+   "features": [
+    "Natural Climber",
+    "Nimble"
+   ]
+  },
+  "domain_card_a_soldiers_bond": {
+   "level": 2,
+   "domain": "blade"
+  },
+  "domain_card_adjust_reality": {
+   "level": 10,
+   "domain": "arcana"
+  },
+  "domain_card_arcana_touched": {
+   "level": 7,
+   "domain": "arcana"
+  },
+  "domain_card_arcane_reflection": {
+   "level": 8,
+   "domain": "arcana"
+  },
+  "domain_card_armorer": {
+   "level": 5,
+   "domain": "valor"
+  },
+  "domain_card_astral_projection": {
+   "level": 8,
+   "domain": "grace"
+  },
+  "domain_card_banish": {
+   "level": 6,
+   "domain": "codex"
+  },
+  "domain_card_bare_bones": {
+   "level": 1,
+   "domain": "valor"
+  },
+  "domain_card_battle_cry": {
+   "level": 8,
+   "domain": "blade"
+  },
+  "domain_card_battle_monster": {
+   "level": 10,
+   "domain": "blade"
+  },
+  "domain_card_battle_hardened": {
+   "level": 6,
+   "domain": "blade"
+  },
+  "domain_card_blade_touched": {
+   "level": 7,
+   "domain": "blade"
+  },
+  "domain_card_blink_out": {
+   "level": 4,
+   "domain": "arcana"
+  },
+  "domain_card_body_basher": {
+   "level": 2,
+   "domain": "valor"
+  },
+  "domain_card_bold_presence": {
+   "level": 2,
+   "domain": "valor"
+  },
+  "domain_card_bolt_beacon": {
+   "level": 1,
+   "domain": "splendor"
+  },
+  "domain_card_bone_touched": {
+   "level": 7,
+   "domain": "bone"
+  },
+  "domain_card_book_of_ava": {
+   "level": 1,
+   "domain": "codex"
+  },
+  "domain_card_book_of_exota": {
+   "level": 4,
+   "domain": "codex"
+  },
+  "domain_card_book_of_grynn": {
+   "level": 4,
+   "domain": "codex"
+  },
+  "domain_card_book_of_homet": {
+   "level": 7,
+   "domain": "codex"
+  },
+  "domain_card_book_of_illiat": {
+   "level": 1,
+   "domain": "codex"
+  },
+  "domain_card_book_of_korvax": {
+   "level": 3,
+   "domain": "codex"
+  },
+  "domain_card_book_of_norai": {
+   "level": 3,
+   "domain": "codex"
+  },
+  "domain_card_book_of_ronin": {
+   "level": 9,
+   "domain": "codex"
+  },
+  "domain_card_book_of_sitil": {
+   "level": 2,
+   "domain": "codex"
+  },
+  "domain_card_book_of_tyfar": {
+   "level": 1,
+   "domain": "codex"
+  },
+  "domain_card_book_of_vagras": {
+   "level": 2,
+   "domain": "codex"
+  },
+  "domain_card_book_of_vyola": {
+   "level": 8,
+   "domain": "codex"
+  },
+  "domain_card_book_of_yarrow": {
+   "level": 10,
+   "domain": "codex"
+  },
+  "domain_card_boost": {
+   "level": 4,
+   "domain": "bone"
+  },
+  "domain_card_brace": {
+   "level": 3,
+   "domain": "bone"
+  },
+  "domain_card_breaking_blow": {
+   "level": 8,
+   "domain": "bone"
+  },
+  "domain_card_chain_lightning": {
+   "level": 5,
+   "domain": "arcana"
+  },
+  "domain_card_champions_edge": {
+   "level": 5,
+   "domain": "blade"
+  },
+  "domain_card_chokehold": {
+   "level": 3,
+   "domain": "midnight"
+  },
+  "domain_card_cinder_grasp": {
+   "level": 2,
+   "domain": "arcana"
+  },
+  "domain_card_cloaking_blast": {
+   "level": 7,
+   "domain": "arcana"
+  },
+  "domain_card_codex_touched": {
+   "level": 7,
+   "domain": "codex"
+  },
+  "domain_card_confusing_aura": {
+   "level": 8,
+   "domain": "arcana"
+  },
+  "domain_card_conjure_swarm": {
+   "level": 2,
+   "domain": "sage"
+  },
+  "domain_card_conjured_steeds": {
+   "level": 6,
+   "domain": "sage"
+  },
+  "domain_card_copycat": {
+   "level": 9,
+   "domain": "grace"
+  },
+  "domain_card_corrosive_projectile": {
+   "level": 3,
+   "domain": "sage"
+  },
+  "domain_card_counterspell": {
+   "level": 3,
+   "domain": "arcana"
+  },
+  "domain_card_critical_inspiration": {
+   "level": 3,
+   "domain": "valor"
+  },
+  "domain_card_cruel_precision": {
+   "level": 7,
+   "domain": "bone"
+  },
+  "domain_card_dark_whispers": {
+   "level": 6,
+   "domain": "midnight"
+  },
+  "domain_card_deadly_focus": {
+   "level": 4,
+   "domain": "blade"
+  },
+  "domain_card_death_grip": {
+   "level": 4,
+   "domain": "sage"
+  },
+  "domain_card_deathrun": {
+   "level": 10,
+   "domain": "bone"
+  },
+  "domain_card_deft_deceiver": {
+   "level": 1,
+   "domain": "grace"
+  },
+  "domain_card_deft_maneuvers": {
+   "level": 1,
+   "domain": "bone"
+  },
+  "domain_card_disintegration_wave": {
+   "level": 9,
+   "domain": "codex"
+  },
+  "domain_card_divination": {
+   "level": 4,
+   "domain": "splendor"
+  },
+  "domain_card_earthquake": {
+   "level": 9,
+   "domain": "arcana"
+  },
+  "domain_card_eclipse": {
+   "level": 10,
+   "domain": "midnight"
+  },
+  "domain_card_encore": {
+   "level": 10,
+   "domain": "grace"
+  },
+  "domain_card_endless_charisma": {
+   "level": 7,
+   "domain": "grace"
+  },
+  "domain_card_enrapture": {
+   "level": 1,
+   "domain": "grace"
+  },
+  "domain_card_falling_sky": {
+   "level": 10,
+   "domain": "arcana"
+  },
+  "domain_card_fane_of_the_wilds": {
+   "level": 9,
+   "domain": "sage"
+  },
+  "domain_card_ferocity": {
+   "level": 2,
+   "domain": "bone"
+  },
+  "domain_card_final_words": {
+   "level": 2,
+   "domain": "splendor"
+  },
+  "domain_card_flight": {
+   "level": 3,
+   "domain": "arcana"
+  },
+  "domain_card_floating_eye": {
+   "level": 2,
+   "domain": "arcana"
+  },
+  "domain_card_forager": {
+   "level": 6,
+   "domain": "sage"
+  },
+  "domain_card_force_of_nature": {
+   "level": 10,
+   "domain": "sage"
+  },
+  "domain_card_forceful_push": {
+   "level": 1,
+   "domain": "valor"
+  },
+  "domain_card_forest_sprites": {
+   "level": 8,
+   "domain": "sage"
+  },
+  "domain_card_fortified_armor": {
+   "level": 4,
+   "domain": "blade"
+  },
+  "domain_card_frenzy": {
+   "level": 8,
+   "domain": "blade"
+  },
+  "domain_card_full_surge": {
+   "level": 8,
+   "domain": "valor"
+  },
+  "domain_card_get_back_up": {
+   "level": 1,
+   "domain": "blade"
+  },
+  "domain_card_gifted_tracker": {
+   "level": 1,
+   "domain": "sage"
+  },
+  "domain_card_glancing_blow": {
+   "level": 7,
+   "domain": "blade"
+  },
+  "domain_card_glyph_of_nightfall": {
+   "level": 4,
+   "domain": "midnight"
+  },
+  "domain_card_goad_them_on": {
+   "level": 4,
+   "domain": "valor"
+  },
+  "domain_card_gore_and_glory": {
+   "level": 9,
+   "domain": "blade"
+  },
+  "domain_card_grace_touched": {
+   "level": 7,
+   "domain": "grace"
+  },
+  "domain_card_ground_pound": {
+   "level": 8,
+   "domain": "valor"
+  },
+  "domain_card_healing_field": {
+   "level": 4,
+   "domain": "sage"
+  },
+  "domain_card_healing_hands": {
+   "level": 2,
+   "domain": "splendor"
+  },
+  "domain_card_healing_strike": {
+   "level": 7,
+   "domain": "splendor"
+  },
+  "domain_card_hold_the_line": {
+   "level": 9,
+   "domain": "valor"
+  },
+  "domain_card_hush": {
+   "level": 5,
+   "domain": "midnight"
+  },
+  "domain_card_hypnotic_shimmer": {
+   "level": 3,
+   "domain": "grace"
+  },
+  "domain_card_i_am_your_shield": {
+   "level": 1,
+   "domain": "valor"
+  },
+  "domain_card_i_see_it_coming": {
+   "level": 1,
+   "domain": "bone"
+  },
+  "domain_card_inevitable": {
+   "level": 6,
+   "domain": "valor"
+  },
+  "domain_card_inspirational_words": {
+   "level": 1,
+   "domain": "grace"
+  },
+  "domain_card_invigoration": {
+   "level": 10,
+   "domain": "splendor"
+  },
+  "domain_card_invisibility": {
+   "level": 3,
+   "domain": "grace"
+  },
+  "domain_card_know_thy_enemy": {
+   "level": 5,
+   "domain": "bone"
+  },
+  "domain_card_lead_by_example": {
+   "level": 9,
+   "domain": "valor"
+  },
+  "domain_card_lean_on_me": {
+   "level": 3,
+   "domain": "valor"
+  },
+  "domain_card_life_ward": {
+   "level": 4,
+   "domain": "splendor"
+  },
+  "domain_card_manifest_wall": {
+   "level": 5,
+   "domain": "codex"
+  },
+  "domain_card_mass_disguise": {
+   "level": 6,
+   "domain": "midnight"
+  },
+  "domain_card_mass_enrapture": {
+   "level": 8,
+   "domain": "grace"
+  },
+  "domain_card_master_of_the_craft": {
+   "level": 9,
+   "domain": "grace"
+  },
+  "domain_card_mending_touch": {
+   "level": 1,
+   "domain": "splendor"
+  },
+  "domain_card_midnight_spirit": {
+   "level": 2,
+   "domain": "midnight"
+  },
+  "domain_card_midnight_touched": {
+   "level": 7,
+   "domain": "midnight"
+  },
+  "domain_card_natural_familiar": {
+   "level": 2,
+   "domain": "sage"
+  },
+  "domain_card_natures_tongue": {
+   "level": 1,
+   "domain": "sage"
+  },
+  "domain_card_never_upstaged": {
+   "level": 6,
+   "domain": "grace"
+  },
+  "domain_card_night_terror": {
+   "level": 9,
+   "domain": "midnight"
+  },
+  "domain_card_not_good_enough": {
+   "level": 1,
+   "domain": "blade"
+  },
+  "domain_card_notorious": {
+   "level": 10,
+   "domain": "grace"
+  },
+  "domain_card_on_the_brink": {
+   "level": 9,
+   "domain": "bone"
+  },
+  "domain_card_onslaught": {
+   "level": 10,
+   "domain": "blade"
+  },
+  "domain_card_overwhelming_aura": {
+   "level": 9,
+   "domain": "splendor"
+  },
+  "domain_card_phantom_retreat": {
+   "level": 5,
+   "domain": "midnight"
+  },
+  "domain_card_pick_and_pull": {
+   "level": 1,
+   "domain": "midnight"
+  },
+  "domain_card_plant_dominion": {
+   "level": 9,
+   "domain": "sage"
+  },
+  "domain_card_premonition": {
+   "level": 5,
+   "domain": "arcana"
+  },
+  "domain_card_preservation_blast": {
+   "level": 4,
+   "domain": "arcana"
+  },
+  "domain_card_rage_up": {
+   "level": 6,
+   "domain": "blade"
+  },
+  "domain_card_rain_of_blades": {
+   "level": 1,
+   "domain": "midnight"
+  },
+  "domain_card_rapid_riposte": {
+   "level": 6,
+   "domain": "bone"
+  },
+  "domain_card_reapers_strike": {
+   "level": 9,
+   "domain": "blade"
+  },
+  "domain_card_reassurance": {
+   "level": 1,
+   "domain": "splendor"
+  },
+  "domain_card_reckless": {
+   "level": 2,
+   "domain": "blade"
+  },
+  "domain_card_recovery": {
+   "level": 6,
+   "domain": "bone"
+  },
+  "domain_card_redirect": {
+   "level": 4,
+   "domain": "bone"
+  },
+  "domain_card_rejuvenation_barrier": {
+   "level": 8,
+   "domain": "sage"
+  },
+  "domain_card_restoration": {
+   "level": 6,
+   "domain": "splendor"
+  },
+  "domain_card_resurrection": {
+   "level": 10,
+   "domain": "splendor"
+  },
+  "domain_card_rift_walker": {
+   "level": 6,
+   "domain": "arcana"
+  },
+  "domain_card_rise_up": {
+   "level": 6,
+   "domain": "valor"
+  },
+  "domain_card_rousing_strike": {
+   "level": 5,
+   "domain": "valor"
+  },
+  "domain_card_rune_ward": {
+   "level": 1,
+   "domain": "arcana"
+  },
+  "domain_card_safe_haven": {
+   "level": 8,
+   "domain": "codex"
+  },
+  "domain_card_sage_touched": {
+   "level": 7,
+   "domain": "sage"
+  },
+  "domain_card_salvation_beam": {
+   "level": 9,
+   "domain": "splendor"
+  },
+  "domain_card_scramble": {
+   "level": 3,
+   "domain": "blade"
+  },
+  "domain_card_second_wind": {
+   "level": 3,
+   "domain": "splendor"
+  },
+  "domain_card_sensory_projection": {
+   "level": 9,
+   "domain": "arcana"
+  },
+  "domain_card_shadowbind": {
+   "level": 2,
+   "domain": "midnight"
+  },
+  "domain_card_shadowhunter": {
+   "level": 8,
+   "domain": "midnight"
+  },
+  "domain_card_shape_material": {
+   "level": 5,
+   "domain": "splendor"
+  },
+  "domain_card_share_the_burden": {
+   "level": 6,
+   "domain": "grace"
+  },
+  "domain_card_shield_aura": {
+   "level": 8,
+   "domain": "splendor"
+  },
+  "domain_card_shrug_it_off": {
+   "level": 7,
+   "domain": "valor"
+  },
+  "domain_card_sigil_of_retribution": {
+   "level": 6,
+   "domain": "codex"
+  },
+  "domain_card_signature_move": {
+   "level": 5,
+   "domain": "bone"
+  },
+  "domain_card_smite": {
+   "level": 5,
+   "domain": "splendor"
+  },
+  "domain_card_soothing_speech": {
+   "level": 4,
+   "domain": "grace"
+  },
+  "domain_card_specter_of_the_dark": {
+   "level": 10,
+   "domain": "midnight"
+  },
+  "domain_card_spellcharge": {
+   "level": 8,
+   "domain": "midnight"
+  },
+  "domain_card_splendor_touched": {
+   "level": 7,
+   "domain": "splendor"
+  },
+  "domain_card_splintering_strike": {
+   "level": 9,
+   "domain": "bone"
+  },
+  "domain_card_stealth_expertise": {
+   "level": 4,
+   "domain": "midnight"
+  },
+  "domain_card_strategic_approach": {
+   "level": 2,
+   "domain": "bone"
+  },
+  "domain_card_stunning_sunlight": {
+   "level": 8,
+   "domain": "splendor"
+  },
+  "domain_card_support_tank": {
+   "level": 4,
+   "domain": "valor"
+  },
+  "domain_card_swift_step": {
+   "level": 10,
+   "domain": "bone"
+  },
+  "domain_card_tactician": {
+   "level": 3,
+   "domain": "bone"
+  },
+  "domain_card_telekinesis": {
+   "level": 6,
+   "domain": "arcana"
+  },
+  "domain_card_teleport": {
+   "level": 5,
+   "domain": "codex"
+  },
+  "domain_card_tell_no_lies": {
+   "level": 2,
+   "domain": "grace"
+  },
+  "domain_card_tempest": {
+   "level": 10,
+   "domain": "sage"
+  },
+  "domain_card_thorn_skin": {
+   "level": 5,
+   "domain": "sage"
+  },
+  "domain_card_thought_delver": {
+   "level": 5,
+   "domain": "grace"
+  },
+  "domain_card_through_your_eyes": {
+   "level": 4,
+   "domain": "grace"
+  },
+  "domain_card_towering_stalk": {
+   "level": 3,
+   "domain": "sage"
+  },
+  "domain_card_transcendent_union": {
+   "level": 10,
+   "domain": "codex"
+  },
+  "domain_card_troublemaker": {
+   "level": 2,
+   "domain": "grace"
+  },
+  "domain_card_twilight_toll": {
+   "level": 9,
+   "domain": "midnight"
+  },
+  "domain_card_unbreakable": {
+   "level": 10,
+   "domain": "valor"
+  },
+  "domain_card_uncanny_disguise": {
+   "level": 1,
+   "domain": "midnight"
+  },
+  "domain_card_unleash_chaos": {
+   "level": 1,
+   "domain": "arcana"
+  },
+  "domain_card_untouchable": {
+   "level": 1,
+   "domain": "bone"
+  },
+  "domain_card_unyielding_armor": {
+   "level": 10,
+   "domain": "valor"
+  },
+  "domain_card_valor_touched": {
+   "level": 7,
+   "domain": "valor"
+  },
+  "domain_card_vanishing_dodge": {
+   "level": 7,
+   "domain": "midnight"
+  },
+  "domain_card_veil_of_night": {
+   "level": 3,
+   "domain": "midnight"
+  },
+  "domain_card_versatile_fighter": {
+   "level": 3,
+   "domain": "blade"
+  },
+  "domain_card_vicious_entangle": {
+   "level": 1,
+   "domain": "sage"
+  },
+  "domain_card_vitality": {
+   "level": 5,
+   "domain": "blade"
+  },
+  "domain_card_voice_of_reason": {
+   "level": 3,
+   "domain": "splendor"
+  },
+  "domain_card_wall_walk": {
+   "level": 1,
+   "domain": "arcana"
+  },
+  "domain_card_whirlwind": {
+   "level": 1,
+   "domain": "blade"
+  },
+  "domain_card_wild_fortress": {
+   "level": 5,
+   "domain": "sage"
+  },
+  "domain_card_wild_surge": {
+   "level": 7,
+   "domain": "sage"
+  },
+  "domain_card_words_of_discord": {
+   "level": 5,
+   "domain": "grace"
+  },
+  "domain_card_wrangle": {
+   "level": 8,
+   "domain": "bone"
+  },
+  "domain_card_zone_of_protection": {
+   "level": 6,
+   "domain": "splendor"
+  },
+  "weapon_broadsword": {
+   "tier": 1
+  },
+  "weapon_longsword": {
+   "tier": 1
+  },
+  "weapon_battleaxe": {
+   "tier": 1
+  },
+  "weapon_greatsword": {
+   "tier": 1
+  },
+  "weapon_mace": {
+   "tier": 1
+  },
+  "weapon_warhammer": {
+   "tier": 1
+  },
+  "weapon_dagger": {
+   "tier": 1
+  },
+  "weapon_quarterstaff": {
+   "tier": 1
+  },
+  "weapon_cutlass": {
+   "tier": 1
+  },
+  "weapon_rapier": {
+   "tier": 1
+  },
+  "weapon_halberd": {
+   "tier": 1
+  },
+  "weapon_spear": {
+   "tier": 1
+  },
+  "weapon_shortbow": {
+   "tier": 1
+  },
+  "weapon_crossbow": {
+   "tier": 1
+  },
+  "weapon_longbow": {
+   "tier": 1
+  },
+  "weapon_arcane_gauntlets": {
+   "tier": 1
+  },
+  "weapon_hallowed_axe": {
+   "tier": 1
+  },
+  "weapon_glowing_rings": {
+   "tier": 1
+  },
+  "weapon_hand_runes": {
+   "tier": 1
+  },
+  "weapon_returning_blade": {
+   "tier": 1
+  },
+  "weapon_shortstaff": {
+   "tier": 1
+  },
+  "weapon_dualstaff": {
+   "tier": 1
+  },
+  "weapon_scepter": {
+   "tier": 1
+  },
+  "weapon_wand": {
+   "tier": 1
+  },
+  "weapon_greatstaff": {
+   "tier": 1
+  },
+  "weapon_improved_broadsword": {
+   "tier": 2
+  },
+  "weapon_improved_longsword": {
+   "tier": 2
+  },
+  "weapon_improved_battleaxe": {
+   "tier": 2
+  },
+  "weapon_improved_greatsword": {
+   "tier": 2
+  },
+  "weapon_improved_mace": {
+   "tier": 2
+  },
+  "weapon_improved_warhammer": {
+   "tier": 2
+  },
+  "weapon_improved_dagger": {
+   "tier": 2
+  },
+  "weapon_improved_quarterstaff": {
+   "tier": 2
+  },
+  "weapon_improved_cutlass": {
+   "tier": 2
+  },
+  "weapon_improved_rapier": {
+   "tier": 2
+  },
+  "weapon_improved_halberd": {
+   "tier": 2
+  },
+  "weapon_improved_spear": {
+   "tier": 2
+  },
+  "weapon_improved_shortbow": {
+   "tier": 2
+  },
+  "weapon_improved_crossbow": {
+   "tier": 2
+  },
+  "weapon_improved_longbow": {
+   "tier": 2
+  },
+  "weapon_gilded_falchion": {
+   "tier": 2
+  },
+  "weapon_knuckle_blades": {
+   "tier": 2
+  },
+  "weapon_urok_broadsword": {
+   "tier": 2
+  },
+  "weapon_bladed_whip": {
+   "tier": 2
+  },
+  "weapon_steelforged_halberd": {
+   "tier": 2
+  },
+  "weapon_war_scythe": {
+   "tier": 2
+  },
+  "weapon_blunderbuss": {
+   "tier": 2
+  },
+  "weapon_greatbow": {
+   "tier": 2
+  },
+  "weapon_finehair_bow": {
+   "tier": 2
+  },
+  "weapon_improved_arcane_gauntlets": {
+   "tier": 2
+  },
+  "weapon_improved_hallowed_axe": {
+   "tier": 2
+  },
+  "weapon_improved_glowing_rings": {
+   "tier": 2
+  },
+  "weapon_improved_hand_runes": {
+   "tier": 2
+  },
+  "weapon_improved_returning_blade": {
+   "tier": 2
+  },
+  "weapon_improved_shortstaff": {
+   "tier": 2
+  },
+  "weapon_improved_dualstaff": {
+   "tier": 2
+  },
+  "weapon_improved_scepter": {
+   "tier": 2
+  },
+  "weapon_improved_wand": {
+   "tier": 2
+  },
+  "weapon_improved_greatstaff": {
+   "tier": 2
+  },
+  "weapon_ego_blade": {
+   "tier": 2
+  },
+  "weapon_casting_sword": {
+   "tier": 2
+  },
+  "weapon_devouring_dagger": {
+   "tier": 2
+  },
+  "weapon_hammer_of_exota": {
+   "tier": 2
+  },
+  "weapon_yutari_bloodbow": {
+   "tier": 2
+  },
+  "weapon_elder_bow": {
+   "tier": 2
+  },
+  "weapon_scepter_of_elias": {
+   "tier": 2
+  },
+  "weapon_wand_of_enthrallment": {
+   "tier": 2
+  },
+  "weapon_keeper_s_staff": {
+   "tier": 2
+  },
+  "weapon_advanced_broadsword": {
+   "tier": 3
+  },
+  "weapon_advanced_longsword": {
+   "tier": 3
+  },
+  "weapon_advanced_battleaxe": {
+   "tier": 3
+  },
+  "weapon_advanced_greatsword": {
+   "tier": 3
+  },
+  "weapon_advanced_mace": {
+   "tier": 3
+  },
+  "weapon_advanced_warhammer": {
+   "tier": 3
+  },
+  "weapon_advanced_dagger": {
+   "tier": 3
+  },
+  "weapon_advanced_quarterstaff": {
+   "tier": 3
+  },
+  "weapon_advanced_cutlass": {
+   "tier": 3
+  },
+  "weapon_advanced_rapier": {
+   "tier": 3
+  },
+  "weapon_advanced_halberd": {
+   "tier": 3
+  },
+  "weapon_advanced_spear": {
+   "tier": 3
+  },
+  "weapon_advanced_shortbow": {
+   "tier": 3
+  },
+  "weapon_advanced_crossbow": {
+   "tier": 3
+  },
+  "weapon_advanced_longbow": {
+   "tier": 3
+  },
+  "weapon_flickerfly_blade": {
+   "tier": 3
+  },
+  "weapon_bravesword": {
+   "tier": 3
+  },
+  "weapon_hammer_of_wrath": {
+   "tier": 3
+  },
+  "weapon_labrys_axe": {
+   "tier": 3
+  },
+  "weapon_meridian_cutlass": {
+   "tier": 3
+  },
+  "weapon_retractable_saber": {
+   "tier": 3
+  },
+  "weapon_double_flail": {
+   "tier": 3
+  },
+  "weapon_talon_blades": {
+   "tier": 3
+  },
+  "weapon_black_powder_revolver": {
+   "tier": 3
+  },
+  "weapon_spiked_bow": {
+   "tier": 3
+  },
+  "weapon_legendary_broadsword": {
+   "tier": 4
+  },
+  "weapon_legendary_longsword": {
+   "tier": 4
+  },
+  "weapon_legendary_battleaxe": {
+   "tier": 4
+  },
+  "weapon_legendary_greatsword": {
+   "tier": 4
+  },
+  "weapon_legendary_mace": {
+   "tier": 4
+  },
+  "weapon_legendary_warhammer": {
+   "tier": 4
+  },
+  "weapon_legendary_dagger": {
+   "tier": 4
+  },
+  "weapon_legendary_quarterstaff": {
+   "tier": 4
+  },
+  "weapon_legendary_cutlass": {
+   "tier": 4
+  },
+  "weapon_legendary_rapier": {
+   "tier": 4
+  },
+  "weapon_legendary_halberd": {
+   "tier": 4
+  },
+  "weapon_legendary_spear": {
+   "tier": 4
+  },
+  "weapon_legendary_shortbow": {
+   "tier": 4
+  },
+  "weapon_legendary_crossbow": {
+   "tier": 4
+  },
+  "weapon_legendary_longbow": {
+   "tier": 4
+  },
+  "weapon_dual_ended_sword": {
+   "tier": 4
+  },
+  "weapon_impact_gauntlet": {
+   "tier": 4
+  },
+  "weapon_sledge_axe": {
+   "tier": 4
+  },
+  "weapon_curved_dagger": {
+   "tier": 4
+  },
+  "weapon_extended_polearm": {
+   "tier": 4
+  },
+  "weapon_swinging_ropeblade": {
+   "tier": 4
+  },
+  "weapon_ricochet_axes": {
+   "tier": 4
+  },
+  "weapon_aantari_bow": {
+   "tier": 4
+  },
+  "weapon_hand_cannon": {
+   "tier": 4
+  },
+  "weapon_legendary_arcane_gauntlets": {
+   "tier": 4
+  },
+  "weapon_legendary_hallowed_axe": {
+   "tier": 4
+  },
+  "weapon_legendary_glowing_rings": {
+   "tier": 4
+  },
+  "weapon_legendary_hand_runes": {
+   "tier": 4
+  },
+  "weapon_legendary_returning_blade": {
+   "tier": 4
+  },
+  "weapon_legendary_shortstaff": {
+   "tier": 4
+  },
+  "weapon_legendary_dualstaff": {
+   "tier": 4
+  },
+  "weapon_legendary_scepter": {
+   "tier": 4
+  },
+  "weapon_legendary_wand": {
+   "tier": 4
+  },
+  "weapon_legendary_greatstaff": {
+   "tier": 4
+  },
+  "weapon_sword_of_light_flame": {
+   "tier": 4
+  },
+  "weapon_siphoning_gauntlets": {
+   "tier": 4
+  },
+  "weapon_midas_scythe": {
+   "tier": 4
+  },
+  "weapon_floating_bladeshards": {
+   "tier": 4
+  },
+  "weapon_bloodstaff": {
+   "tier": 4
+  },
+  "weapon_thistlebow": {
+   "tier": 4
+  },
+  "weapon_wand_of_essek": {
+   "tier": 4
+  },
+  "weapon_magus_revolver": {
+   "tier": 4
+  },
+  "weapon_fusion_gloves": {
+   "tier": 4
+  },
+  "weapon_shortsword": {
+   "tier": 1
+  },
+  "weapon_round_shield": {
+   "tier": 1
+  },
+  "weapon_tower_shield": {
+   "tier": 1
+  },
+  "weapon_small_dagger": {
+   "tier": 1
+  },
+  "weapon_whip": {
+   "tier": 1
+  },
+  "weapon_grappler": {
+   "tier": 1
+  },
+  "weapon_hand_crossbow": {
+   "tier": 1
+  },
+  "weapon_improved_shortsword": {
+   "tier": 2
+  },
+  "weapon_improved_round_shield": {
+   "tier": 2
+  },
+  "weapon_improved_tower_shield": {
+   "tier": 2
+  },
+  "weapon_improved_small_dagger": {
+   "tier": 2
+  },
+  "weapon_improved_whip": {
+   "tier": 2
+  },
+  "weapon_improved_grappler": {
+   "tier": 2
+  },
+  "weapon_improved_hand_crossbow": {
+   "tier": 2
+  },
+  "weapon_spiked_shield": {
+   "tier": 2
+  },
+  "weapon_parrying_dagger": {
+   "tier": 2
+  },
+  "weapon_returning_axe": {
+   "tier": 2
+  },
+  "weapon_advanced_shortsword": {
+   "tier": 3
+  },
+  "weapon_advanced_round_shield": {
+   "tier": 3
+  },
+  "weapon_advanced_tower_shield": {
+   "tier": 3
+  },
+  "weapon_advanced_small_dagger": {
+   "tier": 3
+  },
+  "weapon_advanced_whip": {
+   "tier": 3
+  },
+  "weapon_advanced_grappler": {
+   "tier": 3
+  },
+  "weapon_advanced_hand_crossbow": {
+   "tier": 3
+  },
+  "weapon_buckler": {
+   "tier": 3
+  },
+  "weapon_powered_gauntlet": {
+   "tier": 3
+  },
+  "weapon_hand_sling": {
+   "tier": 3
+  },
+  "weapon_legendary_shortsword": {
+   "tier": 4
+  },
+  "weapon_legendary_round_shield": {
+   "tier": 4
+  },
+  "weapon_legendary_tower_shield": {
+   "tier": 4
+  },
+  "weapon_legendary_small_dagger": {
+   "tier": 4
+  },
+  "weapon_legendary_whip": {
+   "tier": 4
+  },
+  "weapon_legendary_grappler": {
+   "tier": 4
+  },
+  "weapon_legendary_hand_crossbow": {
+   "tier": 4
+  },
+  "weapon_braveshield": {
+   "tier": 4
+  },
+  "weapon_knuckle_claws": {
+   "tier": 4
+  },
+  "weapon_primer_shard": {
+   "tier": 4
+  },
+  "weapon_advanced_arcane_gauntlets": {
+   "tier": 3
+  },
+  "weapon_advanced_hallowed_axe": {
+   "tier": 3
+  },
+  "weapon_advanced_glowing_rings": {
+   "tier": 3
+  },
+  "weapon_advanced_hand_runes": {
+   "tier": 3
+  },
+  "weapon_advanced_returning_blade": {
+   "tier": 3
+  },
+  "weapon_advanced_shortstaff": {
+   "tier": 3
+  },
+  "weapon_advanced_dualstaff": {
+   "tier": 3
+  },
+  "weapon_advanced_scepter": {
+   "tier": 3
+  },
+  "weapon_advanced_wand": {
+   "tier": 3
+  },
+  "weapon_advanced_greatstaff": {
+   "tier": 3
+  },
+  "weapon_axe_of_fortunis": {
+   "tier": 3
+  },
+  "weapon_blessed_anlace": {
+   "tier": 3
+  },
+  "weapon_ghostblade": {
+   "tier": 3
+  },
+  "weapon_runes_of_ruination": {
+   "tier": 3
+  },
+  "weapon_widogast_pendant": {
+   "tier": 3
+  },
+  "weapon_gilded_bow": {
+   "tier": 3
+  },
+  "weapon_firestaff": {
+   "tier": 3
+  },
+  "weapon_mage_orb": {
+   "tier": 3
+  },
+  "weapon_ilmaris_rifle": {
+   "tier": 3
+  },
+  "weapon_light_frame_wheelchair": {
+   "tier": 1
+  },
+  "weapon_improved_light_frame_wheelchair": {
+   "tier": 2
+  },
+  "weapon_advanced_light_frame_wheelchair": {
+   "tier": 3
+  },
+  "weapon_legendary_light_frame_wheelchair": {
+   "tier": 4
+  },
+  "weapon_heavy_frame_wheelchair": {
+   "tier": 1
+  },
+  "weapon_improved_heavy_frame_wheelchair": {
+   "tier": 2
+  },
+  "weapon_advanced_heavy_frame_wheelchair": {
+   "tier": 3
+  },
+  "weapon_legendary_heavy_frame_wheelchair": {
+   "tier": 4
+  },
+  "weapon_arcane_frame_wheelchair": {
+   "tier": 1
+  },
+  "weapon_improved_arcane_frame_wheelchair": {
+   "tier": 2
+  },
+  "weapon_advanced_arcane_frame_wheelchair": {
+   "tier": 3
+  },
+  "weapon_legendary_arcane_frame_wheelchair": {
+   "tier": 4
+  },
+  "armor_gambeson_armor": {
+   "tier": 1
+  },
+  "armor_leather_armor": {
+   "tier": 1
+  },
+  "armor_chainmail_armor": {
+   "tier": 1
+  },
+  "armor_full_plate_armor": {
+   "tier": 1
+  },
+  "armor_improved_gambeson_armor": {
+   "tier": 2
+  },
+  "armor_improved_leather_armor": {
+   "tier": 2
+  },
+  "armor_improved_chainmail_armor": {
+   "tier": 2
+  },
+  "armor_improved_full_plate_armor": {
+   "tier": 2
+  },
+  "armor_elundrian_chain_armor": {
+   "tier": 2
+  },
+  "armor_harrowbone_armor": {
+   "tier": 2
+  },
+  "armor_irontree_breastplate_armor": {
+   "tier": 2
+  },
+  "armor_runetan_floating_armor": {
+   "tier": 2
+  },
+  "armor_tyris_soft_armor": {
+   "tier": 2
+  },
+  "armor_rosewild_armor": {
+   "tier": 2
+  },
+  "armor_advanced_gambeson_armor": {
+   "tier": 3
+  },
+  "armor_advanced_leather_armor": {
+   "tier": 3
+  },
+  "armor_advanced_chainmail_armor": {
+   "tier": 3
+  },
+  "armor_advanced_full_plate_armor": {
+   "tier": 3
+  },
+  "armor_bellamoi_fine_armor": {
+   "tier": 3
+  },
+  "armor_dragonscale_armor": {
+   "tier": 3
+  },
+  "armor_spiked_plate_armor": {
+   "tier": 3
+  },
+  "armor_bladefare_armor": {
+   "tier": 3
+  },
+  "armor_monetts_cloak": {
+   "tier": 3
+  },
+  "armor_runes_of_fortification": {
+   "tier": 3
+  },
+  "armor_legendary_gambeson_armor": {
+   "tier": 4
+  },
+  "armor_legendary_leather_armor": {
+   "tier": 4
+  },
+  "armor_legendary_chainmail_armor": {
+   "tier": 4
+  },
+  "armor_legendary_full_plate_armor": {
+   "tier": 4
+  },
+  "armor_dunamis_silkchain": {
+   "tier": 4
+  },
+  "armor_channeling_armor": {
+   "tier": 4
+  },
+  "armor_emberwoven_armor": {
+   "tier": 4
+  },
+  "armor_full_fortified_armor": {
+   "tier": 4
+  },
+  "armor_veritas_opal_armor": {
+   "tier": 4
+  },
+  "armor_savior_chainmail": {
+   "tier": 4
+  },
+  "subclass_executioners_guild": {
+   "class": "Assassin"
+  },
+  "subclass_poisoners_guild": {
+   "class": "Assassin"
+  },
+  "subclass_juggernaut": {
+   "class": "Brawler"
+  },
+  "subclass_martial_artist": {
+   "class": "Brawler"
+  },
+  "subclass_pact_of_the_endless": {
+   "class": "Warlock"
+  },
+  "subclass_pact_of_the_wrathful": {
+   "class": "Warlock"
+  },
+  "subclass_hedge": {
+   "class": "Witch"
+  },
+  "subclass_moon": {
+   "class": "Witch"
+  },
+  "ancestry_aetheris": {
+   "features": [
+    "Hallowed Aura",
+    "Celestial Wings"
+   ]
+  },
+  "ancestry_earthkin": {
+   "features": [
+    "Stoneskin",
+    "Immovable"
+   ]
+  },
+  "ancestry_emberkin": {
+   "features": [
+    "Fireproof",
+    "Ignition"
+   ]
+  },
+  "ancestry_gnome": {
+   "features": [
+    "Nimble Fingers",
+    "Flicker Step"
+   ]
+  },
+  "ancestry_skykin": {
+   "features": [
+    "Gale Force",
+    "Eye of the Storm"
+   ]
+  },
+  "ancestry_tidekin": {
+   "features": [
+    "Amphibious",
+    "Lifespring"
+   ]
+  },
+  "transformation_demigod": {
+   "features": [
+    "Gifted",
+    "Weight of Divinity"
+   ]
+  },
+  "transformation_ghost": {
+   "features": [
+    "Unfinished Business",
+    "Ephemeral"
+   ]
+  },
+  "transformation_reanimated": {
+   "features": [
+    "Corpse",
+    "Won’t Stay Dead"
+   ]
+  },
+  "transformation_shapeshifter": {
+   "features": [
+    "Change Shape",
+    "Only Skin Deep"
+   ]
+  },
+  "transformation_vampire": {
+   "features": [
+    "Fangs",
+    "Feed"
+   ]
+  },
+  "transformation_werewolf": {
+   "features": [
+    "Wolf Form",
+    "Howling Rampage"
+   ]
+  },
+  "domain_card_blighting_strike": {
+   "level": 1,
+   "domain": "dread"
+  },
+  "domain_card_umbral_veil": {
+   "level": 1,
+   "domain": "dread"
+  },
+  "domain_card_voice_of_dread": {
+   "level": 1,
+   "domain": "dread"
+  },
+  "domain_card_hideous_retribution": {
+   "level": 2,
+   "domain": "dread"
+  },
+  "domain_card_siphon_essence": {
+   "level": 2,
+   "domain": "dread"
+  },
+  "domain_card_shared_trauma": {
+   "level": 3,
+   "domain": "dread"
+  },
+  "domain_card_terrify": {
+   "level": 3,
+   "domain": "dread"
+  },
+  "domain_card_chains_of_affliction": {
+   "level": 4,
+   "domain": "dread"
+  },
+  "domain_card_summon_horror": {
+   "level": 4,
+   "domain": "dread"
+  },
+  "domain_card_dire_strike": {
+   "level": 5,
+   "domain": "dread"
+  },
+  "domain_card_spectral_mist": {
+   "level": 5,
+   "domain": "dread"
+  },
+  "domain_card_darkfire": {
+   "level": 6,
+   "domain": "dread"
+  },
+  "domain_card_jump_scare": {
+   "level": 6,
+   "domain": "dread"
+  },
+  "domain_card_dread_touched": {
+   "level": 7,
+   "domain": "dread"
+  },
+  "domain_card_wall_of_hunger": {
+   "level": 7,
+   "domain": "dread"
+  },
+  "domain_card_dark_army": {
+   "level": 8,
+   "domain": "dread"
+  },
+  "domain_card_eldritch_flesh": {
+   "level": 8,
+   "domain": "dread"
+  },
+  "domain_card_damnation": {
+   "level": 9,
+   "domain": "dread"
+  },
+  "domain_card_savor_the_anguish": {
+   "level": 9,
+   "domain": "dread"
+  },
+  "domain_card_avatar_of_terror": {
+   "level": 10,
+   "domain": "dread"
+  },
+  "domain_card_invoke_torment": {
+   "level": 10,
+   "domain": "dread"
+  },
+  "weapon_katana": {
+   "tier": 1
+  },
+  "weapon_brass_knuckles": {
+   "tier": 1
+  },
+  "weapon_scimitar": {
+   "tier": 1
+  },
+  "weapon_twisted_dagger": {
+   "tier": 1
+  },
+  "weapon_whipsword": {
+   "tier": 1
+  },
+  "weapon_rope_dart": {
+   "tier": 1
+  },
+  "weapon_brightsword": {
+   "tier": 1
+  },
+  "weapon_shadowblade": {
+   "tier": 1
+  },
+  "weapon_enchanted_chakram": {
+   "tier": 1
+  },
+  "weapon_casting_dagger": {
+   "tier": 1
+  },
+  "weapon_runelock_pistol": {
+   "tier": 1
+  },
+  "weapon_arcane_rifle": {
+   "tier": 1
+  },
+  "weapon_improved_katana": {
+   "tier": 2
+  },
+  "weapon_improved_brass_knuckles": {
+   "tier": 2
+  },
+  "weapon_improved_scimitar": {
+   "tier": 2
+  },
+  "weapon_improved_twisted_dagger": {
+   "tier": 2
+  },
+  "weapon_improved_whipsword": {
+   "tier": 2
+  },
+  "weapon_improved_rope_dart": {
+   "tier": 2
+  },
+  "weapon_war_pick": {
+   "tier": 2
+  },
+  "weapon_cane_sword": {
+   "tier": 2
+  },
+  "weapon_bladed_fan": {
+   "tier": 2
+  },
+  "weapon_cyrurgiens_scalpel": {
+   "tier": 2
+  },
+  "weapon_lance": {
+   "tier": 2
+  },
+  "weapon_javelins": {
+   "tier": 2
+  },
+  "weapon_improved_brightsword": {
+   "tier": 2
+  },
+  "weapon_improved_shadowblade": {
+   "tier": 2
+  },
+  "weapon_improved_enchanted_chakram": {
+   "tier": 2
+  },
+  "weapon_improved_casting_dagger": {
+   "tier": 2
+  },
+  "weapon_improved_runelock_pistol": {
+   "tier": 2
+  },
+  "weapon_improved_arcane_rifle": {
+   "tier": 2
+  },
+  "weapon_enchanted_shillelagh": {
+   "tier": 2
+  },
+  "weapon_displacement_razor": {
+   "tier": 2
+  },
+  "weapon_spellbound_bangles": {
+   "tier": 2
+  },
+  "weapon_fury_gem": {
+   "tier": 2
+  },
+  "weapon_enchanted_lute": {
+   "tier": 2
+  },
+  "weapon_splintershaft_bow": {
+   "tier": 2
+  },
+  "weapon_advanced_katana": {
+   "tier": 3
+  },
+  "weapon_advanced_brass_knuckles": {
+   "tier": 3
+  },
+  "weapon_advanced_scimitar": {
+   "tier": 3
+  },
+  "weapon_advanced_twisted_dagger": {
+   "tier": 3
+  },
+  "weapon_advanced_whipsword": {
+   "tier": 3
+  },
+  "weapon_advanced_rope_dart": {
+   "tier": 3
+  },
+  "weapon_blitz_hammer": {
+   "tier": 3
+  },
+  "weapon_platinum_estoc": {
+   "tier": 3
+  },
+  "weapon_soldiers_pike": {
+   "tier": 3
+  },
+  "weapon_chained_scythe": {
+   "tier": 3
+  },
+  "weapon_singing_sword": {
+   "tier": 3
+  },
+  "weapon_bladed_star": {
+   "tier": 3
+  },
+  "weapon_advanced_brightsword": {
+   "tier": 3
+  },
+  "weapon_advanced_shadowblade": {
+   "tier": 3
+  },
+  "weapon_advanced_enchanted_chakram": {
+   "tier": 3
+  },
+  "weapon_advanced_casting_dagger": {
+   "tier": 3
+  },
+  "weapon_advanced_runelock_pistol": {
+   "tier": 3
+  },
+  "weapon_advanced_arcane_rifle": {
+   "tier": 3
+  },
+  "weapon_rocket_maul": {
+   "tier": 3
+  },
+  "weapon_crystal_spear": {
+   "tier": 3
+  },
+  "weapon_arc_wand": {
+   "tier": 3
+  },
+  "weapon_rime_scepter": {
+   "tier": 3
+  },
+  "weapon_gunblade": {
+   "tier": 3
+  },
+  "weapon_staff_of_augma": {
+   "tier": 3
+  },
+  "weapon_legendary_katana": {
+   "tier": 4
+  },
+  "weapon_legendary_brass_knuckles": {
+   "tier": 4
+  },
+  "weapon_legendary_scimitar": {
+   "tier": 4
+  },
+  "weapon_legendary_twisted_dagger": {
+   "tier": 4
+  },
+  "weapon_legendary_whipsword": {
+   "tier": 4
+  },
+  "weapon_legendary_rope_dart": {
+   "tier": 4
+  },
+  "weapon_severed_dragon_claw": {
+   "tier": 4
+  },
+  "weapon_infinite_staff": {
+   "tier": 4
+  },
+  "weapon_bec_de_corbin": {
+   "tier": 4
+  },
+  "weapon_black_powder_serpentine": {
+   "tier": 4
+  },
+  "weapon_clockwork_crossbow": {
+   "tier": 4
+  },
+  "weapon_arquebus": {
+   "tier": 4
+  },
+  "weapon_legendary_brightsword": {
+   "tier": 4
+  },
+  "weapon_legendary_shadowblade": {
+   "tier": 4
+  },
+  "weapon_legendary_enchanted_chakram": {
+   "tier": 4
+  },
+  "weapon_legendary_casting_dagger": {
+   "tier": 4
+  },
+  "weapon_legendary_runelock_pistol": {
+   "tier": 4
+  },
+  "weapon_legendary_arcane_rifle": {
+   "tier": 4
+  },
+  "weapon_starmetal_blade": {
+   "tier": 4
+  },
+  "weapon_adders_fang": {
+   "tier": 4
+  },
+  "weapon_demons_edge": {
+   "tier": 4
+  },
+  "weapon_storm_gods_greataxe": {
+   "tier": 4
+  },
+  "weapon_ethereal_zweihander": {
+   "tier": 4
+  },
+  "weapon_gravity_arbalest": {
+   "tier": 4
+  },
+  "weapon_hatchet": {
+   "tier": 1
+  },
+  "weapon_offhand_brass_knuckles": {
+   "tier": 1
+  },
+  "weapon_throwing_knives": {
+   "tier": 1
+  },
+  "weapon_fighting_cloak": {
+   "tier": 1
+  },
+  "weapon_rune_shield": {
+   "tier": 1
+  },
+  "weapon_focus_runes": {
+   "tier": 1
+  },
+  "weapon_improved_hatchet": {
+   "tier": 2
+  },
+  "weapon_improved_offhand_brass_knuckles": {
+   "tier": 2
+  },
+  "weapon_improved_throwing_knives": {
+   "tier": 2
+  },
+  "weapon_improved_fighting_cloak": {
+   "tier": 2
+  },
+  "weapon_improved_rune_shield": {
+   "tier": 2
+  },
+  "weapon_improved_focus_runes": {
+   "tier": 2
+  },
+  "weapon_collapsible_baton": {
+   "tier": 2
+  },
+  "weapon_eldritch_vambrace": {
+   "tier": 2
+  },
+  "weapon_segmented_staff": {
+   "tier": 2
+  },
+  "weapon_razor_wire": {
+   "tier": 2
+  },
+  "weapon_advanced_hatchet": {
+   "tier": 3
+  },
+  "weapon_advanced_offhand_brass_knuckles": {
+   "tier": 3
+  },
+  "weapon_advanced_throwing_knives": {
+   "tier": 3
+  },
+  "weapon_advanced_fighting_cloak": {
+   "tier": 3
+  },
+  "weapon_advanced_rune_shield": {
+   "tier": 3
+  },
+  "weapon_advanced_focus_runes": {
+   "tier": 3
+  },
+  "weapon_tinkers_hammer": {
+   "tier": 3
+  },
+  "weapon_vorpal_shard": {
+   "tier": 3
+  },
+  "weapon_soul_chain": {
+   "tier": 3
+  },
+  "weapon_war_dart": {
+   "tier": 3
+  },
+  "weapon_legendary_hatchet": {
+   "tier": 4
+  },
+  "weapon_legendary_offhand_brass_knuckles": {
+   "tier": 4
+  },
+  "weapon_legendary_throwing_knives": {
+   "tier": 4
+  },
+  "weapon_legendary_fighting_cloak": {
+   "tier": 4
+  },
+  "weapon_legendary_rune_shield": {
+   "tier": 4
+  },
+  "weapon_legendary_focus_runes": {
+   "tier": 4
+  },
+  "weapon_void_needle": {
+   "tier": 4
+  },
+  "weapon_echo_blade": {
+   "tier": 4
+  },
+  "weapon_mobius_orb": {
+   "tier": 4
+  },
+  "weapon_blackblood_tendril": {
+   "tier": 4
+  },
+  "armor_mage_robes": {
+   "tier": 1
+  },
+  "armor_brigandine_armor": {
+   "tier": 1
+  },
+  "armor_scale_mail_armor": {
+   "tier": 1
+  },
+  "armor_banded_armor": {
+   "tier": 1
+  },
+  "armor_improved_mage_robes": {
+   "tier": 2
+  },
+  "armor_improved_brigandine_armor": {
+   "tier": 2
+  },
+  "armor_improved_scale_mail_armor": {
+   "tier": 2
+  },
+  "armor_improved_banded_armor": {
+   "tier": 2
+  },
+  "armor_enchanters_robes": {
+   "tier": 2
+  },
+  "armor_hawkguards_mantle": {
+   "tier": 2
+  },
+  "armor_spidersilk_tunic": {
+   "tier": 2
+  },
+  "armor_stormthread_habit": {
+   "tier": 2
+  },
+  "armor_wyrdwood_splint_armor": {
+   "tier": 2
+  },
+  "armor_trollhide_cuirass": {
+   "tier": 2
+  },
+  "armor_gilded_sunplate": {
+   "tier": 2
+  },
+  "armor_advanced_mage_robes": {
+   "tier": 3
+  },
+  "armor_advanced_brigandine_armor": {
+   "tier": 3
+  },
+  "armor_advanced_scale_mail_armor": {
+   "tier": 3
+  },
+  "armor_advanced_banded_armor": {
+   "tier": 3
+  },
+  "armor_granminsters_finery": {
+   "tier": 3
+  },
+  "armor_astral_raiment": {
+   "tier": 3
+  },
+  "armor_cloverweave_cloak": {
+   "tier": 3
+  },
+  "armor_skywardens_lamellar": {
+   "tier": 3
+  },
+  "armor_bloodstone_plate_armor": {
+   "tier": 3
+  },
+  "armor_deep_forged_coral_armor": {
+   "tier": 3
+  },
+  "armor_legendary_mage_robes": {
+   "tier": 4
+  },
+  "armor_legendary_brigandine_armor": {
+   "tier": 4
+  },
+  "armor_legendary_scale_mail_armor": {
+   "tier": 4
+  },
+  "armor_legendary_banded_armor": {
+   "tier": 4
+  },
+  "armor_darkweave_shroud": {
+   "tier": 4
+  },
+  "armor_godbound_laminar": {
+   "tier": 4
+  },
+  "armor_circle_forged_dreadplate": {
+   "tier": 4
+  },
+  "armor_rune_forged_exosuit": {
+   "tier": 4
+  },
+  "armor_hallowed_heroplate": {
+   "tier": 4
+  },
+  "armor_resonant_harness": {
+   "tier": 4
+  }
+ }
+}

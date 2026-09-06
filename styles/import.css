@@ -1,0 +1,9 @@
+.dhci-dialog .dhci-intro { margin: 0 0 0.5rem; }
+.dhci-dialog fieldset { margin-bottom: 0.75rem; }
+.dhci-dialog textarea { width: 100%; min-height: 6rem; font-family: var(--font-monospace, monospace); font-size: 0.85em; }
+.dhci-dialog .dhci-characters { list-style: none; margin: 0; padding: 0; }
+.dhci-dialog .dhci-characters li { display: flex; gap: 0.5rem; align-items: center; padding: 0.15rem 0; }
+.dhci-dialog .dhci-characters .dhci-meta { color: var(--color-text-secondary, #888); font-size: 0.9em; }
+.dhci-dialog .dhci-empty { font-style: italic; opacity: 0.8; }
+.dhci-dialog footer { display: flex; justify-content: flex-end; gap: 0.5rem; }
+.dhci-open { flex: 0 0 auto; }

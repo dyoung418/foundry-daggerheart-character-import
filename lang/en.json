@@ -1,0 +1,27 @@
+{
+  "DHCI": {
+    "Title": "Daggerheart Character Import",
+    "Sidebar": { "Button": "Import from Builder" },
+    "Sheet": { "Control": "Import / update from builder file" },
+    "Dialog": {
+      "Title": "Import from Character Builder",
+      "Intro": "Choose a file saved by the Character Builder's Export or Backup & transfer button (daggerheart-characters-YYYY-MM-DD.json), or paste its contents.",
+      "File": "Character file",
+      "Paste": "Or paste JSON",
+      "Parse": "Read file",
+      "Found": "Characters in this file",
+      "Level": "Level",
+      "Import": "Import selected",
+      "NothingParsed": "No file read yet.",
+      "TargetActor": "Updating {name}"
+    },
+    "Notifications": {
+      "NoPermission": "You need permission to create actors to import characters.",
+      "NotImplemented": "Importing is not implemented yet (Phase 0 scaffold).",
+      "ParseFailed": "Could not read that file: {error}"
+    },
+    "Settings": {
+      "LogLevel": { "Name": "Log level", "Hint": "How much the importer writes to the console." }
+    }
+  }
+}

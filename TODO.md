@@ -29,13 +29,16 @@ Headline findings:
 - MVP: multiclass import only when `levelupAuto` is on; reported as skipped otherwise.
 - Homebrew (`void_`) content is **not in use** for exports today; homebrew import is a later phase.
 
-## Next (Phase 0 — scaffold)
+## Phase 0 — scaffold (2026-09-06)
 
-- [ ] `module.json`, `scripts/main.mjs`, empty ApplicationV2 dialog opened from the Actors sidebar
-- [ ] Symlink `~/foundrydata/Data/modules/daggerheart-character-import` → repo; load in `daggerheart-test`
-- [ ] `.github/workflows/main.yaml` from dannysmodule (drop the pack build step)
-- [ ] `package.json` with `npm test` → `node --test tests/`
-- [ ] `tools/build-name-index.mjs` → `data/names.json`
+- [x] `module.json`, `scripts/main.mjs`, ApplicationV2 dialog (`scripts/app/import-dialog.mjs`) opened from
+      the Actors sidebar button and a character-sheet header control; reads a file or pasted JSON and lists
+      the characters; Import shows a not-implemented notice
+- [x] `scripts/lib/ids.mjs`, `scripts/lib/normalize.mjs` with tests (`npm test`, 10 passing)
+- [x] Symlink `~/foundrydata/Data/modules/daggerheart-character-import` → repo
+- [x] `.github/workflows/main.yaml` (release zip on published release) and `tests.yml`
+- [x] `tools/build-name-index.mjs` → `data/names.json` (807 names from srd_1_0 + srd_2_0)
+- [ ] Load in `daggerheart-test`: module enables, sidebar button appears, dialog reads `samples/roster.json`
 
 ## Then (Phase 1 — MVP, see `docs/architecture.md`)
 

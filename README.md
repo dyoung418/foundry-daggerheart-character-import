@@ -25,6 +25,17 @@ record is complete: start with `TODO.md`, then `docs/architecture.md` and `docs/
 - Foundry VTT v14
 - Daggerheart system 2.9 or later
 
+## Development
+
+```
+npm test                       # unit tests for scripts/lib (Node 24, no Foundry needed)
+node tools/build-name-index.mjs   # regenerate data/names.json from the builder's SRD data
+node tools/make-samples.mjs samples   # regenerate samples/ with the builder's own code
+```
+
+To run inside Foundry, symlink this folder to `<FoundryData>/Data/modules/daggerheart-character-import`
+and enable the module in a Daggerheart world.
+
 ## Related
 
 - Builder export format: `shared/transfer.js` in the builder repo (format `daggerheart-character-builder`, version 1)

@@ -1,0 +1,30 @@
+<p class="dhci-intro">{{localize "DHCI.Dialog.Intro"}}</p>
+{{#if targetActor}}<p class="dhci-target">{{localize "DHCI.Dialog.TargetActor" name=targetActor.name}}</p>{{/if}}
+<fieldset>
+  <legend>{{localize "DHCI.Dialog.File"}}</legend>
+  <input type="file" name="file" accept=".json,application/json" data-action="pickFile">
+</fieldset>
+<fieldset>
+  <legend>{{localize "DHCI.Dialog.Paste"}}</legend>
+  <textarea name="pasted" placeholder="{ &quot;format&quot;: &quot;daggerheart-character-builder&quot;, ... }">{{pasted}}</textarea>
+  <button type="button" data-action="parsePasted"><i class="fa-solid fa-file-import"></i> {{localize "DHCI.Dialog.Parse"}}</button>
+</fieldset>
+<fieldset>
+  <legend>{{localize "DHCI.Dialog.Found"}}</legend>
+  {{#if characters.length}}
+    <ul class="dhci-characters">
+      {{#each characters as |ch|}}
+        <li>
+          <input type="checkbox" name="select" value="{{ch.index}}" {{#if ch.selected}}checked{{/if}} data-action="toggleCharacter" data-index="{{ch.index}}">
+          <span class="dhci-name">{{ch.name}}</span>
+          <span class="dhci-meta">{{localize "DHCI.Dialog.Level"}} {{ch.level}} · {{ch.summary}}</span>
+        </li>
+      {{/each}}
+    </ul>
+  {{else}}
+    <p class="dhci-empty">{{localize "DHCI.Dialog.NothingParsed"}}</p>
+  {{/if}}
+</fieldset>
+<footer>
+  <button type="button" data-action="import" {{#unless canImport}}disabled{{/unless}}><i class="fa-solid fa-user-plus"></i> {{localize "DHCI.Dialog.Import"}}</button>
+</footer>
