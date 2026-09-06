@@ -34,6 +34,13 @@ export function registerSettings() {
     type: String,
     default: "",
   });
+  // Homebrew sources imported into world compendia: { [sourceId]: { pack, label, importedAt, counts } }
+  game.settings.register(MODULE_ID, SETTINGS.homebrewSources, {
+    scope: "world",
+    config: false,
+    type: Object,
+    default: {},
+  });
   game.settings.register(MODULE_ID, SETTINGS.logLevel, {
     name: "DHCI.Settings.LogLevel.Name",
     hint: "DHCI.Settings.LogLevel.Hint",

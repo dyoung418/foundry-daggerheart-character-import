@@ -7,6 +7,9 @@ import { importFile, importCharacters } from "./foundry/import.mjs";
 import { buildPlan } from "./lib/plan.mjs";
 import { CompendiumMatcher } from "./foundry/matcher.mjs";
 import { selfTest } from "./foundry/selftest.mjs";
+import { HomebrewDialog } from "./app/homebrew-dialog.mjs";
+import { importHomebrewSource, removeHomebrewSource } from "./foundry/homebrew.mjs";
+import { parseSourceFiles, buildHomebrewItems } from "./lib/homebrew.mjs";
 
 Hooks.once("init", () => {
   registerSettings();
@@ -23,6 +26,12 @@ Hooks.once("ready", () => {
     buildPlan,
     CompendiumMatcher,
     selfTest,
+    /** Homebrew: open the source dialog, or import files (File[] or [{ name, text }]) directly. */
+    openHomebrew: () => new HomebrewDialog().render({ force: true }),
+    importHomebrewSource,
+    removeHomebrewSource,
+    parseSourceFiles,
+    buildHomebrewItems,
   };
   log("ready");
 });

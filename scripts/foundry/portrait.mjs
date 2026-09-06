@@ -1,10 +1,10 @@
-// Builder portraits are data URLs; Foundry's actor `img` must be a file path. Upload to the
-// user data folder configured in settings and return the path, or null on any failure.
+// File uploads into the user data folder. Builder portraits are data URLs; Foundry's actor `img`
+// must be a file path, so they are uploaded to the folder configured in settings. Homebrew card art
+// goes through the same helper.
 import { MODULE_ID, SETTINGS, log } from "./constants.mjs";
 
 export async function uploadPortrait(dataUrl, baseName) {
   if (!dataUrl?.startsWith("data:image/")) return null;
-  if (!game.user.can("FILES_UPLOAD")) { log("no FILES_UPLOAD permission; portrait skipped"); return null; }
   const folder = game.settings.get(MODULE_ID, SETTINGS.portraitFolder) || `${MODULE_ID}/portraits`;
   const m = /^data:image\/(webp|jpeg|png);base64,(.+)$/s.exec(dataUrl);
   if (!m) return null;
@@ -12,13 +12,22 @@ export async function uploadPortrait(dataUrl, baseName) {
   const bytes = Uint8Array.from(atob(m[2]), (c) => c.charCodeAt(0));
   const safe = (baseName || "portrait").replace(/[^a-z0-9_-]+/gi, "_").slice(0, 40) || "portrait";
   const file = new File([bytes], `${safe}-${Date.now()}.${ext}`, { type: `image/${m[1]}` });
+  return uploadFile(folder, file);
+}
+
+/**
+ * Upload a File to `folder` under the user data root (created if missing).
+ * @returns {Promise<string|null>} the stored path, or null on any failure
+ */
+export async function uploadFile(folder, file) {
+  if (!game.user.can("FILES_UPLOAD")) { log("no FILES_UPLOAD permission; upload skipped"); return null; }
   const FP = foundry.applications.apps.FilePicker.implementation;
   try {
     await ensureFolder(FP, folder);
     const res = await FP.upload("data", folder, file, {}, { notify: false });
     return res?.path ?? null;
   } catch (err) {
-    log("portrait upload failed", err);
+    log(`upload of ${file?.name} failed`, err);
     return null;
   }
 }

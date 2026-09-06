@@ -27,6 +27,7 @@
     <p class="dhci-empty">{{localize "DHCI.Dialog.NothingParsed"}}</p>
   {{/if}}
 </fieldset>
+<p class="dhci-meta">{{localize "DHCI.Dialog.HomebrewHint"}} <a data-action="openHomebrew"><i class="fa-solid fa-flask"></i> {{localize "DHCI.Dialog.HomebrewLink"}}</a></p>
 <footer>
   <button type="button" data-action="import" {{#unless canImport}}disabled{{/unless}}><i class="fa-solid fa-user-plus"></i> {{localize "DHCI.Dialog.Import"}}</button>
 </footer>

@@ -1,0 +1,27 @@
+[
+  {
+    "id": "tinker_subclass_clockwright",
+    "name": { "en-US": "Clockwright" },
+    "description": [ { "paragraph": { "en-US": "Play the Clockwright if you want to field small automata that fight beside you." } } ],
+    "class": "TINKER",
+    "domains": ["GEARS", "CODEX"],
+    "spellcastTrait": "KNOWLEDGE",
+    "foundation": {
+      "features": [
+        { "name": { "en-US": "Wind-Up Companion" }, "description": [ { "paragraph": { "en-US": "You have a clockwork companion the size of a cat. It can carry small objects and scout within Far range." } } ] },
+        { "name": { "en-US": "Precision Tools" }, "description": [ { "paragraph": { "en-US": "You have advantage on action rolls to repair, unlock or disarm mechanisms." } } ] }
+      ]
+    },
+    "specialization": {
+      "features": [
+        { "name": { "en-US": "Overwound" }, "description": [ { "paragraph": { "en-US": "Your companion can make an attack using your Spellcast Roll for d6+2 physical damage." } } ] }
+      ]
+    },
+    "mastery": {
+      "features": [
+        { "name": { "en-US": "Perpetual Motion" }, "description": [ { "paragraph": { "en-US": "Once per long rest, when your companion would be destroyed, it keeps ticking with 1 Hit Point." } } ] },
+        { "name": { "en-US": "Grand Design" }, "description": [ { "paragraph": { "en-US": "You may field a second companion." } } ] }
+      ]
+    }
+  }
+]

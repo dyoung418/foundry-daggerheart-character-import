@@ -1,0 +1,32 @@
+[
+  {
+    "id": "tinker_domain_card_gear_toss",
+    "name": { "en-US": "Gear Toss" },
+    "domain": "GEARS",
+    "type": "SPELL",
+    "level": 1,
+    "recallCost": 1,
+    "features": [ { "description": [ { "paragraph": { "en-US": "Make a Spellcast Roll against a target within Far range. On a success, deal d8+1 physical damage using your Proficiency." } } ] } ]
+  },
+  {
+    "id": "tinker_domain_card_overclock",
+    "name": { "en-US": "Overclock" },
+    "domain": "GEARS",
+    "type": "ABILITY",
+    "level": 1,
+    "recallCost": 0,
+    "features": [ { "description": [
+      { "paragraph": { "en-US": "Mark a Stress to push a mechanism past its limits. Choose one:" } },
+      { "list": [ { "en-US": "Your next attack with a built weapon deals an extra d6." }, { "en-US": "An ally within Close range gains a Hope." } ] }
+    ] } ]
+  },
+  {
+    "id": "tinker_domain_card_steam_vent",
+    "name": { "en-US": "Steam Vent" },
+    "domain": "GEARS",
+    "type": "SPELL",
+    "level": 2,
+    "recallCost": 1,
+    "features": [ { "description": [ { "paragraph": { "en-US": "Spend a Hope to release a cloud of steam. Adversaries within Very Close range must mark a Stress or become temporarily Vulnerable." } } ] } ]
+  }
+]

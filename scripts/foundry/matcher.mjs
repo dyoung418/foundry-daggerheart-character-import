@@ -10,7 +10,7 @@ export const DEFAULT_PACKS = [
 const INDEX_FIELDS = [
   "type", "system.domain", "system.level", "system.tier", "system.secondary", "system.features",
   "system.linkedClass", "system.spellcastingTrait", "system.domains", "system.hitPoints", "system.evasion",
-  "system.inventory.take", "system.levelupOptionTiers",
+  "system.inventory.take", "system.levelupOptionTiers", `flags.${MODULE_ID}.homebrew`,
 ];
 
 let namesCache = null;
@@ -29,6 +29,7 @@ export class CompendiumMatcher {
   constructor(packIds = null) {
     this.packIds = packIds ?? readPackSetting();
     this.index = {};   // type → normalized name → entry
+    this.byBuilderId = {};   // builder id → entry, for items created from a homebrew source
     this.names = { names: {}, extras: {} };
     this.renames = {};
   }
@@ -56,6 +57,8 @@ export class CompendiumMatcher {
         };
         const key = normalizeName(e.name);
         (this.index[e.type] ??= {})[key] ??= entry;   // first pack in the list wins
+        const homebrew = e.flags?.[MODULE_ID]?.homebrew;
+        if (homebrew?.builderId) { entry.builderId = homebrew.builderId; this.byBuilderId[homebrew.builderId] ??= entry; }
       }
     }
     debug("matcher loaded", Object.fromEntries(Object.entries(this.index).map(([t, m]) => [t, Object.keys(m).length])));
@@ -69,8 +72,13 @@ export class CompendiumMatcher {
     return byType[normalizeName(renamed ?? name)] ?? byType[normalizeName(name)] ?? null;
   }
 
+  /** An item created from a builder homebrew source, by the builder's own id. */
+  lookupById(builderId) {
+    return this.byBuilderId[builderId] ?? null;
+  }
+
   nameOf(builderId) {
-    return this.names.names?.[bareId(builderId)] ?? null;
+    return this.names.names?.[bareId(builderId)] ?? this.byBuilderId[builderId]?.name ?? null;
   }
 
   featureNames(ancestryId) {

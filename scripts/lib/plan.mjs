@@ -3,6 +3,7 @@
 //
 // Resolver contract (implemented by foundry/matcher.mjs, and by a fixture in tests):
 //   lookup(type, name)        → { uuid, name, ...index fields } | null   (type = Foundry item type)
+//   lookupById?(builderId)    → same shape | null  (items imported from a builder homebrew source)
 //   nameOf(builderId)         → display name | null
 //   featureNames(ancestryId)  → string[] (builder feature order)
 //   newId()                   → 16-char id for experiences
@@ -37,7 +38,7 @@ export function buildPlan(ch, resolver, options = {}) {
     const type = expectType ?? typeOf(id);
     if (!type) { warn(`unrecognised id ${id}`); return null; }
     const name = nameOf(id);
-    const hit = resolver.lookup(type, name);
+    const hit = resolver.lookupById?.(id) ?? resolver.lookup(type, name);
     if (!hit) missing.push({ id, type, name });
     return hit;
   };

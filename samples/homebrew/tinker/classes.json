@@ -1,0 +1,47 @@
+[
+  {
+    "id": "tinker_class_tinker",
+    "name": "TINKER",
+    "description": [
+      { "paragraph": { "en-US": "Tinkers coax wonders out of scrap, steam and stubbornness. This class exists only to exercise the importer's homebrew path." } }
+    ],
+    "domains": ["GEARS", "CODEX"],
+    "startingEvasion": 11,
+    "startingHitPoints": 6,
+    "classItems": [
+      { "en-US": "A roll of well-worn tools" },
+      { "en-US": "A half-built clockwork sparrow" }
+    ],
+    "hopeFeature": {
+      "name": { "en-US": "Spare Parts" },
+      "description": [
+        { "paragraph": { "en-US": "Spend 3 Hope to repair a broken object within Close range, or to give an ally a +2 bonus to their next action roll using a tool you built." } }
+      ]
+    },
+    "classFeatures": [
+      {
+        "name": { "en-US": "Jury-Rig" },
+        "description": [
+          { "paragraph": { "en-US": "Once per rest, mark a Stress to build a temporary tool that lets you make an action roll with a trait of your choice." } }
+        ]
+      },
+      {
+        "name": { "en-US": "Field Repair" },
+        "description": [
+          { "paragraph": { "en-US": "When you take a short rest, you can also clear an Armor Slot for an ally." } },
+          { "list": [ { "en-US": "Tier 1: one Armor Slot." }, { "en-US": "Tier 3+: two Armor Slots." } ] }
+        ]
+      }
+    ],
+    "backgroundQuestions": [
+      "What did you build that you wish you hadn't?",
+      "Who taught you to read a blueprint?",
+      "Which of your creations is still out there somewhere?"
+    ],
+    "connections": [
+      "What did I fix for you that you never asked me to?",
+      "Why do you refuse to let me tinker with your gear?",
+      "What do we build together on quiet nights?"
+    ]
+  }
+]

@@ -18,11 +18,13 @@
       "Import": "Import selected",
       "NothingParsed": "No file read yet.",
       "TargetActor": "Updating {name}",
-      "Importing": "Importing {name}\u2026",
+      "Importing": "Importing {name}…",
       "Step": "{name}: {step}",
       "WillUpdate": "updates {name}",
       "SelectAll": "Select all",
-      "SelectNone": "Select none"
+      "SelectNone": "Select none",
+      "HomebrewHint": "Characters that use homebrew content from the builder need that content in a compendium first.",
+      "HomebrewLink": "Import a homebrew source…"
     },
     "Notifications": {
       "NoPermission": "You need permission to create actors to import characters.",
@@ -58,6 +60,25 @@
       "Failed": "{name} could not be imported: {reasons}",
       "NoIssues": "No issues.",
       "Open": "Open sheet"
+    },
+    "Homebrew": {
+      "Title": "Import homebrew source",
+      "Intro": "Pick the JSON files of a builder homebrew source (the data/<source>/ folder: classes.json, subclasses.json, domain-cards.json, source.json). Card art from card-art/ can be added too. The module creates a world compendium with the classes, subclasses, features and domain cards, registers new domains with the system's Homebrew settings, and searches that compendium when importing characters.",
+      "GMOnly": "Only a GM can import homebrew sources.",
+      "Files": "Source files",
+      "FilesHint": "Select several files at once. Anything that is not a builder source file is ignored and listed.",
+      "Found": "Source",
+      "Images": "{count} art file(s)",
+      "NothingParsed": "No files read yet.",
+      "Existing": "Sources already imported into this world",
+      "Import": "Import source",
+      "Step": "Importing: {step}…",
+      "Done": "{label}: {count} items in {pack}.",
+      "Failed": "Homebrew import failed: {error}",
+      "ReportItems": "{count} items written to {pack} ({replaced} replaced).",
+      "ReportDomains": "New domains registered with the system's Homebrew settings: {domains}. Give them an icon there if you like.",
+      "ReportIgnored": "Ignored {file}: not a builder source file.",
+      "ReportNext": "You can now import characters that use this content. Re-import the source after changing it in the builder; items keep their ids."
     }
   }
 }

@@ -1,6 +1,7 @@
 import { MODULE_ID, debug } from "../foundry/constants.mjs";
 import { parseTransferFile, summarize } from "../lib/normalize.mjs";
-import { bareId } from "../lib/ids.mjs";
+import { bareId, nameFromId } from "../lib/ids.mjs";
+import { HomebrewDialog } from "./homebrew-dialog.mjs";
 import { importCharacters, existingActorFor } from "../foundry/import.mjs";
 import { showReport } from "./report-dialog.mjs";
 
@@ -43,6 +44,7 @@ export class ImportDialog extends HandlebarsApplicationMixin(ApplicationV2) {
       selectAll: ImportDialog.#onSelectAll,
       selectNone: ImportDialog.#onSelectNone,
       import: ImportDialog.#onImport,
+      openHomebrew: ImportDialog.#onOpenHomebrew,
     },
   };
 
@@ -52,7 +54,7 @@ export class ImportDialog extends HandlebarsApplicationMixin(ApplicationV2) {
 
   async _prepareContext() {
     const names = await loadNames();
-    const nameOf = (id) => names[bareId(id)] ?? id;
+    const nameOf = (id) => names[bareId(id)] ?? nameFromId(id) ?? id;
     const characters = (this.parsed?.characters ?? []).map((ch, index) => ({
       index,
       name: ch.name || "(unnamed)",
@@ -101,6 +103,10 @@ export class ImportDialog extends HandlebarsApplicationMixin(ApplicationV2) {
   static #onParsePasted() {
     const ta = this.element.querySelector("textarea[name=pasted]");
     if (ta?.value.trim()) this.#setParsed(ta.value);
+  }
+
+  static #onOpenHomebrew() {
+    new HomebrewDialog().render({ force: true });
   }
 
   static #onSelectAll() {

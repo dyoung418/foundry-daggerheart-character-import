@@ -17,3 +17,6 @@
 .dhci-dialog .dhci-select { display: flex; gap: 0.75rem; margin-bottom: 0.35rem; font-size: 0.9em; }
 .dhci-dialog .dhci-select a { cursor: pointer; }
 .dhci-report-dialog .window-content { max-height: calc(100vh - 8rem); overflow-y: auto; }
+.dhci-dialog .hint { font-size: 0.85em; opacity: 0.8; margin: 0.25rem 0 0; }
+.dhci-dialog .dhci-fatal { color: var(--color-level-error, #c33); }
+.dhci-dialog .dhci-meta a { cursor: pointer; }

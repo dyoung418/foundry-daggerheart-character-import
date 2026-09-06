@@ -1,0 +1,236 @@
+{
+  "format": "daggerheart-character-builder",
+  "version": 1,
+  "exportedAt": "2026-09-06T16:30:00.000Z",
+  "characters": [
+    {
+      "id": "char_lvl1tinker",
+      "name": "Wren Cogsworth",
+      "pronouns": "they/them",
+      "classId": "tinker_class_tinker",
+      "subclassId": "tinker_subclass_clockwright",
+      "heritage": {
+        "ancestryMode": "pure",
+        "ancestryIds": [
+          "srd_2_0_ancestry_clank"
+        ],
+        "chosenFeatures": [
+          {
+            "ancestryId": "srd_2_0_ancestry_clank",
+            "featureName": "Purposeful Design"
+          },
+          {
+            "ancestryId": "srd_2_0_ancestry_clank",
+            "featureName": "Efficient"
+          }
+        ],
+        "communityId": "srd_2_0_community_highborne"
+      },
+      "traits": {
+        "agility": 0,
+        "strength": -1,
+        "finesse": 1,
+        "instinct": 0,
+        "presence": 1,
+        "knowledge": 2
+      },
+      "equipment": {
+        "primaryWeaponId": "srd_2_0_weapon_rapier",
+        "secondaryWeaponId": "srd_2_0_weapon_shortsword",
+        "armorId": "srd_2_0_armor_gambeson_armor",
+        "potionChoice": "srd_2_0_consumable_minor_health_potion"
+      },
+      "transformationId": null,
+      "background": {
+        "description": "A workshop apprentice who left with a stolen blueprint.",
+        "answers": "What did you build that you wish you hadn't? A lock nobody can open, including me."
+      },
+      "experiences": [
+        {
+          "id": "exp_start1",
+          "name": "Steady Hands",
+          "modifier": 2,
+          "baseModifier": 2,
+          "sinceLevel": 1
+        },
+        {
+          "id": "exp_start2",
+          "name": "Guild Gossip",
+          "modifier": 2,
+          "baseModifier": 2,
+          "sinceLevel": 1
+        }
+      ],
+      "domainCardIds": [
+        "tinker_domain_card_gear_toss",
+        "srd_2_0_domain_card_book_of_ava"
+      ],
+      "creationDomainCardIds": [
+        "tinker_domain_card_gear_toss",
+        "srd_2_0_domain_card_book_of_ava"
+      ],
+      "connectionsNotes": "Built Thessaly's lantern.",
+      "level": 1,
+      "proficiency": 1,
+      "traitMarks": {
+        "agility": false,
+        "strength": false,
+        "finesse": false,
+        "instinct": false,
+        "presence": false,
+        "knowledge": false
+      },
+      "hitPointSlotsBonus": 0,
+      "stressSlotsBonus": 0,
+      "evasionBonus": 0,
+      "subclassTier": "foundation",
+      "advancementSlotsUsed": {
+        "traits": {
+          "2": 0,
+          "3": 0,
+          "4": 0
+        },
+        "hitPoint": {
+          "2": 0,
+          "3": 0,
+          "4": 0
+        },
+        "stress": {
+          "2": 0,
+          "3": 0,
+          "4": 0
+        },
+        "experience": {
+          "2": 0,
+          "3": 0,
+          "4": 0
+        },
+        "domainCard": {
+          "2": 0,
+          "3": 0,
+          "4": 0
+        },
+        "evasion": {
+          "2": 0,
+          "3": 0,
+          "4": 0
+        },
+        "subclass": {
+          "2": 0,
+          "3": 0,
+          "4": 0
+        },
+        "proficiency": {
+          "2": 0,
+          "3": 0,
+          "4": 0
+        },
+        "multiclass": {
+          "2": 0,
+          "3": 0,
+          "4": 0
+        }
+      },
+      "domainVaultIds": [],
+      "updatedAt": "2026-09-06T16:30:00.000Z",
+      "multiclass": null,
+      "effectChoices": {
+        "srd_2_0_ancestry_clank:Purposeful Design": {
+          "optionId": "one",
+          "optionIds": [],
+          "experienceIds": [
+            "exp_start1"
+          ]
+        }
+      },
+      "state": {
+        "hp": 0,
+        "stress": 0,
+        "hope": 2,
+        "armor": 0,
+        "scars": 0,
+        "conditions": [],
+        "notes": ""
+      },
+      "levelUps": [],
+      "baselineLevel": 1,
+      "baseline": {
+        "traits": {
+          "agility": 0,
+          "strength": -1,
+          "finesse": 1,
+          "instinct": 0,
+          "presence": 1,
+          "knowledge": 2
+        },
+        "traitMarks": {
+          "agility": false,
+          "strength": false,
+          "finesse": false,
+          "instinct": false,
+          "presence": false,
+          "knowledge": false
+        },
+        "proficiency": 1,
+        "hitPointSlotsBonus": 0,
+        "stressSlotsBonus": 0,
+        "evasionBonus": 0,
+        "subclassTier": "foundation",
+        "multiclass": null,
+        "slotsUsed": {
+          "traits": {
+            "2": 0,
+            "3": 0,
+            "4": 0
+          },
+          "hitPoint": {
+            "2": 0,
+            "3": 0,
+            "4": 0
+          },
+          "stress": {
+            "2": 0,
+            "3": 0,
+            "4": 0
+          },
+          "experience": {
+            "2": 0,
+            "3": 0,
+            "4": 0
+          },
+          "domainCard": {
+            "2": 0,
+            "3": 0,
+            "4": 0
+          },
+          "evasion": {
+            "2": 0,
+            "3": 0,
+            "4": 0
+          },
+          "subclass": {
+            "2": 0,
+            "3": 0,
+            "4": 0
+          },
+          "proficiency": {
+            "2": 0,
+            "3": 0,
+            "4": 0
+          },
+          "multiclass": {
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "domainCardIds": [
+          "srd_2_0_domain_card_deft_deceiver",
+          "srd_2_0_domain_card_book_of_ava"
+        ]
+      },
+      "creationCardsUnbaked": true,
+      "portrait": null
+    }
+  ]
+}

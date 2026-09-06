@@ -1,5 +1,5 @@
 export const MODULE_ID = "daggerheart-character-import";
-export const SETTINGS = { logLevel: "logLevel", packs: "packs", portraitFolder: "portraitFolder", addStartingKit: "addStartingKit", actorFolder: "actorFolder" };
+export const SETTINGS = { logLevel: "logLevel", packs: "packs", portraitFolder: "portraitFolder", addStartingKit: "addStartingKit", actorFolder: "actorFolder", homebrewSources: "homebrewSources" };
 
 export function log(...args) {
   console.log(`${MODULE_ID} |`, ...args);

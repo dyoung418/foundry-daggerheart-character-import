@@ -1,0 +1,33 @@
+<div class="dhci-body">
+<p class="dhci-intro">{{localize "DHCI.Homebrew.Intro"}}</p>
+{{#unless isGM}}<p class="dhci-fatal">{{localize "DHCI.Homebrew.GMOnly"}}</p>{{/unless}}
+<fieldset>
+  <legend>{{localize "DHCI.Homebrew.Files"}}</legend>
+  <input type="file" name="files" multiple accept=".json,application/json,.png,.webp,.jpg,.jpeg,.svg,image/*">
+  <p class="hint">{{localize "DHCI.Homebrew.FilesHint"}}</p>
+</fieldset>
+<fieldset>
+  <legend>{{localize "DHCI.Homebrew.Found"}}</legend>
+  {{#if summary}}
+    <p>{{summary}}{{#if images}} · {{localize "DHCI.Homebrew.Images" count=images}}{{/if}}</p>
+    {{#each ignored as |f|}}<p class="dhci-meta">{{localize "DHCI.Homebrew.ReportIgnored" file=f}}</p>{{/each}}
+  {{else if error}}
+    <p class="dhci-fatal">{{error}}</p>
+  {{else}}
+    <p class="dhci-empty">{{localize "DHCI.Homebrew.NothingParsed"}}</p>
+  {{/if}}
+</fieldset>
+{{#if existing.length}}
+<fieldset>
+  <legend>{{localize "DHCI.Homebrew.Existing"}}</legend>
+  <ul class="dhci-characters">
+    {{#each existing as |s|}}
+      <li><span class="dhci-name">{{s.label}}</span> <span class="dhci-meta">{{s.pack}} · {{s.counts.classes}}/{{s.counts.subclasses}}/{{s.counts.domainCards}} · {{s.importedAt}}</span></li>
+    {{/each}}
+  </ul>
+</fieldset>
+{{/if}}
+<footer>
+  <button type="button" data-action="import" {{#unless canImport}}disabled{{/unless}}><i class="fa-solid fa-flask"></i> {{localize "DHCI.Homebrew.Import"}}</button>
+</footer>
+</div>
