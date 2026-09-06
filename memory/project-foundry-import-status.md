@@ -14,7 +14,11 @@ dialog, loadout warnings, Brawler combo die) were fixed the same night and verif
 [[feedback-release-workflow-research]]). Later that day the homebrew source import landed (builder
 `data/<source>/` folder → `world.dhci-<source>` compendium; Danny's `void` source and its three
 characters import cleanly, card art included), so the whole roster imports; `v0.2.0` shipped it the
-same evening with a removal UI. Not yet done: foundryvtt.com listing, Beastbound companion, renames UI, i18n.
+same evening with a removal UI. **Next (Danny's request, 2026-09-06 evening):** extend the source import to
+every builder category — ancestries, communities, transformations, items, weapons, armor, consumables and
+`effects.json` — because his `data/homebrew` source (ancestry + effects) was refused; `TODO.md` Status holds
+the verified field mappings and change keys. After that: `v0.3.0`, foundryvtt.com listing, Beastbound
+companion, renames UI, i18n.
 `TODO.md` has the exact list. `api.selfTest()` in a Daggerheart world is the regression check;
 `npm test` covers the pure library (27 tests); selfTest runs 44 checks including the homebrew path. See [[project-foundry-import-origin]] and
 [[feedback-verify-in-live-foundry]].

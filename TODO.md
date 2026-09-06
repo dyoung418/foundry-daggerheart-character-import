@@ -2,7 +2,56 @@
 
 Live task list and resume point. Newest status at the top. Dates are absolute.
 
-## Status — 2026-09-06 18:00 (v0.2.0 released: homebrew source import and removal)
+## Status — 2026-09-06 18:40 (v0.2.0 released; next: all homebrew categories)
+
+**Resume here.** Danny tried importing his second builder source, `~/daggerheart-character-builder/data/homebrew/`
+(`source.json`, `ancestries.json` with one ancestry "Oddfolk", `items.json` with one item, `effects.json`),
+and got "no classes, subclasses or domain cards found": the source import only handles classes, subclasses
+and domain cards. Danny wants **every builder category** imported: ancestries, communities, transformations,
+items, weapons, armor, consumables (and the declarative `effects.json`). No code for this exists yet; the
+research below is done and verified against the system source (clone of `v14` at
+`/tmp/claude-1000/…/scratchpad/dh`, 2.9.2 — re-clone into scratch if gone).
+
+Design notes for the next session (all read from `module/data/item/*.mjs` and `src/packs/*/*.json`):
+- **ancestry**: `system.features = [{type:"primary", item}, {type:"secondary", item}]` from the builder's
+  `features[0]`/`[1]` (warn on more than two), `loreReference: null`, default img
+  `systems/daggerheart/assets/icons/documents/items/family-tree.svg`. Store the builder feature names in the
+  item's homebrew flag (`featureNames`) and let `matcher.featureNames(id)` fall back to it so mixed-ancestry
+  composition (`lib/heritage.mjs`) works for homebrew ancestries. Builder fields: `id, name, description, features`.
+- **community**: `system.features = [uuid, …]` (plain uuid strings, not `{type,item}`), `loreReference: null`,
+  img `…/items/village.svg`. Builder fields add `personalities` (drop or append to description).
+- **transformation**: like ancestry/community with `features` — check `module/data/item/transformation.mjs`
+  for the link shape before writing (not read yet).
+- **items.json** (downtime/loot items: `id, name, set, roll, features[].description`) → `loot` items, img
+  `…/items/open-treasure-chest.svg`; ids may lack a kind segment (`homebrew_snack`), so accept any id for loot.
+  Characters never reference these, so they matter only for dragging from the compendium.
+- **weapons / armor / consumables**: builder schema in `docs/builder-export-format.md` (uppercase enums:
+  `trait: "AGILITY"`, `range: "MELEE"`, `burden: "ONE_HANDED"`, `damage: {dice:"D8", type:"PHYSICAL"}`);
+  system fields in `docs/daggerheart-system-model.md` (weapon: `tier, burden oneHanded|twoHanded,
+  attack.roll.trait, attack.range, attack.damage.main.value.{dice,bonus}, type [physical|magical]`; armor:
+  `tier, armor.{current,max}, baseThresholds.{major,severe}`; consumable: `quantity, consumeOnUse`). Read
+  `weapon.mjs`, `armor.mjs`, `consumable.mjs` and one pack JSON each before mapping. Characters *do*
+  reference these (`equipment.*Id`), so matching by builder id matters.
+- **effects.json** (builder declarative effects; keys `"<recordId>:<FeatureName>"`, `"<recordId>:<tier>"` with
+  `feature`, or `"<recordId>"` for cards; values: `traits.{trait}: n`, stat keys `evasion, hitPointSlots,
+  stressSlots, majorThreshold, severeThreshold, armorScore, attack, spellcast, extraDomainCards`, `{equalTo}`
+  scaling, `permanent`, `choice`, `excluded`) → one embedded ActiveEffect on the target feature/card with
+  `transfer: true`, `type: "base"`, `system.changes: [{key, type:"add", value, priority:null, phase:"initial"}]`
+  (shape copied from `src/packs/subclasses/feature_Unrelenting_*.json`). Confirmed change keys in the packs:
+  `system.traits.<trait>.value`, `system.evasion`, `system.resources.hitPoints.max`,
+  `system.resources.stress.max`, `system.damageThresholds.major|severe`, `system.proficiency`,
+  `system.bonuses.roll.attack.bonus`, `system.bonuses.roll.spellcast.bonus`, `system.bonuses.maxLoadout`
+  (= extraDomainCards). `armorScore` is derived from the armor item in `prepareBaseData` — no key; report as
+  not automated. `equalTo`, `choice`, `excluded` → report lines, not effects.
+- `parseSourceFiles`: recognise the new files by name and by shape (ancestry: `features` without
+  `domain`/`class`; community: `personalities`; items: `set`/`roll`; weapons: `damage`/`burden`; armor:
+  `baseThresholds`/`baseScore`; effects: object keyed by ids); error text must list all categories.
+- Update `describeSource`, the sample source `samples/homebrew/tinker` (add one of each category and an
+  `effects.json`; the sample character should use the homebrew ancestry, community, weapon, armor), the Node
+  tests (item counts change from 15), the self-test (`homebrew items` check and derived numbers), README,
+  `docs/mapping.md`. Then re-run in `daggerheart-test`: Danny's `data/homebrew` source (Oddfolk +1 Instinct
+  effect) and `api.selfTest()`; cut `v0.3.0`.
+
 
 Working module, verified on Danny's real 17-character roster in `daggerheart-test` (Foundry 14.367,
 Daggerheart 2.9.2). `npm test` passes 27; `api.selfTest()` passes 44 checks (the last 11 exercise the
@@ -34,6 +83,9 @@ needed by the removed changelog action and can be deleted. Package is not regist
       dialog lists what goes and which actors use the content, optional removal of the domains the import
       added — refused (with a warning) while a card on an actor still uses one, because dropping the domain
       makes the system's actor refresh throw on that card (Danny, 2026-09-06; verified live on the Tinker sample)
+- [ ] **Next:** homebrew source import for all builder categories — ancestries, communities, transformations,
+      items, weapons, armor, consumables, effects.json (design notes in Status; Danny's `data/homebrew` is the
+      live test case; then `v0.3.0`)
 - [ ] Phase 4 candidates, none started: Beastbound companion actor; renames UI; i18n
 - [ ] After each Daggerheart system update: run `api.selfTest()` in a Daggerheart world
 
