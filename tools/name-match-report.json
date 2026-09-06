@@ -1,0 +1,47 @@
+{
+ "class": {
+  "builder": 13,
+  "matched": 13,
+  "missing": []
+ },
+ "subclass": {
+  "builder": 26,
+  "matched": 26,
+  "missing": []
+ },
+ "ancestry": {
+  "builder": 24,
+  "matched": 24,
+  "missing": []
+ },
+ "community": {
+  "builder": 15,
+  "matched": 15,
+  "missing": []
+ },
+ "domainCard": {
+  "builder": 210,
+  "matched": 210,
+  "missing": []
+ },
+ "weapon": {
+  "builder": 315,
+  "matched": 315,
+  "missing": []
+ },
+ "armor": {
+  "builder": 69,
+  "matched": 69,
+  "missing": []
+ },
+ "consumable": {
+  "builder": 120,
+  "matched": 120,
+  "missing": []
+ },
+ "transformation": {
+  "builder": 6,
+  "matched": 6,
+  "missing": []
+ }
+}
