@@ -1,6 +1,6 @@
 import { MODULE_ID, SETTINGS, debug } from "../foundry/constants.mjs";
 import { parseSourceFiles, describeSource, artKey } from "../lib/homebrew.mjs";
-import { importHomebrewSource } from "../foundry/homebrew.mjs";
+import { importHomebrewSource, removeHomebrewSource } from "../foundry/homebrew.mjs";
 import { escapeHtml } from "../lib/plan.mjs";
 
 const { HandlebarsApplicationMixin, ApplicationV2 } = foundry.applications.api;
@@ -24,7 +24,7 @@ export class HomebrewDialog extends HandlebarsApplicationMixin(ApplicationV2) {
     classes: ["daggerheart", "dh-style", "dhci-dialog"],
     window: { title: "DHCI.Homebrew.Title", icon: "fa-solid fa-flask", resizable: true },
     position: { width: 520, height: "auto" },
-    actions: { import: HomebrewDialog.#onImport, clear: HomebrewDialog.#onClear },
+    actions: { import: HomebrewDialog.#onImport, clear: HomebrewDialog.#onClear, remove: HomebrewDialog.#onRemove },
   };
 
   static PARTS = { body: { template: `modules/${MODULE_ID}/templates/homebrew-dialog.hbs` } };
@@ -39,7 +39,7 @@ export class HomebrewDialog extends HandlebarsApplicationMixin(ApplicationV2) {
       fileCount: this.files.length,
       ignored: this.parsed?.ignored ?? [],
       canImport: Boolean(this.parsed?.ok) && game.user.isGM && !this.busy,
-      existing: Object.entries(sources).map(([id, s]) => ({ id, label: s.label, pack: s.pack, importedAt: s.importedAt?.slice(0, 10), counts: s.counts })),
+      existing: Object.entries(sources).map(([id, s]) => ({ id, label: s.label, pack: s.pack, packLabel: game.packs.get(s.pack)?.metadata.label ?? s.pack, importedAt: s.importedAt?.slice(0, 10), counts: s.counts, domains: s.domains ?? [] })),
     };
   }
 
@@ -62,6 +62,46 @@ export class HomebrewDialog extends HandlebarsApplicationMixin(ApplicationV2) {
     this.parsed = texts.length ? parseSourceFiles(texts) : null;
     debug("homebrew parsed", this.parsed);
     this.render();
+  }
+
+  /** Remove a source imported earlier: its compendium documents (and the pack), the pack-list entry, optionally its domains. */
+  static async #onRemove(event, target) {
+    const sourceId = target.dataset.sourceId;
+    const entry = (game.settings.get(MODULE_ID, SETTINGS.homebrewSources) ?? {})[sourceId];
+    if (!entry || this.busy) return;
+    const packLabel = game.packs.get(entry.pack)?.metadata.label ?? entry.pack;
+    const domains = entry.domains ?? [];
+    const usedBy = game.actors.filter((a) => a.items.some((i) => String(i._stats?.compendiumSource ?? "").includes(`Compendium.${entry.pack}.`))).map((a) => a.name);
+    const f = (key, data = {}) => escapeHtml(game.i18n.format(key, data));
+    const content = `<div class="dhci-report">
+      <p>${f("DHCI.Homebrew.RemoveWhat", { label: entry.label, count: entry.counts?.items ?? "?", pack: packLabel })}</p>
+      <ul><li>${f("DHCI.Homebrew.RemovePack")}</li><li>${f("DHCI.Homebrew.RemoveSetting")}</li>${usedBy.length ? `<li class="dhci-warn">${f("DHCI.Homebrew.RemoveActors", { actors: usedBy.join(", ") })}</li>` : ""}</ul>
+      ${domains.length ? `<label class="dhci-check"><input type="checkbox" name="deleteDomains"> ${f("DHCI.Homebrew.RemoveDomains", { domains: domains.join(", ") })}</label>` : ""}
+    </div>`;
+    const choice = await foundry.applications.api.DialogV2.wait({
+      window: { title: "DHCI.Homebrew.RemoveTitle", icon: "fa-solid fa-trash" },
+      classes: ["daggerheart", "dh-style", "dhci-report-dialog"],
+      position: { width: 480 },
+      content,
+      buttons: [
+        { action: "remove", label: "DHCI.Homebrew.RemoveConfirm", icon: "fa-solid fa-trash", callback: (_ev, button) => ({ deleteDomains: button.form?.elements.deleteDomains?.checked ?? false }) },
+        { action: "cancel", label: "Cancel", icon: "fa-solid fa-xmark", default: true },
+      ],
+      rejectClose: false,
+    });
+    if (!choice || choice === "cancel") return;
+    this.busy = true;
+    try {
+      const result = await removeHomebrewSource(sourceId, { deleteDomains: choice.deleteDomains });
+      ui.notifications.info(game.i18n.format("DHCI.Homebrew.Removed", { label: entry.label, count: result.deleted }));
+      for (const w of result.warnings ?? []) ui.notifications.warn(w);
+    } catch (err) {
+      console.error(err);
+      ui.notifications.error(game.i18n.format("DHCI.Homebrew.RemoveFailed", { error: err.message }));
+    } finally {
+      this.busy = false;
+      this.render();
+    }
   }
 
   static #onClear() {

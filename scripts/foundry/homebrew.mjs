@@ -119,6 +119,9 @@ export async function removeHomebrewSource(sourceId, { deleteDomains = false } =
   const sources = foundry.utils.deepClone(game.settings.get(MODULE_ID, SETTINGS.homebrewSources) ?? {});
   const entry = sources[sourceId];
   const collection = entry?.pack ?? `world.${homebrewPackName(sourceId)}`;
+  const warnings = [];
+
+  // 1. the documents, and the pack once empty
   const pack = game.packs.get(collection);
   let deleted = 0;
   if (pack) {
@@ -129,16 +132,31 @@ export async function removeHomebrewSource(sourceId, { deleteDomains = false } =
     deleted = ids.length;
     if (index.size - ids.length <= 0) await pack.deleteCompendium();
   }
-  const packs = readPackSetting().filter((p) => p !== collection);
-  await game.settings.set(MODULE_ID, SETTINGS.packs, packs.join(", "));
-  if (deleteDomains && entry?.domains?.length) {
-    const setting = game.settings.get(SYSTEM_ID, HOMEBREW_SETTING);
-    const data = typeof setting?.toObject === "function" ? setting.toObject() : foundry.utils.deepClone(setting ?? {});
-    for (const id of entry.domains) delete data.domains?.[id];
-    await game.settings.set(SYSTEM_ID, HOMEBREW_SETTING, data);
-  }
+
+  // 2. this module's bookkeeping, before touching system settings so a failure there cannot leave a
+  //    dangling entry
+  await game.settings.set(MODULE_ID, SETTINGS.packs, readPackSetting().filter((p) => p !== collection).join(", "));
   delete sources[sourceId];
   await game.settings.set(MODULE_ID, SETTINGS.homebrewSources, sources);
-  log(`homebrew source ${sourceId} removed (${deleted} documents)`);
-  return { deleted, pack: collection };
+
+  // 3. optionally the domains that import added (the system re-renders actors on change; a failure
+  //    there is reported, not fatal)
+  if (deleteDomains && entry?.domains?.length) {
+    // A domain still used by a card on an actor cannot go: the card would fail validation and the
+    // system's actor refresh throws. Keep the domain and say who uses it.
+    const inUse = game.actors.filter((a) => a.items.some((i) => i.type === "domainCard" && entry.domains.includes(i.system.domain))).map((a) => a.name);
+    if (inUse.length) {
+      warnings.push(`domains ${entry.domains.join(", ")} kept: cards on ${inUse.join(", ")} still use them`);
+    } else try {
+      const setting = game.settings.get(SYSTEM_ID, HOMEBREW_SETTING);
+      const data = typeof setting?.toObject === "function" ? setting.toObject() : foundry.utils.deepClone(setting ?? {});
+      for (const id of entry.domains) delete data.domains?.[id];
+      await game.settings.set(SYSTEM_ID, HOMEBREW_SETTING, data);
+    } catch (err) {
+      console.error(err);
+      warnings.push(`domains ${entry.domains.join(", ")} could not be removed from the system's Homebrew settings: ${err.message}`);
+    }
+  }
+  log(`homebrew source ${sourceId} removed (${deleted} documents)`, { warnings });
+  return { deleted, pack: collection, warnings };
 }

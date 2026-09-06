@@ -32,8 +32,9 @@ export async function applyPlan(plan, { actor = null, progress = () => {} } = {}
     // explicitly. Biography is rebuilt: the class hook re-appends its questions and we re-append
     // the builder text.
     const deletions = {};
-    for (const key of Object.keys(actor.system._source.experiences ?? {})) deletions[`system.experiences.-=${key}`] = null;
-    for (const key of Object.keys(actor.system._source.levelData?.levelups ?? {})) deletions[`system.levelData.levelups.-=${key}`] = null;
+    const remove = () => new foundry.data.operators.ForcedDeletion();
+    for (const key of Object.keys(actor.system._source.experiences ?? {})) deletions[`system.experiences.${key}`] = remove();
+    for (const key of Object.keys(actor.system._source.levelData?.levelups ?? {})) deletions[`system.levelData.levelups.${key}`] = remove();
     await actor.update({ name: plan.name, ...(img ? { img } : {}), flags, "system.biography.background": "", "system.biography.connections": "", ...deletions });
     report.push({ level: "info", message: "existing actor updated: previously imported items replaced, biography rebuilt from the file" });
   }

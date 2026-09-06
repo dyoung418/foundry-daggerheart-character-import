@@ -82,7 +82,17 @@
       "FileCount": "{count} file(s) selected",
       "Clear": "clear",
       "PickFolder": "Whole source folder",
-      "PickFiles": "Or individual files"
+      "PickFiles": "Or individual files",
+      "Counts": "classes {classes} · subclasses {subclasses} · cards {cards}",
+      "RemoveTitle": "Remove homebrew source",
+      "RemoveWhat": "Remove {label}: {count} documents in the compendium {pack}.",
+      "RemovePack": "The compendium's documents are deleted, and the compendium itself once it is empty.",
+      "RemoveSetting": "The compendium is dropped from this module's list of packs to search.",
+      "RemoveActors": "Actors using this content keep their copied items, but lose the link to the compendium: {actors}.",
+      "RemoveDomains": "Also remove the domains this import added to the system's Homebrew settings ({domains}). Skipped for a domain that a card on an actor still uses.",
+      "RemoveConfirm": "Remove",
+      "Removed": "{label} removed ({count} documents deleted).",
+      "RemoveFailed": "Removing the homebrew source failed: {error}"
     }
   }
 }

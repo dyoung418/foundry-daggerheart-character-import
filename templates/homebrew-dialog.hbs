@@ -25,7 +25,7 @@
   <legend>{{localize "DHCI.Homebrew.Existing"}}</legend>
   <ul class="dhci-characters">
     {{#each existing as |s|}}
-      <li><span class="dhci-name">{{s.label}}</span> <span class="dhci-meta">{{s.pack}} · {{s.counts.classes}}/{{s.counts.subclasses}}/{{s.counts.domainCards}} · {{s.importedAt}}</span></li>
+      <li><span class="dhci-name">{{s.label}}</span> <span class="dhci-meta">{{s.packLabel}} · {{localize "DHCI.Homebrew.Counts" classes=s.counts.classes subclasses=s.counts.subclasses cards=s.counts.domainCards}} · {{s.importedAt}}</span>{{#if @root.isGM}}<a class="dhci-remove" data-action="remove" data-source-id="{{s.id}}" data-tooltip="{{localize "DHCI.Homebrew.RemoveTitle"}}"><i class="fa-solid fa-trash"></i></a>{{/if}}</li>
     {{/each}}
   </ul>
 </fieldset>
