@@ -2,23 +2,26 @@
 
 Live task list and resume point. Newest status at the top. Dates are absolute.
 
-## Status — 2026-09-06 (v0.1.0 released)
+## Status — 2026-09-06 16:00 (v0.1.0 released and verified)
 
 Working module, verified on Danny's real 17-character roster in `daggerheart-test` (Foundry 14.367,
-Daggerheart 2.9.2). `api.selfTest()` passes 33 checks; `npm test` passes 20. First release `v0.1.0`
-published 2026-09-06 via the GitHub Release workflow (manifest URL in `README.md`). The Foundry server
-is not running; check with `ss -ltn | grep 36000` (not `pgrep -f`, which matches the checking shell).
-Danny's roster copy sits in the gitignored `scratch/`.
+Daggerheart 2.9.2). `api.selfTest()` passes 33 checks; `npm test` passes 20. **`v0.1.0` is published**:
+the manifest at `releases/latest/download/module.json` serves version 0.1.0 with the versioned zip URL,
+and the zip's `module.json`, scripts, styles, templates, lang and data were checked after download.
+The Foundry server is not running; check with `ss -ltn | grep 36000` (not `pgrep -f`, which matches
+the checking shell). Danny's roster copy sits in the gitignored `scratch/`.
 
-Cold-start reading order: `README.md` → `CLAUDE.md` → this file → `docs/architecture.md` →
-`docs/mapping.md` → `docs/builder-export-format.md` and `docs/daggerheart-system-model.md` →
-`docs/prior-art.md`. Samples in `samples/`, dev tools in `tools/`, fixtures in `tests/fixtures/`
-(regenerate with `tools/build-test-fixture.py <clone>/src/packs` after a system update).
+Release history worth knowing: the first `v0.1.0` build (old workflow copied from `dannysmodule`) shipped
+literal `VERSION`/`DOWNLOAD` strings because the replace-tokens action only matches `#{NAME}#`; it was
+deleted and re-cut the same hour on the new `Release` workflow (League template + manifest check +
+optional foundryvtt.com Package Release API step). The `v0.0.0` tag on the initial commit was only
+needed by the removed changelog action and can be deleted. Package is not registered on foundryvtt.com.
 
 ## Next
 
 - [x] Danny used the file picker with his real export (2026-09-06)
-- [x] First release `v0.1.0` published 2026-09-06 (workflow builds `module.zip` and fills `module.json`)
+- [x] First release `v0.1.0` published 2026-09-06 and verified by downloading the manifest and zip
+- [ ] Decide whether to register the package on foundryvtt.com (then add the `FOUNDRY_PACKAGE_RELEASE_TOKEN` secret; the workflow step is already there)
 - [ ] Phase 4 candidates, none started: homebrew stub items; Beastbound companion actor; renames UI; i18n
 - [ ] After each Daggerheart system update: run `api.selfTest()` in a Daggerheart world
 
