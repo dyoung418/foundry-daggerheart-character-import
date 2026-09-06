@@ -2,33 +2,54 @@
 
 Live task list and resume point. Newest status at the top. Dates are absolute.
 
-## Status — 2026-09-06 00:05
+## Status — 2026-09-06 ~00:15 (research and planning complete)
 
-R1, R2, R3 done. Headline findings: (1) every SRD 2.0 record in the builder has an exact-name match
-in the system compendia, so name matching is the primary key; (2) the system grants features
-automatically when a class/subclass/ancestry/community item is created on an actor, so the importer
-creates parent items from compendium sources and does not build features by hand; (3) level-ups are
-stored on the actor as `system.levelData.levelups` in a shape that maps 1:1 from the builder's
-`levelUps[].picks`, and the world's `levelupAuto` setting decides whether stats are re-derived from
-them or must be written as totals. Local system install is 2.7.4; target 2.9+ and upgrade the test world.
-R4 (mapping) done. Starting R5 (architecture + roadmap).
+All five research tracks are done and committed. Read in this order for a cold start:
+`README.md` → `CLAUDE.md` → `docs/architecture.md` (plan) → `docs/mapping.md` (the translation) →
+`docs/builder-export-format.md` and `docs/daggerheart-system-model.md` (the two sides) →
+`docs/prior-art.md`. Samples live in `samples/`, dev tools in `tools/`.
 
-## In progress
+Headline findings:
+1. Every SRD 2.0 record the builder can reference has an exact-name match in the system's compendia
+   (`tools/name-match-report.json`), so `(type, name)` is the matching key.
+2. The system grants features automatically when a class/subclass/ancestry/community item is created
+   on an actor; the importer creates parent items from compendium sources, in a fixed order.
+3. Level-ups map 1:1 from the builder's `levelUps[].picks` to `system.levelData.levelups`; the world's
+   `levelupAuto` setting decides whether stats are re-derived (default) or must be written as totals.
+4. The local Daggerheart system is 2.7.4; target 2.9+ and upgrade the test world before manual tests.
 
-- [ ] R5 Architecture, test strategy, phased roadmap → `docs/architecture.md`; rewrite this file as the roadmap
+## Questions for Danny (answers unblock Phase 0/1)
 
-## Next
+- [ ] Ship a name-only index derived from the builder's SRD data (`data/names.json`, recommended in
+      `docs/mapping.md`), or rely on compendia only? Does anyone export homebrew (`void`) ids today?
+- [ ] On import, keep the class's background questions the system appends to the biography, or
+      overwrite with the builder's text? (Plan defaults to keep + append.)
+- [ ] OK to upgrade the local Daggerheart system 2.7.4 → 2.9.2 and the `daggerheart-test` world?
+- [ ] Module id `daggerheart-character-import` and title "Daggerheart Character Import" — fine?
+- [ ] MVP scope: multiclass only with `levelupAuto` on (the system opens a dialog otherwise) — acceptable?
 
-- [ ] Ask Danny: does the builder ever export homebrew (`void`) content ids in practice? Ship a name-only index derived from the builder's SRD data (recommended in `docs/mapping.md`) or rely on compendia only?
-- [ ] Ask Danny: on import, keep the class's background questions that the system appends to the biography, or overwrite with the builder's text?
-- [ ] Ask Danny: upgrade the local Daggerheart system (2.7.4 → 2.9.2) and the `daggerheart-test` world before manual testing?
+## Next (Phase 0 — scaffold)
+
+- [ ] `module.json`, `scripts/main.mjs`, empty ApplicationV2 dialog opened from the Actors sidebar
+- [ ] Symlink `~/foundrydata/Data/modules/daggerheart-character-import` → repo; load in `daggerheart-test`
+- [ ] `.github/workflows/main.yaml` from dannysmodule (drop the pack build step)
+- [ ] `package.json` with `npm test` → `node --test tests/`
+- [ ] `tools/build-name-index.mjs` (pending question 1)
+
+## Then (Phase 1 — MVP, see `docs/architecture.md`)
+
+- [ ] `lib/normalize.mjs` + tests against `samples/legacy-pre-levels.json`
+- [ ] `lib/ids.mjs`, `foundry/matcher.mjs`
+- [ ] `lib/plan.mjs` for level-1 characters; `foundry/writer.mjs`; import `samples/level1-bard.json`
+- [ ] Compare sheet-derived stats with `samples/expected-derived.json`
+- [ ] `lib/levelups.mjs`; import `samples/level5-ranger-multiclass.json`
+- [ ] Report dialog; portrait upload
 
 ## Done
 
+- [x] 2026-09-06 R5 `docs/architecture.md`; TODO rewritten as roadmap
 - [x] 2026-09-06 R4 `docs/mapping.md`; reference actor `samples/foundry/`; first memory files
-
 - [x] 2026-09-05 R2 `docs/daggerheart-system-model.md`; R3 `docs/prior-art.md`; `tools/name-match.py` + report
-
 - [x] 2026-09-05 R1 `docs/builder-export-format.md`, `samples/*.json`, `tools/make-samples.mjs`
 - [x] 2026-09-05 git init, CLAUDE.md, README.md, TODO.md, LICENSE (MIT), `.gitignore`, memory symlink
 - [x] 2026-09-05 GitHub repo `dyoung418/foundry-daggerheart-character-import` (public) as `origin`

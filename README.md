@@ -6,8 +6,8 @@ A [Foundry Virtual Tabletop](https://foundryvtt.com/) module that imports charac
 into a world running the official
 [Foundryborne Daggerheart system](https://github.com/Foundryborne/daggerheart).
 
-**Status: planning.** There is no installable module yet. This repository currently holds the
-research and design record: see `docs/` for findings and `TODO.md` for the roadmap.
+**Status: planned, not yet built.** There is no installable module yet. The research and design
+record is complete: start with `TODO.md`, then `docs/architecture.md` and `docs/mapping.md`.
 
 ## What it will do
 
@@ -23,7 +23,7 @@ research and design record: see `docs/` for findings and `TODO.md` for the roadm
 ## Requirements (planned)
 
 - Foundry VTT v14
-- Daggerheart system 2.7 or later
+- Daggerheart system 2.9 or later
 
 ## Related
 
