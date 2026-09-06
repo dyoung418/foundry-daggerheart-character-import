@@ -2,17 +2,17 @@
   "id": "daggerheart-character-import",
   "title": "Daggerheart Character Import",
   "description": "Import characters exported by the Daggerheart Character Builder (.json) into the Foundryborne Daggerheart system.",
-  "version": "VERSION",
+  "version": "#{VERSION}#",
   "authors": [
     {
       "name": "Danny Young",
       "url": "https://github.com/dyoung418"
     }
   ],
-  "url": "URL",
+  "url": "#{URL}#",
   "bugs": "https://github.com/dyoung418/foundry-daggerheart-character-import/issues",
-  "manifest": "MANIFEST",
-  "download": "DOWNLOAD",
+  "manifest": "#{MANIFEST}#",
+  "download": "#{DOWNLOAD}#",
   "license": "https://github.com/dyoung418/foundry-daggerheart-character-import/blob/main/LICENSE",
   "readme": "https://github.com/dyoung418/foundry-daggerheart-character-import/blob/main/README.md",
   "changelog": "https://github.com/dyoung418/foundry-daggerheart-character-import/blob/main/CHANGELOG.md",

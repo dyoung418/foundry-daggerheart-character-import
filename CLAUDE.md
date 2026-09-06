@@ -73,6 +73,8 @@ uncommitted planning work. Commits use Conventional Commits (`docs:`, `feat:`, `
   with the Chrome tools and read the console for `daggerheart-character-import |` lines. To see whether
   the server is up use `ss -ltn | grep 36000`; `pgrep -f foundryvtt/main.js` matches the shell running
   the check and reports a false positive.
+- `module.json` placeholders must be `#{VERSION}#`-style; bare `VERSION` is silently left alone by the
+  replace-tokens action (this shipped a broken first v0.1.0 on 2026-09-06 before it was re-cut).
 - Releases: add a `CHANGELOG.md` entry by hand, commit, then `gh release create vX.Y.Z --generate-notes
   --notes-file <summary>`; the `Release` workflow (League template) tests, fills `module.json`, zips and
   attaches `module.json` + `module.zip`. It registers the version with foundryvtt.com only if the
