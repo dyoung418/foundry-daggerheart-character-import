@@ -82,7 +82,9 @@ and every card, subclass and tier feature carries its image; a character re-impo
 existing actors. The Foundry server is running
 on port 36000 (check with `ss -ltn | grep 36000`). Danny's roster copy sits in the gitignored `scratch/`.
 
-Release history worth knowing: the first `v0.1.0` build (old workflow copied from `dannysmodule`) shipped
+Release history worth knowing: `v0.3.0` (2026-09-06, every homebrew category) was cut with `gh release create
+--generate-notes --notes-file`; the Release workflow built it in 10 s and the manifest (`0.3.0`) and zip
+(61 files, samples included) were verified by download. the first `v0.1.0` build (old workflow copied from `dannysmodule`) shipped
 literal `VERSION`/`DOWNLOAD` strings because the replace-tokens action only matches `#{NAME}#`; it was
 deleted and re-cut the same hour on the new `Release` workflow (League template + manifest check +
 optional foundryvtt.com Package Release API step). The `v0.0.0` tag on the initial commit was only
