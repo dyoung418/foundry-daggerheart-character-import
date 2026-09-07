@@ -3,7 +3,7 @@
 Format: [Keep a Changelog](https://keepachangelog.com/). Versions follow semver; the release
 workflow reads the version from the release tag.
 
-## 0.3.0 — unreleased
+## 0.3.0 — 2026-09-06
 
 - Homebrew source import covers every builder category: ancestries, communities, transformations,
   items (loot), weapons, armor and consumables join classes, subclasses and domain cards. Weapon and

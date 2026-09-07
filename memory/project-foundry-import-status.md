@@ -1,6 +1,6 @@
 ---
 name: project-foundry-import-status
-description: State of the Daggerheart character importer as of 2026-09-06 (v0.2.0 released, homebrew import) — what works, what Danny has tried, what is next; the resume point for the next session
+description: State of the Daggerheart character importer as of 2026-09-06 evening (v0.3.0, every homebrew category) — what works, what Danny has tried, what is next; the resume point for the next session
 metadata:
   type: project
 ---
@@ -14,11 +14,11 @@ dialog, loadout warnings, Brawler combo die) were fixed the same night and verif
 [[feedback-release-workflow-research]]). Later that day the homebrew source import landed (builder
 `data/<source>/` folder → `world.dhci-<source>` compendium; Danny's `void` source and its three
 characters import cleanly, card art included), so the whole roster imports; `v0.2.0` shipped it the
-same evening with a removal UI. **Next (Danny's request, 2026-09-06 evening):** extend the source import to
-every builder category — ancestries, communities, transformations, items, weapons, armor, consumables and
-`effects.json` — because his `data/homebrew` source (ancestry + effects) was refused; `TODO.md` Status holds
-the verified field mappings and change keys. After that: `v0.3.0`, foundryvtt.com listing, Beastbound
-companion, renames UI, i18n.
-`TODO.md` has the exact list. `api.selfTest()` in a Daggerheart world is the regression check;
-`npm test` covers the pure library (27 tests); selfTest runs 44 checks including the homebrew path. See [[project-foundry-import-origin]] and
-[[feedback-verify-in-live-foundry]].
+same evening with a removal UI. On 2026-09-06 evening
+the source import was extended to every builder category (ancestries, communities, transformations,
+items, weapons, armor, consumables, `effects.json` → ActiveEffects; weapon/armor features via the
+system's own feature keys or custom Homebrew `itemFeatures`), verified live with `api.selfTest()` (52
+checks) and on Danny's `data/homebrew` source (Oddfolk +1 Instinct); shipped as `v0.3.0`. Danny logs
+into Foundry himself (Gamemaster has a password); start the server with `--world=daggerheart-test` so
+the admin password is not needed. **Next:** nothing requested; candidates in `TODO.md` (Beastbound
+companion, renames UI, i18n, foundryvtt.com registration).

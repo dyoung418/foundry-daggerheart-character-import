@@ -39,7 +39,7 @@ export class HomebrewDialog extends HandlebarsApplicationMixin(ApplicationV2) {
       fileCount: this.files.length,
       ignored: this.parsed?.ignored ?? [],
       canImport: Boolean(this.parsed?.ok) && game.user.isGM && !this.busy,
-      existing: Object.entries(sources).map(([id, s]) => ({ id, label: s.label, pack: s.pack, packLabel: game.packs.get(s.pack)?.metadata.label ?? s.pack, importedAt: s.importedAt?.slice(0, 10), summary: describeCounts(s.counts), domains: s.domains ?? [] })),
+      existing: Object.entries(sources).map(([id, s]) => ({ id, label: s.label, pack: s.pack, packLabel: game.packs.get(s.pack)?.metadata.label ?? s.pack, importedAt: s.importedAt?.slice(0, 10), summary: summarizeCounts(s.counts), domains: s.domains ?? [] })),
     };
   }
 
@@ -129,6 +129,15 @@ export class HomebrewDialog extends HandlebarsApplicationMixin(ApplicationV2) {
       this.render();
     }
   }
+}
+
+/** Sources imported before 0.3.0 stored `{ classes, subclasses, domainCards, items: <total documents> }`. */
+function summarizeCounts(counts) {
+  if (!counts) return "";
+  if (counts.documents === undefined && counts.items !== undefined && counts.ancestries === undefined) {
+    return `${describeCounts({ ...counts, items: 0 })} · ${counts.items} documents`;
+  }
+  return describeCounts(counts);
 }
 
 async function showHomebrewReport(result) {

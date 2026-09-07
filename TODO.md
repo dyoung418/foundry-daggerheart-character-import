@@ -2,17 +2,23 @@
 
 Live task list and resume point. Newest status at the top. Dates are absolute.
 
-## Status — 2026-09-06 (all homebrew categories implemented; live verification pending)
+## Status — 2026-09-06 evening (v0.3.0: every homebrew category, verified live)
 
-**Resume here.** Code for every builder category is in (`lib/homebrew.mjs` rewritten: ancestries,
-communities, transformations, items → loot, weapons, armor, consumables, `effects.json` → ActiveEffects;
-`foundry/homebrew.mjs` applies weapon/armor features by `update()` and registers custom ones in the
-system's Homebrew `itemFeatures`; matcher falls back to the ancestry's stored `featureNames`; dialog
-report lists non-automated notes). `npm test` passes 33. Sample source `samples/homebrew/tinker` has one
-record per category and the sample character uses them; `api.selfTest()` expects 31 documents and
-HP 7 / Stress 7 / Evasion 13 / Instinct 1 for the tinker. **Not yet verified live** — next: start
-Foundry, run `api.selfTest()` in `daggerheart-test`, import Danny's `data/homebrew` (Oddfolk +1 Instinct)
-and fix what the console shows; then CHANGELOG date + `v0.3.0`.
+**Resume here.** Every builder category now imports from a homebrew source: ancestries, communities,
+transformations, items (loot), weapons, armor, consumables and `effects.json`, on top of classes,
+subclasses and domain cards. Verified live in `daggerheart-test` (Foundry 14.367, Daggerheart 2.9.2):
+`api.selfTest()` passes 52 checks (31 tinker documents; weapon/armor features applied by the system's
+`_preUpdate` with their effects; custom features `dhci-tinker-coiled`/`-greased` registered in the
+system's Homebrew `itemFeatures`; the tinker character derives HP 7, Stress 7, Evasion 13, Instinct 1,
+attack bonus 1 from effects.json). Danny's real `data/homebrew` source (Oddfolk, Premium Snack, two
+effects) imported as `world.dhci-homebrew` with 4 documents and one report note; a bard on Oddfolk got
+Instinct 1 from the Inscrutable effect. That source is still in the test world. `npm test` passes 33.
+`v0.3.0` cut from this state (see Release history). The Foundry server was started with
+`--world=daggerheart-test` so the join page skips the admin password; Gamemaster has a password and Danny
+logged in himself.
+
+Known cosmetic: the dialog's "imported" date is the UTC day. Not automated by design (reported as
+notes): `equalTo` scaling, `choice`, `excluded`, `armorScore`, actions on features/cards.
 
 Earlier context: Danny tried importing his second builder source, `~/daggerheart-character-builder/data/homebrew/`
 (`source.json`, `ancestries.json` with one ancestry "Oddfolk", `items.json` with one item, `effects.json`),
@@ -93,9 +99,9 @@ needed by the removed changelog action and can be deleted. Package is not regist
       dialog lists what goes and which actors use the content, optional removal of the domains the import
       added — refused (with a warning) while a card on an actor still uses one, because dropping the domain
       makes the system's actor refresh throw on that card (Danny, 2026-09-06; verified live on the Tinker sample)
-- [ ] **Next:** homebrew source import for all builder categories — ancestries, communities, transformations,
-      items, weapons, armor, consumables, effects.json (design notes in Status; Danny's `data/homebrew` is the
-      live test case; then `v0.3.0`)
+- [x] Homebrew source import for all builder categories — ancestries, communities, transformations,
+      items, weapons, armor, consumables, effects.json (2026-09-06; verified on Danny's `data/homebrew`;
+      `v0.3.0`)
 - [ ] Phase 4 candidates, none started: Beastbound companion actor; renames UI; i18n
 - [ ] After each Daggerheart system update: run `api.selfTest()` in a Daggerheart world
 

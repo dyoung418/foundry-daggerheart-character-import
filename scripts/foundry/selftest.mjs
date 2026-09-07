@@ -78,7 +78,7 @@ export async function selfTest({ keep = false } = {}) {
       const features = a.items.filter((i) => i.type === "feature").map((i) => i.name);
       check("tinker features granted", ["Spare Parts", "Jury-Rig", "Field Repair", "Wind-Up Companion", "Precision Tools", "Steady Gears", "Oil-Slick", "Union Card", "Ticking Resolve", "Wind-Down"].filter((n) => !features.includes(n)), []);
       check("tinker gear", [s.primaryWeapon?.name, s.secondaryWeapon?.name, s.armor?.name, a.items.filter((i) => i.type === "consumable").map((i) => i.name)], ["Wrench Hammer", "Spring Dagger", "Brass Plate", ["Oil Flask"]]);
-      check("tinker armor score", s.armorScore?.value ?? s.armorScore, 4);
+      check("tinker armor score", s.armorScore?.max, 4);
       check("tinker starting kit", a.items.filter((i) => i.type === "loot").map((i) => i.name).sort(), ["A half-built clockwork sparrow", "A roll of well-worn tools"]);
       check("tinker background questions", s.biography.background.includes("What did you build that you wish you hadn"), true);
     }
