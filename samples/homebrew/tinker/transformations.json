@@ -1,0 +1,23 @@
+[
+  {
+    "id": "tinker_transformation_clockwork_heart",
+    "name": { "en-US": "Clockwork Heart" },
+    "description": [
+      { "paragraph": { "en-US": "Your heart was replaced by a brass mechanism that must be wound each dawn." } }
+    ],
+    "features": [
+      {
+        "name": { "en-US": "Ticking Resolve" },
+        "description": [ { "paragraph": { "en-US": "Gain an additional Stress slot." } } ]
+      },
+      {
+        "name": { "en-US": "Wind-Down" },
+        "description": [ { "paragraph": { "en-US": "If you do not wind your heart during a rest, you have disadvantage on all rolls until you do." } } ]
+      }
+    ],
+    "transformationQuestions": [
+      { "en-US": "Who built your heart, and what did they ask in return?" },
+      { "en-US": "What do you hear when the ticking stops?" }
+    ]
+  }
+]

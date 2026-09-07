@@ -1,0 +1,9 @@
+[
+  {
+    "id": "tinker_consumable_oil_flask",
+    "name": { "en-US": "Oil Flask" },
+    "set": "workshop",
+    "roll": 1,
+    "features": [ { "description": [ { "paragraph": { "en-US": "Clear a Stress the next time you wind a mechanism." } } ] } ]
+  }
+]

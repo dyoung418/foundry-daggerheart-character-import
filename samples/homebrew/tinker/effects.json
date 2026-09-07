@@ -1,0 +1,12 @@
+{
+  "tinker_ancestry_cogborn:Steady Gears": { "traits": { "instinct": 1 } },
+  "tinker_ancestry_cogborn:Oil-Slick": {
+    "excluded": ["Oil-Slick costs a Hope and happens in play, so it isn't counted here"]
+  },
+  "tinker_transformation_clockwork_heart:Ticking Resolve": { "stressSlots": 1 },
+  "tinker_subclass_clockwright:foundation": { "feature": "Precision Tools", "hitPointSlots": 1 },
+  "tinker_class_tinker:Jury-Rig": { "attack": 1 },
+  "tinker_domain_card_gear_toss": { "evasion": 1, "permanent": true },
+  "tinker_domain_card_steam_vent": { "majorThreshold": { "equalTo": "proficiency" } },
+  "tinker_armor_brass_plate:Flexible": { "evasion": 1 }
+}

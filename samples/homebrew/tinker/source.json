@@ -1,4 +1,4 @@
 {
   "label": "Tinker's Workshop (sample)",
-  "files": ["classes", "subclasses", "domain-cards"]
+  "files": ["classes", "subclasses", "ancestries", "communities", "transformations", "domain-cards", "items", "weapons", "armors", "consumables", "effects"]
 }

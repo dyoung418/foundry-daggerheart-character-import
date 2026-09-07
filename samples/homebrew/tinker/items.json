@@ -1,0 +1,16 @@
+[
+  {
+    "id": "tinker_item_spare_cog",
+    "name": { "en-US": "Spare Cog" },
+    "set": "workshop",
+    "roll": 1,
+    "features": [ { "description": [ { "paragraph": { "en-US": "During downtime, you can fit this cog to a broken mechanism to repair it." } } ] } ]
+  },
+  {
+    "id": "tinker_gizmo",
+    "name": { "en-US": "Pocket Gizmo" },
+    "set": "workshop",
+    "roll": 2,
+    "features": [ { "description": [ { "paragraph": { "en-US": "Nobody, including you, knows what it does. An id without a kind segment, to exercise the loose loot id rule." } } ] } ]
+  }
+]

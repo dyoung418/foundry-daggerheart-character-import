@@ -44,24 +44,34 @@ Notes:
 
 ## Homebrew content
 
-The builder loads extra content from source folders (`data/<source>/` with `classes.json`,
-`subclasses.json`, `domain-cards.json`, `source.json`). Characters built on such content carry ids
-like `void_class_blood_hunter` that no system compendium knows. To import them:
+The builder loads extra content from source folders (`data/<source>/` with `source.json` and any of
+`classes.json`, `subclasses.json`, `ancestries.json`, `communities.json`, `transformations.json`,
+`domain-cards.json`, `items.json`, `weapons.json`, `armors.json`, `consumables.json`, `effects.json`).
+Characters built on such content carry ids like `void_class_blood_hunter` that no system compendium
+knows. To import them:
 
 1. In the import dialog choose **Import a homebrew source…** (or run
    `game.modules.get("daggerheart-character-import").api.openHomebrew()`), as a GM.
-2. Select the source folder's JSON files, plus any `card-art/` images named after the builder ids.
-3. The module creates a world compendium `Builder homebrew: <source label>` with the classes (with
-   their hope and class features and starting items), subclasses (with tier features), and domain
-   cards; registers domains the system does not have (e.g. `blood`) in the system's **Homebrew**
-   settings; and adds the compendium to this module's pack list.
-4. Import the characters as usual. Content is matched by builder id first, then by name.
+2. Select the source folder (or its JSON files), plus any `card-art/` images named after the builder ids.
+3. The module creates a world compendium `Builder homebrew: <source label>` holding every record as
+   a Foundry item: classes (with hope and class features and starting items), subclasses (with tier
+   features), ancestries (primary and secondary feature), communities and transformations (with
+   their features and questions), domain cards, loot, weapons, armor and consumables. Weapon and
+   armor features are matched to the system's own (`Reliable`, `Flexible`, …) so their effects and
+   actions are built by the system; names it does not know are registered as custom features in the
+   system's **Homebrew** settings with the builder's text. Domains the system does not have (e.g.
+   `blood`) are registered there too, and the compendium is added to this module's pack list.
+4. `effects.json` entries become active effects on the feature, card or item they name: trait
+   bonuses, Evasion, Hit Point and Stress slots, damage thresholds, attack and Spellcast bonuses and
+   extra loadout cards. A card marked `permanent` is set vault-active so its bonus survives vaulting.
+   What the system cannot apply on its own (`equalTo` scaling, choices, `excluded` notes, Armor Score)
+   is listed in the import report to apply by hand.
+5. Import the characters as usual. Content is matched by builder id first, then by name.
 
 Re-importing a source after editing it in the builder replaces the same compendium documents (ids
 are derived from the builder ids), so already-imported characters keep working. Feature text is
-carried over as description; the system's automated actions and effects are not generated, so
-homebrew features are read-and-apply-by-hand on the sheet. `api.removeHomebrewSource(id)` undoes an
-import.
+carried over as description; the system's automated *actions* are not generated for features and
+cards. `api.removeHomebrewSource(id)` undoes an import.
 
 Console API: `game.modules.get("daggerheart-character-import").api` exposes `open()`, `importFile(json,
 { actor })`, `parseTransferFile`, `buildPlan`, `CompendiumMatcher`, `openHomebrew()`,

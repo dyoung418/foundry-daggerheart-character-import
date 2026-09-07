@@ -1,5 +1,5 @@
 import { MODULE_ID, SETTINGS, debug } from "../foundry/constants.mjs";
-import { parseSourceFiles, describeSource, artKey } from "../lib/homebrew.mjs";
+import { parseSourceFiles, describeSource, describeCounts, artKey } from "../lib/homebrew.mjs";
 import { importHomebrewSource, removeHomebrewSource } from "../foundry/homebrew.mjs";
 import { escapeHtml } from "../lib/plan.mjs";
 
@@ -39,7 +39,7 @@ export class HomebrewDialog extends HandlebarsApplicationMixin(ApplicationV2) {
       fileCount: this.files.length,
       ignored: this.parsed?.ignored ?? [],
       canImport: Boolean(this.parsed?.ok) && game.user.isGM && !this.busy,
-      existing: Object.entries(sources).map(([id, s]) => ({ id, label: s.label, pack: s.pack, packLabel: game.packs.get(s.pack)?.metadata.label ?? s.pack, importedAt: s.importedAt?.slice(0, 10), counts: s.counts, domains: s.domains ?? [] })),
+      existing: Object.entries(sources).map(([id, s]) => ({ id, label: s.label, pack: s.pack, packLabel: game.packs.get(s.pack)?.metadata.label ?? s.pack, importedAt: s.importedAt?.slice(0, 10), summary: describeCounts(s.counts), domains: s.domains ?? [] })),
     };
   }
 
@@ -71,12 +71,13 @@ export class HomebrewDialog extends HandlebarsApplicationMixin(ApplicationV2) {
     if (!entry || this.busy) return;
     const packLabel = game.packs.get(entry.pack)?.metadata.label ?? entry.pack;
     const domains = entry.domains ?? [];
+    const registered = [...domains, ...(entry.itemFeatures ?? []).map((f) => f.split(":")[1])];
     const usedBy = game.actors.filter((a) => a.items.some((i) => String(i._stats?.compendiumSource ?? "").includes(`Compendium.${entry.pack}.`))).map((a) => a.name);
     const f = (key, data = {}) => escapeHtml(game.i18n.format(key, data));
     const content = `<div class="dhci-report">
-      <p>${f("DHCI.Homebrew.RemoveWhat", { label: entry.label, count: entry.counts?.items ?? "?", pack: packLabel })}</p>
+      <p>${f("DHCI.Homebrew.RemoveWhat", { label: entry.label, count: entry.counts?.documents ?? entry.counts?.items ?? "?", pack: packLabel })}</p>
       <ul><li>${f("DHCI.Homebrew.RemovePack")}</li><li>${f("DHCI.Homebrew.RemoveSetting")}</li>${usedBy.length ? `<li class="dhci-warn">${f("DHCI.Homebrew.RemoveActors", { actors: usedBy.join(", ") })}</li>` : ""}</ul>
-      ${domains.length ? `<label class="dhci-check"><input type="checkbox" name="deleteDomains"> ${f("DHCI.Homebrew.RemoveDomains", { domains: domains.join(", ") })}</label>` : ""}
+      ${registered.length ? `<label class="dhci-check"><input type="checkbox" name="deleteDomains"> ${f("DHCI.Homebrew.RemoveDomains", { domains: registered.join(", ") })}</label>` : ""}
     </div>`;
     const choice = await foundry.applications.api.DialogV2.wait({
       window: { title: "DHCI.Homebrew.RemoveTitle", icon: "fa-solid fa-trash" },
@@ -135,10 +136,12 @@ async function showHomebrewReport(result) {
   const lines = [
     game.i18n.format("DHCI.Homebrew.ReportItems", { count: result.created, replaced: result.replaced, pack: result.pack.metadata.label }),
     result.domainsAdded.length ? game.i18n.format("DHCI.Homebrew.ReportDomains", { domains: result.domainsAdded.join(", ") }) : null,
+    result.featuresAdded?.length ? game.i18n.format("DHCI.Homebrew.ReportFeatures", { features: result.featuresAdded.map((f) => f.split(":")[1]).join(", ") }) : null,
     ...result.ignored.map((f) => game.i18n.format("DHCI.Homebrew.ReportIgnored", { file: f })),
   ].filter(Boolean);
   const warnings = result.warnings.map((w) => `<li class="dhci-warn">${escapeHtml(w)}</li>`).join("");
-  const content = `<div class="dhci-report"><p>${escapeHtml(describeSource(result.source))}</p><ul>${lines.map(li).join("")}</ul>${warnings ? `<ul>${warnings}</ul>` : ""}<p>${escapeHtml(game.i18n.localize("DHCI.Homebrew.ReportNext"))}</p></div>`;
+  const notes = (result.notes ?? []).map(li).join("");
+  const content = `<div class="dhci-report"><p>${escapeHtml(describeSource(result.source))}</p><ul>${lines.map(li).join("")}</ul>${warnings ? `<ul>${warnings}</ul>` : ""}${notes ? `<p>${escapeHtml(game.i18n.localize("DHCI.Homebrew.ReportNotes"))}</p><ul class="dhci-notes">${notes}</ul>` : ""}<p>${escapeHtml(game.i18n.localize("DHCI.Homebrew.ReportNext"))}</p></div>`;
   return foundry.applications.api.DialogV2.prompt({
     window: { title: "DHCI.Homebrew.Title", icon: "fa-solid fa-flask" },
     classes: ["daggerheart", "dh-style", "dhci-report-dialog"],

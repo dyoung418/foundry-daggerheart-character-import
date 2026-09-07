@@ -1,0 +1,35 @@
+[
+  {
+    "id": "tinker_weapon_wrench_hammer",
+    "name": { "en-US": "Wrench Hammer" },
+    "type": "PRIMARY_PHYSICAL",
+    "tier": 1,
+    "trait": "STRENGTH",
+    "range": "MELEE",
+    "damage": { "dice": "D8", "type": "PHYSICAL" },
+    "burden": "ONE_HANDED",
+    "features": [ { "name": { "en-US": "Reliable" }, "description": [ { "paragraph": { "en-US": "+1 to attack rolls" } } ] } ]
+  },
+  {
+    "id": "tinker_weapon_spring_dagger",
+    "name": { "en-US": "Spring Dagger" },
+    "type": "SECONDARY",
+    "tier": 1,
+    "trait": "FINESSE",
+    "range": "MELEE",
+    "damage": { "dice": "D6", "type": "PHYSICAL" },
+    "burden": "ONE_HANDED",
+    "features": [ { "name": { "en-US": "Coiled" }, "description": [ { "paragraph": { "en-US": "Once per rest, mark a Stress to make this weapon's attack at Very Close range." } } ] } ]
+  },
+  {
+    "id": "tinker_weapon_arc_rod",
+    "name": { "en-US": "Arc Rod" },
+    "type": "PRIMARY_MAGIC",
+    "tier": 2,
+    "trait": "SPELLCAST",
+    "range": "FAR",
+    "damage": { "dice": "D6", "modifier": 1, "type": "MAGICAL" },
+    "burden": "TWO_HANDED",
+    "features": []
+  }
+]

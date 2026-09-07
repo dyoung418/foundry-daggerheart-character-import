@@ -1,0 +1,19 @@
+[
+  {
+    "id": "tinker_ancestry_cogborn",
+    "name": { "en-US": "Cogborn" },
+    "description": [
+      { "paragraph": { "en-US": "Cogborn are assembled rather than born, each one a workshop's masterpiece. This ancestry exists only to exercise the importer's homebrew path." } }
+    ],
+    "features": [
+      {
+        "name": { "en-US": "Steady Gears" },
+        "description": [ { "paragraph": { "en-US": "Your clockwork senses never drift. Gain a permanent +1 bonus to your Instinct." } } ]
+      },
+      {
+        "name": { "en-US": "Oil-Slick" },
+        "description": [ { "paragraph": { "en-US": "Once per rest, you can spend a Hope to slip free of a grapple or restraint without a roll." } } ]
+      }
+    ]
+  }
+]

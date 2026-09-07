@@ -11,14 +11,15 @@ export function homebrewResolver(built, options = {}) {
   const byBuilderId = {};
   for (const item of built.items) {
     const sys = item.system;
+    const hb = item.flags?.[MODULE_ID]?.homebrew;
     const entry = {
       uuid: `Compendium.${options.packCollection ?? "world.dhci-test"}.Item.${item._id}`, name: item.name, type: item.type,
-      domain: sys.domain, level: sys.level, features: sys.features, linkedClass: sys.linkedClass,
+      domain: sys.domain, level: sys.level, tier: sys.tier, secondary: sys.secondary, features: sys.features, linkedClass: sys.linkedClass,
       spellcastingTrait: sys.spellcastingTrait, domains: sys.domains, hitPoints: sys.hitPoints, evasion: sys.evasion,
       inventory: sys.inventory ? { take: sys.inventory.take ?? [] } : null, levelupOptionTiers: sys.levelupOptionTiers ?? null,
+      featureNames: hb?.featureNames ?? null,
     };
     (byType[item.type] ??= {})[normalizeName(item.name)] ??= entry;
-    const hb = item.flags?.[MODULE_ID]?.homebrew;
     if (hb?.builderId) byBuilderId[hb.builderId] ??= entry;
   }
   return {
@@ -26,5 +27,6 @@ export function homebrewResolver(built, options = {}) {
     lookup: (type, name) => base.lookup(type, name) ?? byType[type]?.[normalizeName(name)] ?? null,
     lookupById: (id) => byBuilderId[id] ?? null,
     nameOf: (id) => base.nameOf(id) ?? byBuilderId[id]?.name ?? null,
+    featureNames: (id) => { const b = base.featureNames(id); return b.length ? b : (byBuilderId[id]?.featureNames ?? []); },
   };
 }

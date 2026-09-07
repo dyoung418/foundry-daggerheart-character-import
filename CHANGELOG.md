@@ -3,6 +3,20 @@
 Format: [Keep a Changelog](https://keepachangelog.com/). Versions follow semver; the release
 workflow reads the version from the release tag.
 
+## 0.3.0 — unreleased
+
+- Homebrew source import covers every builder category: ancestries, communities, transformations,
+  items (loot), weapons, armor and consumables join classes, subclasses and domain cards. Weapon and
+  armor features map to the system's own features (effects and actions built by the system); unknown
+  ones are registered as custom features in the system's Homebrew settings with the builder's text.
+- `effects.json` in a source becomes active effects on the features, cards and items it names (traits,
+  Evasion, HP/Stress slots, thresholds, attack/Spellcast bonuses, extra loadout cards; `permanent`
+  cards stay active in the vault). Parts the system cannot apply are listed in the import report.
+- Mixed ancestries with a homebrew half compose correctly (feature names are stored on the item).
+- Removing a source also removes the custom item features it registered (same checkbox as domains).
+- Sample source `samples/homebrew/tinker` has one record of each category; `api.selfTest()` checks
+  the derived numbers of a character built on them.
+
 ## 0.2.0 — 2026-09-06
 
 - Homebrew content: import a builder homebrew source (the `data/<source>/` folder's JSON files, plus

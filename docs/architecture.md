@@ -110,7 +110,7 @@ classes so it looks native (see `characterCreation.mjs:56-66` for `DEFAULT_OPTIO
 
 Phases 0–3 are built and verified in `daggerheart-test` on Daggerheart 2.9.2; see `TODO.md`. The layout
 below is what exists, with `scripts/foundry/import.mjs` (pipeline + actor matching) and
-`scripts/foundry/selftest.mjs` added. 2026-09-06: homebrew source import (`lib/homebrew.mjs`, `foundry/homebrew.mjs`, `app/homebrew-dialog.mjs`). Not built: Beastbound companion, renames UI, i18n.
+`scripts/foundry/selftest.mjs` added. 2026-09-06: homebrew source import (`lib/homebrew.mjs`, `foundry/homebrew.mjs`, `app/homebrew-dialog.mjs`), first classes/subclasses/cards, then every builder category plus `effects.json` (see `docs/mapping.md` §3). Not built: Beastbound companion, renames UI, i18n.
 
 ## Phased roadmap
 

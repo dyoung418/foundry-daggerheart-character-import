@@ -1,0 +1,20 @@
+[
+  {
+    "id": "tinker_armor_brass_plate",
+    "name": { "en-US": "Brass Plate" },
+    "tier": 1,
+    "baseMajorThreshold": 6,
+    "baseSevereThreshold": 12,
+    "baseScore": 4,
+    "features": [ { "name": { "en-US": "Flexible" }, "description": [ { "paragraph": { "en-US": "+1 to Evasion" } } ] } ]
+  },
+  {
+    "id": "tinker_armor_gasket_weave",
+    "name": { "en-US": "Gasket Weave" },
+    "tier": 2,
+    "baseMajorThreshold": 8,
+    "baseSevereThreshold": 17,
+    "baseScore": 4,
+    "features": [ { "name": { "en-US": "Greased" }, "description": [ { "paragraph": { "en-US": "You have advantage on rolls to escape a grapple." } } ] } ]
+  }
+]

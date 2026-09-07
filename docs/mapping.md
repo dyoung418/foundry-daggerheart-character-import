@@ -208,15 +208,45 @@ exported by anyone today, so unmatched homebrew is reported and skipped until a 
    multiclass characters.
 3. **Homebrew content** (`void_` ids, `sources.local.json`): no compendium match. **Done 2026-09-06**
    as a source import (`scripts/lib/homebrew.mjs`, `scripts/foundry/homebrew.mjs`): the user hands the
-   module the source folder's JSON files; it writes `class` (+ `feature` items for hope/class features,
-   `loot` for `classItems` as `inventory.take`), `subclass` (+ tier `feature`s, `linkedClass` to the
-   class in the same source or an SRD class by name), and `domainCard` documents into
-   `world.dhci-<source>` with ids `stableId("<source>:<builderId>[:part]")`, registers unknown domains in
-   the system's `Homebrew.domains` setting (they must exist before a card is created: the `domain` field's
-   choices are `CONFIG.DH.DOMAIN.allDomains`), and appends the pack to the packs setting. Items carry
-   `flags.<module>.homebrew.{sourceId,builderId,kind}` (children: `parentId`); the matcher indexes
-   `builderId` and the plan tries `lookupById` before the name lookup. Not generated: actions, effects,
-   `characterGuide`, level-up options; feature text only.
+   module the source folder's JSON files; it writes documents into `world.dhci-<source>` with ids
+   `stableId("<source>:<builderId>[:part]")`, registers unknown domains in the system's
+   `Homebrew.domains` setting (they must exist before a card is created: the `domain` field's choices
+   are `CONFIG.DH.DOMAIN.allDomains`), and appends the pack to the packs setting. Items carry
+   `flags.<module>.homebrew.{sourceId,builderId,kind}` (children: `parentId`; ancestries add
+   `featureNames` for mixed-ancestry composition); the matcher indexes `builderId` and the plan tries
+   `lookupById` before the name lookup. Per category (all categories since 2026-09-06, verified against
+   the 2.9.2 data models and `src/packs/`):
+   - `class` (+ `feature` items for hope/class features, `loot` for `classItems` as `inventory.take`);
+     `subclass` (+ tier `feature`s, `linkedClass` to the class in the same source or an SRD class by
+     name); `domainCard`.
+   - `ancestry`: `system.features = [{type:"primary"},{type:"secondary"}]` from the first two builder
+     features (more → warning); `community` and `transformation`: `system.features` are bare uuids;
+     community `personalities` are appended to the description; `transformationQuestions` → `questions`
+     HTML list.
+   - `items.json` → `loot`, `consumables.json` → `consumable` (`consumeOnUse: true`); text from
+     `features[].description`; ids may lack a kind segment (`homebrew_snack`).
+   - `weapon`: `tier`, `secondary` (`type: "SECONDARY"`), `burden` (`ONE_HANDED` → `oneHanded`), full
+     `attack` action (`roll.trait`, `range` `VERY_CLOSE` → `veryClose`, `damage.main.value.{dice,bonus}`
+     from `damage.{dice,modifier}`, `type` physical|magical). `SPELLCAST` trait → `knowledge` plus a note
+     (the system rolls weapons on a named trait; its own Arcane-Frame Wheelchair uses Knowledge).
+   - `armor`: `tier`, `armor.max = baseScore`, `baseThresholds` from `baseMajorThreshold`/`baseSevereThreshold`.
+   - Weapon/armor `features[].name` → the system's feature key (`Double Duty` → `doubleDuty`,
+     `Very Heavy` → `veryheavy`, `Magic` → `magical`; localized labels of the running system are
+     consulted too). Unknown names become custom features `dhci-<source>-<name>` registered in the
+     system's `Homebrew.itemFeatures.{weapon,armor}Features` with the builder text. Features are put on
+     the item by `update()` after creation, because the system's `_preUpdate` (not `_preCreate`) is what
+     creates the feature's effects and actions.
+   - `effects.json`: `<recordId>:<FeatureName>` → that feature item; `<subclassId>:<tier>` (+ `feature`)
+     → the tier feature; `<cardId>` → the card; keys without a source prefix match by bare id. Values
+     → one `ActiveEffect` (`type: "base"`, `transfer: true`, `system.changes[{key,type:add|subtract,value,
+     phase:"initial"}]`): `traits.<t>` → `system.traits.<t>.value`, `evasion`, `hitPointSlots` →
+     `resources.hitPoints.max`, `stressSlots` → `resources.stress.max`, `majorThreshold`/`severeThreshold`
+     → `damageThresholds.*`, `attack`/`spellcast` → `bonuses.roll.*.bonus`, `extraDomainCards` →
+     `bonuses.maxLoadout`. `permanent` on a card → `vaultActive: true` (the system suppresses a vaulted
+     card's effects unless vault-active). `armorScore`, `{equalTo}`, `choice`, `excluded`, `base`, `track`,
+     `when` → report notes only. A `<weaponId>:<Feature>` key naming a system feature is skipped (the
+     system's feature carries the effect); naming a custom one puts the effect on the item itself.
+   Not generated: actions on features/cards, `characterGuide`, level-up options.
 4. **Beastbound companion**: separate `companion` actor linked via `system.companion`. Out of scope
    for MVP; report.
 5. **Re-import / update**: match by `flags.<module>.builder.id`; delete previously imported items

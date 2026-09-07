@@ -2,9 +2,19 @@
 
 Live task list and resume point. Newest status at the top. Dates are absolute.
 
-## Status — 2026-09-06 18:40 (v0.2.0 released; next: all homebrew categories)
+## Status — 2026-09-06 (all homebrew categories implemented; live verification pending)
 
-**Resume here.** Danny tried importing his second builder source, `~/daggerheart-character-builder/data/homebrew/`
+**Resume here.** Code for every builder category is in (`lib/homebrew.mjs` rewritten: ancestries,
+communities, transformations, items → loot, weapons, armor, consumables, `effects.json` → ActiveEffects;
+`foundry/homebrew.mjs` applies weapon/armor features by `update()` and registers custom ones in the
+system's Homebrew `itemFeatures`; matcher falls back to the ancestry's stored `featureNames`; dialog
+report lists non-automated notes). `npm test` passes 33. Sample source `samples/homebrew/tinker` has one
+record per category and the sample character uses them; `api.selfTest()` expects 31 documents and
+HP 7 / Stress 7 / Evasion 13 / Instinct 1 for the tinker. **Not yet verified live** — next: start
+Foundry, run `api.selfTest()` in `daggerheart-test`, import Danny's `data/homebrew` (Oddfolk +1 Instinct)
+and fix what the console shows; then CHANGELOG date + `v0.3.0`.
+
+Earlier context: Danny tried importing his second builder source, `~/daggerheart-character-builder/data/homebrew/`
 (`source.json`, `ancestries.json` with one ancestry "Oddfolk", `items.json` with one item, `effects.json`),
 and got "no classes, subclasses or domain cards found": the source import only handles classes, subclasses
 and domain cards. Danny wants **every builder category** imported: ancestries, communities, transformations,

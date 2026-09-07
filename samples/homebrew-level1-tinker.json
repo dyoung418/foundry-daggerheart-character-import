@@ -12,19 +12,19 @@
       "heritage": {
         "ancestryMode": "pure",
         "ancestryIds": [
-          "srd_2_0_ancestry_clank"
+          "tinker_ancestry_cogborn"
         ],
         "chosenFeatures": [
           {
-            "ancestryId": "srd_2_0_ancestry_clank",
-            "featureName": "Purposeful Design"
+            "ancestryId": "tinker_ancestry_cogborn",
+            "featureName": "Steady Gears"
           },
           {
-            "ancestryId": "srd_2_0_ancestry_clank",
-            "featureName": "Efficient"
+            "ancestryId": "tinker_ancestry_cogborn",
+            "featureName": "Oil-Slick"
           }
         ],
-        "communityId": "srd_2_0_community_highborne"
+        "communityId": "tinker_community_guildborne"
       },
       "traits": {
         "agility": 0,
@@ -35,12 +35,12 @@
         "knowledge": 2
       },
       "equipment": {
-        "primaryWeaponId": "srd_2_0_weapon_rapier",
-        "secondaryWeaponId": "srd_2_0_weapon_shortsword",
-        "armorId": "srd_2_0_armor_gambeson_armor",
-        "potionChoice": "srd_2_0_consumable_minor_health_potion"
+        "primaryWeaponId": "tinker_weapon_wrench_hammer",
+        "secondaryWeaponId": "tinker_weapon_spring_dagger",
+        "armorId": "tinker_armor_brass_plate",
+        "potionChoice": "tinker_consumable_oil_flask"
       },
-      "transformationId": null,
+      "transformationId": "tinker_transformation_clockwork_heart",
       "background": {
         "description": "A workshop apprentice who left with a stolen blueprint.",
         "answers": "What did you build that you wish you hadn't? A lock nobody can open, including me."
@@ -134,15 +134,7 @@
       "domainVaultIds": [],
       "updatedAt": "2026-09-06T16:30:00.000Z",
       "multiclass": null,
-      "effectChoices": {
-        "srd_2_0_ancestry_clank:Purposeful Design": {
-          "optionId": "one",
-          "optionIds": [],
-          "experienceIds": [
-            "exp_start1"
-          ]
-        }
-      },
+      "effectChoices": {},
       "state": {
         "hp": 0,
         "stress": 0,

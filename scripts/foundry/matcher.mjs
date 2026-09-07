@@ -58,7 +58,11 @@ export class CompendiumMatcher {
         const key = normalizeName(e.name);
         (this.index[e.type] ??= {})[key] ??= entry;   // first pack in the list wins
         const homebrew = e.flags?.[MODULE_ID]?.homebrew;
-        if (homebrew?.builderId) { entry.builderId = homebrew.builderId; this.byBuilderId[homebrew.builderId] ??= entry; }
+        if (homebrew?.builderId) {
+          entry.builderId = homebrew.builderId;
+          entry.featureNames = homebrew.featureNames ?? null;   // ancestries from a builder source
+          this.byBuilderId[homebrew.builderId] ??= entry;
+        }
       }
     }
     debug("matcher loaded", Object.fromEntries(Object.entries(this.index).map(([t, m]) => [t, Object.keys(m).length])));
@@ -82,7 +86,7 @@ export class CompendiumMatcher {
   }
 
   featureNames(ancestryId) {
-    return this.names.extras?.[bareId(ancestryId)]?.features ?? [];
+    return this.names.extras?.[bareId(ancestryId)]?.features ?? this.byBuilderId[ancestryId]?.featureNames ?? [];
   }
 
   newId() {

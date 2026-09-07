@@ -1,0 +1,16 @@
+[
+  {
+    "id": "tinker_community_guildborne",
+    "name": { "en-US": "Guildborne" },
+    "description": [
+      { "paragraph": { "en-US": "Being part of a guildborne community means you grew up among workshops, ledgers and the smell of hot brass." } }
+    ],
+    "personalities": [ { "en-US": "meticulous" }, { "en-US": "proud" }, { "en-US": "thrifty" } ],
+    "features": [
+      {
+        "name": { "en-US": "Union Card" },
+        "description": [ { "paragraph": { "en-US": "You have advantage on rolls to negotiate with artisans, merchants or guild officials." } } ]
+      }
+    ]
+  }
+]
